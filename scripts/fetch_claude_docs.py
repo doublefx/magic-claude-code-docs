@@ -58,35 +58,6 @@ RATE_LIMIT_DELAY = 0.5  # seconds between requests
 MAX_REDIRECTS = 5
 MAX_RESPONSE_SIZE = 10 * 1024 * 1024  # 10 MB
 
-# Fallback documentation pages (full URLs) when llms.txt discovery fails
-FALLBACK_DOCUMENTATION_PAGES = [
-    "https://code.claude.com/docs/en/overview.md",
-    "https://code.claude.com/docs/en/setup.md",
-    "https://code.claude.com/docs/en/quickstart.md",
-    "https://code.claude.com/docs/en/memory.md",
-    "https://code.claude.com/docs/en/common-workflows.md",
-    "https://code.claude.com/docs/en/ide-integrations.md",
-    "https://code.claude.com/docs/en/mcp.md",
-    "https://code.claude.com/docs/en/github-actions.md",
-    "https://code.claude.com/docs/en/sdk.md",
-    "https://code.claude.com/docs/en/troubleshooting.md",
-    "https://code.claude.com/docs/en/security.md",
-    "https://code.claude.com/docs/en/settings.md",
-    "https://code.claude.com/docs/en/hooks.md",
-    "https://code.claude.com/docs/en/costs.md",
-    "https://code.claude.com/docs/en/monitoring-usage.md",
-    "https://code.claude.com/docs/en/tutorials.md",
-    "https://code.claude.com/docs/en/agentic-coding.md",
-    "https://code.claude.com/docs/en/sub-agents.md",
-    "https://code.claude.com/docs/en/agent-tool-use.md",
-    "https://code.claude.com/docs/en/bedrock-and-vertex.md",
-    "https://code.claude.com/docs/en/claude-md.md",
-    "https://code.claude.com/docs/en/model-configuration.md",
-    "https://code.claude.com/docs/en/permissions.md",
-    "https://code.claude.com/docs/en/cli-reference.md",
-    "https://code.claude.com/docs/en/slash-commands.md",
-]
-
 # Allowed hosts for redirect validation (SSRF prevention)
 ALLOWED_HOSTS = frozenset(
     {
@@ -206,39 +177,35 @@ def discover_pages_from_llms_txt(session: requests.Session) -> list[tuple[str, s
 
     Returns:
         List of (title, url) tuples.
-        Falls back to FALLBACK_DOCUMENTATION_PAGES on failure.
+
+    Raises:
+        RuntimeError: If llms.txt cannot be fetched or contains no links.
     """
     logger.info(f"Fetching documentation index: {LLMS_TXT_URL}")
-    try:
-        response = safe_get(session, LLMS_TXT_URL, headers=HEADERS, timeout=30)
-        response.raise_for_status()
+    response = safe_get(session, LLMS_TXT_URL, headers=HEADERS, timeout=30)
+    response.raise_for_status()
 
-        content = response.text[:MAX_RESPONSE_SIZE]
-        if len(content.strip()) < 50:
-            raise ValueError(f"llms.txt content too short ({len(content)} bytes)")
+    content = response.text[:MAX_RESPONSE_SIZE]
+    if len(content.strip()) < 50:
+        raise RuntimeError(f"llms.txt content too short ({len(content)} bytes)")
 
-        # Parse markdown links pointing to .md files under docs/en/
-        pattern = r"\[([^\]]+)\]\((https://code\.claude\.com/docs/en/[^\)]+\.md)\)"
-        matches = re.findall(pattern, content)
+    # Parse markdown links pointing to .md files under docs/en/
+    pattern = r"\[([^\]]+)\]\((https://code\.claude\.com/docs/en/[^\)]+\.md)\)"
+    matches = re.findall(pattern, content)
 
-        if not matches:
-            raise ValueError("No documentation links found in llms.txt")
+    if not matches:
+        raise RuntimeError("No documentation links found in llms.txt")
 
-        # Deduplicate by URL while preserving order
-        seen: set[str] = set()
-        pages: list[tuple[str, str]] = []
-        for title, url in matches:
-            if url not in seen:
-                seen.add(url)
-                pages.append((title, url))
+    # Deduplicate by URL while preserving order
+    seen: set[str] = set()
+    pages: list[tuple[str, str]] = []
+    for title, url in matches:
+        if url not in seen:
+            seen.add(url)
+            pages.append((title, url))
 
-        logger.info(f"Discovered {len(pages)} documentation pages from llms.txt")
-        return pages
-
-    except Exception as e:
-        logger.error(f"Failed to discover pages from llms.txt: {e}")
-        logger.warning("Falling back to essential pages...")
-        return [("", url) for url in FALLBACK_DOCUMENTATION_PAGES]
+    logger.info(f"Discovered {len(pages)} documentation pages from llms.txt")
+    return pages
 
 
 def validate_markdown_content(content: str, filename: str) -> None:
