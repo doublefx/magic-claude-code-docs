@@ -194,20 +194,12 @@ jobs:
         if gh release view "$TAG" >/dev/null 2>&1; then
           echo "Release $TAG already exists, skipping"
         else
+          NOTES_FILE=$(mktemp)
+          printf '## Claude Code Documentation Mirror %s\n\nThis release includes the latest updates to the Claude Code documentation mirror.\n\n### Installation\n\n```bash\nclaude plugin marketplace add https://github.com/doublefx/magic-claude-code-docs\nclaude plugin install magic-claude-docs\n```\n' "$TAG" > "$NOTES_FILE"
           gh release create "$TAG" \
             --title "Claude Code Docs $TAG" \
             --generate-notes \
-            --notes "## Claude Code Documentation Mirror $TAG
-
-This release includes the latest updates to the Claude Code documentation mirror.
-
-### Installation
-
-\`\`\`bash
-claude plugin marketplace add https://github.com/doublefx/magic-claude-code-docs
-claude plugin install magic-claude-docs
-\`\`\`
-"
+            --notes-file "$NOTES_FILE"
           echo "Created release $TAG"
         fi
 
