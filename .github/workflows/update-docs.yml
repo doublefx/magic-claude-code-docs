@@ -41,16 +41,18 @@ jobs:
         SENTINEL_DIR=".github/sentinels"
         mkdir -p "$SENTINEL_DIR"
 
-        # Fetch and hash llms.txt
+        # Fetch and hash llms.txt, docs_map, and changelog
         LLMS_HASH=$(curl -sf "https://code.claude.com/docs/llms.txt" | sha256sum | cut -d' ' -f1 || echo "fetch_failed")
         DOCS_MAP_HASH=$(curl -sf "https://code.claude.com/docs/en/claude_code_docs_map.md" | sha256sum | cut -d' ' -f1 || echo "fetch_failed")
+        CHANGELOG_HASH=$(curl -sf "https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md" | sha256sum | cut -d' ' -f1 || echo "fetch_failed")
 
         # Read stored sentinels
         OLD_LLMS=$(cat "$SENTINEL_DIR/llms_txt.sha256" 2>/dev/null || echo "none")
         OLD_DOCS_MAP=$(cat "$SENTINEL_DIR/docs_map.sha256" 2>/dev/null || echo "none")
+        OLD_CHANGELOG=$(cat "$SENTINEL_DIR/changelog.sha256" 2>/dev/null || echo "none")
 
-        if [[ "$LLMS_HASH" != "fetch_failed" && "$DOCS_MAP_HASH" != "fetch_failed" &&
-              "$LLMS_HASH" == "$OLD_LLMS" && "$DOCS_MAP_HASH" == "$OLD_DOCS_MAP" ]]; then
+        if [[ "$LLMS_HASH" != "fetch_failed" && "$DOCS_MAP_HASH" != "fetch_failed" && "$CHANGELOG_HASH" != "fetch_failed" &&
+              "$LLMS_HASH" == "$OLD_LLMS" && "$DOCS_MAP_HASH" == "$OLD_DOCS_MAP" && "$CHANGELOG_HASH" == "$OLD_CHANGELOG" ]]; then
           echo "skip_fetch=true" >> "$GITHUB_OUTPUT"
           echo "Sentinels unchanged -- skipping full fetch"
         else
@@ -58,6 +60,7 @@ jobs:
           echo "skip_fetch=false" >> "$GITHUB_OUTPUT"
           echo "llms_hash=$LLMS_HASH" >> "$GITHUB_OUTPUT"
           echo "docs_map_hash=$DOCS_MAP_HASH" >> "$GITHUB_OUTPUT"
+          echo "changelog_hash=$CHANGELOG_HASH" >> "$GITHUB_OUTPUT"
           echo "Sentinels changed or fetch failed -- proceeding with full fetch"
         fi
 
@@ -173,8 +176,10 @@ jobs:
         SENTINEL_DIR=".github/sentinels"
         LLMS_HASH="${{ steps.sentinel.outputs.llms_hash }}"
         DOCS_MAP_HASH="${{ steps.sentinel.outputs.docs_map_hash }}"
+        CHANGELOG_HASH="${{ steps.sentinel.outputs.changelog_hash }}"
         [[ -n "$LLMS_HASH" && "$LLMS_HASH" != "fetch_failed" ]] && echo "$LLMS_HASH" > "$SENTINEL_DIR/llms_txt.sha256"
         [[ -n "$DOCS_MAP_HASH" && "$DOCS_MAP_HASH" != "fetch_failed" ]] && echo "$DOCS_MAP_HASH" > "$SENTINEL_DIR/docs_map.sha256"
+        [[ -n "$CHANGELOG_HASH" && "$CHANGELOG_HASH" != "fetch_failed" ]] && echo "$CHANGELOG_HASH" > "$SENTINEL_DIR/changelog.sha256"
         git add "$SENTINEL_DIR/"
         git commit -m "chore: update sentinel hashes" || true
         git push
