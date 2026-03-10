@@ -57,8 +57,8 @@
     "code-review.md": {
       "original_url": "https://code.claude.com/docs/en/code-review.md",
       "title": "Code Review",
-      "hash": "13155e293eeaa7a47b48ce15398b98df932d9d1f1a97c555ffceab862441c0ee",
-      "last_updated": "2026-03-09T21:21:55.550154"
+      "hash": "3584aa84a5c3ad3495e982ca644d12abc571d26a96631c9036928fed0308b7bb",
+      "last_updated": "2026-03-10T00:59:47.448398"
     },
     "common-workflows.md": {
       "original_url": "https://code.claude.com/docs/en/common-workflows.md",
@@ -364,20 +364,20 @@
       "original_url": "https://code.claude.com/docs/en/claude_code_docs_map.md",
       "title": "Documentation Map",
       "source": "docs-map",
-      "hash": "e49863856526de5e4620f28a3568e1814147039847a120b4b686319647699346",
-      "last_updated": "2026-03-05T19:06:42.697312"
+      "hash": "4bd025ebc803a852be5fd3c8620c7f2844acf6efd8acc969f904b9ad34f2775d",
+      "last_updated": "2026-03-10T01:00:18.699179"
     },
     "changelog.md": {
       "original_url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
       "original_raw_url": "https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md",
       "source": "claude-code-repository",
-      "hash": "3561949f593d6f250bf8192fc01a11462a304d0e06425b4bbadf5aee05142165",
-      "last_updated": "2026-03-07T01:00:58.748248"
+      "hash": "8b11a2e006046a69f3b9489cefc34617d3c5105ef50b3dbdd0ca6602fd165a92",
+      "last_updated": "2026-03-10T01:00:18.733171"
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2026-03-09T21:22:38.099121",
-    "fetch_duration_seconds": 51.100278,
+    "last_fetch_completed": "2026-03-10T01:00:18.733491",
+    "fetch_duration_seconds": 37.763637,
     "total_pages_discovered": 61,
     "pages_fetched_successfully": 62,
     "pages_failed": 1,
@@ -388,7 +388,7 @@
     "total_files": 62,
     "fetch_tool_version": "4.0"
   },
-  "last_updated": "2026-03-09T21:22:38.099281",
+  "last_updated": "2026-03-10T01:00:18.733654",
   "base_url": "https://raw.githubusercontent.com/doublefx/magic-claude-code-docs/main/plugin/docs/",
   "github_repository": "doublefx/magic-claude-code-docs",
   "github_ref": "main",
