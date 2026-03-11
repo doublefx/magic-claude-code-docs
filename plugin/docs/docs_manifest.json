@@ -9,8 +9,8 @@
     "amazon-bedrock.md": {
       "original_url": "https://code.claude.com/docs/en/amazon-bedrock.md",
       "title": "Claude Code on Amazon Bedrock",
-      "hash": "aedc96511695de0b0cc1c2ce3b072644b7a45a6adda497a4b8480cfb98ad73c0",
-      "last_updated": "2026-02-19T00:07:57.868539"
+      "hash": "c1a4ae679cba83ed7a425ea2166f536daaa64e088488484fe0b5fec4544231fa",
+      "last_updated": "2026-03-11T21:21:30.075012"
     },
     "analytics.md": {
       "original_url": "https://code.claude.com/docs/en/analytics.md",
@@ -159,8 +159,8 @@
     "interactive-mode.md": {
       "original_url": "https://code.claude.com/docs/en/interactive-mode.md",
       "title": "Interactive mode",
-      "hash": "feb8c1d243ebd0c68141323c474c04af8a142855f690770f0ff2f1740c7563f2",
-      "last_updated": "2026-03-11T18:38:49.654266"
+      "hash": "2a620a9216c88a167a43c54e20726e24815366636b2e247fef36ada14042d715",
+      "last_updated": "2026-03-11T21:21:45.907478"
     },
     "jetbrains.md": {
       "original_url": "https://code.claude.com/docs/en/jetbrains.md",
@@ -207,8 +207,8 @@
     "model-config.md": {
       "original_url": "https://code.claude.com/docs/en/model-config.md",
       "title": "Model configuration",
-      "hash": "7aa0a291c96ecb6beaa4f0306e733e38d6e1981b72528e446582b71134838f2a",
-      "last_updated": "2026-03-05T14:32:51.232460"
+      "hash": "517676df4c3809374011a32d892b4f63e95db8f026eca6bd8ff845bb5d7c6920",
+      "last_updated": "2026-03-11T21:21:50.700312"
     },
     "monitoring-usage.md": {
       "original_url": "https://code.claude.com/docs/en/monitoring-usage.md",
@@ -225,8 +225,8 @@
     "output-styles.md": {
       "original_url": "https://code.claude.com/docs/en/output-styles.md",
       "title": "Output styles",
-      "hash": "bba9ff34db2ba66cfdf8e0343a42162af77db44b99f13d96b6cdb060fd3eef2d",
-      "last_updated": "2026-01-24T03:29:17.221291"
+      "hash": "28dc102fd6e5bc97cfd3b3dbb1daec89bbedccce3be0b2f2e6ae5b7140eed12e",
+      "last_updated": "2026-03-11T21:21:52.561587"
     },
     "overview.md": {
       "original_url": "https://code.claude.com/docs/en/overview.md",
@@ -297,8 +297,8 @@
     "settings.md": {
       "original_url": "https://code.claude.com/docs/en/settings.md",
       "title": "Claude Code settings",
-      "hash": "d2a174368cb427716685fa11d576796ebba6bd0691bd32cf783ea350563bcd29",
-      "last_updated": "2026-03-10T04:26:45.455911"
+      "hash": "6b48922c3c855fc7994e2f5a09903af492d9509ecc454749e5f322b6ba89c1b7",
+      "last_updated": "2026-03-11T21:21:59.918212"
     },
     "setup.md": {
       "original_url": "https://code.claude.com/docs/en/setup.md",
@@ -364,8 +364,8 @@
       "original_url": "https://code.claude.com/docs/en/claude_code_docs_map.md",
       "title": "Documentation Map",
       "source": "docs-map",
-      "hash": "4bd025ebc803a852be5fd3c8620c7f2844acf6efd8acc969f904b9ad34f2775d",
-      "last_updated": "2026-03-10T01:00:18.699179"
+      "hash": "aa0dd686ce479bdc4e9b303996ce3da0209b60229e220ca6f5031e9a736bcbd4",
+      "last_updated": "2026-03-11T21:22:06.219112"
     },
     "changelog.md": {
       "original_url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
@@ -376,8 +376,8 @@
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2026-03-11T18:39:09.936423",
-    "fetch_duration_seconds": 37.178965,
+    "last_fetch_completed": "2026-03-11T21:22:06.233420",
+    "fetch_duration_seconds": 36.983252,
     "total_pages_discovered": 61,
     "pages_fetched_successfully": 62,
     "pages_failed": 1,
@@ -388,7 +388,7 @@
     "total_files": 62,
     "fetch_tool_version": "4.0"
   },
-  "last_updated": "2026-03-11T18:39:09.936603",
+  "last_updated": "2026-03-11T21:22:06.233600",
   "base_url": "https://raw.githubusercontent.com/doublefx/magic-claude-code-docs/main/plugin/docs/",
   "github_repository": "doublefx/magic-claude-code-docs",
   "github_ref": "main",
