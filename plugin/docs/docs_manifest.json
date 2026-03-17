@@ -34,8 +34,8 @@
       "original_url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
       "original_raw_url": "https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md",
       "source": "claude-code-repository",
-      "hash": "d9536ef7876a2191dc3c16d94b2b8d6dc30ba64d37283678d0b60b7450735cb9",
-      "last_updated": "2026-03-14T04:27:32.943042"
+      "hash": "9c895bc0dd1b770634d53d20b3ee429308dea718742651b44362f417656a6ac3",
+      "last_updated": "2026-03-17T01:05:31.467786"
     },
     "checkpointing.md": {
       "original_url": "https://code.claude.com/docs/en/checkpointing.md",
@@ -118,8 +118,8 @@
     "env-vars.md": {
       "original_url": "https://code.claude.com/docs/en/env-vars.md",
       "title": "Environment variables",
-      "hash": "77a0ceecbbb37179bc0c07750006d72d2e986e0a45f677de37980a5024a25415",
-      "last_updated": "2026-03-16T21:27:56.782808"
+      "hash": "1bd7b110cff8ae8a0928b946ef0e0b4594f851cd38224fff1687832fd7f2326f",
+      "last_updated": "2026-03-17T01:05:03.661065"
     },
     "fast-mode.md": {
       "original_url": "https://code.claude.com/docs/en/fast-mode.md",
@@ -394,8 +394,8 @@
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2026-03-16T21:28:23.794894",
-    "fetch_duration_seconds": 38.803659,
+    "last_fetch_completed": "2026-03-17T01:05:31.468098",
+    "fetch_duration_seconds": 40.02944,
     "total_pages_discovered": 64,
     "pages_fetched_successfully": 66,
     "pages_failed": 0,
@@ -404,7 +404,7 @@
     "total_files": 65,
     "fetch_tool_version": "4.0"
   },
-  "last_updated": "2026-03-16T21:28:23.795058",
+  "last_updated": "2026-03-17T01:05:31.468280",
   "base_url": "https://raw.githubusercontent.com/doublefx/magic-claude-code-docs/main/plugin/docs/",
   "github_repository": "doublefx/magic-claude-code-docs",
   "github_ref": "main",
