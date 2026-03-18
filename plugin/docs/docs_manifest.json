@@ -9,8 +9,8 @@
     "amazon-bedrock.md": {
       "original_url": "https://code.claude.com/docs/en/amazon-bedrock.md",
       "title": "Claude Code on Amazon Bedrock",
-      "hash": "c1a4ae679cba83ed7a425ea2166f536daaa64e088488484fe0b5fec4544231fa",
-      "last_updated": "2026-03-11T21:21:30.075012"
+      "hash": "569e14a034262a94cd5a85928270cb4b86741f406e5b5133c389cbe1658b8ced",
+      "last_updated": "2026-03-18T01:09:12.168250"
     },
     "analytics.md": {
       "original_url": "https://code.claude.com/docs/en/analytics.md",
@@ -34,8 +34,8 @@
       "original_url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
       "original_raw_url": "https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md",
       "source": "claude-code-repository",
-      "hash": "9c895bc0dd1b770634d53d20b3ee429308dea718742651b44362f417656a6ac3",
-      "last_updated": "2026-03-17T01:05:31.467786"
+      "hash": "956ba7f00bc247b5f4a88b85d839789970303b490ea8363b398df54eece4f7e8",
+      "last_updated": "2026-03-18T01:09:57.102692"
     },
     "checkpointing.md": {
       "original_url": "https://code.claude.com/docs/en/checkpointing.md",
@@ -148,8 +148,8 @@
     "google-vertex-ai.md": {
       "original_url": "https://code.claude.com/docs/en/google-vertex-ai.md",
       "title": "Claude Code on Google Vertex AI",
-      "hash": "9b997508f757ef537d20d00a4fee27c44add93a3a6bca88e89d72ca91bc8023b",
-      "last_updated": "2026-03-13T18:26:41.443094"
+      "hash": "a82802e81d5418077029145cb60cdf333f185b9a8db98a2f9474e867006e531f",
+      "last_updated": "2026-03-18T01:09:29.040295"
     },
     "headless.md": {
       "original_url": "https://code.claude.com/docs/en/headless.md",
@@ -160,8 +160,8 @@
     "hooks.md": {
       "original_url": "https://code.claude.com/docs/en/hooks.md",
       "title": "Hooks reference",
-      "hash": "898b214470559f5d4990b43ca6ae32f420ee49c95caa4c1a178e3afd9f9a04e0",
-      "last_updated": "2026-03-17T21:27:01.567613"
+      "hash": "c7be587fc019ee61538c7872b32e35d65a1eb36c005d79c4bdc7f722e81afcf2",
+      "last_updated": "2026-03-18T01:09:30.247673"
     },
     "hooks-guide.md": {
       "original_url": "https://code.claude.com/docs/en/hooks-guide.md",
@@ -208,14 +208,14 @@
     "mcp.md": {
       "original_url": "https://code.claude.com/docs/en/mcp.md",
       "title": "Connect Claude Code to tools via MCP",
-      "hash": "f49750630381ffebec883f60ab43cbea86b49f44eca872f5e633e15238eeed60",
-      "last_updated": "2026-03-16T21:28:05.849866"
+      "hash": "fa3d7a71a25a0f2b6fd10651cc99e7decf643781ee2adf5a8fb1c73bf7c59592",
+      "last_updated": "2026-03-18T01:09:35.238945"
     },
     "memory.md": {
       "original_url": "https://code.claude.com/docs/en/memory.md",
       "title": "How Claude remembers your project",
-      "hash": "022a47f11df1e200085afc53a669305b9a942c2729473a77098e9298a2f34fc7",
-      "last_updated": "2026-03-17T21:27:06.859442"
+      "hash": "0dc69630422f0b3de0f420122b1d19e5aaa4b2394ec83abb3c394f6529dc2c3c",
+      "last_updated": "2026-03-18T01:09:35.827969"
     },
     "microsoft-foundry.md": {
       "original_url": "https://code.claude.com/docs/en/microsoft-foundry.md",
@@ -256,14 +256,14 @@
     "permissions.md": {
       "original_url": "https://code.claude.com/docs/en/permissions.md",
       "title": "Configure permissions",
-      "hash": "ef863b950de5c852f1fd1dec67f6680ce56602991b0a973582ff7a3a59c61a00",
-      "last_updated": "2026-03-17T21:27:10.990024"
+      "hash": "ff47d327d1a10e11e87fbec8edbb1a7dbc449b7239255c20e4538ac9ebbf12f8",
+      "last_updated": "2026-03-18T01:09:40.629781"
     },
     "plugin-marketplaces.md": {
       "original_url": "https://code.claude.com/docs/en/plugin-marketplaces.md",
       "title": "Create and distribute a plugin marketplace",
-      "hash": "4f0e926e45dd7d036e8d3ed4fd2a96c158bcdbe9da69ea38d428220288385311",
-      "last_updated": "2026-03-17T21:27:11.567123"
+      "hash": "ae7d6aba26ff8cccd25920e96674cb2b6494bd7b7504dc998e6b3524f169420b",
+      "last_updated": "2026-03-18T01:09:41.531742"
     },
     "plugins.md": {
       "original_url": "https://code.claude.com/docs/en/plugins.md",
@@ -274,8 +274,8 @@
     "plugins-reference.md": {
       "original_url": "https://code.claude.com/docs/en/plugins-reference.md",
       "title": "Plugins reference",
-      "hash": "d2d2435c10291424f15efe2d9ef82d9123f6cd172c92f401bf0ae49d60b9d5ec",
-      "last_updated": "2026-03-17T21:27:12.725612"
+      "hash": "046ac935f5c68232949301a486d03dbd3fe44a19b236c08650f2aa1211be5fc4",
+      "last_updated": "2026-03-18T01:09:42.724422"
     },
     "quickstart.md": {
       "original_url": "https://code.claude.com/docs/en/quickstart.md",
@@ -316,8 +316,8 @@
     "settings.md": {
       "original_url": "https://code.claude.com/docs/en/settings.md",
       "title": "Claude Code settings",
-      "hash": "9ae208eb127d5ea7c0add4075e2f5560c7d1b725b2ac5b95e2aea93eaeffcfc3",
-      "last_updated": "2026-03-17T21:27:16.768260"
+      "hash": "2bb65437f5e7c10f714acd818beceea538a89be41ff789369f55da20909b2653",
+      "last_updated": "2026-03-18T01:09:47.433545"
     },
     "setup.md": {
       "original_url": "https://code.claude.com/docs/en/setup.md",
@@ -346,8 +346,8 @@
     "sub-agents.md": {
       "original_url": "https://code.claude.com/docs/en/sub-agents.md",
       "title": "Create custom subagents",
-      "hash": "a96d8eedd72568265f68a3994bc9b8b64cfbedeaa568be41cf6b545c82709311",
-      "last_updated": "2026-03-17T21:27:19.685623"
+      "hash": "4d06ec2fe3dc728cf0d4567ef32a74e43d14367178daf7770ab24ff1e6276777",
+      "last_updated": "2026-03-18T01:09:50.988122"
     },
     "terminal-config.md": {
       "original_url": "https://code.claude.com/docs/en/terminal-config.md",
@@ -400,8 +400,8 @@
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2026-03-17T21:27:23.834278",
-    "fetch_duration_seconds": 37.52734,
+    "last_fetch_completed": "2026-03-18T01:09:57.103056",
+    "fetch_duration_seconds": 46.341477,
     "total_pages_discovered": 65,
     "pages_fetched_successfully": 67,
     "pages_failed": 0,
@@ -410,7 +410,7 @@
     "total_files": 66,
     "fetch_tool_version": "4.0"
   },
-  "last_updated": "2026-03-17T21:27:23.834449",
+  "last_updated": "2026-03-18T01:09:57.103211",
   "base_url": "https://raw.githubusercontent.com/doublefx/magic-claude-code-docs/main/plugin/docs/",
   "github_repository": "doublefx/magic-claude-code-docs",
   "github_ref": "main",
