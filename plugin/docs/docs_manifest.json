@@ -40,14 +40,14 @@
     "channels.md": {
       "original_url": "https://code.claude.com/docs/en/channels.md",
       "title": "Push events into a running session with channels",
-      "hash": "0832bdae5fc1052b4b654fa7a2fe2c55fdd957ae6b4700fbd7ecfd6b95e12698",
-      "last_updated": "2026-03-21T01:00:39.333785"
+      "hash": "c5b269ea0470e22ad31ce287fcb4ac45400b24a929a786f5d9298bd50f0802d2",
+      "last_updated": "2026-03-22T18:20:35.826011"
     },
     "channels-reference.md": {
       "original_url": "https://code.claude.com/docs/en/channels-reference.md",
       "title": "Channels reference",
-      "hash": "7d6f96b30ece6bfbe7831a0941b5fe7b61265fd03f956c84fae4dd280a33ea96",
-      "last_updated": "2026-03-21T01:00:39.930717"
+      "hash": "a5c6e5f5581a74a336807a5bdb4da51a920984f3c63c37c9005727e44a0bfbc0",
+      "last_updated": "2026-03-22T18:20:36.444078"
     },
     "checkpointing.md": {
       "original_url": "https://code.claude.com/docs/en/checkpointing.md",
@@ -70,8 +70,8 @@
     "cli-reference.md": {
       "original_url": "https://code.claude.com/docs/en/cli-reference.md",
       "title": "CLI reference",
-      "hash": "759db9ff2db9dac8765e21a73e6e99a7f943da7223b72e10f061a483d0f73651",
-      "last_updated": "2026-03-21T01:00:42.316316"
+      "hash": "57b1c1c43cd6014037e15467725989c8e0633ea3b1c32fad1cfd7b5da739320a",
+      "last_updated": "2026-03-22T18:20:39.100557"
     },
     "code-review.md": {
       "original_url": "https://code.claude.com/docs/en/code-review.md",
@@ -130,8 +130,8 @@
     "env-vars.md": {
       "original_url": "https://code.claude.com/docs/en/env-vars.md",
       "title": "Environment variables",
-      "hash": "cf4ce376b5f1c55a7c60b1fff1a50ce11d728141413532b112eabe053f80a7ed",
-      "last_updated": "2026-03-21T01:00:48.242676"
+      "hash": "30649aabeca6609c39cf044b9b5542b99db2d81cadb61d18495bfc150850e634",
+      "last_updated": "2026-03-22T18:20:45.062844"
     },
     "fast-mode.md": {
       "original_url": "https://code.claude.com/docs/en/fast-mode.md",
@@ -148,8 +148,8 @@
     "github-actions.md": {
       "original_url": "https://code.claude.com/docs/en/github-actions.md",
       "title": "Claude Code GitHub Actions",
-      "hash": "cadecd0fde2c121ea13d11d2d0e39a169afe7161dcee0b0fe8d9ce90e500ef8b",
-      "last_updated": "2026-03-09T21:22:02.936669"
+      "hash": "3f13d910dc7f9b3a666b3f1f49f826f602549f3b6874a600e3810f4099c16b14",
+      "last_updated": "2026-03-22T18:20:46.858711"
     },
     "gitlab-ci-cd.md": {
       "original_url": "https://code.claude.com/docs/en/gitlab-ci-cd.md",
@@ -166,8 +166,8 @@
     "headless.md": {
       "original_url": "https://code.claude.com/docs/en/headless.md",
       "title": "Run Claude Code programmatically",
-      "hash": "16df64837072f406d59733b8f3412cba6ad8445a708efe396986c0a5386ef1a5",
-      "last_updated": "2026-03-17T21:27:00.982141"
+      "hash": "33ba27b6bd42db5e981d55f470ee1eac40e4c2b45d36a9e5b6e24805ecf46669",
+      "last_updated": "2026-03-22T18:20:48.649485"
     },
     "hooks.md": {
       "original_url": "https://code.claude.com/docs/en/hooks.md",
@@ -184,14 +184,14 @@
     "how-claude-code-works.md": {
       "original_url": "https://code.claude.com/docs/en/how-claude-code-works.md",
       "title": "How Claude Code works",
-      "hash": "3d0820f35fe3c70846237e9db2570846c8e667ce768f2e7dcca66ecd22db2fa2",
-      "last_updated": "2026-03-13T18:26:43.872029"
+      "hash": "4b825bac3f6179d734038f777add047d88d249cccf9804405b27be345300a4da",
+      "last_updated": "2026-03-22T18:20:50.435102"
     },
     "interactive-mode.md": {
       "original_url": "https://code.claude.com/docs/en/interactive-mode.md",
       "title": "Interactive mode",
-      "hash": "1232bf50c2baa1355ccecbe1f318e24093a7b69957054f64a0b0fe791ed66b6f",
-      "last_updated": "2026-03-17T21:27:03.340635"
+      "hash": "a1b8232208d1b6e6c5b2427b730ca2a5f1ebe85d74b835b1cdf37c983beccd4d",
+      "last_updated": "2026-03-22T18:20:51.024207"
     },
     "jetbrains.md": {
       "original_url": "https://code.claude.com/docs/en/jetbrains.md",
@@ -220,8 +220,8 @@
     "mcp.md": {
       "original_url": "https://code.claude.com/docs/en/mcp.md",
       "title": "Connect Claude Code to tools via MCP",
-      "hash": "bbdb3c532af84f431b4d55ce500764b99a31090bab02243ea2ffe132a2cec1e6",
-      "last_updated": "2026-03-20T01:04:58.586325"
+      "hash": "f15349d1f16dad0580df14e5efabbe5d1e22a120484a5f681261d9a2f63e9143",
+      "last_updated": "2026-03-22T18:20:53.979451"
     },
     "memory.md": {
       "original_url": "https://code.claude.com/docs/en/memory.md",
@@ -244,8 +244,8 @@
     "monitoring-usage.md": {
       "original_url": "https://code.claude.com/docs/en/monitoring-usage.md",
       "title": "Monitoring",
-      "hash": "b4168131af5f99a08e362c652a710c2cdf532188b22b4a15f96d6fb9dc3a4a13",
-      "last_updated": "2026-02-19T03:47:58.853956"
+      "hash": "ff9fd80d49f3f09e648fa1a80e82c59ba30e4a5db87299256312272b14b2f718",
+      "last_updated": "2026-03-22T18:20:56.342403"
     },
     "network-config.md": {
       "original_url": "https://code.claude.com/docs/en/network-config.md",
@@ -286,8 +286,8 @@
     "plugins-reference.md": {
       "original_url": "https://code.claude.com/docs/en/plugins-reference.md",
       "title": "Plugins reference",
-      "hash": "f03a9b133834d4f4f80f26b795c73ca214302100141426ccb951a4e66f19aaed",
-      "last_updated": "2026-03-19T01:08:49.379086"
+      "hash": "c98a8d83b405b3f68e85896409f9aa452041f8985fe7d924d93b51a7491d19cd",
+      "last_updated": "2026-03-22T18:21:00.483472"
     },
     "quickstart.md": {
       "original_url": "https://code.claude.com/docs/en/quickstart.md",
@@ -328,8 +328,8 @@
     "settings.md": {
       "original_url": "https://code.claude.com/docs/en/settings.md",
       "title": "Claude Code settings",
-      "hash": "fa98eea5bfd44dbc41292be1d6f92771f9670e454402d3b0949f788e0ab1ee7d",
-      "last_updated": "2026-03-21T01:01:08.258096"
+      "hash": "5a8345ce8eedadebde807791e572953c46342402ea3eecdd99e028223eb8974e",
+      "last_updated": "2026-03-22T18:21:04.635943"
     },
     "setup.md": {
       "original_url": "https://code.claude.com/docs/en/setup.md",
@@ -364,8 +364,8 @@
     "terminal-config.md": {
       "original_url": "https://code.claude.com/docs/en/terminal-config.md",
       "title": "Optimize your terminal setup",
-      "hash": "21a20b1b92a0fe4451c7f8f323f6cab3b38c505cd9470dbb30f7918491c6615d",
-      "last_updated": "2026-03-18T06:49:24.254659"
+      "hash": "d81cbaf363ca69a2763b17ae54a7f49c61e0347d40f24c2798c1211b5a8afc9d",
+      "last_updated": "2026-03-22T18:21:08.218586"
     },
     "third-party-integrations.md": {
       "original_url": "https://code.claude.com/docs/en/third-party-integrations.md",
@@ -412,8 +412,8 @@
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2026-03-21T04:22:45.643576",
-    "fetch_duration_seconds": 39.679424,
+    "last_fetch_completed": "2026-03-22T18:21:11.870129",
+    "fetch_duration_seconds": 39.853129,
     "total_pages_discovered": 67,
     "pages_fetched_successfully": 69,
     "pages_failed": 0,
@@ -422,7 +422,7 @@
     "total_files": 68,
     "fetch_tool_version": "4.0"
   },
-  "last_updated": "2026-03-21T04:22:45.643737",
+  "last_updated": "2026-03-22T18:21:11.870296",
   "base_url": "https://raw.githubusercontent.com/doublefx/magic-claude-code-docs/main/plugin/docs/",
   "github_repository": "doublefx/magic-claude-code-docs",
   "github_ref": "main",
