@@ -34,8 +34,8 @@
       "original_url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
       "original_raw_url": "https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md",
       "source": "claude-code-repository",
-      "hash": "d46412f25088414db6471c2b2607d4d568747286b2c906f8cc625bff892ce1d6",
-      "last_updated": "2026-03-21T01:01:15.553443"
+      "hash": "558cfabf7a74f8a43e30d538e6079c8620addf897fe513907f4409a3ce2e917f",
+      "last_updated": "2026-03-25T06:49:47.103375"
     },
     "channels.md": {
       "original_url": "https://code.claude.com/docs/en/channels.md",
@@ -202,8 +202,8 @@
     "keybindings.md": {
       "original_url": "https://code.claude.com/docs/en/keybindings.md",
       "title": "Customize keyboard shortcuts",
-      "hash": "290af2a807a1663aede435c910a1ab0267757d661027be919cf58e58deeb3f42",
-      "last_updated": "2026-03-17T21:27:04.515063"
+      "hash": "1ca8cde7270d0c526d0c2621c8e5831728209cfe6bdd1c1a1c30821df80ff793",
+      "last_updated": "2026-03-25T06:49:25.045076"
     },
     "legal-and-compliance.md": {
       "original_url": "https://code.claude.com/docs/en/legal-and-compliance.md",
@@ -304,8 +304,8 @@
     "quickstart.md": {
       "original_url": "https://code.claude.com/docs/en/quickstart.md",
       "title": "Quickstart",
-      "hash": "226a9c8c6c8ec8f350a915eaf53d555aaf092a538156352395d59b02d88de189",
-      "last_updated": "2026-03-14T04:27:22.257245"
+      "hash": "384d905d82b31f25052a25bc450b3484b4362cd1ac1b7d1371f69a98a7ad4bb4",
+      "last_updated": "2026-03-25T06:49:35.551249"
     },
     "remote-control.md": {
       "original_url": "https://code.claude.com/docs/en/remote-control.md",
@@ -430,8 +430,8 @@
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2026-03-25T01:07:57.105006",
-    "fetch_duration_seconds": 41.934303,
+    "last_fetch_completed": "2026-03-25T06:49:47.103726",
+    "fetch_duration_seconds": 42.370214,
     "total_pages_discovered": 70,
     "pages_fetched_successfully": 72,
     "pages_failed": 0,
@@ -440,7 +440,7 @@
     "total_files": 71,
     "fetch_tool_version": "4.0"
   },
-  "last_updated": "2026-03-25T01:07:57.105175",
+  "last_updated": "2026-03-25T06:49:47.103912",
   "base_url": "https://raw.githubusercontent.com/doublefx/magic-claude-code-docs/main/plugin/docs/",
   "github_repository": "doublefx/magic-claude-code-docs",
   "github_ref": "main",
