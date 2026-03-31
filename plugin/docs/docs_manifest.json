@@ -3,8 +3,8 @@
     "agent-teams.md": {
       "original_url": "https://code.claude.com/docs/en/agent-teams.md",
       "title": "Orchestrate teams of Claude Code sessions",
-      "hash": "187050646efc7e4d3537f019ca4ef16efda03c8c9ae5bbfb3fd2901a1bae3f3d",
-      "last_updated": "2026-03-28T01:06:19.242904"
+      "hash": "6c4856414ed2e7faec95913c0bbe7f55bbcf7824a573ad3b20f74c02a4868ab9",
+      "last_updated": "2026-03-31T15:57:21.839625"
     },
     "amazon-bedrock.md": {
       "original_url": "https://code.claude.com/docs/en/amazon-bedrock.md",
@@ -34,8 +34,8 @@
       "original_url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
       "original_raw_url": "https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md",
       "source": "claude-code-repository",
-      "hash": "4fbfffa1ee0cadb5af82367e91a8b24ed0af74bfe6d5ec7f946cac8079d6629d",
-      "last_updated": "2026-03-31T01:14:50.562368"
+      "hash": "5e4309f876c77fd5ecf65aee30b6e9166dbfbc3750c080b3730acad744e54997",
+      "last_updated": "2026-03-31T15:58:05.585788"
     },
     "channels.md": {
       "original_url": "https://code.claude.com/docs/en/channels.md",
@@ -124,8 +124,8 @@
     "desktop.md": {
       "original_url": "https://code.claude.com/docs/en/desktop.md",
       "title": "Use Claude Code Desktop",
-      "hash": "a280c81f22db7a7a9ca769c58358429e4d95434fc19a49eb1692f672b4add3db",
-      "last_updated": "2026-03-30T21:32:05.650921"
+      "hash": "c5b4a188827a04834f435441c2e6f497e51350641d5d824bba9d6f5593c30d68",
+      "last_updated": "2026-03-31T15:57:33.494670"
     },
     "desktop-quickstart.md": {
       "original_url": "https://code.claude.com/docs/en/desktop-quickstart.md",
@@ -400,8 +400,8 @@
     "sub-agents.md": {
       "original_url": "https://code.claude.com/docs/en/sub-agents.md",
       "title": "Create custom subagents",
-      "hash": "6870801258cb980dd32dcd04b7dd90cff04faedbe99e368280f47e98149e2e61",
-      "last_updated": "2026-03-27T01:12:47.467168"
+      "hash": "2d70a10cca0fb886670e914c54f0e39edf501545dc3471985ff99bbf19079411",
+      "last_updated": "2026-03-31T15:58:00.681573"
     },
     "terminal-config.md": {
       "original_url": "https://code.claude.com/docs/en/terminal-config.md",
@@ -460,8 +460,8 @@
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2026-03-31T01:14:50.562693",
-    "fetch_duration_seconds": 55.002522,
+    "last_fetch_completed": "2026-03-31T15:58:05.586140",
+    "fetch_duration_seconds": 43.926147,
     "total_pages_discovered": 75,
     "pages_fetched_successfully": 77,
     "pages_failed": 0,
@@ -470,7 +470,7 @@
     "total_files": 76,
     "fetch_tool_version": "4.0"
   },
-  "last_updated": "2026-03-31T01:14:50.562847",
+  "last_updated": "2026-03-31T15:58:05.586331",
   "base_url": "https://raw.githubusercontent.com/doublefx/magic-claude-code-docs/main/plugin/docs/",
   "github_repository": "doublefx/magic-claude-code-docs",
   "github_ref": "main",
