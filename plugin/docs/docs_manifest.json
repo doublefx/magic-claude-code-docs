@@ -154,8 +154,8 @@
     "env-vars.md": {
       "original_url": "https://code.claude.com/docs/en/env-vars.md",
       "title": "Environment variables",
-      "hash": "b44e44fff75a774f2b462e7dee2ec0a64f0e860b8383400ede349390c183b37b",
-      "last_updated": "2026-04-03T01:14:07.731047"
+      "hash": "84f5dfdb14fc1d1e662c75b88b576637f0b1e48d082a4e495ef68050a2aaa98d",
+      "last_updated": "2026-04-04T04:44:11.901176"
     },
     "fast-mode.md": {
       "original_url": "https://code.claude.com/docs/en/fast-mode.md",
@@ -457,6 +457,24 @@
       "hash": "a215d5ded10b20b8ae6b91e00d5352f0ed292bda04422cd31d3af86ac9198a04",
       "last_updated": "2026-04-03T21:23:41.373635"
     },
+    "2026-w13.md": {
+      "original_url": "https://code.claude.com/docs/en/whats-new/2026-w13.md",
+      "title": "Week 13 \u00b7 March 23\u201327, 2026",
+      "hash": "0e9f2b3e43911aea379e493505ec817953ba2cbadd89566caeaa286d14c1122b",
+      "last_updated": "2026-04-04T04:44:41.750113"
+    },
+    "2026-w14.md": {
+      "original_url": "https://code.claude.com/docs/en/whats-new/2026-w14.md",
+      "title": "Week 14 \u00b7 March 30 \u2013 April 3, 2026",
+      "hash": "fb9c317d9dff35c4ea0f65942ef4186f73e02927c89760d8cf9b9fc871c779b0",
+      "last_updated": "2026-04-04T04:44:42.371129"
+    },
+    "index.md": {
+      "original_url": "https://code.claude.com/docs/en/whats-new/index.md",
+      "title": "What's new",
+      "hash": "d0a901e3239c4e8ac9c9e1128feaa2384761d3519ba0dbe059ce4f0f4b51637b",
+      "last_updated": "2026-04-04T04:44:42.939456"
+    },
     "zero-data-retention.md": {
       "original_url": "https://code.claude.com/docs/en/zero-data-retention.md",
       "title": "Zero data retention",
@@ -472,17 +490,17 @@
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2026-04-04T01:07:57.971201",
-    "fetch_duration_seconds": 45.499085,
-    "total_pages_discovered": 77,
-    "pages_fetched_successfully": 79,
+    "last_fetch_completed": "2026-04-04T04:44:43.601656",
+    "fetch_duration_seconds": 46.38285,
+    "total_pages_discovered": 80,
+    "pages_fetched_successfully": 82,
     "pages_failed": 0,
     "failed_pages": [],
     "llms_txt_url": "https://code.claude.com/docs/llms.txt",
-    "total_files": 78,
+    "total_files": 81,
     "fetch_tool_version": "4.0"
   },
-  "last_updated": "2026-04-04T01:07:57.971359",
+  "last_updated": "2026-04-04T04:44:43.601821",
   "base_url": "https://raw.githubusercontent.com/doublefx/magic-claude-code-docs/main/plugin/docs/",
   "github_repository": "doublefx/magic-claude-code-docs",
   "github_ref": "main",
