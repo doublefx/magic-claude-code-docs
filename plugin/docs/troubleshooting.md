@@ -593,6 +593,8 @@ export PATH="$HOME/.nvm/versions/node/$(node -v)/bin:$PATH"
 
 WSL1 does not support sandboxing. If you see "Sandboxing requires WSL2", you need to upgrade to WSL2 or run Claude Code without sandboxing.
 
+Sandboxed commands cannot launch Windows binaries such as `cmd.exe`, `powershell.exe`, or executables under `/mnt/c/`. WSL hands these off to the Windows host over a Unix socket, which the sandbox blocks. If a command needs to invoke a Windows binary, add it to [`excludedCommands`](/en/settings#sandbox-settings) so it runs outside the sandbox.
+
 ### Permission errors during installation
 
 If the native installer fails with permission errors, the target directory may not be writable. See [Check directory permissions](#check-directory-permissions).
@@ -639,6 +641,28 @@ If you see `API Error: 403 {"error":{"type":"forbidden","message":"Request not a
 * **Claude Pro/Max users**: verify your subscription is active at [claude.ai/settings](https://claude.ai/settings)
 * **Console users**: confirm your account has the "Claude Code" or "Developer" role assigned by your admin
 * **Behind a proxy**: corporate proxies can interfere with API requests. See [network configuration](/en/network-config) for proxy setup.
+
+### Model not found or not accessible
+
+If you see `There's an issue with the selected model (...). It may not exist or you may not have access to it`, the API rejected the configured model name.
+
+Common causes:
+
+* A typo in the model name passed to `--model`
+* A stale or deprecated model ID saved in your settings
+* An API key without access to that model on your current usage tier
+
+Check where the model is set, in [priority order](/en/model-config#setting-your-model):
+
+* The `--model` flag
+* The `ANTHROPIC_MODEL` environment variable
+* The `model` field in `.claude/settings.local.json`
+* The `model` field in your project's `.claude/settings.json`
+* The `model` field in `~/.claude/settings.json`
+
+To clear a stale value, remove the `model` field from your settings or unset `ANTHROPIC_MODEL`, and Claude Code will fall back to the default model for your account.
+
+To browse models available to your account, start `claude` interactively and run `/model` to open the picker. For Vertex AI deployments, see [the Vertex AI troubleshooting section](/en/google-vertex-ai#troubleshooting).
 
 ### "This organization has been disabled" with an active subscription
 
