@@ -60,6 +60,12 @@
       "hash": "e511a8d79c07e66369c683e410dd79cb9a1b87ba6702f70a64161f56ece4c003",
       "last_updated": "2026-04-08T18:59:49.714886"
     },
+    "observability.md": {
+      "original_url": "https://code.claude.com/docs/en/agent-sdk/observability.md",
+      "title": "Observability with OpenTelemetry",
+      "hash": "c929a4b2401cfc2659af5a72e637647343943120adae8da5f87660a48edd3763",
+      "last_updated": "2026-04-08T21:33:00.986882"
+    },
     "overview.md": {
       "original_url": "https://code.claude.com/docs/en/overview.md",
       "title": "Claude Code overview",
@@ -105,8 +111,8 @@
     "skills.md": {
       "original_url": "https://code.claude.com/docs/en/skills.md",
       "title": "Extend Claude with skills",
-      "hash": "01e693280afe2cd36529793f852e4fc7b5b75fb455a2e224083e10b0e172d995",
-      "last_updated": "2026-04-08T19:00:45.693869"
+      "hash": "9c060f5d4a05a34e9fe79e3fa4a5f61fc89caeefd9c46c27e378c3d778c9b05f",
+      "last_updated": "2026-04-08T21:33:53.274496"
     },
     "slash-commands.md": {
       "original_url": "https://code.claude.com/docs/en/agent-sdk/slash-commands.md",
@@ -526,8 +532,8 @@
     "statusline.md": {
       "original_url": "https://code.claude.com/docs/en/statusline.md",
       "title": "Customize your status line",
-      "hash": "fd65974e5587345a845152561043fc3477071672a5a8ea26f7e49f02e54cd037",
-      "last_updated": "2026-04-08T19:00:46.976238"
+      "hash": "effab8d11e4f0046a74ceabc36b222b243f20bb0d24acb69073bbaeb91ccbddd",
+      "last_updated": "2026-04-08T21:33:54.534958"
     },
     "sub-agents.md": {
       "original_url": "https://code.claude.com/docs/en/sub-agents.md",
@@ -622,17 +628,17 @@
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2026-04-08T19:00:57.053850",
-    "fetch_duration_seconds": 73.287347,
-    "total_pages_discovered": 109,
-    "pages_fetched_successfully": 111,
+    "last_fetch_completed": "2026-04-08T21:34:03.648375",
+    "fetch_duration_seconds": 69.273012,
+    "total_pages_discovered": 110,
+    "pages_fetched_successfully": 112,
     "pages_failed": 0,
     "failed_pages": [],
     "llms_txt_url": "https://code.claude.com/docs/llms.txt",
-    "total_files": 103,
+    "total_files": 104,
     "fetch_tool_version": "4.0"
   },
-  "last_updated": "2026-04-08T19:00:57.054017",
+  "last_updated": "2026-04-08T21:34:03.648538",
   "base_url": "https://raw.githubusercontent.com/doublefx/magic-claude-code-docs/main/plugin/docs/",
   "github_repository": "doublefx/magic-claude-code-docs",
   "github_ref": "main",
