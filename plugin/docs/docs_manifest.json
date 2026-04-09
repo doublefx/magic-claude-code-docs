@@ -111,8 +111,8 @@
     "skills.md": {
       "original_url": "https://code.claude.com/docs/en/skills.md",
       "title": "Extend Claude with skills",
-      "hash": "9c060f5d4a05a34e9fe79e3fa4a5f61fc89caeefd9c46c27e378c3d778c9b05f",
-      "last_updated": "2026-04-08T21:33:53.274496"
+      "hash": "268bfb971488551c60c514fce4b8250ee8d4a53ebc8ab70188f0cab0e7d2ccbd",
+      "last_updated": "2026-04-09T01:06:15.110508"
     },
     "slash-commands.md": {
       "original_url": "https://code.claude.com/docs/en/agent-sdk/slash-commands.md",
@@ -208,8 +208,8 @@
       "original_url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
       "original_raw_url": "https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md",
       "source": "claude-code-repository",
-      "hash": "56c4af3bd98fbb3deea829a390d2614bd82603579257e6cc61e0421eebb50e08",
-      "last_updated": "2026-04-08T05:04:44.769907"
+      "hash": "b2ec686eda2297e2e5d193a904ba776c123d04c20a919901c82260fd1b3ff8f6",
+      "last_updated": "2026-04-09T01:06:25.844726"
     },
     "channels.md": {
       "original_url": "https://code.claude.com/docs/en/channels.md",
@@ -238,8 +238,8 @@
     "claude-code-on-the-web.md": {
       "original_url": "https://code.claude.com/docs/en/claude-code-on-the-web.md",
       "title": "Use Claude Code on the web",
-      "hash": "13fe7d4f795ceb753fab3b544526c7705d0460a48c8c477fddeeb7a3fdfb4a09",
-      "last_updated": "2026-04-08T19:00:08.369555"
+      "hash": "f827f1c7698d60c8c9fecde82a7bdc29f2d108e6a038d84b68ec43e934dbca9f",
+      "last_updated": "2026-04-09T01:05:42.192316"
     },
     "claude-directory.md": {
       "original_url": "https://code.claude.com/docs/en/claude-directory.md",
@@ -262,8 +262,8 @@
     "commands.md": {
       "original_url": "https://code.claude.com/docs/en/commands.md",
       "title": "Built-in commands",
-      "hash": "9a3014fd06000067f58ec134cedbf1be6c64f2b1b82159b742a654bdba3c2ccf",
-      "last_updated": "2026-04-08T19:00:11.119634"
+      "hash": "59429b6d18b6bf5afbf52e4fc7ffb9098355ae6d06c3c51cc1789ba1f66b0354",
+      "last_updated": "2026-04-09T01:05:44.594664"
     },
     "common-workflows.md": {
       "original_url": "https://code.claude.com/docs/en/common-workflows.md",
@@ -562,8 +562,8 @@
     "troubleshooting.md": {
       "original_url": "https://code.claude.com/docs/en/troubleshooting.md",
       "title": "Troubleshooting",
-      "hash": "14c398c424c4734a9c8580aed166d9b66eb848155ade4c93ffd522e08d869734",
-      "last_updated": "2026-04-08T19:00:50.619097"
+      "hash": "945a914b705847020a7e241ea4f9adfa41637a8613d98945eb0fd387f9012fcf",
+      "last_updated": "2026-04-09T01:06:19.420505"
     },
     "ultraplan.md": {
       "original_url": "https://code.claude.com/docs/en/ultraplan.md",
@@ -628,8 +628,8 @@
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2026-04-08T21:34:03.648375",
-    "fetch_duration_seconds": 69.273012,
+    "last_fetch_completed": "2026-04-09T01:06:25.845078",
+    "fetch_duration_seconds": 67.811134,
     "total_pages_discovered": 110,
     "pages_fetched_successfully": 112,
     "pages_failed": 0,
@@ -638,7 +638,7 @@
     "total_files": 104,
     "fetch_tool_version": "4.0"
   },
-  "last_updated": "2026-04-08T21:34:03.648538",
+  "last_updated": "2026-04-09T01:06:25.845245",
   "base_url": "https://raw.githubusercontent.com/doublefx/magic-claude-code-docs/main/plugin/docs/",
   "github_repository": "doublefx/magic-claude-code-docs",
   "github_ref": "main",
