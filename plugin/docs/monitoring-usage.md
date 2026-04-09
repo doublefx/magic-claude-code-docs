@@ -118,6 +118,8 @@ Tracing is off by default. To enable it, set both `CLAUDE_CODE_ENABLE_TELEMETRY=
 
 Spans redact user prompt text and tool content by default. Set `OTEL_LOG_USER_PROMPTS=1` and `OTEL_LOG_TOOL_CONTENT=1` to include them.
 
+When tracing is active, Bash subprocesses automatically inherit a `TRACEPARENT` environment variable containing the W3C trace context of the active tool execution span. This lets any subprocess that reads `TRACEPARENT` parent its own spans under the same trace, enabling end-to-end distributed tracing through scripts and commands that Claude runs.
+
 ### Dynamic headers
 
 For enterprise environments that require dynamic authentication, you can configure a script to generate headers dynamically:
@@ -446,7 +448,7 @@ Logged when an API request to Claude fails.
 * `error`: Error message
 * `status_code`: HTTP status code as a string, or `"undefined"` for non-HTTP errors
 * `duration_ms`: Request duration in milliseconds
-* `attempt`: Attempt number (for retried requests)
+* `attempt`: Total number of attempts made, including the initial request (`1` means no retries occurred)
 * `speed`: `"fast"` or `"normal"`, indicating whether fast mode was active
 
 #### Tool decision event
@@ -498,6 +500,14 @@ Common alerts to consider:
 * High session volume from specific users
 
 All metrics can be segmented by `user.account_uuid`, `user.account_id`, `organization.id`, `session.id`, `model`, and `app.version`.
+
+### Detect retry exhaustion
+
+Claude Code retries failed API requests internally and emits a single `claude_code.api_error` event only after it gives up, so the event itself is the terminal signal for that request. Intermediate retry attempts are not logged as separate events.
+
+The `attempt` attribute on the event records how many attempts were made in total. A value greater than `CLAUDE_CODE_MAX_RETRIES` (default `10`) indicates the request exhausted all retries on a transient error. A lower value indicates a non-retryable error such as a `400` response.
+
+To distinguish a session that recovered from one that stalled, group events by `session.id` and check whether a later `api_request` event exists after the error.
 
 ### Event analysis
 
