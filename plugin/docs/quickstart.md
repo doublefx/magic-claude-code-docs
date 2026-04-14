@@ -14,946 +14,314 @@
 
 # Quickstart
 
-> Welcome to Claude Code!
+> Get started with the Python or TypeScript Agent SDK to build AI agents that work autonomously
 
-export const InstallConfigurator = () => {
-  const TERM = {
-    mac: {
-      label: 'macOS / Linux',
-      cmd: 'curl -fsSL https://claude.ai/install.sh | bash'
-    },
-    win: {
-      label: 'Windows'
-    },
-    brew: {
-      label: 'Homebrew',
-      cmd: 'brew install --cask claude-code'
-    },
-    winget: {
-      label: 'WinGet',
-      cmd: 'winget install Anthropic.ClaudeCode'
+Use the Agent SDK to build an AI agent that reads your code, finds bugs, and fixes them, all without manual intervention.
+
+**What you'll do:**
+
+1. Set up a project with the Agent SDK
+2. Create a file with some buggy code
+3. Run an agent that finds and fixes the bugs automatically
+
+## Prerequisites
+
+* **Node.js 18+** or **Python 3.10+**
+* An **Anthropic account** ([sign up here](https://platform.claude.com/))
+
+## Setup
+
+<Steps>
+  <Step title="Create a project folder">
+    Create a new directory for this quickstart:
+
+    ```bash  theme={null}
+    mkdir my-agent && cd my-agent
+    ```
+
+    For your own projects, you can run the SDK from any folder; it will have access to files in that directory and its subdirectories by default.
+  </Step>
+
+  <Step title="Install the SDK">
+    Install the Agent SDK package for your language:
+
+    <Tabs>
+      <Tab title="TypeScript">
+        ```bash  theme={null}
+        npm install @anthropic-ai/claude-agent-sdk
+        ```
+      </Tab>
+
+      <Tab title="Python (uv)">
+        [uv Python package manager](https://docs.astral.sh/uv/) is a fast Python package manager that handles virtual environments automatically:
+
+        ```bash  theme={null}
+        uv init && uv add claude-agent-sdk
+        ```
+      </Tab>
+
+      <Tab title="Python (pip)">
+        Create a virtual environment first, then install:
+
+        ```bash  theme={null}
+        python3 -m venv .venv && source .venv/bin/activate
+        pip3 install claude-agent-sdk
+        ```
+      </Tab>
+    </Tabs>
+  </Step>
+
+  <Step title="Set your API key">
+    Get an API key from the [Claude Console](https://platform.claude.com/), then create a `.env` file in your project directory:
+
+    ```bash  theme={null}
+    ANTHROPIC_API_KEY=your-api-key
+    ```
+
+    The SDK also supports authentication via third-party API providers:
+
+    * **Amazon Bedrock**: set `CLAUDE_CODE_USE_BEDROCK=1` environment variable and configure AWS credentials
+    * **Google Vertex AI**: set `CLAUDE_CODE_USE_VERTEX=1` environment variable and configure Google Cloud credentials
+    * **Microsoft Azure**: set `CLAUDE_CODE_USE_FOUNDRY=1` environment variable and configure Azure credentials
+
+    See the setup guides for [Bedrock](/en/amazon-bedrock), [Vertex AI](/en/google-vertex-ai), or [Azure AI Foundry](/en/microsoft-foundry) for details.
+
+    <Note>
+      Unless previously approved, Anthropic does not allow third party developers to offer claude.ai login or rate limits for their products, including agents built on the Claude Agent SDK. Please use the API key authentication methods described in this document instead.
+    </Note>
+  </Step>
+</Steps>
+
+## Create a buggy file
+
+This quickstart walks you through building an agent that can find and fix bugs in code. First, you need a file with some intentional bugs for the agent to fix. Create `utils.py` in the `my-agent` directory and paste the following code:
+
+```python  theme={null}
+def calculate_average(numbers):
+    total = 0
+    for num in numbers:
+        total += num
+    return total / len(numbers)
+
+
+def get_user_name(user):
+    return user["name"].upper()
+```
+
+This code has two bugs:
+
+1. `calculate_average([])` crashes with division by zero
+2. `get_user_name(None)` crashes with a TypeError
+
+## Build an agent that finds and fixes bugs
+
+Create `agent.py` if you're using the Python SDK, or `agent.ts` for TypeScript:
+
+<CodeGroup>
+  ```python Python theme={null}
+  import asyncio
+  from claude_agent_sdk import query, ClaudeAgentOptions, AssistantMessage, ResultMessage
+
+
+  async def main():
+      # Agentic loop: streams messages as Claude works
+      async for message in query(
+          prompt="Review utils.py for bugs that would cause crashes. Fix any issues you find.",
+          options=ClaudeAgentOptions(
+              allowed_tools=["Read", "Edit", "Glob"],  # Tools Claude can use
+              permission_mode="acceptEdits",  # Auto-approve file edits
+          ),
+      ):
+          # Print human-readable output
+          if isinstance(message, AssistantMessage):
+              for block in message.content:
+                  if hasattr(block, "text"):
+                      print(block.text)  # Claude's reasoning
+                  elif hasattr(block, "name"):
+                      print(f"Tool: {block.name}")  # Tool being called
+          elif isinstance(message, ResultMessage):
+              print(f"Done: {message.subtype}")  # Final result
+
+
+  asyncio.run(main())
+  ```
+
+  ```typescript TypeScript theme={null}
+  import { query } from "@anthropic-ai/claude-agent-sdk";
+
+  // Agentic loop: streams messages as Claude works
+  for await (const message of query({
+    prompt: "Review utils.py for bugs that would cause crashes. Fix any issues you find.",
+    options: {
+      allowedTools: ["Read", "Edit", "Glob"], // Tools Claude can use
+      permissionMode: "acceptEdits" // Auto-approve file edits
     }
-  };
-  const WIN_VARIANTS = {
-    ps: 'irm https://claude.ai/install.ps1 | iex',
-    cmd: 'curl -fsSL https://claude.ai/install.cmd -o install.cmd && install.cmd && del install.cmd'
-  };
-  const TABS = [{
-    key: 'terminal',
-    label: 'Terminal'
-  }, {
-    key: 'desktop',
-    label: 'Desktop'
-  }, {
-    key: 'vscode',
-    label: 'VS Code'
-  }, {
-    key: 'jetbrains',
-    label: 'JetBrains'
-  }];
-  const ALT_TARGETS = {
-    desktop: {
-      name: 'Desktop',
-      installLabel: 'Download the app',
-      installHref: 'https://claude.com/download?utm_source=claude_code&utm_medium=docs&utm_content=configurator_desktop_download',
-      guideHref: '/en/desktop-quickstart'
-    },
-    vscode: {
-      name: 'VS Code',
-      installLabel: 'Install from Marketplace',
-      installHref: 'https://marketplace.visualstudio.com/items?itemName=anthropic.claude-code',
-      altCmd: 'code --install-extension anthropic.claude-code',
-      guideHref: '/en/vs-code'
-    },
-    jetbrains: {
-      name: 'JetBrains',
-      installLabel: 'Install from Marketplace',
-      installHref: 'https://plugins.jetbrains.com/plugin/27310-claude-code-beta-',
-      guideHref: '/en/jetbrains'
-    }
-  };
-  const PROVIDERS = [{
-    key: 'anthropic',
-    label: 'Anthropic'
-  }, {
-    key: 'bedrock',
-    label: 'Amazon Bedrock'
-  }, {
-    key: 'foundry',
-    label: 'Microsoft Foundry'
-  }, {
-    key: 'vertex',
-    label: 'Google Vertex AI'
-  }];
-  const PROVIDER_NOTICE = {
-    bedrock: <>
-        <strong>Configure your AWS account first.</strong> Running on Bedrock
-        requires model access enabled in the AWS console and IAM credentials.{' '}
-        <a href="/en/amazon-bedrock">Bedrock setup guide →</a>
-      </>,
-    vertex: <>
-        <strong>Configure your GCP project first.</strong> Running on Vertex AI
-        requires the Vertex API enabled and a service account with the right
-        permissions.{' '}
-        <a href="/en/google-vertex-ai">Vertex setup guide →</a>
-      </>,
-    foundry: <>
-        <strong>Configure your Azure resources first.</strong> Running on
-        Microsoft Foundry requires an Azure subscription with a Foundry resource
-        and model deployments provisioned.{' '}
-        <a href="/en/microsoft-foundry">Foundry setup guide →</a>
-      </>
-  };
-  const iconCheck = (size = 14) => <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-      <polyline points="20 6 9 17 4 12" />
-    </svg>;
-  const iconCopy = (size = 14) => <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-      <rect x="9" y="9" width="13" height="13" rx="2" />
-      <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
-    </svg>;
-  const iconArrowRight = (size = 13) => <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-      <line x1="5" y1="12" x2="19" y2="12" />
-      <polyline points="12 5 19 12 12 19" />
-    </svg>;
-  const iconArrowUpRight = (size = 14) => <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-      <line x1="7" y1="17" x2="17" y2="7" />
-      <polyline points="7 7 17 7 17 17" />
-    </svg>;
-  const iconInfo = (size = 16) => <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-      <circle cx="12" cy="12" r="10" />
-      <line x1="12" y1="16" x2="12" y2="12" />
-      <line x1="12" y1="8" x2="12.01" y2="8" />
-    </svg>;
-  const [target, setTarget] = useState('terminal');
-  const [team, setTeam] = useState(false);
-  const [provider, setProvider] = useState('anthropic');
-  const [pkg, setPkg] = useState(() => (/Win/).test(navigator.userAgent) ? 'win' : 'mac');
-  const [winCmd, setWinCmd] = useState(false);
-  const [copied, setCopied] = useState(null);
-  const copyTimer = useRef(null);
-  const handleCopy = async (text, key) => {
-    try {
-      await navigator.clipboard.writeText(text);
-    } catch {
-      const ta = document.createElement('textarea');
-      ta.value = text;
-      document.body.appendChild(ta);
-      ta.select();
-      document.execCommand('copy');
-      document.body.removeChild(ta);
-    }
-    clearTimeout(copyTimer.current);
-    setCopied(key);
-    copyTimer.current = setTimeout(() => setCopied(null), 1800);
-  };
-  const cardBodyCmd = (cmd, prompt) => {
-    const on = copied === 'term';
-    return <div className="cc-ic-card-body">
-        <span className="cc-ic-prompt">{prompt || '$'}</span>
-        <div className="cc-ic-cmd">{cmd}</div>
-        <button type="button" className={'cc-ic-copy' + (on ? ' cc-ic-copied' : '')} onClick={() => handleCopy(cmd, 'term')}>
-          {on ? iconCheck(13) : iconCopy(13)}
-          <span>{on ? 'Copied' : 'Copy'}</span>
-        </button>
-      </div>;
-  };
-  const isWinInstaller = pkg === 'win';
-  const isWinPrompt = pkg === 'win' || pkg === 'winget';
-  const terminalCmd = isWinInstaller ? WIN_VARIANTS[winCmd ? 'cmd' : 'ps'] : TERM[pkg].cmd;
-  const alt = ALT_TARGETS[target];
-  const showNotice = team && provider !== 'anthropic';
-  const STYLES = `
-.cc-ic {
-  --ic-slate: #141413;
-  --ic-clay: #d97757;
-  --ic-clay-deep: #c6613f;
-  --ic-gray-000: #ffffff;
-  --ic-gray-150: #f0eee6;
-  --ic-gray-550: #73726c;
-  --ic-gray-700: #3d3d3a;
-  --ic-border-subtle: rgba(31, 30, 29, 0.08);
-  --ic-border-default: rgba(31, 30, 29, 0.15);
-  --ic-border-strong: rgba(31, 30, 29, 0.3);
-  --ic-font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, 'Courier New', monospace;
-  font-family: 'Anthropic Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  font-size: 14px; line-height: 1.5; color: var(--ic-slate);
-  margin: 8px 0 32px;
-}
-.dark .cc-ic {
-  --ic-slate: #f0eee6;
-  --ic-gray-000: #262624;
-  --ic-gray-150: #1f1e1d;
-  --ic-gray-550: #91908a;
-  --ic-gray-700: #bfbdb4;
-  --ic-border-subtle: rgba(240, 238, 230, 0.08);
-  --ic-border-default: rgba(240, 238, 230, 0.14);
-  --ic-border-strong: rgba(240, 238, 230, 0.28);
-}
-.dark .cc-ic-check { background: transparent; }
-.dark .cc-ic-card { border: 0.5px solid var(--ic-border-subtle); }
-.dark .cc-ic-p-pill.cc-ic-active { box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); }
-.cc-ic *, .cc-ic *::before, .cc-ic *::after { box-sizing: border-box; }
-.cc-ic a { text-decoration: none; }
-.cc-ic a:not([class]) { color: inherit; }
-.cc-ic button { font-family: inherit; cursor: pointer; }
-
-.cc-ic-tab-strip {
-  display: inline-flex; gap: 2px;
-  padding: 4px; background: var(--ic-gray-150);
-  border-radius: 10px; overflow-x: auto;
-  max-width: 100%;
-}
-.cc-ic-tab {
-  appearance: none; background: none; border: none;
-  padding: 10px 18px; font-size: 15px; font-weight: 430;
-  color: var(--ic-gray-550); border-radius: 7px;
-  white-space: nowrap;
-  transition: color 0.12s, background-color 0.12s;
-}
-.cc-ic-tab:hover { color: var(--ic-gray-700); }
-.cc-ic-tab.cc-ic-active {
-  color: var(--ic-slate); font-weight: 500;
-  background: var(--ic-gray-000);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
-}
-.dark .cc-ic-tab.cc-ic-active { box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4); }
-
-.cc-ic-team-wrap { padding: 16px 0 20px; }
-.cc-ic-team-toggle {
-  display: flex; align-items: center; gap: 12px; font-family: inherit;
-  padding: 12px 16px; font-size: 14px; font-weight: 430;
-  color: var(--ic-gray-700); cursor: pointer; user-select: none;
-  width: fit-content; background: var(--ic-gray-150);
-  border: 0.5px solid var(--ic-border-subtle); border-radius: 8px;
-  transition: border-color 0.15s;
-}
-.cc-ic-team-toggle:hover { border-color: var(--ic-border-default); }
-.cc-ic-team-toggle.cc-ic-checked {
-  background: rgba(217, 119, 87, 0.08);
-  border-color: rgba(217, 119, 87, 0.25);
-}
-.cc-ic-check {
-  width: 16px; height: 16px;
-  border: 1px solid var(--ic-border-strong); border-radius: 4px;
-  background: var(--ic-gray-000);
-  display: flex; align-items: center; justify-content: center;
-  flex-shrink: 0;
-}
-.cc-ic-check svg { color: #fff; display: none; }
-.cc-ic-team-toggle.cc-ic-checked .cc-ic-check { background: var(--ic-clay-deep); border-color: var(--ic-clay-deep); }
-.cc-ic-team-toggle.cc-ic-checked .cc-ic-check svg { display: block; }
-
-.cc-ic-team-reveal { display: flex; flex-direction: column; gap: 12px; margin-bottom: 16px; }
-.cc-ic-sales {
-  display: flex; align-items: center; justify-content: space-between;
-  gap: 16px; padding: 14px 16px;
-  background: var(--ic-gray-000); border: 0.5px solid var(--ic-border-default);
-  border-radius: 8px; flex-wrap: wrap;
-}
-.cc-ic-sales-text { font-size: 13px; color: var(--ic-gray-700); line-height: 1.5; flex: 1; min-width: 200px; }
-.cc-ic-sales-text strong { font-weight: 550; color: var(--ic-slate); }
-.cc-ic-sales-actions { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
-.cc-ic-btn-clay {
-  display: inline-flex; align-items: center; gap: 8px;
-  background: var(--ic-clay-deep); color: #fff; border: none;
-  border-radius: 8px; padding: 8px 14px;
-  font-size: 13px; font-weight: 500;
-  transition: background-color 0.15s; white-space: nowrap;
-}
-.cc-ic-btn-clay:hover { background: var(--ic-clay); }
-.cc-ic-btn-ghost {
-  display: inline-flex; align-items: center; gap: 8px;
-  background: transparent; color: var(--ic-gray-700);
-  border: 0.5px solid var(--ic-border-default);
-  border-radius: 8px; padding: 8px 14px;
-  font-size: 13px; font-weight: 500;
-}
-.cc-ic-btn-ghost:hover { background: rgba(0, 0, 0, 0.04); }
-
-.cc-ic-provider-bar {
-  display: flex; align-items: center; gap: 12px;
-  padding: 14px 16px; background: var(--ic-gray-150);
-  border-radius: 8px; font-size: 13px; flex-wrap: wrap;
-}
-.cc-ic-provider-bar .cc-ic-label { color: var(--ic-gray-550); flex-shrink: 0; }
-.cc-ic-provider-pills { display: flex; gap: 4px; flex-wrap: wrap; }
-.cc-ic-p-pill {
-  appearance: none; border: none; background: transparent;
-  padding: 6px 12px; border-radius: 6px;
-  font-size: 13px; font-weight: 430; color: var(--ic-gray-700);
-  white-space: nowrap;
-}
-.cc-ic-p-pill:hover { background: rgba(0, 0, 0, 0.04); }
-.cc-ic-p-pill.cc-ic-active {
-  background: var(--ic-gray-000); color: var(--ic-slate);
-  font-weight: 500; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-}
-.cc-ic-provider-notice {
-  display: flex; padding: 16px 18px;
-  background: var(--ic-gray-000); border: 0.5px solid var(--ic-border-default);
-  border-radius: 8px; gap: 14px; align-items: flex-start;
-}
-.cc-ic-provider-notice > svg { color: var(--ic-gray-550); margin-top: 2px; flex-shrink: 0; }
-.cc-ic-provider-notice-body { font-size: 14px; line-height: 1.55; color: var(--ic-gray-700); }
-.cc-ic-provider-notice-body strong { font-weight: 550; color: var(--ic-slate); }
-.cc-ic-provider-notice-body a { color: var(--ic-clay-deep); font-weight: 500; }
-.cc-ic-provider-notice-body a:hover { text-decoration: underline; }
-
-.cc-ic-card { background: #141413; border-radius: 12px; overflow: hidden; }
-.cc-ic-subtabs {
-  display: flex; align-items: center;
-  background: #1a1918;
-  border-bottom: 0.5px solid rgba(255, 255, 255, 0.08);
-  padding: 0 8px; overflow-x: auto;
-}
-.cc-ic-subtab-spacer { flex: 1; }
-.cc-ic-subtab {
-  appearance: none; background: none; border: none;
-  padding: 12px 16px; font-size: 12px;
-  color: rgba(255, 255, 255, 0.5);
-  position: relative; white-space: nowrap;
-}
-.cc-ic-subtab:hover { color: rgba(255, 255, 255, 0.75); }
-.cc-ic-subtab.cc-ic-active { color: #fff; }
-.cc-ic-subtab.cc-ic-active::after {
-  content: ''; position: absolute;
-  left: 12px; right: 12px; bottom: -0.5px;
-  height: 2px; background: var(--ic-clay);
-}
-.cc-ic-cmd-toggle {
-  display: flex; align-items: center; gap: 8px; font-family: inherit;
-  background: none; border: none;
-  padding: 0 12px; font-size: 11px;
-  color: rgba(255, 255, 255, 0.5);
-  cursor: pointer; user-select: none; white-space: nowrap;
-}
-.cc-ic-cmd-toggle:hover { color: rgba(255, 255, 255, 0.75); }
-.cc-ic-mini-check {
-  width: 12px; height: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.3); border-radius: 3px;
-  display: flex; align-items: center; justify-content: center;
-  flex-shrink: 0;
-}
-.cc-ic-mini-check svg { color: #fff; display: none; }
-.cc-ic-cmd-toggle.cc-ic-checked .cc-ic-mini-check { background: var(--ic-clay-deep); border-color: var(--ic-clay-deep); }
-.cc-ic-cmd-toggle.cc-ic-checked .cc-ic-mini-check svg { display: block; }
-
-.cc-ic-card-body { padding: 24px 26px; display: flex; align-items: flex-start; gap: 14px; }
-.cc-ic-prompt {
-  color: var(--ic-clay); font-family: var(--ic-font-mono);
-  font-size: 17px; user-select: none; padding-top: 2px;
-}
-.cc-ic-cmd {
-  flex: 1; font-family: var(--ic-font-mono);
-  font-size: 17px; color: #f0eee6;
-  line-height: 1.55; white-space: pre-wrap; word-break: break-word;
-}
-.cc-ic-copy {
-  display: inline-flex; align-items: center; gap: 6px;
-  background: rgba(255, 255, 255, 0.08);
-  border: 0.5px solid rgba(255, 255, 255, 0.12);
-  color: rgba(255, 255, 255, 0.85);
-  padding: 7px 13px; border-radius: 8px;
-  font-size: 13px; font-weight: 500; flex-shrink: 0;
-}
-.cc-ic-copy:hover { background: rgba(255, 255, 255, 0.14); }
-.cc-ic-copy.cc-ic-copied { background: var(--ic-clay-deep); border-color: var(--ic-clay-deep); color: #fff; }
-
-.cc-ic-below {
-  margin-top: 12px; font-size: 13px; color: var(--ic-gray-550);
-  display: flex; gap: 16px; flex-wrap: wrap; align-items: baseline;
-}
-.cc-ic-below a { color: var(--ic-gray-700); border-bottom: 0.5px solid var(--ic-border-default); }
-.cc-ic-below a:hover { color: var(--ic-clay-deep); border-bottom-color: var(--ic-clay-deep); }
-.cc-ic-handoff {
-  padding: 20px 22px;
-  background: var(--ic-gray-000);
-  border: 0.5px solid var(--ic-border-default);
-  border-radius: 12px;
-}
-.cc-ic-handoff-head {
-  font-size: 14px; line-height: 1.55; color: var(--ic-gray-700);
-  margin-bottom: 14px;
-}
-.cc-ic-handoff-head strong { font-weight: 550; color: var(--ic-slate); }
-.cc-ic-handoff-actions { display: flex; gap: 10px; flex-wrap: wrap; }
-.cc-ic-handoff-alt {
-  margin-top: 12px; font-size: 12px; color: var(--ic-gray-550);
-}
-.cc-ic-handoff-alt code {
-  font-family: var(--ic-font-mono); font-size: 11px;
-  background: var(--ic-gray-150); padding: 2px 6px;
-  border-radius: 4px; color: var(--ic-gray-700);
-}
-.cc-ic-copy-sm {
-  appearance: none; border: none;
-  display: inline-flex; align-items: center; justify-content: center;
-  width: 22px; height: 22px;
-  margin-left: 4px; vertical-align: middle;
-  background: var(--ic-gray-150); color: var(--ic-gray-550);
-  border-radius: 4px;
-  transition: color 0.1s, background-color 0.1s;
-}
-.cc-ic-copy-sm:hover { color: var(--ic-gray-700); background: var(--ic-border-default); }
-.cc-ic-copy-sm.cc-ic-copied { background: var(--ic-clay-deep); color: #fff; }
-
-@media (max-width: 720px) {
-  .cc-ic-tab { padding: 12px 14px; font-size: 14px; }
-  .cc-ic-sales-actions { width: 100%; }
-  .cc-ic-card-body { padding: 20px; }
-  .cc-ic-cmd { font-size: 15px; }
-}
-`;
-  return <div className="cc-ic not-prose">
-      <style>{STYLES}</style>
-
-      {}
-      <div className="cc-ic-tab-strip" role="tablist">
-        {TABS.map(t => <button key={t.key} type="button" role="tab" aria-selected={target === t.key} className={'cc-ic-tab' + (target === t.key ? ' cc-ic-active' : '')} onClick={() => setTarget(t.key)}>
-            {t.label}
-          </button>)}
-      </div>
-
-      {}
-      <div className="cc-ic-team-wrap">
-        <button type="button" role="switch" aria-checked={team} className={'cc-ic-team-toggle' + (team ? ' cc-ic-checked' : '')} onClick={() => setTeam(!team)}>
-          <span className="cc-ic-check">{iconCheck(11)}</span>
-          <span>
-            I’m buying for a team or company (SSO, AWS/Azure/GCP, central billing)
-          </span>
-        </button>
-      </div>
-
-      {}
-      {team && <div className="cc-ic-team-reveal">
-          <div className="cc-ic-sales">
-            <div className="cc-ic-sales-text">
-              <strong>Set up your team:</strong> self-serve or talk to sales.
-            </div>
-            <div className="cc-ic-sales-actions">
-              <a href="https://claude.ai/upgrade?initialPlanType=team&amp;utm_source=claude_code&amp;utm_medium=docs&amp;utm_content=configurator_team_get_started" className="cc-ic-btn-ghost">
-                Get started
-              </a>
-              <a href="https://www.anthropic.com/contact-sales?utm_source=claude_code&amp;utm_medium=docs&amp;utm_content=configurator_team_contact_sales" className="cc-ic-btn-clay">
-                Contact sales {iconArrowRight()}
-              </a>
-            </div>
-          </div>
-
-          <div className="cc-ic-provider-bar">
-            <span className="cc-ic-label">Run on</span>
-            <div className="cc-ic-provider-pills" role="radiogroup" aria-label="Provider">
-              {PROVIDERS.map(p => <button key={p.key} type="button" role="radio" aria-checked={provider === p.key} className={'cc-ic-p-pill' + (provider === p.key ? ' cc-ic-active' : '')} onClick={() => setProvider(p.key)}>
-                  {p.label}
-                </button>)}
-            </div>
-          </div>
-
-          {showNotice && <div className="cc-ic-provider-notice">
-              {iconInfo()}
-              <div className="cc-ic-provider-notice-body">
-                {PROVIDER_NOTICE[provider]}
-              </div>
-            </div>}
-        </div>}
-
-      {}
-      {target === 'terminal' && <div className="cc-ic-card">
-          <div className="cc-ic-subtabs" role="tablist" aria-label="Install method">
-            {Object.keys(TERM).map(k => <button key={k} type="button" role="tab" aria-selected={pkg === k} className={'cc-ic-subtab' + (pkg === k ? ' cc-ic-active' : '')} onClick={() => setPkg(k)}>
-                {TERM[k].label}
-              </button>)}
-            <span className="cc-ic-subtab-spacer" />
-            {isWinInstaller && <button type="button" role="switch" aria-checked={winCmd} className={'cc-ic-cmd-toggle' + (winCmd ? ' cc-ic-checked' : '')} onClick={() => setWinCmd(!winCmd)}>
-                <span className="cc-ic-mini-check">{iconCheck(9)}</span>
-                <span>CMD instead of PowerShell</span>
-              </button>}
-          </div>
-          {cardBodyCmd(terminalCmd, isWinPrompt ? '>' : '$')}
-        </div>}
-
-      {}
-      {target === 'terminal' && <div className="cc-ic-below">
-          {isWinInstaller && <span>
-              Requires{' '}
-              <a href="https://git-scm.com/downloads/win" target="_blank" rel="noopener">
-                Git for Windows
-              </a>.
-            </span>}
-          {(pkg === 'brew' || pkg === 'winget') && <span>
-              Does not auto-update. Run{' '}
-              <code>{pkg === 'brew' ? 'brew upgrade claude-code' : 'winget upgrade Anthropic.ClaudeCode'}</code>{' '}
-              periodically.
-            </span>}
-          <a href="/en/troubleshooting">Troubleshooting</a>
-        </div>}
-
-      {alt && <div className="cc-ic-handoff">
-          <div className="cc-ic-handoff-head">
-            <strong>The steps below use the command line.</strong>{' '}
-            Prefer {alt.name}? Install here, then follow the {alt.name} guide instead.
-          </div>
-          <div className="cc-ic-handoff-actions">
-            <a href={alt.installHref} className="cc-ic-btn-clay" {...alt.installHref.startsWith('http') ? {
-    target: '_blank',
-    rel: 'noopener'
-  } : {}}>
-              {alt.installLabel} {iconArrowUpRight(13)}
-            </a>
-            <a href={alt.guideHref} className="cc-ic-btn-ghost">
-              {alt.name} guide {iconArrowRight(12)}
-            </a>
-          </div>
-          {alt.altCmd && <div className="cc-ic-handoff-alt">
-              or run <code>{alt.altCmd}</code>
-              <button type="button" className={'cc-ic-copy-sm' + (copied === 'alt' ? ' cc-ic-copied' : '')} onClick={() => handleCopy(alt.altCmd, 'alt')} aria-label="Copy command">
-                {copied === 'alt' ? iconCheck(11) : iconCopy(11)}
-              </button>
-            </div>}
-        </div>}
-    </div>;
-};
-
-export const Experiment = ({flag, treatment, children}) => {
-  const VID_KEY = 'exp_vid';
-  const CONSENT_COUNTRIES = new Set(['AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'RE', 'GP', 'MQ', 'GF', 'YT', 'BL', 'MF', 'PM', 'WF', 'PF', 'NC', 'AW', 'CW', 'SX', 'FO', 'GL', 'AX', 'GB', 'UK', 'AI', 'BM', 'IO', 'VG', 'KY', 'FK', 'GI', 'MS', 'PN', 'SH', 'TC', 'GG', 'JE', 'IM', 'CA', 'BR', 'IN']);
-  const fnv1a = s => {
-    let h = 0x811c9dc5;
-    for (let i = 0; i < s.length; i++) {
-      h ^= s.charCodeAt(i);
-      h += (h << 1) + (h << 4) + (h << 7) + (h << 8) + (h << 24);
-    }
-    return h >>> 0;
-  };
-  const bucket = (seed, vid) => fnv1a(fnv1a(seed + vid) + '') % 10000 < 5000 ? 'control' : 'treatment';
-  const [decision] = useState(() => {
-    const params = new URLSearchParams(location.search);
-    const force = params.get('gb-force');
-    if (force) {
-      for (const p of force.split(',')) {
-        const [k, v] = p.split(':');
-        if (k === flag) return {
-          variant: v || 'treatment',
-          track: false
-        };
-      }
-    }
-    if (navigator.globalPrivacyControl) {
-      return {
-        variant: 'control',
-        track: false
-      };
-    }
-    const prefsMatch = document.cookie.match(/(?:^|; )anthropic-consent-preferences=([^;]+)/);
-    if (prefsMatch) {
-      try {
-        if (JSON.parse(decodeURIComponent(prefsMatch[1])).analytics !== true) {
-          return {
-            variant: 'control',
-            track: false
-          };
+  })) {
+    // Print human-readable output
+    if (message.type === "assistant" && message.message?.content) {
+      for (const block of message.message.content) {
+        if ("text" in block) {
+          console.log(block.text); // Claude's reasoning
+        } else if ("name" in block) {
+          console.log(`Tool: ${block.name}`); // Tool being called
         }
-      } catch {
-        return {
-          variant: 'control',
-          track: false
-        };
       }
-    } else {
-      const country = params.get('country')?.toUpperCase() || (document.cookie.match(/(?:^|; )cf_geo=([A-Z]{2})/) || [])[1];
-      if (!country || CONSENT_COUNTRIES.has(country)) {
-        return {
-          variant: 'control',
-          track: false
-        };
-      }
+    } else if (message.type === "result") {
+      console.log(`Done: ${message.subtype}`); // Final result
     }
-    let vid;
-    try {
-      const ajsMatch = document.cookie.match(/(?:^|; )ajs_anonymous_id=([^;]+)/);
-      if (ajsMatch) {
-        vid = decodeURIComponent(ajsMatch[1]).replace(/^"|"$/g, '');
-      } else {
-        vid = localStorage.getItem(VID_KEY);
-        if (!vid) {
-          vid = crypto.randomUUID();
-        }
-        document.cookie = `ajs_anonymous_id=${vid}; domain=.claude.com; path=/; Secure; SameSite=Lax; max-age=31536000`;
-      }
-      try {
-        localStorage.setItem(VID_KEY, vid);
-      } catch {}
-    } catch {
-      return {
-        variant: 'control',
-        track: false
-      };
-    }
-    return {
-      variant: bucket(flag, vid),
-      track: true,
-      vid
-    };
-  });
-  useEffect(() => {
-    if (!decision.track) return;
-    fetch('https://api.anthropic.com/api/event_logging/v2/batch', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'x-service-name': 'claude_code_docs'
-      },
-      body: JSON.stringify({
-        events: [{
-          event_type: 'GrowthbookExperimentEvent',
-          event_data: {
-            device_id: decision.vid,
-            anonymous_id: decision.vid,
-            timestamp: new Date().toISOString(),
-            experiment_id: flag,
-            variation_id: decision.variant === 'treatment' ? 1 : 0,
-            environment: 'production'
-          }
-        }]
-      }),
-      keepalive: true
-    }).catch(() => {});
-  }, []);
-  return decision.variant === 'treatment' ? treatment : children;
-};
+  }
+  ```
+</CodeGroup>
 
-This quickstart guide will have you using AI-powered coding assistance in a few minutes. By the end, you'll understand how to use Claude Code for common development tasks.
+This code has three main parts:
 
-<Experiment flag="quickstart-install-configurator" treatment={<InstallConfigurator />} />
+1. **`query`**: the main entry point that creates the agentic loop. It returns an async iterator, so you use `async for` to stream messages as Claude works. See the full API in the [Python](/en/agent-sdk/python#query) or [TypeScript](/en/agent-sdk/typescript#query) SDK reference.
 
-## Before you begin
+2. **`prompt`**: what you want Claude to do. Claude figures out which tools to use based on the task.
 
-Make sure you have:
+3. **`options`**: configuration for the agent. This example uses `allowedTools` to pre-approve `Read`, `Edit`, and `Glob`, and `permissionMode: "acceptEdits"` to auto-approve file changes. Other options include `systemPrompt`, `mcpServers`, and more. See all options for [Python](/en/agent-sdk/python#claude-agent-options) or [TypeScript](/en/agent-sdk/typescript#options).
 
-* A terminal or command prompt open
-  * If you've never used the terminal before, check out the [terminal guide](/en/terminal-guide)
-* A code project to work with
-* A [Claude subscription](https://claude.com/pricing?utm_source=claude_code\&utm_medium=docs\&utm_content=quickstart_prereq) (Pro, Max, Team, or Enterprise), [Claude Console](https://console.anthropic.com/) account, or access through a [supported cloud provider](/en/third-party-integrations)
+The `async for` loop keeps running as Claude thinks, calls tools, observes results, and decides what to do next. Each iteration yields a message: Claude's reasoning, a tool call, a tool result, or the final outcome. The SDK handles the orchestration (tool execution, context management, retries) so you just consume the stream. The loop ends when Claude finishes the task or hits an error.
+
+The message handling inside the loop filters for human-readable output. Without filtering, you'd see raw message objects including system initialization and internal state, which is useful for debugging but noisy otherwise.
 
 <Note>
-  This guide covers the terminal CLI. Claude Code is also available on the [web](https://claude.ai/code), as a [desktop app](/en/desktop), in [VS Code](/en/vs-code) and [JetBrains IDEs](/en/jetbrains), in [Slack](/en/slack), and in CI/CD with [GitHub Actions](/en/github-actions) and [GitLab](/en/gitlab-ci-cd). See [all interfaces](/en/overview#use-claude-code-everywhere).
+  This example uses streaming to show progress in real-time. If you don't need live output (e.g., for background jobs or CI pipelines), you can collect all messages at once. See [Streaming vs. single-turn mode](/en/agent-sdk/streaming-vs-single-mode) for details.
 </Note>
 
-## Step 1: Install Claude Code
+### Run your agent
 
-To install Claude Code, use one of the following methods:
+Your agent is ready. Run it with the following command:
 
 <Tabs>
-  <Tab title="Native Install (Recommended)">
-    **macOS, Linux, WSL:**
-
+  <Tab title="Python">
     ```bash  theme={null}
-    curl -fsSL https://claude.ai/install.sh | bash
+    python3 agent.py
     ```
-
-    **Windows PowerShell:**
-
-    ```powershell  theme={null}
-    irm https://claude.ai/install.ps1 | iex
-    ```
-
-    **Windows CMD:**
-
-    ```batch  theme={null}
-    curl -fsSL https://claude.ai/install.cmd -o install.cmd && install.cmd && del install.cmd
-    ```
-
-    If you see `The token '&&' is not a valid statement separator`, you're in PowerShell, not CMD. Use the PowerShell command above instead. Your prompt shows `PS C:\` when you're in PowerShell.
-
-    **Native Windows setups require [Git for Windows](https://git-scm.com/downloads/win).** Install it first if you don't have it. WSL setups do not need it.
-
-    <Info>
-      Native installations automatically update in the background to keep you on the latest version.
-    </Info>
   </Tab>
 
-  <Tab title="Homebrew">
+  <Tab title="TypeScript">
     ```bash  theme={null}
-    brew install --cask claude-code
+    npx tsx agent.ts
     ```
-
-    Homebrew offers two casks. `claude-code` tracks the stable release channel, which is typically about a week behind and skips releases with major regressions. `claude-code@latest` tracks the latest channel and receives new versions as soon as they ship.
-
-    <Info>
-      Homebrew installations do not auto-update. Run `brew upgrade claude-code` or `brew upgrade claude-code@latest`, depending on which cask you installed, to get the latest features and security fixes.
-    </Info>
-  </Tab>
-
-  <Tab title="WinGet">
-    ```powershell  theme={null}
-    winget install Anthropic.ClaudeCode
-    ```
-
-    <Info>
-      WinGet installations do not auto-update. Run `winget upgrade Anthropic.ClaudeCode` periodically to get the latest features and security fixes.
-    </Info>
   </Tab>
 </Tabs>
 
-## Step 2: Log in to your account
+After running, check `utils.py`. You'll see defensive code handling empty lists and null users. Your agent autonomously:
 
-Claude Code requires an account to use. When you start an interactive session with the `claude` command, you'll need to log in:
+1. **Read** `utils.py` to understand the code
+2. **Analyzed** the logic and identified edge cases that would crash
+3. **Edited** the file to add proper error handling
 
-```bash  theme={null}
-claude
-# You'll be prompted to log in on first use
-```
-
-```bash  theme={null}
-/login
-# Follow the prompts to log in with your account
-```
-
-You can log in using any of these account types:
-
-* [Claude Pro, Max, Team, or Enterprise](https://claude.com/pricing?utm_source=claude_code\&utm_medium=docs\&utm_content=quickstart_login) (recommended)
-* [Claude Console](https://console.anthropic.com/) (API access with pre-paid credits). On first login, a "Claude Code" workspace is automatically created in the Console for centralized cost tracking.
-* [Amazon Bedrock, Google Vertex AI, or Microsoft Foundry](/en/third-party-integrations) (enterprise cloud providers)
-
-Once logged in, your credentials are stored and you won't need to log in again. To switch accounts later, use the `/login` command.
-
-## Step 3: Start your first session
-
-Open your terminal in any project directory and start Claude Code:
-
-```bash  theme={null}
-cd /path/to/your/project
-claude
-```
-
-You'll see the Claude Code welcome screen with your session information, recent conversations, and latest updates. Type `/help` for available commands or `/resume` to continue a previous conversation.
-
-<Tip>
-  After logging in (Step 2), your credentials are stored on your system. Learn more in [Credential Management](/en/authentication#credential-management).
-</Tip>
-
-## Step 4: Ask your first question
-
-Let's start with understanding your codebase. Try one of these commands:
-
-```text  theme={null}
-what does this project do?
-```
-
-Claude will analyze your files and provide a summary. You can also ask more specific questions:
-
-```text  theme={null}
-what technologies does this project use?
-```
-
-```text  theme={null}
-where is the main entry point?
-```
-
-```text  theme={null}
-explain the folder structure
-```
-
-You can also ask Claude about its own capabilities:
-
-```text  theme={null}
-what can Claude Code do?
-```
-
-```text  theme={null}
-how do I create custom skills in Claude Code?
-```
-
-```text  theme={null}
-can Claude Code work with Docker?
-```
+This is what makes the Agent SDK different: Claude executes tools directly instead of asking you to implement them.
 
 <Note>
-  Claude Code reads your project files as needed. You don't have to manually add context.
+  If you see "API key not found", make sure you've set the `ANTHROPIC_API_KEY` environment variable in your `.env` file or shell environment. See the [full troubleshooting guide](/en/troubleshooting) for more help.
 </Note>
 
-## Step 5: Make your first code change
+### Try other prompts
 
-Now let's make Claude Code do some actual coding. Try a simple task:
+Now that your agent is set up, try some different prompts:
 
-```text  theme={null}
-add a hello world function to the main file
-```
+* `"Add docstrings to all functions in utils.py"`
+* `"Add type hints to all functions in utils.py"`
+* `"Create a README.md documenting the functions in utils.py"`
 
-Claude Code will:
+### Customize your agent
 
-1. Find the appropriate file
-2. Show you the proposed changes
-3. Ask for your approval
-4. Make the edit
+You can modify your agent's behavior by changing the options. Here are a few examples:
 
-<Note>
-  Claude Code always asks for permission before modifying files. You can approve individual changes or enable "Accept all" mode for a session.
-</Note>
+**Add web search capability:**
 
-## Step 6: Use Git with Claude Code
+<CodeGroup>
+  ```python Python theme={null}
+  options = ClaudeAgentOptions(
+      allowed_tools=["Read", "Edit", "Glob", "WebSearch"], permission_mode="acceptEdits"
+  )
+  ```
 
-Claude Code makes Git operations conversational:
+  ```typescript TypeScript hidelines={1,-1} theme={null}
+  const _ = {
+    options: {
+      allowedTools: ["Read", "Edit", "Glob", "WebSearch"],
+      permissionMode: "acceptEdits"
+    }
+  };
+  ```
+</CodeGroup>
 
-```text  theme={null}
-what files have I changed?
-```
+**Give Claude a custom system prompt:**
 
-```text  theme={null}
-commit my changes with a descriptive message
-```
+<CodeGroup>
+  ```python Python theme={null}
+  options = ClaudeAgentOptions(
+      allowed_tools=["Read", "Edit", "Glob"],
+      permission_mode="acceptEdits",
+      system_prompt="You are a senior Python developer. Always follow PEP 8 style guidelines.",
+  )
+  ```
 
-You can also prompt for more complex Git operations:
+  ```typescript TypeScript hidelines={1,-1} theme={null}
+  const _ = {
+    options: {
+      allowedTools: ["Read", "Edit", "Glob"],
+      permissionMode: "acceptEdits",
+      systemPrompt: "You are a senior Python developer. Always follow PEP 8 style guidelines."
+    }
+  };
+  ```
+</CodeGroup>
 
-```text  theme={null}
-create a new branch called feature/quickstart
-```
+**Run commands in the terminal:**
 
-```text  theme={null}
-show me the last 5 commits
-```
+<CodeGroup>
+  ```python Python theme={null}
+  options = ClaudeAgentOptions(
+      allowed_tools=["Read", "Edit", "Glob", "Bash"], permission_mode="acceptEdits"
+  )
+  ```
 
-```text  theme={null}
-help me resolve merge conflicts
-```
+  ```typescript TypeScript hidelines={1,-1} theme={null}
+  const _ = {
+    options: {
+      allowedTools: ["Read", "Edit", "Glob", "Bash"],
+      permissionMode: "acceptEdits"
+    }
+  };
+  ```
+</CodeGroup>
 
-## Step 7: Fix a bug or add a feature
+With `Bash` enabled, try: `"Write unit tests for utils.py, run them, and fix any failures"`
 
-Claude is proficient at debugging and feature implementation.
+## Key concepts
 
-Describe what you want in natural language:
+**Tools** control what your agent can do:
 
-```text  theme={null}
-add input validation to the user registration form
-```
+| Tools                                  | What the agent can do   |
+| -------------------------------------- | ----------------------- |
+| `Read`, `Glob`, `Grep`                 | Read-only analysis      |
+| `Read`, `Edit`, `Glob`                 | Analyze and modify code |
+| `Read`, `Edit`, `Bash`, `Glob`, `Grep` | Full automation         |
 
-Or fix existing issues:
+**Permission modes** control how much human oversight you want:
 
-```text  theme={null}
-there's a bug where users can submit empty forms - fix it
-```
+| Mode                     | Behavior                                                                        | Use case                                 |
+| ------------------------ | ------------------------------------------------------------------------------- | ---------------------------------------- |
+| `acceptEdits`            | Auto-approves file edits and common filesystem commands, asks for other actions | Trusted development workflows            |
+| `dontAsk`                | Denies anything not in `allowedTools`                                           | Locked-down headless agents              |
+| `auto` (TypeScript only) | A model classifier approves or denies each tool call                            | Autonomous agents with safety guardrails |
+| `bypassPermissions`      | Runs every tool without prompts                                                 | Sandboxed CI, fully trusted environments |
+| `default`                | Requires a `canUseTool` callback to handle approval                             | Custom approval flows                    |
 
-Claude Code will:
+The example above uses `acceptEdits` mode, which auto-approves file operations so the agent can run without interactive prompts. If you want to prompt users for approval, use `default` mode and provide a [`canUseTool` callback](/en/agent-sdk/user-input) that collects user input. For more control, see [Permissions](/en/agent-sdk/permissions).
 
-* Locate the relevant code
-* Understand the context
-* Implement a solution
-* Run tests if available
+## Next steps
 
-## Step 8: Test out other common workflows
+Now that you've created your first agent, learn how to extend its capabilities and tailor it to your use case:
 
-There are a number of ways to work with Claude:
-
-**Refactor code**
-
-```text  theme={null}
-refactor the authentication module to use async/await instead of callbacks
-```
-
-**Write tests**
-
-```text  theme={null}
-write unit tests for the calculator functions
-```
-
-**Update documentation**
-
-```text  theme={null}
-update the README with installation instructions
-```
-
-**Code review**
-
-```text  theme={null}
-review my changes and suggest improvements
-```
-
-<Tip>
-  Talk to Claude like you would a helpful colleague. Describe what you want to achieve, and it will help you get there.
-</Tip>
-
-## Essential commands
-
-Here are the most important commands for daily use:
-
-| Command             | What it does                                           | Example                             |
-| ------------------- | ------------------------------------------------------ | ----------------------------------- |
-| `claude`            | Start interactive mode                                 | `claude`                            |
-| `claude "task"`     | Run a one-time task                                    | `claude "fix the build error"`      |
-| `claude -p "query"` | Run one-off query, then exit                           | `claude -p "explain this function"` |
-| `claude -c`         | Continue most recent conversation in current directory | `claude -c`                         |
-| `claude -r`         | Resume a previous conversation                         | `claude -r`                         |
-| `/clear`            | Clear conversation history                             | `/clear`                            |
-| `/help`             | Show available commands                                | `/help`                             |
-| `exit` or Ctrl+D    | Exit Claude Code                                       | `exit`                              |
-
-See the [CLI reference](/en/cli-reference) for a complete list of commands.
-
-## Pro tips for beginners
-
-For more, see [best practices](/en/best-practices) and [common workflows](/en/common-workflows).
-
-<AccordionGroup>
-  <Accordion title="Be specific with your requests">
-    Instead of: "fix the bug"
-
-    Try: "fix the login bug where users see a blank screen after entering wrong credentials"
-  </Accordion>
-
-  <Accordion title="Use step-by-step instructions">
-    Break complex tasks into steps:
-
-    ```text  theme={null}
-    1. create a new database table for user profiles
-    2. create an API endpoint to get and update user profiles
-    3. build a webpage that allows users to see and edit their information
-    ```
-  </Accordion>
-
-  <Accordion title="Let Claude explore first">
-    Before making changes, let Claude understand your code:
-
-    ```text  theme={null}
-    analyze the database schema
-    ```
-
-    ```text  theme={null}
-    build a dashboard showing products that are most frequently returned by our UK customers
-    ```
-  </Accordion>
-
-  <Accordion title="Save time with shortcuts">
-    * Press `?` to see all available keyboard shortcuts
-    * Use Tab for command completion
-    * Press ↑ for command history
-    * Type `/` to see all commands and skills
-  </Accordion>
-</AccordionGroup>
-
-## What's next?
-
-Now that you've learned the basics, explore more advanced features:
-
-<CardGroup cols={2}>
-  <Card title="How Claude Code works" icon="microchip" href="/en/how-claude-code-works">
-    Understand the agentic loop, built-in tools, and how Claude Code interacts with your project
-  </Card>
-
-  <Card title="Best practices" icon="star" href="/en/best-practices">
-    Get better results with effective prompting and project setup
-  </Card>
-
-  <Card title="Common workflows" icon="graduation-cap" href="/en/common-workflows">
-    Step-by-step guides for common tasks
-  </Card>
-
-  <Card title="Extend Claude Code" icon="puzzle-piece" href="/en/features-overview">
-    Customize with CLAUDE.md, skills, hooks, MCP, and more
-  </Card>
-</CardGroup>
-
-## Getting help
-
-* **In Claude Code**: Type `/help` or ask "how do I..."
-* **Documentation**: You're here! Browse other guides
-* **Community**: Join our [Discord](https://www.anthropic.com/discord) for tips and support
+* **[Permissions](/en/agent-sdk/permissions)**: control what your agent can do and when it needs approval
+* **[Hooks](/en/agent-sdk/hooks)**: run custom code before or after tool calls
+* **[Sessions](/en/agent-sdk/sessions)**: build multi-turn agents that maintain context
+* **[MCP servers](/en/agent-sdk/mcp)**: connect to databases, browsers, APIs, and other external systems
+* **[Hosting](/en/agent-sdk/hosting)**: deploy agents to Docker, cloud, and CI/CD
+* **[Example agents](https://github.com/anthropics/claude-agent-sdk-demos)**: see complete examples: email assistant, research agent, and more
