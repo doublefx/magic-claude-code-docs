@@ -208,8 +208,8 @@
       "original_url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
       "original_raw_url": "https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md",
       "source": "claude-code-repository",
-      "hash": "651adef309c8d222a016add432546c27f910ce6fea51b02c1b2922da1ad52730",
-      "last_updated": "2026-04-14T01:21:33.681617"
+      "hash": "ba766a75a11754c597b40164d1a276e560fc272b7afaaaebcce18c30db996f8d",
+      "last_updated": "2026-04-14T07:16:17.587293"
     },
     "channels.md": {
       "original_url": "https://code.claude.com/docs/en/channels.md",
@@ -232,8 +232,8 @@
     "chrome.md": {
       "original_url": "https://code.claude.com/docs/en/chrome.md",
       "title": "Use Claude Code with Chrome (beta)",
-      "hash": "86a12c76193181680e7c1c087b2b5ec98e39285a14bd50a987a85bcfb3a27497",
-      "last_updated": "2026-04-10T01:16:39.848394"
+      "hash": "73ad5cba6c5aebae5a8fec80803f33cec0ed5407149c79de617391da4cefcbdf",
+      "last_updated": "2026-04-14T07:15:33.410903"
     },
     "claude-code-on-the-web.md": {
       "original_url": "https://code.claude.com/docs/en/claude-code-on-the-web.md",
@@ -286,8 +286,8 @@
     "costs.md": {
       "original_url": "https://code.claude.com/docs/en/costs.md",
       "title": "Manage costs effectively",
-      "hash": "05578150cad02a920d67f2d93a3bdc99fc5c957205cd38bbd48940f3bfb1dd20",
-      "last_updated": "2026-04-14T05:14:32.263997"
+      "hash": "68e8ddfd1017026f7ee2745d51c237cc518c34c6628178e7b7fbda32795c5ce3",
+      "last_updated": "2026-04-14T07:15:38.828724"
     },
     "data-usage.md": {
       "original_url": "https://code.claude.com/docs/en/data-usage.md",
@@ -562,8 +562,8 @@
     "troubleshooting.md": {
       "original_url": "https://code.claude.com/docs/en/troubleshooting.md",
       "title": "Troubleshooting",
-      "hash": "aac790eafbd9674e99ba7bd633be3e31b1aece0dcb278edb84dbbf2ca356473b",
-      "last_updated": "2026-04-14T05:15:04.508982"
+      "hash": "75f5a25ab95094ad900d02f6a5348296d37dd4701679dc885a95a3b553efee64",
+      "last_updated": "2026-04-14T07:16:11.325618"
     },
     "ultraplan.md": {
       "original_url": "https://code.claude.com/docs/en/ultraplan.md",
@@ -634,8 +634,8 @@
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2026-04-14T05:15:10.709855",
-    "fetch_duration_seconds": 67.429007,
+    "last_fetch_completed": "2026-04-14T07:16:17.587712",
+    "fetch_duration_seconds": 67.377175,
     "total_pages_discovered": 111,
     "pages_fetched_successfully": 113,
     "pages_failed": 0,
@@ -644,7 +644,7 @@
     "total_files": 105,
     "fetch_tool_version": "4.0"
   },
-  "last_updated": "2026-04-14T05:15:10.710015",
+  "last_updated": "2026-04-14T07:16:17.587898",
   "base_url": "https://raw.githubusercontent.com/doublefx/magic-claude-code-docs/main/plugin/docs/",
   "github_repository": "doublefx/magic-claude-code-docs",
   "github_ref": "main",
