@@ -301,7 +301,7 @@ Configuration object for the `query()` function.
 | `forkSession`                     | `boolean`                                                                                                | `false`                                     | When resuming with `resume`, fork to a new session ID instead of continuing the original session                                                                                                                                                                                                                                                                                                                                                                                    |
 | `hooks`                           | `Partial<Record<`[`HookEvent`](#hook-event)`, `[`HookCallbackMatcher`](#hook-callback-matcher)`[]>>`     | `{}`                                        | Hook callbacks for events                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | `includePartialMessages`          | `boolean`                                                                                                | `false`                                     | Include partial message events                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| `maxBudgetUsd`                    | `number`                                                                                                 | `undefined`                                 | Maximum budget in USD for the query                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| `maxBudgetUsd`                    | `number`                                                                                                 | `undefined`                                 | Stop the query when the client-side cost estimate reaches this USD value. Compared against the same estimate as `total_cost_usd`; see [Track cost and usage](/en/agent-sdk/cost-tracking) for accuracy caveats                                                                                                                                                                                                                                                                      |
 | `maxThinkingTokens`               | `number`                                                                                                 | `undefined`                                 | *Deprecated:* Use `thinking` instead. Maximum tokens for thinking process                                                                                                                                                                                                                                                                                                                                                                                                           |
 | `maxTurns`                        | `number`                                                                                                 | `undefined`                                 | Maximum agentic turns (tool-use round trips)                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | `mcpServers`                      | `Record<string, [`McpServerConfig`](#mcp-server-config)>`                                                | `{}`                                        | MCP server configurations                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
@@ -317,7 +317,7 @@ Configuration object for the `query()` function.
 | `resumeSessionAt`                 | `string`                                                                                                 | `undefined`                                 | Resume session at a specific message UUID                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | `sandbox`                         | [`SandboxSettings`](#sandbox-settings)                                                                   | `undefined`                                 | Configure sandbox behavior programmatically. See [Sandbox settings](#sandbox-settings) for details                                                                                                                                                                                                                                                                                                                                                                                  |
 | `sessionId`                       | `string`                                                                                                 | Auto-generated                              | Use a specific UUID for the session instead of auto-generating one                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| `settingSources`                  | [`SettingSource`](#setting-source)`[]`                                                                   | `[]` (no settings)                          | Control which filesystem settings to load. When omitted, no settings are loaded. **Note:** Must include `'project'` to load CLAUDE.md files                                                                                                                                                                                                                                                                                                                                         |
+| `settingSources`                  | [`SettingSource`](#setting-source)`[]`                                                                   | CLI defaults (all sources)                  | Control which filesystem settings to load. Pass `[]` to disable user, project, and local settings. Managed policy settings load regardless. See [Use Claude Code features](/en/agent-sdk/claude-code-features#what-settingsources-does-not-control)                                                                                                                                                                                                                                 |
 | `spawnClaudeCodeProcess`          | `(options: SpawnOptions) => SpawnedProcess`                                                              | `undefined`                                 | Custom function to spawn the Claude Code process. Use to run Claude Code in VMs, containers, or remote environments                                                                                                                                                                                                                                                                                                                                                                 |
 | `stderr`                          | `(data: string) => void`                                                                                 | `undefined`                                 | Callback for stderr output                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | `strictMcpConfig`                 | `boolean`                                                                                                | `false`                                     | Enforce strict MCP validation                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
@@ -449,14 +449,23 @@ type SettingSource = "user" | "project" | "local";
 
 #### Default behavior
 
-When `settingSources` is **omitted** or **undefined**, the SDK does **not** load any filesystem settings. This provides isolation for SDK applications.
+When `settingSources` is omitted or `undefined`, `query()` loads the same filesystem settings as the Claude Code CLI: user, project, and local. Managed policy settings are loaded in all cases. See [What settingSources does not control](/en/agent-sdk/claude-code-features#what-settingsources-does-not-control) for inputs that are read regardless of this option, and how to disable them.
 
 #### Why use settingSources
 
-**Load all filesystem settings (legacy behavior):**
+**Disable filesystem settings:**
 
 ```typescript theme={null}
-// Load all settings like SDK v0.0.x did
+// Do not load user, project, or local settings from disk
+const result = query({
+  prompt: "Analyze this code",
+  options: { settingSources: [] }
+});
+```
+
+**Load all filesystem settings explicitly:**
+
+```typescript theme={null}
 const result = query({
   prompt: "Analyze this code",
   options: {
@@ -493,12 +502,12 @@ const result = query({
 **SDK-only applications:**
 
 ```typescript theme={null}
-// Define everything programmatically (default behavior)
-// No filesystem dependencies - settingSources defaults to []
+// Define everything programmatically.
+// Pass [] to opt out of filesystem setting sources.
 const result = query({
   prompt: "Review this PR",
   options: {
-    // settingSources: [] is the default, no need to specify
+    settingSources: [],
     agents: {
       /* ... */
     },
@@ -519,7 +528,7 @@ const result = query({
   options: {
     systemPrompt: {
       type: "preset",
-      preset: "claude_code" // Required to use CLAUDE.md
+      preset: "claude_code" // Use Claude Code's system prompt
     },
     settingSources: ["project"], // Loads CLAUDE.md from project directory
     allowedTools: ["Read", "Write", "Edit"]
@@ -535,7 +544,7 @@ When multiple sources are loaded, settings are merged with this precedence (high
 2. Project settings (`.claude/settings.json`)
 3. User settings (`~/.claude/settings.json`)
 
-Programmatic options (like `agents`, `allowedTools`) always override filesystem settings.
+Programmatic options such as `agents` and `allowedTools` override user, project, and local filesystem settings. Managed policy settings take precedence over programmatic options.
 
 ### `PermissionMode`
 
