@@ -208,8 +208,8 @@
       "original_url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
       "original_raw_url": "https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md",
       "source": "claude-code-repository",
-      "hash": "39be3234561e1a89e6a43f02e4db7e9f318ffaa04e809ac432c0390271a4ef20",
-      "last_updated": "2026-04-16T01:23:50.521351"
+      "hash": "826a1e40f653c199807ee3bbfa6d9fdcac17b9f19db71acba61abcceb4e4b79e",
+      "last_updated": "2026-04-16T05:22:54.769578"
     },
     "channels.md": {
       "original_url": "https://code.claude.com/docs/en/channels.md",
@@ -598,20 +598,20 @@
     "2026-w13.md": {
       "original_url": "https://code.claude.com/docs/en/whats-new/2026-w13.md",
       "title": "Week 13 \u00b7 March 23\u201327, 2026",
-      "hash": "0e9f2b3e43911aea379e493505ec817953ba2cbadd89566caeaa286d14c1122b",
-      "last_updated": "2026-04-14T05:15:08.114142"
+      "hash": "e65c24343a906e7512b5871a6cebc1dd6a032238965cd892efcd62b6bd1caa75",
+      "last_updated": "2026-04-16T05:22:52.391257"
     },
     "2026-w14.md": {
       "original_url": "https://code.claude.com/docs/en/whats-new/2026-w14.md",
       "title": "Week 14 \u00b7 March 30 \u2013 April 3, 2026",
-      "hash": "e86f81ad720c216c03e2d5eaa088048fa1efe14cb19ef40958d0d2ded6aa34fb",
-      "last_updated": "2026-04-14T21:41:29.844151"
+      "hash": "41ee7c631497425f91177c72853d564283bffcee0ed96fb7245a249eac678166",
+      "last_updated": "2026-04-16T05:22:52.943583"
     },
     "2026-w15.md": {
       "original_url": "https://code.claude.com/docs/en/whats-new/2026-w15.md",
       "title": "Week 15 \u00b7 April 6\u201310, 2026",
-      "hash": "8f5eab6f5a13465a204c598861ee8cab50cfac315c2cfa3393b5418e2921c7d4",
-      "last_updated": "2026-04-14T05:15:09.316112"
+      "hash": "d9f88f29f1ca640f60d4f718d5d510cfd8910a426e3cae1cc62ce816380f7baa",
+      "last_updated": "2026-04-16T05:22:53.517241"
     },
     "index.md": {
       "original_url": "https://code.claude.com/docs/en/whats-new/index.md",
@@ -634,8 +634,8 @@
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2026-04-16T01:23:50.521666",
-    "fetch_duration_seconds": 60.221962,
+    "last_fetch_completed": "2026-04-16T05:22:54.769925",
+    "fetch_duration_seconds": 61.764099,
     "total_pages_discovered": 111,
     "pages_fetched_successfully": 113,
     "pages_failed": 0,
@@ -644,7 +644,7 @@
     "total_files": 105,
     "fetch_tool_version": "4.0"
   },
-  "last_updated": "2026-04-16T01:23:50.521821",
+  "last_updated": "2026-04-16T05:22:54.770086",
   "base_url": "https://raw.githubusercontent.com/doublefx/magic-claude-code-docs/main/plugin/docs/",
   "github_repository": "doublefx/magic-claude-code-docs",
   "github_ref": "main",
