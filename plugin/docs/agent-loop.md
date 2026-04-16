@@ -133,7 +133,7 @@ Claude determines which tools to call based on the task, but you control whether
 * **`disallowed_tools` / `disallowedTools`** blocks listed tools, regardless of other settings. See [Permissions](/en/agent-sdk/permissions) for the order that rules are checked before a tool runs.
 * **`permission_mode` / `permissionMode`** controls what happens to tools that aren't covered by allow or deny rules. See [Permission mode](#permission-mode) for available modes.
 
-You can also scope individual tools with rules like `"Bash(npm:*)"` to allow only specific commands. See [Permissions](/en/agent-sdk/permissions) for the full rule syntax.
+You can also scope individual tools with rules like `"Bash(npm *)"` to allow only specific commands. See [Permissions](/en/agent-sdk/permissions) for the full rule syntax.
 
 When a tool is denied, Claude receives a rejection message as the tool result and typically attempts a different approach or reports that it couldn't proceed.
 
