@@ -39,8 +39,8 @@
     "hosting.md": {
       "original_url": "https://code.claude.com/docs/en/agent-sdk/hosting.md",
       "title": "Hosting the Agent SDK",
-      "hash": "9e62437d7283c4f33c286f541cf5de3c410b326300223a4562018075fa7608c4",
-      "last_updated": "2026-04-14T05:14:07.287130"
+      "hash": "44896d9df467a495248e19104fba84ced51fb56c7e2f770e0d34dc20a4415d21",
+      "last_updated": "2026-04-17T21:31:35.839269"
     },
     "mcp.md": {
       "original_url": "https://code.claude.com/docs/en/mcp.md",
@@ -159,14 +159,14 @@
     "typescript.md": {
       "original_url": "https://code.claude.com/docs/en/agent-sdk/typescript.md",
       "title": "Agent SDK reference - TypeScript",
-      "hash": "88ec04ffb129a94cb46c0a79b19b0b153d8e8913fa09ea35c5fb27d6964fc894",
-      "last_updated": "2026-04-16T21:33:32.607056"
+      "hash": "a88bb80440f5f8c8faf78205e14f23bc63fbb5caaa3525bdd88c8bd1337e56ec",
+      "last_updated": "2026-04-17T21:31:47.276416"
     },
     "typescript-v2-preview.md": {
       "original_url": "https://code.claude.com/docs/en/agent-sdk/typescript-v2-preview.md",
       "title": "TypeScript SDK V2 interface (preview)",
-      "hash": "56006267df6bf9be6a488b84bfcc4c9f0712511c38fb8c1216f310fb4772c6d3",
-      "last_updated": "2026-04-16T16:15:26.393223"
+      "hash": "ab12504584aa142370e8c04cc9d4e039815ee9e25287a8d2f46f0733a8766f78",
+      "last_updated": "2026-04-17T21:31:47.875861"
     },
     "user-input.md": {
       "original_url": "https://code.claude.com/docs/en/agent-sdk/user-input.md",
@@ -208,8 +208,8 @@
       "original_url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
       "original_raw_url": "https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md",
       "source": "claude-code-repository",
-      "hash": "10261d0f875ba0abb8371f46277c1b3d3b1b94bd3dae3dfee01ad0458c14c91b",
-      "last_updated": "2026-04-16T21:34:21.252346"
+      "hash": "d07802a85a023d82410d3346b3352ab4b6627fe4ce1804c1c1a4a349a3f7625a",
+      "last_updated": "2026-04-17T21:32:37.708714"
     },
     "channels.md": {
       "original_url": "https://code.claude.com/docs/en/channels.md",
@@ -442,8 +442,8 @@
     "model-config.md": {
       "original_url": "https://code.claude.com/docs/en/model-config.md",
       "title": "Model configuration",
-      "hash": "90795f0605d79e6b0de4b9151eb39c9f5d3f510fac7ceaeeb8fabf5942b8dcdf",
-      "last_updated": "2026-04-16T21:34:00.383706"
+      "hash": "09c14263e7f0c3b8ddc5766ef4b2dc680861b0a87d5bbd46826feb0f7719ea8c",
+      "last_updated": "2026-04-17T21:32:15.664001"
     },
     "monitoring-usage.md": {
       "original_url": "https://code.claude.com/docs/en/monitoring-usage.md",
@@ -502,8 +502,8 @@
     "routines.md": {
       "original_url": "https://code.claude.com/docs/en/routines.md",
       "title": "Automate work with routines",
-      "hash": "bb4a31cf19052d3908852ebbcbbb163cc6e4b34e2d6131d9a73086bfb3eb7550",
-      "last_updated": "2026-04-16T21:34:07.987471"
+      "hash": "32cc0bc7adc5f6e8c7f091b74cbbf910bc0a7f59c156c7948425382519607704",
+      "last_updated": "2026-04-17T21:32:23.810651"
     },
     "sandboxing.md": {
       "original_url": "https://code.claude.com/docs/en/sandboxing.md",
@@ -538,8 +538,8 @@
     "setup.md": {
       "original_url": "https://code.claude.com/docs/en/setup.md",
       "title": "Advanced setup",
-      "hash": "a9d42e4c62c03330dc259650e300767e1c6ae7f0e9de1b22ad2bef11c8818eaf",
-      "last_updated": "2026-04-16T21:34:11.277729"
+      "hash": "3187b33ef8d2d7bc207504bd7d8654dd8ec3c45f022ba3a27bf9e95c2062396c",
+      "last_updated": "2026-04-17T21:32:27.236565"
     },
     "slack.md": {
       "original_url": "https://code.claude.com/docs/en/slack.md",
@@ -580,8 +580,8 @@
     "troubleshooting.md": {
       "original_url": "https://code.claude.com/docs/en/troubleshooting.md",
       "title": "Troubleshooting",
-      "hash": "7632175dfb9046e36f7ce96a8257df785d3a9c93bfa6a1081390722ee65c42a8",
-      "last_updated": "2026-04-16T21:34:15.654262"
+      "hash": "bfe81a93cbefd56c510802415e76095589120035de6d98b1ca93b5752c743b0e",
+      "last_updated": "2026-04-17T21:32:31.774364"
     },
     "ultraplan.md": {
       "original_url": "https://code.claude.com/docs/en/ultraplan.md",
@@ -652,8 +652,8 @@
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2026-04-16T21:34:21.252673",
-    "fetch_duration_seconds": 63.299519,
+    "last_fetch_completed": "2026-04-17T21:32:37.709012",
+    "fetch_duration_seconds": 65.492914,
     "total_pages_discovered": 114,
     "pages_fetched_successfully": 116,
     "pages_failed": 0,
@@ -662,7 +662,7 @@
     "total_files": 108,
     "fetch_tool_version": "4.0"
   },
-  "last_updated": "2026-04-16T21:34:21.252829",
+  "last_updated": "2026-04-17T21:32:37.709163",
   "base_url": "https://raw.githubusercontent.com/doublefx/magic-claude-code-docs/main/plugin/docs/",
   "github_repository": "doublefx/magic-claude-code-docs",
   "github_ref": "main",
