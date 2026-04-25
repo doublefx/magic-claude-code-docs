@@ -316,20 +316,20 @@
     "desktop.md": {
       "original_url": "https://code.claude.com/docs/en/desktop.md",
       "title": "Use Claude Code Desktop",
-      "hash": "900a508f665a2b28027b00c4e48d20d3fd57f9c78143325c0de744b9a50b38c5",
-      "last_updated": "2026-04-22T21:41:17.991409"
+      "hash": "18b59ad2b5302c047c44fdaff68de93baa8fda83d4edbe27f291412ab3de1148",
+      "last_updated": "2026-04-25T21:26:18.079703"
     },
     "desktop-quickstart.md": {
       "original_url": "https://code.claude.com/docs/en/desktop-quickstart.md",
       "title": "Get started with the desktop app",
-      "hash": "8e6d178183183acd782cd2b1cb4bec52282b87825a146cb87a75342c8a8818a6",
-      "last_updated": "2026-04-16T21:33:45.751260"
+      "hash": "3b37772301e27ce1fbc9e6b08ab4c50760cdc97c884989942e17f0a1a419ec99",
+      "last_updated": "2026-04-25T21:26:18.615744"
     },
     "desktop-scheduled-tasks.md": {
       "original_url": "https://code.claude.com/docs/en/desktop-scheduled-tasks.md",
       "title": "Schedule recurring tasks in Claude Code Desktop",
-      "hash": "0e2f0e0cfbab4c6f4af2b2f70c92dfd14a2ae3d3cdf04e2c31146b3fb09be890",
-      "last_updated": "2026-04-23T18:53:07.446298"
+      "hash": "eea8d1a9c8ce68614d33ccee94d6131e5258458e89bf795c6eaf6e8dececaa55",
+      "last_updated": "2026-04-25T21:26:19.166491"
     },
     "devcontainer.md": {
       "original_url": "https://code.claude.com/docs/en/devcontainer.md",
@@ -520,8 +520,8 @@
     "routines.md": {
       "original_url": "https://code.claude.com/docs/en/routines.md",
       "title": "Automate work with routines",
-      "hash": "3273c42c219c2dded4ec8f3a90af14ea4111f4de9f6245f0bd195bc63481c7f8",
-      "last_updated": "2026-04-23T18:53:29.242123"
+      "hash": "3111c7bd3ad848b297b27f892460cbcf617246709edfd901ca446443dd07dc58",
+      "last_updated": "2026-04-25T21:26:39.677856"
     },
     "sandboxing.md": {
       "original_url": "https://code.claude.com/docs/en/sandboxing.md",
@@ -580,8 +580,8 @@
     "terminal-config.md": {
       "original_url": "https://code.claude.com/docs/en/terminal-config.md",
       "title": "Configure your terminal for Claude Code",
-      "hash": "a5c16d25367e719af5c0e596f19b9f15978eb05fdfc810a8a5ca2052ae0ac92c",
-      "last_updated": "2026-04-25T01:17:15.782291"
+      "hash": "f2b164425e5cdcce580a2e486aa4b9bc8062187f0f65b259dbad1696709cc31d",
+      "last_updated": "2026-04-25T21:26:45.672675"
     },
     "third-party-integrations.md": {
       "original_url": "https://code.claude.com/docs/en/third-party-integrations.md",
@@ -665,13 +665,13 @@
       "original_url": "https://code.claude.com/docs/en/claude_code_docs_map.md",
       "title": "Documentation Map",
       "source": "docs-map",
-      "hash": "649ce6e568b16ea9f9c25d1f5c675131f85c1765338180d15beebc70c49fee27",
-      "last_updated": "2026-04-24T01:24:20.583946"
+      "hash": "883fd380cd6089df213427b728d75ccf57b771f39de6b927232724d8040c5bc7",
+      "last_updated": "2026-04-25T21:26:52.674896"
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2026-04-25T05:05:16.437666",
-    "fetch_duration_seconds": 62.10576,
+    "last_fetch_completed": "2026-04-25T21:26:52.772287",
+    "fetch_duration_seconds": 63.05233,
     "total_pages_discovered": 117,
     "pages_fetched_successfully": 119,
     "pages_failed": 0,
@@ -680,7 +680,7 @@
     "total_files": 111,
     "fetch_tool_version": "4.0"
   },
-  "last_updated": "2026-04-25T05:05:16.437806",
+  "last_updated": "2026-04-25T21:26:52.772443",
   "base_url": "https://raw.githubusercontent.com/doublefx/magic-claude-code-docs/main/plugin/docs/",
   "github_repository": "doublefx/magic-claude-code-docs",
   "github_ref": "main",
