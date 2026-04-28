@@ -216,6 +216,12 @@
       "hash": "5fdbbed47aa5d0239bf0219f87a76f122d383664765462771fbf8756d23eadeb",
       "last_updated": "2026-04-21T18:54:47.683899"
     },
+    "champion-kit.md": {
+      "original_url": "https://code.claude.com/docs/en/champion-kit.md",
+      "title": "Champion kit",
+      "hash": "c3574420815a3daae4062535ff3db41b5be6dd0c269cb5e4b6d500dc615ca176",
+      "last_updated": "2026-04-28T16:31:04.154665"
+    },
     "changelog.md": {
       "original_url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
       "original_raw_url": "https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md",
@@ -282,6 +288,12 @@
       "title": "Common workflows",
       "hash": "c90940612369f186a5359c13c37e0d85ded6946780a7c8a6f6a07332802577fc",
       "last_updated": "2026-04-23T18:53:02.898635"
+    },
+    "communications-kit.md": {
+      "original_url": "https://code.claude.com/docs/en/communications-kit.md",
+      "title": "Communications kit",
+      "hash": "14f4728a03fac9f77a12588acf76308f1e2fc8b271c7d7af19b05c07b69d2f9e",
+      "last_updated": "2026-04-28T16:31:10.580725"
     },
     "computer-use.md": {
       "original_url": "https://code.claude.com/docs/en/computer-use.md",
@@ -390,6 +402,12 @@
       "title": "Claude Code GitLab CI/CD",
       "hash": "9e89b6ae92bcca3909daffba57d1db66598335df276a82b901c141812dc8c48e",
       "last_updated": "2026-04-14T21:41:01.056753"
+    },
+    "glossary.md": {
+      "original_url": "https://code.claude.com/docs/en/glossary.md",
+      "title": "Glossary",
+      "hash": "c05229f2f05496c3ac366d1984446daa00b2c3649fbfe425b162b49d26e33291",
+      "last_updated": "2026-04-28T16:31:20.690469"
     },
     "google-vertex-ai.md": {
       "original_url": "https://code.claude.com/docs/en/google-vertex-ai.md",
@@ -677,22 +695,22 @@
       "original_url": "https://code.claude.com/docs/en/claude_code_docs_map.md",
       "title": "Documentation Map",
       "source": "docs-map",
-      "hash": "acd8bd99f54006b04c86735cde8efdc460a05fd64f3b8661299d0497e78d3d4d",
-      "last_updated": "2026-04-28T05:49:36.642474"
+      "hash": "07f796d46f82c518f7318f2a8a8e34695bb9023e0ec34d3e145110330ed09c46",
+      "last_updated": "2026-04-28T16:31:49.535311"
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2026-04-28T05:49:36.656441",
-    "fetch_duration_seconds": 63.525919,
-    "total_pages_discovered": 119,
-    "pages_fetched_successfully": 121,
+    "last_fetch_completed": "2026-04-28T16:31:49.728112",
+    "fetch_duration_seconds": 64.92637,
+    "total_pages_discovered": 122,
+    "pages_fetched_successfully": 124,
     "pages_failed": 0,
     "failed_pages": [],
     "llms_txt_url": "https://code.claude.com/docs/llms.txt",
-    "total_files": 113,
+    "total_files": 116,
     "fetch_tool_version": "4.0"
   },
-  "last_updated": "2026-04-28T05:49:36.656606",
+  "last_updated": "2026-04-28T16:31:49.728306",
   "base_url": "https://raw.githubusercontent.com/doublefx/magic-claude-code-docs/main/plugin/docs/",
   "github_repository": "doublefx/magic-claude-code-docs",
   "github_ref": "main",
