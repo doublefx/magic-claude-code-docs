@@ -39,8 +39,8 @@
     "hooks.md": {
       "original_url": "https://code.claude.com/docs/en/hooks.md",
       "title": "Hooks reference",
-      "hash": "3ddb08ca095508f2055e9f207028880c09a1957c64bf2080b88895ebb64750ab",
-      "last_updated": "2026-04-28T05:49:09.479115"
+      "hash": "e4f760ec7734b3bd8645e31d9c13b28861b3b90de5e6a377a69bae15d2244f9b",
+      "last_updated": "2026-04-28T19:16:37.816167"
     },
     "hosting.md": {
       "original_url": "https://code.claude.com/docs/en/agent-sdk/hosting.md",
@@ -87,8 +87,8 @@
     "plugins.md": {
       "original_url": "https://code.claude.com/docs/en/plugins.md",
       "title": "Create plugins",
-      "hash": "47f40108ccea2a470fe949492b973f8d0cf9b29a9fdb51241c8735642da33461",
-      "last_updated": "2026-04-23T18:53:26.927594"
+      "hash": "102220dfe69bf18a901ceb343016ad481737d940efc6cac68fc8db6128181ddb",
+      "last_updated": "2026-04-28T19:16:49.401831"
     },
     "python.md": {
       "original_url": "https://code.claude.com/docs/en/agent-sdk/python.md",
@@ -358,8 +358,8 @@
     "env-vars.md": {
       "original_url": "https://code.claude.com/docs/en/env-vars.md",
       "title": "Environment variables",
-      "hash": "47d960f77f817b98f780214d5d0db9d48032901f34421d0bbb5db2898d16dea5",
-      "last_updated": "2026-04-28T05:49:04.171504"
+      "hash": "4688db5d15297a69a598d70d95d0da4772ae225c47b166a467d558289b9f5654",
+      "last_updated": "2026-04-28T19:16:31.751448"
     },
     "errors.md": {
       "original_url": "https://code.claude.com/docs/en/errors.md",
@@ -460,8 +460,8 @@
     "llm-gateway.md": {
       "original_url": "https://code.claude.com/docs/en/llm-gateway.md",
       "title": "LLM gateway configuration",
-      "hash": "c5a367f97d0575ca7ff75d70681ab3318fde97cc1341cd4428fb8c628d99ceb4",
-      "last_updated": "2026-04-14T21:41:07.175277"
+      "hash": "ca7810a9e73b5a62ad4fb79d5e07959e76e600fe23d60e985dc4132900f788e8",
+      "last_updated": "2026-04-28T19:16:41.650377"
     },
     "memory.md": {
       "original_url": "https://code.claude.com/docs/en/memory.md",
@@ -628,8 +628,8 @@
     "ultrareview.md": {
       "original_url": "https://code.claude.com/docs/en/ultrareview.md",
       "title": "Find bugs with ultrareview",
-      "hash": "202e57c05b76ea9323f555e17ee2c7692404da81ac20fdfe5448606cebb82228",
-      "last_updated": "2026-04-28T05:49:31.282597"
+      "hash": "89f8f1c7ee05b61943386524ea4364e060befcf5b97ae5a1295a07b5eb67495e",
+      "last_updated": "2026-04-28T19:17:00.439148"
     },
     "voice-dictation.md": {
       "original_url": "https://code.claude.com/docs/en/voice-dictation.md",
@@ -695,13 +695,13 @@
       "original_url": "https://code.claude.com/docs/en/claude_code_docs_map.md",
       "title": "Documentation Map",
       "source": "docs-map",
-      "hash": "07f796d46f82c518f7318f2a8a8e34695bb9023e0ec34d3e145110330ed09c46",
-      "last_updated": "2026-04-28T16:31:49.535311"
+      "hash": "8fc3546b686491ffb5569a11871cb171851f02f495e5799966f5446aeedef30a",
+      "last_updated": "2026-04-28T19:17:06.149153"
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2026-04-28T16:31:49.728112",
-    "fetch_duration_seconds": 64.92637,
+    "last_fetch_completed": "2026-04-28T19:17:06.219546",
+    "fetch_duration_seconds": 67.408546,
     "total_pages_discovered": 122,
     "pages_fetched_successfully": 124,
     "pages_failed": 0,
@@ -710,7 +710,7 @@
     "total_files": 116,
     "fetch_tool_version": "4.0"
   },
-  "last_updated": "2026-04-28T16:31:49.728306",
+  "last_updated": "2026-04-28T19:17:06.219744",
   "base_url": "https://raw.githubusercontent.com/doublefx/magic-claude-code-docs/main/plugin/docs/",
   "github_repository": "doublefx/magic-claude-code-docs",
   "github_ref": "main",
