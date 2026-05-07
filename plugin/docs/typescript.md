@@ -8,10 +8,6 @@
 
 <script src="/components/typescript-sdk-type-links.js" defer />
 
-<Note>
-  **Try the new V2 interface (preview):** A simplified interface with `send()` and `stream()` patterns is now available, making multi-turn conversations easier. [Learn more about the TypeScript V2 preview](/en/agent-sdk/typescript-v2-preview)
-</Note>
-
 ## Installation
 
 ```bash theme={null}
@@ -2495,7 +2491,7 @@ type Usage = {
 
 ### `CallToolResult`
 
-MCP tool result type (from `@modelcontextprotocol/sdk/types.js`).
+MCP tool result type (from `@modelcontextprotocol/sdk/types.js`). `structuredContent` is a JSON object that can be returned alongside `content`, including image blocks. See [Return structured data](/en/agent-sdk/custom-tools#return-structured-data).
 
 ```typescript theme={null}
 type CallToolResult = {
@@ -2503,6 +2499,7 @@ type CallToolResult = {
     type: "text" | "image" | "resource";
     // Additional fields vary by type
   }>;
+  structuredContent?: Record<string, unknown>;
   isError?: boolean;
 };
 ```
