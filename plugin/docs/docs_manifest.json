@@ -226,8 +226,8 @@
       "original_url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
       "original_raw_url": "https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md",
       "source": "claude-code-repository",
-      "hash": "707eee1005f2330b675b75382ced49bfb1836bd7f09549bf3d87e42a1f311fc7",
-      "last_updated": "2026-05-06T08:04:07.453343"
+      "hash": "44828823e6a006795e6bb5739a5c991381870b54aac8524965f5f4a7a51dce90",
+      "last_updated": "2026-05-07T01:48:00.713869"
     },
     "channels.md": {
       "original_url": "https://code.claude.com/docs/en/channels.md",
@@ -574,8 +574,8 @@
     "settings.md": {
       "original_url": "https://code.claude.com/docs/en/settings.md",
       "title": "Claude Code settings",
-      "hash": "f7b3ac3cf654107a07a45d7a91c3b04eee680e92add736f8477fcd867d6ab930",
-      "last_updated": "2026-05-06T16:23:09.744639"
+      "hash": "fcd1acd005abc31fa0490d47c9bb8be7a6e80acfc500e6248dac42a946629fdb",
+      "last_updated": "2026-05-07T01:47:48.575779"
     },
     "setup.md": {
       "original_url": "https://code.claude.com/docs/en/setup.md",
@@ -712,8 +712,8 @@
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2026-05-06T16:23:21.602673",
-    "fetch_duration_seconds": 67.055297,
+    "last_fetch_completed": "2026-05-07T01:48:00.714269",
+    "fetch_duration_seconds": 68.0638,
     "total_pages_discovered": 124,
     "pages_fetched_successfully": 126,
     "pages_failed": 0,
@@ -722,7 +722,7 @@
     "total_files": 118,
     "fetch_tool_version": "4.0"
   },
-  "last_updated": "2026-05-06T16:23:21.602832",
+  "last_updated": "2026-05-07T01:48:00.714451",
   "base_url": "https://raw.githubusercontent.com/doublefx/magic-claude-code-docs/main/plugin/docs/",
   "github_repository": "doublefx/magic-claude-code-docs",
   "github_ref": "main",
