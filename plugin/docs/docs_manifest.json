@@ -334,8 +334,8 @@
     "desktop.md": {
       "original_url": "https://code.claude.com/docs/en/desktop.md",
       "title": "Use Claude Code Desktop",
-      "hash": "b77cc431013c97c83cf3bc1c9d1ac0b26f328d4cac39dfebf9a4e03c8316e39f",
-      "last_updated": "2026-05-05T21:51:54.980694"
+      "hash": "0b1d44a51bee84b308f96cb4ecc9fcb0d8b6f4022f898c68ed6058fb1483333d",
+      "last_updated": "2026-05-08T07:13:37.490229"
     },
     "desktop-quickstart.md": {
       "original_url": "https://code.claude.com/docs/en/desktop-quickstart.md",
@@ -707,13 +707,13 @@
       "original_url": "https://code.claude.com/docs/en/claude_code_docs_map.md",
       "title": "Documentation Map",
       "source": "docs-map",
-      "hash": "84308f2012ab72f8c92c16a9afa54b1587af2865afb442efe3201e548803de26",
-      "last_updated": "2026-05-08T01:52:04.275867"
+      "hash": "a23a348047485033ee012a0f69799feb2cc7dfa37dcad020f56f78f4f10e2f15",
+      "last_updated": "2026-05-08T07:14:14.374008"
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2026-05-08T01:52:04.310960",
-    "fetch_duration_seconds": 66.233318,
+    "last_fetch_completed": "2026-05-08T07:14:14.388498",
+    "fetch_duration_seconds": 66.685429,
     "total_pages_discovered": 124,
     "pages_fetched_successfully": 126,
     "pages_failed": 0,
@@ -722,7 +722,7 @@
     "total_files": 118,
     "fetch_tool_version": "4.0"
   },
-  "last_updated": "2026-05-08T01:52:04.311116",
+  "last_updated": "2026-05-08T07:14:14.388669",
   "base_url": "https://raw.githubusercontent.com/doublefx/magic-claude-code-docs/main/plugin/docs/",
   "github_repository": "doublefx/magic-claude-code-docs",
   "github_ref": "main",
