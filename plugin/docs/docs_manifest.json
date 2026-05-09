@@ -39,8 +39,8 @@
     "hooks.md": {
       "original_url": "https://code.claude.com/docs/en/hooks.md",
       "title": "Hooks reference",
-      "hash": "f1bf5e376c8cd47b0fd56e5c2132bae454d2fed0367d91f0e3748b44e3d5791e",
-      "last_updated": "2026-05-08T01:51:36.409372"
+      "hash": "3b5782cc54f484e588a37923ad07779451ca291e6fda07fe1e9b530ebba385a3",
+      "last_updated": "2026-05-09T01:46:58.156780"
     },
     "hosting.md": {
       "original_url": "https://code.claude.com/docs/en/agent-sdk/hosting.md",
@@ -226,8 +226,8 @@
       "original_url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
       "original_raw_url": "https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md",
       "source": "claude-code-repository",
-      "hash": "c76c69350a3d0c4ea4c5d87e50b6bd232b5e997291ea8b796d3f806d59ab63ef",
-      "last_updated": "2026-05-08T19:02:25.281707"
+      "hash": "a2f5b996c431a3338c46de8f2af621f7efcd547871622cbf0ac06bc410c04fc5",
+      "last_updated": "2026-05-09T01:47:26.531645"
     },
     "channels.md": {
       "original_url": "https://code.claude.com/docs/en/channels.md",
@@ -580,8 +580,8 @@
     "setup.md": {
       "original_url": "https://code.claude.com/docs/en/setup.md",
       "title": "Advanced setup",
-      "hash": "4da6ea2da69d8a3eb9dd00b4d06e3f666d9fb6645722a617e7e70c2d206d0233",
-      "last_updated": "2026-05-06T16:23:10.286187"
+      "hash": "9e6d4fca383caaa8fef089c13f91915b7fc2d64d7721e681aaa5dc2a5f35e6a6",
+      "last_updated": "2026-05-09T01:47:15.004838"
     },
     "slack.md": {
       "original_url": "https://code.claude.com/docs/en/slack.md",
@@ -712,8 +712,8 @@
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2026-05-08T19:02:25.282083",
-    "fetch_duration_seconds": 65.685346,
+    "last_fetch_completed": "2026-05-09T01:47:26.531993",
+    "fetch_duration_seconds": 67.108767,
     "total_pages_discovered": 124,
     "pages_fetched_successfully": 126,
     "pages_failed": 0,
@@ -722,7 +722,7 @@
     "total_files": 118,
     "fetch_tool_version": "4.0"
   },
-  "last_updated": "2026-05-08T19:02:25.282259",
+  "last_updated": "2026-05-09T01:47:26.532164",
   "base_url": "https://raw.githubusercontent.com/doublefx/magic-claude-code-docs/main/plugin/docs/",
   "github_repository": "doublefx/magic-claude-code-docs",
   "github_ref": "main",
