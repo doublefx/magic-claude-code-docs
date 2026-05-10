@@ -370,8 +370,8 @@
     "errors.md": {
       "original_url": "https://code.claude.com/docs/en/errors.md",
       "title": "Error reference",
-      "hash": "094d102359a36353ab5b8028a4a191030c0249aaaa3c1938bc3a5cc834dce7bd",
-      "last_updated": "2026-05-09T05:39:06.673619"
+      "hash": "983882df4b947dede26f7f88054392aefa6bd7ef0f272ff98574466d2ef57885",
+      "last_updated": "2026-05-10T18:43:23.404265"
     },
     "fast-mode.md": {
       "original_url": "https://code.claude.com/docs/en/fast-mode.md",
@@ -430,8 +430,8 @@
     "hooks-guide.md": {
       "original_url": "https://code.claude.com/docs/en/hooks-guide.md",
       "title": "Automate workflows with hooks",
-      "hash": "ccd1639a9d75881ff461746c92514826d6dc1e2ba49b5c6e167c1de3acc172df",
-      "last_updated": "2026-05-05T01:31:09.562631"
+      "hash": "6507f3a52100ae36531053973b22f7de7ce367c729cef77e5cad89bda5209876",
+      "last_updated": "2026-05-10T18:43:29.421169"
     },
     "how-claude-code-works.md": {
       "original_url": "https://code.claude.com/docs/en/how-claude-code-works.md",
@@ -719,13 +719,13 @@
       "original_url": "https://code.claude.com/docs/en/claude_code_docs_map.md",
       "title": "Documentation Map",
       "source": "docs-map",
-      "hash": "ef7e6dd71a6475fa2f2a59c647e099ca9c48a9dbb320364176e50fe1d81acc8d",
-      "last_updated": "2026-05-09T05:39:40.935516"
+      "hash": "b6c97d890d05a790c29ae380e543c5d8b9d499eb7e6d7ee932ad7b8fd86ab003",
+      "last_updated": "2026-05-10T18:43:58.541528"
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2026-05-09T07:30:24.556728",
-    "fetch_duration_seconds": 66.586338,
+    "last_fetch_completed": "2026-05-10T18:43:58.688734",
+    "fetch_duration_seconds": 69.002358,
     "total_pages_discovered": 126,
     "pages_fetched_successfully": 128,
     "pages_failed": 0,
@@ -734,7 +734,7 @@
     "total_files": 120,
     "fetch_tool_version": "4.0"
   },
-  "last_updated": "2026-05-09T07:30:24.556895",
+  "last_updated": "2026-05-10T18:43:58.688897",
   "base_url": "https://raw.githubusercontent.com/doublefx/magic-claude-code-docs/main/plugin/docs/",
   "github_repository": "doublefx/magic-claude-code-docs",
   "github_ref": "main",
