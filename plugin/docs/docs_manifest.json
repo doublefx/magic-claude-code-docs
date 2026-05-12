@@ -51,8 +51,8 @@
     "mcp.md": {
       "original_url": "https://code.claude.com/docs/en/mcp.md",
       "title": "Connect Claude Code to tools via MCP",
-      "hash": "c73cdb607cec22d50584daf6fe96cef5710891763d62174efb6b2c0420239fd4",
-      "last_updated": "2026-05-12T01:50:38.956873"
+      "hash": "a26f1de454d95cf3ad23cfc4cd647ebde6bfaf551973d835d97dabb47d0de66f",
+      "last_updated": "2026-05-12T22:01:33.013913"
     },
     "migration-guide.md": {
       "original_url": "https://code.claude.com/docs/en/agent-sdk/migration-guide.md",
@@ -189,8 +189,8 @@
     "agent-view.md": {
       "original_url": "https://code.claude.com/docs/en/agent-view.md",
       "title": "Manage multiple agents with agent view",
-      "hash": "79a82fb189dfec9cae2638a08ccf6b1f027eb4fb2eca5d2adcd2387111aa2171",
-      "last_updated": "2026-05-12T01:50:08.985520"
+      "hash": "cbde3162279dabb504eab589974c215894ba0c5ce18c73383925ee2680a1284a",
+      "last_updated": "2026-05-12T22:01:04.331651"
     },
     "agents.md": {
       "original_url": "https://code.claude.com/docs/en/agents.md",
@@ -238,8 +238,8 @@
       "original_url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
       "original_raw_url": "https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md",
       "source": "claude-code-repository",
-      "hash": "42c298a535ca99e38f0585d7ac9d53d7e0352e0172bb870641515e105d96f4b0",
-      "last_updated": "2026-05-11T19:25:46.874807"
+      "hash": "42ef84c29e745a10dda46ffc06ba080210e62b7ca396d24530fb65875e029d69",
+      "last_updated": "2026-05-12T22:01:58.987271"
     },
     "channels.md": {
       "original_url": "https://code.claude.com/docs/en/channels.md",
@@ -586,8 +586,8 @@
     "security.md": {
       "original_url": "https://code.claude.com/docs/en/security.md",
       "title": "Security",
-      "hash": "dcec874491cafd8b166513c43bf557924dd23ba15e1ef1575f7acf7821e6449b",
-      "last_updated": "2026-05-09T05:39:27.030345"
+      "hash": "06cbb60c87fdfe16a471aec48417c7029665ad89e5b62e13b4c9902006aac95f",
+      "last_updated": "2026-05-12T22:01:44.010685"
     },
     "server-managed-settings.md": {
       "original_url": "https://code.claude.com/docs/en/server-managed-settings.md",
@@ -749,13 +749,13 @@
       "original_url": "https://code.claude.com/docs/en/claude_code_docs_map.md",
       "title": "Documentation Map",
       "source": "docs-map",
-      "hash": "02df5cd8d3a51caee174209bba1ce2ab899c5af8a5f6da0b68c4acb4d430e9e9",
-      "last_updated": "2026-05-12T19:26:28.619261"
+      "hash": "7f1de754004caaf92bb5ef44131ad9311faafc4780a41fe459ae50c9041575bd",
+      "last_updated": "2026-05-12T22:01:58.969263"
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2026-05-12T19:26:28.696131",
-    "fetch_duration_seconds": 72.70332,
+    "last_fetch_completed": "2026-05-12T22:01:58.987607",
+    "fetch_duration_seconds": 71.922015,
     "total_pages_discovered": 131,
     "pages_fetched_successfully": 133,
     "pages_failed": 0,
@@ -764,7 +764,7 @@
     "total_files": 125,
     "fetch_tool_version": "4.0"
   },
-  "last_updated": "2026-05-12T19:26:28.696320",
+  "last_updated": "2026-05-12T22:01:58.987782",
   "base_url": "https://raw.githubusercontent.com/doublefx/magic-claude-code-docs/main/plugin/docs/",
   "github_repository": "doublefx/magic-claude-code-docs",
   "github_ref": "main",
