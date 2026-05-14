@@ -238,8 +238,8 @@
       "original_url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
       "original_raw_url": "https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md",
       "source": "claude-code-repository",
-      "hash": "42ef84c29e745a10dda46ffc06ba080210e62b7ca396d24530fb65875e029d69",
-      "last_updated": "2026-05-12T22:01:58.987271"
+      "hash": "532af68f071c2b879c8338290281a49ac3229ef63778cb2d9e5083184a97c379",
+      "last_updated": "2026-05-14T01:58:45.846993"
     },
     "channels.md": {
       "original_url": "https://code.claude.com/docs/en/channels.md",
@@ -559,12 +559,6 @@
       "hash": "021655c937efe74fdb06602910a834235ea194c90fbc37007dff303938bc9607",
       "last_updated": "2026-05-13T01:55:57.994642"
     },
-    "prompt-library.md": {
-      "original_url": "https://code.claude.com/docs/en/prompt-library.md",
-      "title": "Prompt library",
-      "hash": "d59bbc4216bf34945dc0cfdc22b1c9385c92e9a6ee6e6c09b1c9cfcac1d8744d",
-      "last_updated": "2026-05-13T22:04:22.434809"
-    },
     "remote-control.md": {
       "original_url": "https://code.claude.com/docs/en/remote-control.md",
       "title": "Continue local sessions from any device with Remote Control",
@@ -755,22 +749,22 @@
       "original_url": "https://code.claude.com/docs/en/claude_code_docs_map.md",
       "title": "Documentation Map",
       "source": "docs-map",
-      "hash": "5b42294a00ef4f14da058dd96b64d37ee9de0e441453617f52306468c9034cdd",
-      "last_updated": "2026-05-13T22:04:41.203879"
+      "hash": "1deb3bc1349aa9e954961d7286354fef29aceaf1abe25258658ac42a197e7d25",
+      "last_updated": "2026-05-14T01:58:45.829011"
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2026-05-13T22:04:41.247817",
-    "fetch_duration_seconds": 74.9865,
-    "total_pages_discovered": 132,
-    "pages_fetched_successfully": 134,
+    "last_fetch_completed": "2026-05-14T01:58:45.847524",
+    "fetch_duration_seconds": 71.700361,
+    "total_pages_discovered": 131,
+    "pages_fetched_successfully": 133,
     "pages_failed": 0,
     "failed_pages": [],
     "llms_txt_url": "https://code.claude.com/docs/llms.txt",
-    "total_files": 126,
+    "total_files": 125,
     "fetch_tool_version": "4.0"
   },
-  "last_updated": "2026-05-13T22:04:41.247981",
+  "last_updated": "2026-05-14T01:58:45.847730",
   "base_url": "https://raw.githubusercontent.com/doublefx/magic-claude-code-docs/main/plugin/docs/",
   "github_repository": "doublefx/magic-claude-code-docs",
   "github_ref": "main",
