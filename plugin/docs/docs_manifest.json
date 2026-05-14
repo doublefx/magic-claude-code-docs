@@ -189,8 +189,8 @@
     "agent-view.md": {
       "original_url": "https://code.claude.com/docs/en/agent-view.md",
       "title": "Manage multiple agents with agent view",
-      "hash": "e7ac0ec004c98b68ffa853f336707cb9cc67b52619d036e6a0d6e1e0ce196707",
-      "last_updated": "2026-05-13T22:03:44.324097"
+      "hash": "ada6957bf29595dfe366dbcd358d48ac6dd246eb3004a64d05b2d5149c62fb4b",
+      "last_updated": "2026-05-14T06:13:43.327175"
     },
     "agents.md": {
       "original_url": "https://code.claude.com/docs/en/agents.md",
@@ -749,13 +749,13 @@
       "original_url": "https://code.claude.com/docs/en/claude_code_docs_map.md",
       "title": "Documentation Map",
       "source": "docs-map",
-      "hash": "1deb3bc1349aa9e954961d7286354fef29aceaf1abe25258658ac42a197e7d25",
-      "last_updated": "2026-05-14T01:58:45.829011"
+      "hash": "d3647fd47fd7559ec115e8bb3e609b5fc17ced9cda419a7747dd0609c1174636",
+      "last_updated": "2026-05-14T06:14:36.579669"
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2026-05-14T01:58:45.847524",
-    "fetch_duration_seconds": 71.700361,
+    "last_fetch_completed": "2026-05-14T06:14:36.600651",
+    "fetch_duration_seconds": 70.025146,
     "total_pages_discovered": 131,
     "pages_fetched_successfully": 133,
     "pages_failed": 0,
@@ -764,7 +764,7 @@
     "total_files": 125,
     "fetch_tool_version": "4.0"
   },
-  "last_updated": "2026-05-14T01:58:45.847730",
+  "last_updated": "2026-05-14T06:14:36.600813",
   "base_url": "https://raw.githubusercontent.com/doublefx/magic-claude-code-docs/main/plugin/docs/",
   "github_repository": "doublefx/magic-claude-code-docs",
   "github_ref": "main",
