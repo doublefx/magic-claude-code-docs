@@ -39,8 +39,8 @@
     "hooks.md": {
       "original_url": "https://code.claude.com/docs/en/hooks.md",
       "title": "Hooks reference",
-      "hash": "90e3b1b274141b27b9f002af4090f2bf6a0e7a92ffcba7f812c79d3f483b6d8c",
-      "last_updated": "2026-05-14T16:55:39.331834"
+      "hash": "30ef74af06b38e300ce12058aa62be03c80c1d0e217227b60bef6222e87ca99c",
+      "last_updated": "2026-05-15T01:56:34.103013"
     },
     "hosting.md": {
       "original_url": "https://code.claude.com/docs/en/agent-sdk/hosting.md",
@@ -189,8 +189,8 @@
     "agent-view.md": {
       "original_url": "https://code.claude.com/docs/en/agent-view.md",
       "title": "Manage multiple agents with agent view",
-      "hash": "fe2d5b2f3d21288c211d2b3efd170e1b33846b95688a920928f57df70f91188c",
-      "last_updated": "2026-05-14T16:55:14.435901"
+      "hash": "2d10f72bebc0a795209bf8572ece99c60e569f8243b6c751640401633d45406c",
+      "last_updated": "2026-05-15T01:56:10.070153"
     },
     "agents.md": {
       "original_url": "https://code.claude.com/docs/en/agents.md",
@@ -238,8 +238,8 @@
       "original_url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
       "original_raw_url": "https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md",
       "source": "claude-code-repository",
-      "hash": "532af68f071c2b879c8338290281a49ac3229ef63778cb2d9e5083184a97c379",
-      "last_updated": "2026-05-14T01:58:45.846993"
+      "hash": "7e0b51ecbe02912e2f31b04a231430c734e278c307ad0d6e2810b41705bcfa4d",
+      "last_updated": "2026-05-15T01:57:03.480235"
     },
     "channels.md": {
       "original_url": "https://code.claude.com/docs/en/channels.md",
@@ -388,8 +388,8 @@
     "env-vars.md": {
       "original_url": "https://code.claude.com/docs/en/env-vars.md",
       "title": "Environment variables",
-      "hash": "32ae3a5f6598e99d05dde58e6199ba18a92dba2548479276eba56aa906f4ae36",
-      "last_updated": "2026-05-14T16:55:32.626419"
+      "hash": "e8896cc22d645f89575cdd81a9a532411a459c8a01a5d40d7d871b884a0dda36",
+      "last_updated": "2026-05-15T01:56:27.665513"
     },
     "errors.md": {
       "original_url": "https://code.claude.com/docs/en/errors.md",
@@ -442,8 +442,8 @@
     "goal.md": {
       "original_url": "https://code.claude.com/docs/en/goal.md",
       "title": "Keep Claude working toward a goal",
-      "hash": "f306f221d7fa7afa75e5cad22e8a7b334e833e95be0dc41733d417a7bcf4e986",
-      "last_updated": "2026-05-14T16:55:37.679718"
+      "hash": "d1ed30854d47fa94d4b2994c890a5e1dca68878cd7e0a2711ddd733f5da07e51",
+      "last_updated": "2026-05-15T01:56:32.504450"
     },
     "google-vertex-ai.md": {
       "original_url": "https://code.claude.com/docs/en/google-vertex-ai.md",
@@ -604,8 +604,8 @@
     "settings.md": {
       "original_url": "https://code.claude.com/docs/en/settings.md",
       "title": "Claude Code settings",
-      "hash": "07ebdf801be7ff5ae5fec4c420925270c98fc5efe2e680ab6b96c1bcd1ce92ad",
-      "last_updated": "2026-05-13T22:04:26.964092"
+      "hash": "26dd5c1f0db22f20c753b04203da67cd3989522b90d206461a5537faf136ce80",
+      "last_updated": "2026-05-15T01:56:50.082852"
     },
     "setup.md": {
       "original_url": "https://code.claude.com/docs/en/setup.md",
@@ -760,8 +760,8 @@
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2026-05-14T16:56:09.699099",
-    "fetch_duration_seconds": 72.79667,
+    "last_fetch_completed": "2026-05-15T01:57:03.480625",
+    "fetch_duration_seconds": 70.054956,
     "total_pages_discovered": 132,
     "pages_fetched_successfully": 134,
     "pages_failed": 0,
@@ -770,7 +770,7 @@
     "total_files": 126,
     "fetch_tool_version": "4.0"
   },
-  "last_updated": "2026-05-14T16:56:09.699257",
+  "last_updated": "2026-05-15T01:57:03.480786",
   "base_url": "https://raw.githubusercontent.com/doublefx/magic-claude-code-docs/main/plugin/docs/",
   "github_repository": "doublefx/magic-claude-code-docs",
   "github_ref": "main",
