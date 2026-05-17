@@ -117,8 +117,8 @@
     "skills.md": {
       "original_url": "https://code.claude.com/docs/en/skills.md",
       "title": "Extend Claude with skills",
-      "hash": "0e2de15c2b49351ebc491865c9889d3bbbe4ed196de8f1587d372f583efdc910",
-      "last_updated": "2026-05-13T01:56:03.466261"
+      "hash": "8271c224849df9e77e6bad926eee3c92414aa36746c69f11f9e13f1d1cec32fd",
+      "last_updated": "2026-05-17T01:53:26.558816"
     },
     "slash-commands.md": {
       "original_url": "https://code.claude.com/docs/en/agent-sdk/slash-commands.md",
@@ -508,14 +508,14 @@
     "microsoft-foundry.md": {
       "original_url": "https://code.claude.com/docs/en/microsoft-foundry.md",
       "title": "Claude Code on Microsoft Foundry",
-      "hash": "a309a54a2e2be46ede40b10df355c636948d17a8b7adb449eb709f38a90a39b1",
-      "last_updated": "2026-05-16T01:49:35.836999"
+      "hash": "2b9270f40dea16737d9c09d1b6c06fcf8855fa001a88e1a1175040ff1ca13b2b",
+      "last_updated": "2026-05-17T01:53:14.504209"
     },
     "model-config.md": {
       "original_url": "https://code.claude.com/docs/en/model-config.md",
       "title": "Model configuration",
-      "hash": "dea8866d7cb61a9494e2e80d66c3f7d93158df2a5ba69be7d469fdc66dc70096",
-      "last_updated": "2026-05-13T01:55:51.989667"
+      "hash": "5e7319e820a3039631bc726fcb5e58a8aca0070f33008c8ec4e4559c1446085c",
+      "last_updated": "2026-05-17T01:53:15.051519"
     },
     "monitoring-usage.md": {
       "original_url": "https://code.claude.com/docs/en/monitoring-usage.md",
@@ -755,13 +755,13 @@
       "original_url": "https://code.claude.com/docs/en/claude_code_docs_map.md",
       "title": "Documentation Map",
       "source": "docs-map",
-      "hash": "d9426ac56709278c79331edbfb3c65d225b6aec7a036422a7f8926fcdecf3091",
-      "last_updated": "2026-05-14T16:56:09.683750"
+      "hash": "acd09b912f3e106a7abf05f77b1286e7d9fe3499d7c34f53c209be1e7dedf9ee",
+      "last_updated": "2026-05-17T01:53:39.275772"
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2026-05-16T01:50:01.297489",
-    "fetch_duration_seconds": 73.973456,
+    "last_fetch_completed": "2026-05-17T01:53:39.399686",
+    "fetch_duration_seconds": 72.446485,
     "total_pages_discovered": 132,
     "pages_fetched_successfully": 134,
     "pages_failed": 0,
@@ -770,7 +770,7 @@
     "total_files": 126,
     "fetch_tool_version": "4.0"
   },
-  "last_updated": "2026-05-16T01:50:01.297666",
+  "last_updated": "2026-05-17T01:53:39.399881",
   "base_url": "https://raw.githubusercontent.com/doublefx/magic-claude-code-docs/main/plugin/docs/",
   "github_repository": "doublefx/magic-claude-code-docs",
   "github_ref": "main",
