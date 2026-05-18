@@ -2739,11 +2739,15 @@ type CallToolResult = {
 Controls Claude's thinking/reasoning behavior. Takes precedence over the deprecated `maxThinkingTokens`.
 
 ```typescript theme={null}
+type ThinkingDisplay = "summarized" | "omitted";
+
 type ThinkingConfig =
-  | { type: "adaptive" } // The model determines when and how much to reason (Opus 4.6+)
-  | { type: "enabled"; budgetTokens?: number } // Fixed thinking token budget
+  | { type: "adaptive"; display?: ThinkingDisplay } // The model determines when and how much to reason (Opus 4.6+)
+  | { type: "enabled"; budgetTokens?: number; display?: ThinkingDisplay } // Fixed thinking token budget
   | { type: "disabled" }; // No extended thinking
 ```
+
+The optional `display` field controls whether thinking text is returned `"summarized"` or `"omitted"`. On Claude Opus 4.7 and later, the API default is `"omitted"`, so set `"summarized"` to receive thinking content in `thinking` blocks.
 
 ### `SpawnedProcess`
 
