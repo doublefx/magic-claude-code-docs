@@ -27,8 +27,8 @@
     "custom-tools.md": {
       "original_url": "https://code.claude.com/docs/en/agent-sdk/custom-tools.md",
       "title": "Give Claude custom tools",
-      "hash": "36309a038999fd45c911cc1815aeccaaf707eedb743b37d5dae7a7eeb03838c1",
-      "last_updated": "2026-05-07T10:58:22.872578"
+      "hash": "5d72029e2ffaefe3c7962fef5d706b2ed99c0fe1c4caf5ce8732f66e469bd8de",
+      "last_updated": "2026-05-19T19:40:45.036190"
     },
     "file-checkpointing.md": {
       "original_url": "https://code.claude.com/docs/en/agent-sdk/file-checkpointing.md",
@@ -51,8 +51,8 @@
     "mcp.md": {
       "original_url": "https://code.claude.com/docs/en/mcp.md",
       "title": "Connect Claude Code to tools via MCP",
-      "hash": "987d198ab7e132f58bc27a3fd26884b304383bcc6997a7eb5830083d1f57bc70",
-      "last_updated": "2026-05-19T02:02:39.558348"
+      "hash": "fab279fb17fb5c273f70ba044e2cc39f68d9b9ba94d40a5f283d947549b3c18a",
+      "last_updated": "2026-05-19T19:41:28.725451"
     },
     "migration-guide.md": {
       "original_url": "https://code.claude.com/docs/en/agent-sdk/migration-guide.md",
@@ -63,8 +63,8 @@
     "modifying-system-prompts.md": {
       "original_url": "https://code.claude.com/docs/en/agent-sdk/modifying-system-prompts.md",
       "title": "Modifying system prompts",
-      "hash": "532a8726dc4fc5108784d4c2a64767e98735bc91b18655df613584dc0e9da41b",
-      "last_updated": "2026-05-13T22:03:32.185474"
+      "hash": "b08c10581e193c9ef18ad5c1ca46997529c82de82c26012a229279372521798d",
+      "last_updated": "2026-05-19T19:40:48.309896"
     },
     "observability.md": {
       "original_url": "https://code.claude.com/docs/en/agent-sdk/observability.md",
@@ -93,8 +93,8 @@
     "python.md": {
       "original_url": "https://code.claude.com/docs/en/agent-sdk/python.md",
       "title": "Agent SDK reference - Python",
-      "hash": "d2f296884fc3ae93909811133ff378dc37483591ecb15ce270a9e21d51c9069f",
-      "last_updated": "2026-05-19T02:02:02.167250"
+      "hash": "6ba33579565674726a30805ed038513b24da193f9a0642bc1eb7cd40c5ba075c",
+      "last_updated": "2026-05-19T19:40:51.043127"
     },
     "quickstart.md": {
       "original_url": "https://code.claude.com/docs/en/quickstart.md",
@@ -165,8 +165,8 @@
     "typescript.md": {
       "original_url": "https://code.claude.com/docs/en/agent-sdk/typescript.md",
       "title": "Agent SDK reference - TypeScript",
-      "hash": "be02ef10f88f495fe6553b277034d3bae899709e9ef98504d9b9125840ad4b3b",
-      "last_updated": "2026-05-19T14:30:04.850004"
+      "hash": "708060a22ba7ced9906d6625906b2393763bf41d8cfaa8011fd306177fd7d1c8",
+      "last_updated": "2026-05-19T19:40:57.602565"
     },
     "typescript-v2-preview.md": {
       "original_url": "https://code.claude.com/docs/en/agent-sdk/typescript-v2-preview.md",
@@ -189,8 +189,8 @@
     "agent-view.md": {
       "original_url": "https://code.claude.com/docs/en/agent-view.md",
       "title": "Manage multiple agents with agent view",
-      "hash": "3d975c68944b3ed943e5423fde962390faa06dff4f6cc98e8c371ebfea80c930",
-      "last_updated": "2026-05-19T14:30:09.599785"
+      "hash": "dd1ce769b40fc3f3c43e8bca2f217b981d987d56eb88ca287cf4180a47d1e131",
+      "last_updated": "2026-05-19T19:40:59.769824"
     },
     "agents.md": {
       "original_url": "https://code.claude.com/docs/en/agents.md",
@@ -286,8 +286,8 @@
     "cli-reference.md": {
       "original_url": "https://code.claude.com/docs/en/cli-reference.md",
       "title": "CLI reference",
-      "hash": "c0a1cce14d553fc08b5abb477492d898a47f26d34d22e0161e2de7d751d5d36c",
-      "last_updated": "2026-05-19T14:30:23.052890"
+      "hash": "bbaf7077ce2b654faa6d473b586a341c2999513949f753ce1455d4ccc38ec76c",
+      "last_updated": "2026-05-19T19:41:08.532800"
     },
     "code-review.md": {
       "original_url": "https://code.claude.com/docs/en/code-review.md",
@@ -388,8 +388,8 @@
     "env-vars.md": {
       "original_url": "https://code.claude.com/docs/en/env-vars.md",
       "title": "Environment variables",
-      "hash": "50ecbd4f77bafd2e14c64676f62400db23dfce20f8bf9830cbadb5f3d5a9b603",
-      "last_updated": "2026-05-19T17:32:46.842522"
+      "hash": "2de852d70aba20b0b5e9fbd2bc96ea7326f34e012c3ddba421f71ef4304513aa",
+      "last_updated": "2026-05-19T19:41:17.803302"
     },
     "errors.md": {
       "original_url": "https://code.claude.com/docs/en/errors.md",
@@ -767,13 +767,13 @@
       "original_url": "https://code.claude.com/docs/en/claude_code_docs_map.md",
       "title": "Documentation Map",
       "source": "docs-map",
-      "hash": "e85864a8e6b3e3a6e4169df49032c829e15d6e03d49db47fdcbb0d6bca036837",
-      "last_updated": "2026-05-19T17:33:25.588077"
+      "hash": "779f988a9cf313c396a6fc7304a2b354e2730255d00f9179bb08457db6fae68c",
+      "last_updated": "2026-05-19T19:41:55.484821"
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2026-05-19T17:33:25.612530",
-    "fetch_duration_seconds": 75.029312,
+    "last_fetch_completed": "2026-05-19T19:41:55.517657",
+    "fetch_duration_seconds": 72.809071,
     "total_pages_discovered": 134,
     "pages_fetched_successfully": 136,
     "pages_failed": 0,
@@ -782,7 +782,7 @@
     "total_files": 128,
     "fetch_tool_version": "4.0"
   },
-  "last_updated": "2026-05-19T17:33:25.612704",
+  "last_updated": "2026-05-19T19:41:55.517816",
   "base_url": "https://raw.githubusercontent.com/doublefx/magic-claude-code-docs/main/plugin/docs/",
   "github_repository": "doublefx/magic-claude-code-docs",
   "github_ref": "main",
