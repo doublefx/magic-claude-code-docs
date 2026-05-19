@@ -81,8 +81,8 @@
     "permissions.md": {
       "original_url": "https://code.claude.com/docs/en/permissions.md",
       "title": "Configure permissions",
-      "hash": "e72905cfe43500ed220ab7ed3a7664b8797d8da2fd5bd334ac402836928b29e8",
-      "last_updated": "2026-05-18T21:57:50.311063"
+      "hash": "74a265cf4c28f995635348d01569c50ecfede71487ef5b28639af1af63887da3",
+      "last_updated": "2026-05-19T22:04:41.563018"
     },
     "plugins.md": {
       "original_url": "https://code.claude.com/docs/en/plugins.md",
@@ -238,8 +238,8 @@
       "original_url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
       "original_raw_url": "https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md",
       "source": "claude-code-repository",
-      "hash": "06a4b5000d7afa26409c6352b3e1eda6c8013e317acc7c330aa22f55b4edad64",
-      "last_updated": "2026-05-19T02:03:04.871308"
+      "hash": "49846f0db9f5400cc773675cf3323c0b6a817615b7e3ec38a7bd484f394a1bcf",
+      "last_updated": "2026-05-19T22:05:03.686532"
     },
     "channels.md": {
       "original_url": "https://code.claude.com/docs/en/channels.md",
@@ -568,8 +568,8 @@
     "prompt-caching.md": {
       "original_url": "https://code.claude.com/docs/en/prompt-caching.md",
       "title": "How Claude Code uses prompt caching",
-      "hash": "a278630dd072a3923507cd5fe0e3a2d303fafb0dfced49ad66514ea02b031645",
-      "last_updated": "2026-05-19T17:33:06.359597"
+      "hash": "11b72e26d8ad38ee7bd63a49cf3060a250ef49580583e7173a60f767f3b5f5c4",
+      "last_updated": "2026-05-19T22:04:44.853393"
     },
     "remote-control.md": {
       "original_url": "https://code.claude.com/docs/en/remote-control.md",
@@ -580,8 +580,8 @@
     "routines.md": {
       "original_url": "https://code.claude.com/docs/en/routines.md",
       "title": "Automate work with routines",
-      "hash": "9edc52477468f6bedda15381bc07180ef4bd0a800ecc69b5122369156c78cba9",
-      "last_updated": "2026-05-19T14:31:06.060642"
+      "hash": "27213e9ed746e4bde09615714f53bf8e5478c2d6948ee0bdf4eae1df96f73606",
+      "last_updated": "2026-05-19T22:04:46.512963"
     },
     "sandboxing.md": {
       "original_url": "https://code.claude.com/docs/en/sandboxing.md",
@@ -610,8 +610,8 @@
     "settings.md": {
       "original_url": "https://code.claude.com/docs/en/settings.md",
       "title": "Claude Code settings",
-      "hash": "bed8c8c4534b3f9166ee26709ffa2ca46c48702e9465a6c60e72f59a9da5fcda",
-      "last_updated": "2026-05-19T14:31:10.284004"
+      "hash": "9732de9e4eb6200c439e2e4aaa34f7db919d2168a5077634dd51a8ec55b3d937",
+      "last_updated": "2026-05-19T22:04:49.228558"
     },
     "setup.md": {
       "original_url": "https://code.claude.com/docs/en/setup.md",
@@ -767,13 +767,13 @@
       "original_url": "https://code.claude.com/docs/en/claude_code_docs_map.md",
       "title": "Documentation Map",
       "source": "docs-map",
-      "hash": "779f988a9cf313c396a6fc7304a2b354e2730255d00f9179bb08457db6fae68c",
-      "last_updated": "2026-05-19T19:41:55.484821"
+      "hash": "30bd984e7f37426116af6d698d0cf333c6ba8312eb0a3772484ff488e1cf4db6",
+      "last_updated": "2026-05-19T22:05:03.669212"
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2026-05-19T19:41:55.517657",
-    "fetch_duration_seconds": 72.809071,
+    "last_fetch_completed": "2026-05-19T22:05:03.686848",
+    "fetch_duration_seconds": 73.896904,
     "total_pages_discovered": 134,
     "pages_fetched_successfully": 136,
     "pages_failed": 0,
@@ -782,7 +782,7 @@
     "total_files": 128,
     "fetch_tool_version": "4.0"
   },
-  "last_updated": "2026-05-19T19:41:55.517816",
+  "last_updated": "2026-05-19T22:05:03.687016",
   "base_url": "https://raw.githubusercontent.com/doublefx/magic-claude-code-docs/main/plugin/docs/",
   "github_repository": "doublefx/magic-claude-code-docs",
   "github_ref": "main",
