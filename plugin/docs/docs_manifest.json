@@ -108,11 +108,17 @@
       "hash": "2a461c7caf4cc2d5352db78389442e8f99fff389c4d4d28a2074eec0095457cf",
       "last_updated": "2026-04-29T21:50:13.684740"
     },
+    "session-storage.md": {
+      "original_url": "https://code.claude.com/docs/en/agent-sdk/session-storage.md",
+      "title": "Persist sessions to external storage",
+      "hash": "a3b4abef343de5806b608b9b5b60ac7cf5579fc0329009d27d2b3e4a2b5bc84c",
+      "last_updated": "2026-05-20T17:48:19.348611"
+    },
     "sessions.md": {
-      "original_url": "https://code.claude.com/docs/en/agent-sdk/sessions.md",
-      "title": "Work with sessions",
-      "hash": "45c6baee65e4a9e3c1d178713327832e5c7a7cbb4c1524727cbf1052e7ed9151",
-      "last_updated": "2026-05-19T02:02:03.778706"
+      "original_url": "https://code.claude.com/docs/en/sessions.md",
+      "title": "Manage sessions",
+      "hash": "b9990b1bf0d56f35a0c1d02e80b552a5606072a4e2048808b71d26f77c72f26e",
+      "last_updated": "2026-05-20T17:49:09.250572"
     },
     "skills.md": {
       "original_url": "https://code.claude.com/docs/en/skills.md",
@@ -256,8 +262,8 @@
     "checkpointing.md": {
       "original_url": "https://code.claude.com/docs/en/checkpointing.md",
       "title": "Checkpointing",
-      "hash": "0d292b1432079262906d80a125703c9aa769899a4103588bfe0ca47e7750a4c2",
-      "last_updated": "2026-05-14T16:55:20.534925"
+      "hash": "4056d43fd208398998e2e54d26b9d3913ebdc1a12de7be3538ee0158d94cb88b",
+      "last_updated": "2026-05-20T17:48:32.954265"
     },
     "chrome.md": {
       "original_url": "https://code.claude.com/docs/en/chrome.md",
@@ -472,8 +478,8 @@
     "interactive-mode.md": {
       "original_url": "https://code.claude.com/docs/en/interactive-mode.md",
       "title": "Interactive mode",
-      "hash": "7d0f8665be47bfa6fcc4dd8e20620cead6fd25ec4d3634b53d8eda032ab30f28",
-      "last_updated": "2026-05-20T06:38:05.397236"
+      "hash": "5ec4b05955083e831a05d077437b6df5487d41471cef0640c9ae6ffe483dcf13",
+      "last_updated": "2026-05-20T17:48:53.009948"
     },
     "jetbrains.md": {
       "original_url": "https://code.claude.com/docs/en/jetbrains.md",
@@ -553,11 +559,17 @@
       "hash": "3fde6d01fcfb71f5f17826e0a8a04569f0b8ae93f4fe462bf3c36ed5fb0957e7",
       "last_updated": "2026-05-19T02:02:45.425147"
     },
+    "plugin-hints.md": {
+      "original_url": "https://code.claude.com/docs/en/plugin-hints.md",
+      "title": "Recommend your plugin from your CLI",
+      "hash": "e4f31d5ad098c9a9a9ecb39c3ec5e4dad1490b31d8e0bec6437667983f7482be",
+      "last_updated": "2026-05-20T17:49:02.225950"
+    },
     "plugin-marketplaces.md": {
       "original_url": "https://code.claude.com/docs/en/plugin-marketplaces.md",
       "title": "Create and distribute a plugin marketplace",
-      "hash": "66e70f14338c541f0066009a193dfb00069b732d5e3baadc18ee155499950e66",
-      "last_updated": "2026-05-19T02:02:45.966062"
+      "hash": "247c82a96bc272f37a68e7005b0a010b2b62c8c3c53065176c4dc8c023401585",
+      "last_updated": "2026-05-20T17:49:02.769026"
     },
     "plugins-reference.md": {
       "original_url": "https://code.claude.com/docs/en/plugins-reference.md",
@@ -570,6 +582,12 @@
       "title": "How Claude Code uses prompt caching",
       "hash": "11b72e26d8ad38ee7bd63a49cf3060a250ef49580583e7173a60f767f3b5f5c4",
       "last_updated": "2026-05-19T22:04:44.853393"
+    },
+    "prompt-library.md": {
+      "original_url": "https://code.claude.com/docs/en/prompt-library.md",
+      "title": "Prompt library",
+      "hash": "d59bbc4216bf34945dc0cfdc22b1c9385c92e9a6ee6e6c09b1c9cfcac1d8744d",
+      "last_updated": "2026-05-20T17:49:04.943143"
     },
     "remote-control.md": {
       "original_url": "https://code.claude.com/docs/en/remote-control.md",
@@ -767,22 +785,22 @@
       "original_url": "https://code.claude.com/docs/en/claude_code_docs_map.md",
       "title": "Documentation Map",
       "source": "docs-map",
-      "hash": "56e2cfc2767d0b0c1b6a49b55cee6b52b52fdd071f5716743c1f04a2c83b463a",
-      "last_updated": "2026-05-20T06:38:34.082638"
+      "hash": "45925ab85f41954edec83c3848849eec0422bf739d937ec180c640412b586f4a",
+      "last_updated": "2026-05-20T17:49:23.877424"
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2026-05-20T06:38:34.096968",
-    "fetch_duration_seconds": 70.777381,
-    "total_pages_discovered": 134,
-    "pages_fetched_successfully": 136,
+    "last_fetch_completed": "2026-05-20T17:49:23.910792",
+    "fetch_duration_seconds": 74.472766,
+    "total_pages_discovered": 138,
+    "pages_fetched_successfully": 140,
     "pages_failed": 0,
     "failed_pages": [],
     "llms_txt_url": "https://code.claude.com/docs/llms.txt",
-    "total_files": 128,
+    "total_files": 131,
     "fetch_tool_version": "4.0"
   },
-  "last_updated": "2026-05-20T06:38:34.097132",
+  "last_updated": "2026-05-20T17:49:23.910974",
   "base_url": "https://raw.githubusercontent.com/doublefx/magic-claude-code-docs/main/plugin/docs/",
   "github_repository": "doublefx/magic-claude-code-docs",
   "github_ref": "main",
