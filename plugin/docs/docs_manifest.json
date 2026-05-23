@@ -129,8 +129,8 @@
     "slash-commands.md": {
       "original_url": "https://code.claude.com/docs/en/agent-sdk/slash-commands.md",
       "title": "Slash Commands in the SDK",
-      "hash": "4112a73ed879a202d529e11af190f4c4d6b006280dd9ac1c350570be08c4e776",
-      "last_updated": "2026-05-16T01:48:58.728809"
+      "hash": "637a972e697eef622534a4515ebc41e4af1a04dcf3b4a973fb2891ebad7f3251",
+      "last_updated": "2026-05-23T01:53:08.641895"
     },
     "streaming-output.md": {
       "original_url": "https://code.claude.com/docs/en/agent-sdk/streaming-output.md",
@@ -153,8 +153,8 @@
     "subagents.md": {
       "original_url": "https://code.claude.com/docs/en/agent-sdk/subagents.md",
       "title": "Subagents in the SDK",
-      "hash": "e1c0ee9a50aaeba9695ecd2b85028430f6ced7f92bb661cd05996ee7c62f6a5d",
-      "last_updated": "2026-05-16T01:49:00.985586"
+      "hash": "cb702ff2d919c9f03db429fe4440babbc3bf18d39f9577fb6dc80f11930ca92d",
+      "last_updated": "2026-05-23T01:53:11.919263"
     },
     "todo-tracking.md": {
       "original_url": "https://code.claude.com/docs/en/agent-sdk/todo-tracking.md",
@@ -244,8 +244,8 @@
       "original_url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
       "original_raw_url": "https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md",
       "source": "claude-code-repository",
-      "hash": "6f7b0bccb831632c7f6eef1415850962bb753e9746195c44ebeb5e50b2619b11",
-      "last_updated": "2026-05-22T02:03:58.701528"
+      "hash": "d85dc377ea191ba04e661b3d1d09484b8594b464839bad966660419be1a1ea7a",
+      "last_updated": "2026-05-23T01:54:37.382346"
     },
     "channels.md": {
       "original_url": "https://code.claude.com/docs/en/channels.md",
@@ -664,8 +664,8 @@
     "sub-agents.md": {
       "original_url": "https://code.claude.com/docs/en/sub-agents.md",
       "title": "Create custom subagents",
-      "hash": "d67cd8b4d24c8dacb161fbff2bff7888e0a846dcdd77bde0a82bb0341d2e8d84",
-      "last_updated": "2026-05-19T17:33:13.580038"
+      "hash": "bc6eb30295186156688266922cdd5c8844c6437df564dea3d11dec6b1a9ac048",
+      "last_updated": "2026-05-23T01:54:20.490482"
     },
     "terminal-config.md": {
       "original_url": "https://code.claude.com/docs/en/terminal-config.md",
@@ -784,8 +784,8 @@
     "worktrees.md": {
       "original_url": "https://code.claude.com/docs/en/worktrees.md",
       "title": "Run parallel sessions with worktrees",
-      "hash": "b6759d03d098f0509133d16b5fb32fbbfd5f2ca4b66fb2f0f0274f3d51e13112",
-      "last_updated": "2026-05-13T01:56:15.624499"
+      "hash": "e100605f712de0b1abc031ad949f67a59c72648f48a7ec0ff3414a07f7c4001a",
+      "last_updated": "2026-05-23T01:54:36.508667"
     },
     "zero-data-retention.md": {
       "original_url": "https://code.claude.com/docs/en/zero-data-retention.md",
@@ -797,13 +797,13 @@
       "original_url": "https://code.claude.com/docs/en/claude_code_docs_map.md",
       "title": "Documentation Map",
       "source": "docs-map",
-      "hash": "67026bc79643eeaabbf413326a9cba87448630952868715ff00858ba623cb2be",
-      "last_updated": "2026-05-22T02:03:58.682754"
+      "hash": "9d40e3f876ccf852cc41f60082d83c16a026db56fd2149b00dccfc8a5866b9ab",
+      "last_updated": "2026-05-23T01:54:37.330418"
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2026-05-22T02:03:58.701884",
-    "fetch_duration_seconds": 74.896238,
+    "last_fetch_completed": "2026-05-23T01:54:37.382729",
+    "fetch_duration_seconds": 105.377383,
     "total_pages_discovered": 140,
     "pages_fetched_successfully": 142,
     "pages_failed": 0,
@@ -812,7 +812,7 @@
     "total_files": 133,
     "fetch_tool_version": "4.0"
   },
-  "last_updated": "2026-05-22T02:03:58.702060",
+  "last_updated": "2026-05-23T01:54:37.382900",
   "base_url": "https://raw.githubusercontent.com/doublefx/magic-claude-code-docs/main/plugin/docs/",
   "github_repository": "doublefx/magic-claude-code-docs",
   "github_ref": "main",
