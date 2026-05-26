@@ -382,8 +382,8 @@
     "discover-plugins.md": {
       "original_url": "https://code.claude.com/docs/en/discover-plugins.md",
       "title": "Discover and install prebuilt plugins through marketplaces",
-      "hash": "f9679f47f62452ae2a62385df541652bcd6807374d9abc060ee9b8e7b9644c35",
-      "last_updated": "2026-05-26T19:52:25.376466"
+      "hash": "515dec721f92d32d0e75ded5d3cad8d764f7357bebef0a5c7aee148b7abee532",
+      "last_updated": "2026-05-26T22:14:28.039184"
     },
     "env-vars.md": {
       "original_url": "https://code.claude.com/docs/en/env-vars.md",
@@ -460,8 +460,8 @@
     "hooks-guide.md": {
       "original_url": "https://code.claude.com/docs/en/hooks-guide.md",
       "title": "Automate workflows with hooks",
-      "hash": "a8ceb5abdb5aa2fb41bc5b51bf92ec451e0334ccc21de31ee45ba9d1a0552085",
-      "last_updated": "2026-05-21T06:40:18.524569"
+      "hash": "6b7ee0efd0de7f6a4f53b9e71f5c5aca54d65716cd5178889966e1473b5e1627",
+      "last_updated": "2026-05-26T22:14:35.643611"
     },
     "how-claude-code-works.md": {
       "original_url": "https://code.claude.com/docs/en/how-claude-code-works.md",
@@ -574,8 +574,8 @@
     "plugins-reference.md": {
       "original_url": "https://code.claude.com/docs/en/plugins-reference.md",
       "title": "Plugins reference",
-      "hash": "6e23570b4af5056fa22811db160b1a35e6e67f8ff4828963dfbb54b01fa3f945",
-      "last_updated": "2026-05-20T06:38:15.509820"
+      "hash": "d7a3e000dd602ae02c7ccab5bc69cf9378ff2cb82287a65d34b07eb38d138d9a",
+      "last_updated": "2026-05-26T22:14:48.199760"
     },
     "prompt-caching.md": {
       "original_url": "https://code.claude.com/docs/en/prompt-caching.md",
@@ -622,8 +622,14 @@
     "security.md": {
       "original_url": "https://code.claude.com/docs/en/security.md",
       "title": "Security",
-      "hash": "3cd0e8581e8058b18551d7f1a92bd9652720a6cad53bdbecce02df291906f0db",
-      "last_updated": "2026-05-22T02:03:42.761225"
+      "hash": "f184f5b7cc24d247fca511028a1c7d1e40db9101ffc24ac9674d27f293c9c5ab",
+      "last_updated": "2026-05-26T22:14:53.041003"
+    },
+    "security-guidance.md": {
+      "original_url": "https://code.claude.com/docs/en/security-guidance.md",
+      "title": "Catch security issues as Claude writes code",
+      "hash": "169701633fa89908893f7434c41307b3563335c693501656ea441c8694d898da",
+      "last_updated": "2026-05-26T22:14:53.575945"
     },
     "server-managed-settings.md": {
       "original_url": "https://code.claude.com/docs/en/server-managed-settings.md",
@@ -791,22 +797,22 @@
       "original_url": "https://code.claude.com/docs/en/claude_code_docs_map.md",
       "title": "Documentation Map",
       "source": "docs-map",
-      "hash": "abf9f6dfe62619f2180fff8685fe95cc0fc46100af5bdd2b3c6de10b4ab6ed41",
-      "last_updated": "2026-05-26T19:53:07.393035"
+      "hash": "dcef4dc3c736cf44a80b1714906172d49838b942d5bdf6b67cc815d24a865655",
+      "last_updated": "2026-05-26T22:15:09.311089"
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2026-05-26T19:53:07.411061",
-    "fetch_duration_seconds": 77.426932,
-    "total_pages_discovered": 139,
-    "pages_fetched_successfully": 141,
+    "last_fetch_completed": "2026-05-26T22:15:09.329325",
+    "fetch_duration_seconds": 75.78655,
+    "total_pages_discovered": 140,
+    "pages_fetched_successfully": 142,
     "pages_failed": 0,
     "failed_pages": [],
     "llms_txt_url": "https://code.claude.com/docs/llms.txt",
-    "total_files": 132,
+    "total_files": 133,
     "fetch_tool_version": "4.0"
   },
-  "last_updated": "2026-05-26T19:53:07.411233",
+  "last_updated": "2026-05-26T22:15:09.329503",
   "base_url": "https://raw.githubusercontent.com/doublefx/magic-claude-code-docs/main/plugin/docs/",
   "github_repository": "doublefx/magic-claude-code-docs",
   "github_ref": "main",
