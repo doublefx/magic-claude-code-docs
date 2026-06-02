@@ -274,8 +274,8 @@
     "claude-code-on-the-web.md": {
       "original_url": "https://code.claude.com/docs/en/claude-code-on-the-web.md",
       "title": "Use Claude Code on the web",
-      "hash": "a60e9d04b530c8ba74e4ee597e0dcc5d1a4ffbe59782ac70922220a6ffbce521",
-      "last_updated": "2026-05-14T16:55:21.606563"
+      "hash": "fae81238d4ce0afde5297ff259d9a674accb9c404d616681f80bb3b213093ec5",
+      "last_updated": "2026-06-02T18:29:45.764784"
     },
     "claude-directory.md": {
       "original_url": "https://code.claude.com/docs/en/claude-directory.md",
@@ -394,14 +394,14 @@
     "errors.md": {
       "original_url": "https://code.claude.com/docs/en/errors.md",
       "title": "Error reference",
-      "hash": "60685a5e7f973b3e661db4e71f5803fcddab160a7421d48b280ddb1cea3ec83f",
-      "last_updated": "2026-06-02T07:15:46.668367"
+      "hash": "cc40295dd36246f541615a483b5a53cfbfac250e2e5cca8fe46173f2b3d41cf8",
+      "last_updated": "2026-06-02T18:30:05.193853"
     },
     "fast-mode.md": {
       "original_url": "https://code.claude.com/docs/en/fast-mode.md",
       "title": "Speed up responses with fast mode",
-      "hash": "1223f48e73fb6226bcfeef9856a9458127db75e967e24c98ed2504069203b17d",
-      "last_updated": "2026-05-29T02:00:08.710658"
+      "hash": "cfde50911c74340896ba433f27d35e39a4b8bf60926ad622994b7267f9037bfe",
+      "last_updated": "2026-06-02T18:30:06.063158"
     },
     "features-overview.md": {
       "original_url": "https://code.claude.com/docs/en/features-overview.md",
@@ -827,13 +827,13 @@
       "original_url": "https://code.claude.com/docs/en/claude_code_docs_map.md",
       "title": "Documentation Map",
       "source": "docs-map",
-      "hash": "ce80bb3509e3558c14ba69b049fdae9e66b7eae72ec1741f8ab94935f82861d9",
-      "last_updated": "2026-06-02T02:31:58.106140"
+      "hash": "b9241ebe4e31d3031b50f063767f21f79dd2dbb1370aa10f701d149683613798",
+      "last_updated": "2026-06-02T18:31:22.018991"
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2026-06-02T07:16:57.913000",
-    "fetch_duration_seconds": 132.114881,
+    "last_fetch_completed": "2026-06-02T18:31:22.082000",
+    "fetch_duration_seconds": 139.43421,
     "total_pages_discovered": 145,
     "pages_fetched_successfully": 147,
     "pages_failed": 0,
@@ -842,7 +842,7 @@
     "total_files": 138,
     "fetch_tool_version": "4.0"
   },
-  "last_updated": "2026-06-02T07:16:57.913187",
+  "last_updated": "2026-06-02T18:31:22.082175",
   "base_url": "https://raw.githubusercontent.com/doublefx/magic-claude-code-docs/main/plugin/docs/",
   "github_repository": "doublefx/magic-claude-code-docs",
   "github_ref": "main",
