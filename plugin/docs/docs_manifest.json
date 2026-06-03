@@ -400,8 +400,8 @@
     "fast-mode.md": {
       "original_url": "https://code.claude.com/docs/en/fast-mode.md",
       "title": "Speed up responses with fast mode",
-      "hash": "9bd26e5105204d981e641807613152b9b4fee39cc2641dfaad8f48a058435e6b",
-      "last_updated": "2026-06-02T22:55:05.668414"
+      "hash": "3c9b0d4d461416d9f4c9bb3716276ba05d07db6e541007f479c47d8c0128d0bd",
+      "last_updated": "2026-06-03T18:39:38.390434"
     },
     "features-overview.md": {
       "original_url": "https://code.claude.com/docs/en/features-overview.md",
@@ -592,8 +592,8 @@
     "prompt-caching.md": {
       "original_url": "https://code.claude.com/docs/en/prompt-caching.md",
       "title": "How Claude Code uses prompt caching",
-      "hash": "dab2d1f33ee3f06a2469e16370737bf9de2da8baa0c9b3a2a9e6de7172d80adf",
-      "last_updated": "2026-06-01T22:55:52.859743"
+      "hash": "5a4394c8e9b6f7a7eab2efffeb1df120818af6d7339cedfcd48470af5f214da0",
+      "last_updated": "2026-06-03T18:40:22.254266"
     },
     "prompt-library.md": {
       "original_url": "https://code.claude.com/docs/en/prompt-library.md",
@@ -778,26 +778,26 @@
     "2026-w19.md": {
       "original_url": "https://code.claude.com/docs/en/whats-new/2026-w19.md",
       "title": "Week 19 \u00b7 May 4\u20138, 2026",
-      "hash": "a71c1bcf2c43ec27632ebcacf2ad4ac011886688b3e39d36d1b619f63c7eaff0",
-      "last_updated": "2026-05-09T05:39:39.840060"
+      "hash": "a4d69d75fd04c89569a31f3d1b97d37eb9014327018befb546c03e1f4d1b6ef3",
+      "last_updated": "2026-06-03T18:41:01.246620"
     },
     "2026-w20.md": {
       "original_url": "https://code.claude.com/docs/en/whats-new/2026-w20.md",
       "title": "Week 20 \u00b7 May 11\u201315, 2026",
-      "hash": "4cdfb6d54ea28fe22559ec5145e765ccda2482dca6d05698cc3fd20b35dae898",
-      "last_updated": "2026-05-19T14:31:28.844860"
+      "hash": "5b093d94b4a1cf58b790326f2a35925d9f8d0ab3c25f5255f3487e21f67c76fc",
+      "last_updated": "2026-06-03T18:41:02.048490"
     },
     "2026-w21.md": {
       "original_url": "https://code.claude.com/docs/en/whats-new/2026-w21.md",
       "title": "Week 21 \u00b7 May 18\u201322, 2026",
-      "hash": "370c2999d65226cf71aed82619ce4e0ab2f8955216e3194749028dea44c3f9cb",
-      "last_updated": "2026-05-30T18:58:39.466830"
+      "hash": "84b615d385e105d6b7bc2e22cdb8817e6ec77bfc9d59fdbe4c83b6c45e496fba",
+      "last_updated": "2026-06-03T18:41:03.016659"
     },
     "2026-w22.md": {
       "original_url": "https://code.claude.com/docs/en/whats-new/2026-w22.md",
       "title": "Week 22 \u00b7 May 25\u201329, 2026",
-      "hash": "446703bfb9a00ae49dc6545466e7c27538e0b74d62ed5b1ffda12420ecf2ad59",
-      "last_updated": "2026-06-02T22:56:38.573239"
+      "hash": "16e902eb2c0e5ed64aef07b0e73d7912e22864f7ae1f1ab2a6fc6ab183153cd0",
+      "last_updated": "2026-06-03T18:41:04.118678"
     },
     "index.md": {
       "original_url": "https://code.claude.com/docs/en/whats-new/index.md",
@@ -827,13 +827,13 @@
       "original_url": "https://code.claude.com/docs/en/claude_code_docs_map.md",
       "title": "Documentation Map",
       "source": "docs-map",
-      "hash": "9e9821c9629ead08729ccfdabc792bcc72fff8c15ea85313a21efe219bcfa70b",
-      "last_updated": "2026-06-02T22:56:44.282348"
+      "hash": "3499f6d0c859dc19f723af28c9f98f74ae8576ba4cddaf564cd7c2c85eca4000",
+      "last_updated": "2026-06-03T18:41:09.442968"
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2026-06-02T22:56:44.335180",
-    "fetch_duration_seconds": 176.963632,
+    "last_fetch_completed": "2026-06-03T18:41:09.459700",
+    "fetch_duration_seconds": 162.600559,
     "total_pages_discovered": 145,
     "pages_fetched_successfully": 147,
     "pages_failed": 0,
@@ -842,7 +842,7 @@
     "total_files": 138,
     "fetch_tool_version": "4.0"
   },
-  "last_updated": "2026-06-02T22:56:44.335364",
+  "last_updated": "2026-06-03T18:41:09.459864",
   "base_url": "https://raw.githubusercontent.com/doublefx/magic-claude-code-docs/main/plugin/docs/",
   "github_repository": "doublefx/magic-claude-code-docs",
   "github_ref": "main",
