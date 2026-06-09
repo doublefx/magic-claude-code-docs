@@ -14,12 +14,12 @@ Claude Code uses a **scope system** to determine where configurations apply and 
 
 ### Available scopes
 
-| Scope       | Location                                                                           | Who it affects                       | Shared with team?      |
-| :---------- | :--------------------------------------------------------------------------------- | :----------------------------------- | :--------------------- |
-| **Managed** | Server-managed settings, plist / registry, or system-level `managed-settings.json` | All users on the machine             | Yes (deployed by IT)   |
-| **User**    | `~/.claude/` directory                                                             | You, across all projects             | No                     |
-| **Project** | `.claude/` in repository                                                           | All collaborators on this repository | Yes (committed to git) |
-| **Local**   | `.claude/settings.local.json`                                                      | You, in this repository only         | No (gitignored)        |
+| Scope       | Location                                                                           | Who it affects                       | Shared with team?                           |
+| :---------- | :--------------------------------------------------------------------------------- | :----------------------------------- | :------------------------------------------ |
+| **Managed** | Server-managed settings, plist / registry, or system-level `managed-settings.json` | All users on the machine             | Yes (deployed by IT)                        |
+| **User**    | `~/.claude/` directory                                                             | You, across all projects             | No                                          |
+| **Project** | `.claude/` in repository                                                           | All collaborators on this repository | Yes (committed to git)                      |
+| **Local**   | `.claude/settings.local.json`                                                      | You, in this repository only         | No (gitignored when Claude Code creates it) |
 
 ### When to use each scope
 
@@ -663,7 +663,7 @@ Controls which plugins are enabled. Format: `"plugin-name@marketplace-name": tru
 
 * **User settings** (`~/.claude/settings.json`): Personal plugin preferences
 * **Project settings** (`.claude/settings.json`): Project-specific plugins shared with team
-* **Local settings** (`.claude/settings.local.json`): Per-machine overrides (not committed)
+* **Local settings** (`.claude/settings.local.json`): Per-machine overrides, gitignored when Claude Code creates it
 * **Managed settings** (`managed-settings.json`): Organization-wide policy overrides that block installation at all scopes and hide the plugin from the marketplace
 
 <Note>

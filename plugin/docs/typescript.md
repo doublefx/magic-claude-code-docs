@@ -630,22 +630,22 @@ type AgentDefinition = {
 };
 ```
 
-| Field                                 | Required | Description                                                                                                                                                                    |
-| :------------------------------------ | :------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `description`                         | Yes      | Natural language description of when to use this agent                                                                                                                         |
-| `tools`                               | No       | Array of allowed tool names. If omitted, inherits all tools from parent. To preload Skills into the agent's context, use the `skills` field rather than listing `'Skill'` here |
-| `disallowedTools`                     | No       | Array of tool names to explicitly disallow for this agent                                                                                                                      |
-| `prompt`                              | Yes      | The agent's system prompt                                                                                                                                                      |
-| `model`                               | No       | Model override for this agent. Accepts an alias such as `'sonnet'`, `'opus'`, `'haiku'`, `'inherit'`, or a full model ID. If omitted or `'inherit'`, uses the main model       |
-| `mcpServers`                          | No       | MCP server specifications for this agent                                                                                                                                       |
-| `skills`                              | No       | Array of skill names to preload into the agent context                                                                                                                         |
-| `initialPrompt`                       | No       | Auto-submitted as the first user turn when this agent runs as the main thread agent                                                                                            |
-| `maxTurns`                            | No       | Maximum number of agentic turns (API round-trips) before stopping                                                                                                              |
-| `background`                          | No       | Run this agent as a non-blocking background task when invoked                                                                                                                  |
-| `memory`                              | No       | Memory source for this agent: `'user'`, `'project'`, or `'local'`                                                                                                              |
-| `effort`                              | No       | Reasoning effort level for this agent. Accepts a named level or an integer                                                                                                     |
-| `permissionMode`                      | No       | Permission mode for tool execution within this agent. See [`PermissionMode`](#permissionmode)                                                                                  |
-| `criticalSystemReminder_EXPERIMENTAL` | No       | Experimental: Critical reminder added to the system prompt                                                                                                                     |
+| Field                                 | Required | Description                                                                                                                                                                         |
+| :------------------------------------ | :------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `description`                         | Yes      | Natural language description of when to use this agent                                                                                                                              |
+| `tools`                               | No       | Array of allowed tool names. If omitted, inherits all tools from parent. To preload Skills into the agent's context, use the `skills` field rather than listing `'Skill'` here      |
+| `disallowedTools`                     | No       | Array of tool names to explicitly disallow for this agent                                                                                                                           |
+| `prompt`                              | Yes      | The agent's system prompt                                                                                                                                                           |
+| `model`                               | No       | Model override for this agent. Accepts an alias such as `'fable'`, `'opus'`, `'sonnet'`, `'haiku'`, `'inherit'`, or a full model ID. If omitted or `'inherit'`, uses the main model |
+| `mcpServers`                          | No       | MCP server specifications for this agent                                                                                                                                            |
+| `skills`                              | No       | Array of skill names to preload into the agent context                                                                                                                              |
+| `initialPrompt`                       | No       | Auto-submitted as the first user turn when this agent runs as the main thread agent                                                                                                 |
+| `maxTurns`                            | No       | Maximum number of agentic turns (API round-trips) before stopping                                                                                                                   |
+| `background`                          | No       | Run this agent as a non-blocking background task when invoked                                                                                                                       |
+| `memory`                              | No       | Memory source for this agent: `'user'`, `'project'`, or `'local'`                                                                                                                   |
+| `effort`                              | No       | Reasoning effort level for this agent. Accepts a named level or an integer                                                                                                          |
+| `permissionMode`                      | No       | Permission mode for tool execution within this agent. See [`PermissionMode`](#permissionmode)                                                                                       |
+| `criticalSystemReminder_EXPERIMENTAL` | No       | Experimental: Critical reminder added to the system prompt                                                                                                                          |
 
 ### `AgentMcpServerSpec`
 
@@ -665,11 +665,11 @@ Controls which filesystem-based configuration sources the SDK loads settings fro
 type SettingSource = "user" | "project" | "local";
 ```
 
-| Value       | Description                                  | Location                      |
-| :---------- | :------------------------------------------- | :---------------------------- |
-| `'user'`    | Global user settings                         | `~/.claude/settings.json`     |
-| `'project'` | Shared project settings (version controlled) | `.claude/settings.json`       |
-| `'local'`   | Local project settings (gitignored)          | `.claude/settings.local.json` |
+| Value       | Description                                     | Location                      |
+| :---------- | :---------------------------------------------- | :---------------------------- |
+| `'user'`    | Global user settings                            | `~/.claude/settings.json`     |
+| `'project'` | Shared project settings (version controlled)    | `.claude/settings.json`       |
+| `'local'`   | Local project settings (not version controlled) | `.claude/settings.local.json` |
 
 #### Default behavior
 
@@ -2701,7 +2701,7 @@ type PermissionBehavior = "allow" | "deny" | "ask";
 type PermissionUpdateDestination =
   | "userSettings" // Global user settings
   | "projectSettings" // Per-directory project settings
-  | "localSettings" // Gitignored local settings
+  | "localSettings" // Local project settings
   | "session" // Current session only
   | "cliArg"; // CLI argument
 ```
