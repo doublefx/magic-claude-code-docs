@@ -57,8 +57,8 @@
     "mcp.md": {
       "original_url": "https://code.claude.com/docs/en/mcp.md",
       "title": "Connect Claude Code to tools via MCP",
-      "hash": "9006b0bb74722d71c096aa2d196dbee0f3759d517d0f079d69d90159dcc13355",
-      "last_updated": "2026-06-12T02:14:11.464102"
+      "hash": "4cfba47a5a895280039dc7a1d0d5bf14dfe2edca54f833a7d933f6390b0e217a",
+      "last_updated": "2026-06-13T06:45:34.089737"
     },
     "migration-guide.md": {
       "original_url": "https://code.claude.com/docs/en/agent-sdk/migration-guide.md",
@@ -81,8 +81,8 @@
     "overview.md": {
       "original_url": "https://code.claude.com/docs/en/overview.md",
       "title": "Overview",
-      "hash": "cf475b2b521f9b36bf86031094b23a87380106fd78fac02d9b85b3b396713de7",
-      "last_updated": "2026-06-10T02:07:07.275356"
+      "hash": "3f3a9cbf5574fabb023630a68f60d37565b265489f8cfa6342c72947e97a96a5",
+      "last_updated": "2026-06-13T06:45:43.508011"
     },
     "permissions.md": {
       "original_url": "https://code.claude.com/docs/en/permissions.md",
@@ -484,8 +484,8 @@
     "jetbrains.md": {
       "original_url": "https://code.claude.com/docs/en/jetbrains.md",
       "title": "JetBrains IDEs",
-      "hash": "fa9151fa2e9e6dbca83ba2f07dfe2328f07ef199e8ab3e6c0065ce72ec797e18",
-      "last_updated": "2026-06-12T07:11:54.119912"
+      "hash": "b6e13b2fd20ada8006d0d601219d654f73af49673f4d6b0d81c9bdc26b403d04",
+      "last_updated": "2026-06-13T06:45:27.237911"
     },
     "keybindings.md": {
       "original_url": "https://code.claude.com/docs/en/keybindings.md",
@@ -833,13 +833,13 @@
       "original_url": "https://code.claude.com/docs/en/claude_code_docs_map.md",
       "title": "Documentation Map",
       "source": "docs-map",
-      "hash": "31bbda40529a5549986ac1a45498943498b142153ef20882db1aa61b5809a87c",
-      "last_updated": "2026-06-12T22:18:54.146365"
+      "hash": "8a78d9ca58b67685ad00a3d3bed11ea9e9d649ba040562dec1e1b624e512d4a5",
+      "last_updated": "2026-06-13T06:46:25.473820"
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2026-06-12T22:18:54.186098",
-    "fetch_duration_seconds": 135.072873,
+    "last_fetch_completed": "2026-06-13T06:46:25.512674",
+    "fetch_duration_seconds": 129.872032,
     "total_pages_discovered": 146,
     "pages_fetched_successfully": 148,
     "pages_failed": 0,
@@ -848,7 +848,7 @@
     "total_files": 139,
     "fetch_tool_version": "4.0"
   },
-  "last_updated": "2026-06-12T22:18:54.186283",
+  "last_updated": "2026-06-13T06:46:25.512828",
   "base_url": "https://raw.githubusercontent.com/doublefx/magic-claude-code-docs/main/plugin/docs/",
   "github_repository": "doublefx/magic-claude-code-docs",
   "github_ref": "main",
