@@ -201,8 +201,8 @@
     "agent-view.md": {
       "original_url": "https://code.claude.com/docs/en/agent-view.md",
       "title": "Manage multiple agents with agent view",
-      "hash": "18c68325e1f4911f1ff545d3356461142667842b9b794b507cdf3a710925c41d",
-      "last_updated": "2026-06-09T22:17:07.544635"
+      "hash": "b447ee524206288f4979a9a6b8383736d99014106808f642c5ba545f5b242682",
+      "last_updated": "2026-06-16T02:35:56.941136"
     },
     "agents.md": {
       "original_url": "https://code.claude.com/docs/en/agents.md",
@@ -610,8 +610,8 @@
     "remote-control.md": {
       "original_url": "https://code.claude.com/docs/en/remote-control.md",
       "title": "Continue local sessions from any device with Remote Control",
-      "hash": "dd63c7b5db4b5ede6fd476df28cc9b1ee8963bbf40c75c632e343768850c5886",
-      "last_updated": "2026-06-12T22:18:20.158108"
+      "hash": "2d0946e8455582ba1310556ec29829997bdeff3ae2acab7b75afee2dd99fca54",
+      "last_updated": "2026-06-16T02:37:07.856517"
     },
     "routines.md": {
       "original_url": "https://code.claude.com/docs/en/routines.md",
@@ -658,8 +658,8 @@
     "settings.md": {
       "original_url": "https://code.claude.com/docs/en/settings.md",
       "title": "Claude Code settings",
-      "hash": "ee97b7fc9a2de8685087f9ecdd3bfcebf7ac28072d09eea1cebb40ca7d8b7440",
-      "last_updated": "2026-06-15T22:55:06.605535"
+      "hash": "fee2fa5b029ff83ece8d5ad001f73a64bac768c1f684f26fb4afdee1570e6aa1",
+      "last_updated": "2026-06-16T02:37:16.589209"
     },
     "setup.md": {
       "original_url": "https://code.claude.com/docs/en/setup.md",
@@ -805,11 +805,23 @@
       "hash": "16e902eb2c0e5ed64aef07b0e73d7912e22864f7ae1f1ab2a6fc6ab183153cd0",
       "last_updated": "2026-06-03T18:41:04.118678"
     },
+    "2026-w23.md": {
+      "original_url": "https://code.claude.com/docs/en/whats-new/2026-w23.md",
+      "title": "Week 23 \u00b7 June 1\u20135, 2026",
+      "hash": "19d89a76ccc6c01423635f01f1497d348ed0233f3579e98c8f1eaae41581e098",
+      "last_updated": "2026-06-16T02:37:41.299980"
+    },
+    "2026-w24.md": {
+      "original_url": "https://code.claude.com/docs/en/whats-new/2026-w24.md",
+      "title": "Week 24 \u00b7 June 8\u201312, 2026",
+      "hash": "0298789b6f4ac9cd2a82e88062726aa94f7d3df87781a52730286ee267f852cb",
+      "last_updated": "2026-06-16T02:37:42.158070"
+    },
     "index.md": {
       "original_url": "https://code.claude.com/docs/en/whats-new/index.md",
       "title": "What's new",
-      "hash": "c3cc507590e5c2b992b3378dcf8cb19266b9de746db81ba092555acf1ca6403f",
-      "last_updated": "2026-05-30T18:58:41.467387"
+      "hash": "647cc64251d7047ba6b4c5b06824b57a78ec9a140cd96e3f5f874514ecf7649d",
+      "last_updated": "2026-06-16T02:37:42.968290"
     },
     "workflows.md": {
       "original_url": "https://code.claude.com/docs/en/workflows.md",
@@ -833,22 +845,22 @@
       "original_url": "https://code.claude.com/docs/en/claude_code_docs_map.md",
       "title": "Documentation Map",
       "source": "docs-map",
-      "hash": "7b8058d05f9054af9ccdeee2ffc43fb16d3e824d06ecbb45ae04424f71b8114a",
-      "last_updated": "2026-06-15T22:55:33.138886"
+      "hash": "546f27541e23fecf6f3c14fa55a8f1340896848b4ee05b82a0c9b4d2c69ccad7",
+      "last_updated": "2026-06-16T02:37:46.435420"
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2026-06-15T22:55:33.192486",
-    "fetch_duration_seconds": 142.144101,
-    "total_pages_discovered": 146,
-    "pages_fetched_successfully": 148,
+    "last_fetch_completed": "2026-06-16T02:37:46.473671",
+    "fetch_duration_seconds": 141.363185,
+    "total_pages_discovered": 148,
+    "pages_fetched_successfully": 150,
     "pages_failed": 0,
     "failed_pages": [],
     "llms_txt_url": "https://code.claude.com/docs/llms.txt",
-    "total_files": 139,
+    "total_files": 141,
     "fetch_tool_version": "4.0"
   },
-  "last_updated": "2026-06-15T22:55:33.192644",
+  "last_updated": "2026-06-16T02:37:46.473833",
   "base_url": "https://raw.githubusercontent.com/doublefx/magic-claude-code-docs/main/plugin/docs/",
   "github_repository": "doublefx/magic-claude-code-docs",
   "github_ref": "main",
