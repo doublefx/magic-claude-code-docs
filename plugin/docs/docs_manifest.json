@@ -129,8 +129,8 @@
     "skills.md": {
       "original_url": "https://code.claude.com/docs/en/skills.md",
       "title": "Extend Claude with skills",
-      "hash": "2af68f43a0ca42a8ec93d1f018cb8755f5d92d0ad74ed4dd9cde42cf9686401c",
-      "last_updated": "2026-06-18T20:08:13.557202"
+      "hash": "b12d6464ca8ab6267f27008b8699b24151963147191c74810be0448f24db3a50",
+      "last_updated": "2026-06-18T22:51:27.780363"
     },
     "slash-commands.md": {
       "original_url": "https://code.claude.com/docs/en/agent-sdk/slash-commands.md",
@@ -256,8 +256,8 @@
       "original_url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
       "original_raw_url": "https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md",
       "source": "claude-code-repository",
-      "hash": "c732306ef7fffc3eff4823cd0fcd45ba3eeaa7f93a1786edc04784aec915fe57",
-      "last_updated": "2026-06-17T22:29:36.878354"
+      "hash": "fa8fe7faf63f203e81f42009d775076bc73a4b0ca3b042d3040a277fdcfef81a",
+      "last_updated": "2026-06-18T22:52:57.950094"
     },
     "channels.md": {
       "original_url": "https://code.claude.com/docs/en/channels.md",
@@ -856,8 +856,8 @@
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2026-06-18T20:08:45.466983",
-    "fetch_duration_seconds": 151.819945,
+    "last_fetch_completed": "2026-06-18T22:52:57.950510",
+    "fetch_duration_seconds": 202.120713,
     "total_pages_discovered": 149,
     "pages_fetched_successfully": 151,
     "pages_failed": 0,
@@ -866,7 +866,7 @@
     "total_files": 142,
     "fetch_tool_version": "4.0"
   },
-  "last_updated": "2026-06-18T20:08:45.467144",
+  "last_updated": "2026-06-18T22:52:57.950689",
   "base_url": "https://raw.githubusercontent.com/doublefx/magic-claude-code-docs/main/plugin/docs/",
   "github_repository": "doublefx/magic-claude-code-docs",
   "github_ref": "main",
