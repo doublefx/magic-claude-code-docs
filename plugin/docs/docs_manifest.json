@@ -256,8 +256,8 @@
       "original_url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
       "original_raw_url": "https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md",
       "source": "claude-code-repository",
-      "hash": "fa8fe7faf63f203e81f42009d775076bc73a4b0ca3b042d3040a277fdcfef81a",
-      "last_updated": "2026-06-18T22:52:57.950094"
+      "hash": "28d17e30504b652e799835e90da1cc7dbe9b7ee7b5ffefc4fc17451b2fd51381",
+      "last_updated": "2026-06-19T02:48:56.282335"
     },
     "channels.md": {
       "original_url": "https://code.claude.com/docs/en/channels.md",
@@ -851,13 +851,13 @@
       "original_url": "https://code.claude.com/docs/en/claude_code_docs_map.md",
       "title": "Documentation Map",
       "source": "docs-map",
-      "hash": "ec508b616714829d8f1cd1f77e782bd0c59dff0101ff786e1f26760097146246",
-      "last_updated": "2026-06-16T22:47:56.634762"
+      "hash": "de5492b966f15a64555e02a54f3ba0ef246d0464466a63c39e067a06ed305cf3",
+      "last_updated": "2026-06-19T02:48:56.202351"
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2026-06-18T22:52:57.950510",
-    "fetch_duration_seconds": 202.120713,
+    "last_fetch_completed": "2026-06-19T02:48:56.282690",
+    "fetch_duration_seconds": 172.786506,
     "total_pages_discovered": 149,
     "pages_fetched_successfully": 151,
     "pages_failed": 0,
@@ -866,7 +866,7 @@
     "total_files": 142,
     "fetch_tool_version": "4.0"
   },
-  "last_updated": "2026-06-18T22:52:57.950689",
+  "last_updated": "2026-06-19T02:48:56.282865",
   "base_url": "https://raw.githubusercontent.com/doublefx/magic-claude-code-docs/main/plugin/docs/",
   "github_repository": "doublefx/magic-claude-code-docs",
   "github_ref": "main",
