@@ -256,8 +256,8 @@
       "original_url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
       "original_raw_url": "https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md",
       "source": "claude-code-repository",
-      "hash": "e436e9a9cbe39653fdac24ce4ff74684e072753f30129fbe6c18dc95076c259a",
-      "last_updated": "2026-06-24T17:00:22.572686"
+      "hash": "0649bcc765df66dbf91ee48938473ee8693a66ad02eff76eef97824eee7e5322",
+      "last_updated": "2026-06-24T22:08:15.172625"
     },
     "channels.md": {
       "original_url": "https://code.claude.com/docs/en/channels.md",
@@ -568,8 +568,8 @@
     "permission-modes.md": {
       "original_url": "https://code.claude.com/docs/en/permission-modes.md",
       "title": "Choose a permission mode",
-      "hash": "ba369ab4ada09874d3e212c7690a25315ffb0ababb5160b75de2d4617ed91e7b",
-      "last_updated": "2026-06-20T02:07:26.891877"
+      "hash": "4e6ce0a656cfd0cceab9bd458d3e28fb948bb48cea299551db20e92f8b53b67b",
+      "last_updated": "2026-06-24T22:07:21.833838"
     },
     "platforms.md": {
       "original_url": "https://code.claude.com/docs/en/platforms.md",
@@ -857,13 +857,13 @@
       "original_url": "https://code.claude.com/docs/en/claude_code_docs_map.md",
       "title": "Documentation Map",
       "source": "docs-map",
-      "hash": "81053a3aae3ee2dee1428d97942374619ae3635a291ea21e15520b12776aac83",
-      "last_updated": "2026-06-24T19:27:06.693278"
+      "hash": "f5e8e0b4181cd2849687adb86625b1166812124e765616db0567ad005fbee178",
+      "last_updated": "2026-06-24T22:08:15.074493"
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2026-06-24T19:27:06.850834",
-    "fetch_duration_seconds": 212.938112,
+    "last_fetch_completed": "2026-06-24T22:08:15.172936",
+    "fetch_duration_seconds": 162.146504,
     "total_pages_discovered": 150,
     "pages_fetched_successfully": 152,
     "pages_failed": 0,
@@ -872,7 +872,7 @@
     "total_files": 143,
     "fetch_tool_version": "4.0"
   },
-  "last_updated": "2026-06-24T19:27:06.850997",
+  "last_updated": "2026-06-24T22:08:15.173094",
   "base_url": "https://raw.githubusercontent.com/doublefx/magic-claude-code-docs/main/plugin/docs/",
   "github_repository": "doublefx/magic-claude-code-docs",
   "github_ref": "main",
