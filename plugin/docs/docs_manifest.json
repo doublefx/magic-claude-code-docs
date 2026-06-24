@@ -394,8 +394,8 @@
     "discover-plugins.md": {
       "original_url": "https://code.claude.com/docs/en/discover-plugins.md",
       "title": "Discover and install prebuilt plugins through marketplaces",
-      "hash": "b8ff81011f6c9220e420d19139b3fc1e610ce54970e90aa5792d7568cdf87fe8",
-      "last_updated": "2026-06-24T16:58:57.770518"
+      "hash": "19d992a540f843ac5ad4d29efd1a9e84f7f1d0e9ba579fcd96f21537fc7852c2",
+      "last_updated": "2026-06-24T19:25:31.905805"
     },
     "env-vars.md": {
       "original_url": "https://code.claude.com/docs/en/env-vars.md",
@@ -484,8 +484,8 @@
     "interactive-mode.md": {
       "original_url": "https://code.claude.com/docs/en/interactive-mode.md",
       "title": "Interactive mode",
-      "hash": "cb3f5019c75eadc9dd08575592dd2197e048cfe7020f7847d8aefbc1cda65075",
-      "last_updated": "2026-06-24T16:59:14.836884"
+      "hash": "8b50c5f185a0bd03f78e0254e002bf2f8fc59028f38c32f85646eafc28d07f0f",
+      "last_updated": "2026-06-24T19:25:58.116196"
     },
     "jetbrains.md": {
       "original_url": "https://code.claude.com/docs/en/jetbrains.md",
@@ -694,8 +694,8 @@
     "sub-agents.md": {
       "original_url": "https://code.claude.com/docs/en/sub-agents.md",
       "title": "Create custom subagents",
-      "hash": "31dab816ac84d129394bebc4ee6c3a8ecac758b7161ff28aef7dd8e8836fcdbc",
-      "last_updated": "2026-06-24T16:59:56.895495"
+      "hash": "740187eb5387903f083bfe670b62d8b6e1fa864ea744e05615c06c466dd06731",
+      "last_updated": "2026-06-24T19:26:39.683984"
     },
     "terminal-config.md": {
       "original_url": "https://code.claude.com/docs/en/terminal-config.md",
@@ -857,13 +857,13 @@
       "original_url": "https://code.claude.com/docs/en/claude_code_docs_map.md",
       "title": "Documentation Map",
       "source": "docs-map",
-      "hash": "687adc93f4e329f036289b6fbdfc4e640cb1018fe2a8ae8a2458338d893458da",
-      "last_updated": "2026-06-23T22:08:54.305986"
+      "hash": "81053a3aae3ee2dee1428d97942374619ae3635a291ea21e15520b12776aac83",
+      "last_updated": "2026-06-24T19:27:06.693278"
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2026-06-24T17:00:22.573064",
-    "fetch_duration_seconds": 154.893967,
+    "last_fetch_completed": "2026-06-24T19:27:06.850834",
+    "fetch_duration_seconds": 212.938112,
     "total_pages_discovered": 150,
     "pages_fetched_successfully": 152,
     "pages_failed": 0,
@@ -872,7 +872,7 @@
     "total_files": 143,
     "fetch_tool_version": "4.0"
   },
-  "last_updated": "2026-06-24T17:00:22.573227",
+  "last_updated": "2026-06-24T19:27:06.850997",
   "base_url": "https://raw.githubusercontent.com/doublefx/magic-claude-code-docs/main/plugin/docs/",
   "github_repository": "doublefx/magic-claude-code-docs",
   "github_ref": "main",
