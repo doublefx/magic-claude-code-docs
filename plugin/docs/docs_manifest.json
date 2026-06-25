@@ -256,8 +256,8 @@
       "original_url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
       "original_raw_url": "https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md",
       "source": "claude-code-repository",
-      "hash": "0649bcc765df66dbf91ee48938473ee8693a66ad02eff76eef97824eee7e5322",
-      "last_updated": "2026-06-24T22:08:15.172625"
+      "hash": "4211c9856b9b00c4195f16a9718347d5b5d08000b888355a14c1cf3e1f8099aa",
+      "last_updated": "2026-06-25T22:17:20.713504"
     },
     "channels.md": {
       "original_url": "https://code.claude.com/docs/en/channels.md",
@@ -574,8 +574,8 @@
     "monitoring-usage.md": {
       "original_url": "https://code.claude.com/docs/en/monitoring-usage.md",
       "title": "Monitoring",
-      "hash": "8be91bf824c4a20dc22ffb1e002874cad7926b59edbf18ff60ceeb306e835081",
-      "last_updated": "2026-06-25T19:45:00.584147"
+      "hash": "447b65f5a500223999c94b0c15d0d1fee3c359c83d276b0a9d58c82388d0da13",
+      "last_updated": "2026-06-25T22:16:15.919220"
     },
     "network-config.md": {
       "original_url": "https://code.claude.com/docs/en/network-config.md",
@@ -886,8 +886,8 @@
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2026-06-25T19:45:57.481839",
-    "fetch_duration_seconds": 177.401449,
+    "last_fetch_completed": "2026-06-25T22:17:20.713887",
+    "fetch_duration_seconds": 183.198114,
     "total_pages_discovered": 154,
     "pages_fetched_successfully": 156,
     "pages_failed": 0,
@@ -896,7 +896,7 @@
     "total_files": 147,
     "fetch_tool_version": "4.0"
   },
-  "last_updated": "2026-06-25T19:45:57.482027",
+  "last_updated": "2026-06-25T22:17:20.714059",
   "base_url": "https://raw.githubusercontent.com/doublefx/magic-claude-code-docs/main/plugin/docs/",
   "github_repository": "doublefx/magic-claude-code-docs",
   "github_ref": "main",
