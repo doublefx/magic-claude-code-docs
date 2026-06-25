@@ -358,8 +358,8 @@
     "debug-your-config.md": {
       "original_url": "https://code.claude.com/docs/en/debug-your-config.md",
       "title": "Debug your configuration",
-      "hash": "c229979ad3ec811ffc195ebd285fb8232780909d824b972c01cf06a06ba59d5d",
-      "last_updated": "2026-06-09T17:17:23.532898"
+      "hash": "544d91724aa4dc3bc2226976feda6934345b7a5a87b7b8502ca508b62140cb26",
+      "last_updated": "2026-06-25T17:03:35.903868"
     },
     "deep-links.md": {
       "original_url": "https://code.claude.com/docs/en/deep-links.md",
@@ -472,8 +472,8 @@
     "hooks-guide.md": {
       "original_url": "https://code.claude.com/docs/en/hooks-guide.md",
       "title": "Automate actions with hooks",
-      "hash": "527cb9e1914de025886e6b331f9f9623aff529ff4e6e60a49ca0ef373ce2451b",
-      "last_updated": "2026-06-09T22:17:47.523808"
+      "hash": "e623e705dabb65c052e53683653f82b156a114b91e64188dc5f75dc785b88ea3",
+      "last_updated": "2026-06-25T17:03:55.472370"
     },
     "how-claude-code-works.md": {
       "original_url": "https://code.claude.com/docs/en/how-claude-code-works.md",
@@ -544,8 +544,8 @@
     "mcp-quickstart.md": {
       "original_url": "https://code.claude.com/docs/en/mcp-quickstart.md",
       "title": "Connect to MCP servers",
-      "hash": "5f6d016806415cc787c57aac113aa64d2a1e0409f6d68a00a57decd7ca01fecf",
-      "last_updated": "2026-06-18T20:07:44.367980"
+      "hash": "f43273b572b5d8119f4fe89fa2b8baa8c5b7fa8e7b6fd4900828957e6ea9b136",
+      "last_updated": "2026-06-25T17:04:08.764001"
     },
     "memory.md": {
       "original_url": "https://code.claude.com/docs/en/memory.md",
@@ -646,8 +646,8 @@
     "routines.md": {
       "original_url": "https://code.claude.com/docs/en/routines.md",
       "title": "Automate work with routines",
-      "hash": "27213e9ed746e4bde09615714f53bf8e5478c2d6948ee0bdf4eae1df96f73606",
-      "last_updated": "2026-05-19T22:04:46.512963"
+      "hash": "3c3f8316c1c3965ca27ae8504883f4f06b2b8bc0f90c1b34ed49cdf2f37c5860",
+      "last_updated": "2026-06-25T17:04:30.168044"
     },
     "sandbox-environments.md": {
       "original_url": "https://code.claude.com/docs/en/sandbox-environments.md",
@@ -772,8 +772,8 @@
     "web-quickstart.md": {
       "original_url": "https://code.claude.com/docs/en/web-quickstart.md",
       "title": "Get started with Claude Code on the web",
-      "hash": "4bc908bec82703037e32f2d6062e61c319234e696d6ede064175414372ab56aa",
-      "last_updated": "2026-06-10T02:07:41.829553"
+      "hash": "b2f588fb0e46d45c5fc7fccec9910ca05245cc94070ca01076f2a4b4a47cb471",
+      "last_updated": "2026-06-25T17:04:52.933658"
     },
     "2026-w13.md": {
       "original_url": "https://code.claude.com/docs/en/whats-new/2026-w13.md",
@@ -875,13 +875,13 @@
       "original_url": "https://code.claude.com/docs/en/claude_code_docs_map.md",
       "title": "Documentation Map",
       "source": "docs-map",
-      "hash": "859d780f63b599ed5de92faf1697e0983111d7a841a8f3d62dabf6a6b7dd1c2a",
-      "last_updated": "2026-06-25T06:40:41.567970"
+      "hash": "fb815c721de986e13c1fdaa2a56a6743eb009495160f5715d7499882ae6f8547",
+      "last_updated": "2026-06-25T17:05:09.483545"
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2026-06-25T06:40:41.627197",
-    "fetch_duration_seconds": 183.189805,
+    "last_fetch_completed": "2026-06-25T17:05:09.503723",
+    "fetch_duration_seconds": 157.076025,
     "total_pages_discovered": 153,
     "pages_fetched_successfully": 155,
     "pages_failed": 0,
@@ -890,7 +890,7 @@
     "total_files": 146,
     "fetch_tool_version": "4.0"
   },
-  "last_updated": "2026-06-25T06:40:41.627362",
+  "last_updated": "2026-06-25T17:05:09.503911",
   "base_url": "https://raw.githubusercontent.com/doublefx/magic-claude-code-docs/main/plugin/docs/",
   "github_repository": "doublefx/magic-claude-code-docs",
   "github_ref": "main",
