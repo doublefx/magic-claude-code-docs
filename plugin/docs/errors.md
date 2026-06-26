@@ -383,7 +383,7 @@ This is a server-side organization setting, so it cannot be overridden from loca
 
 ### Routines are disabled by your organization's policy
 
-Your Team or Enterprise admin has turned off routines at the organization level. The error appears when you try to create or run a routine, including from `/schedule` and the [Routines](/en/routines) UI on claude.ai/code.
+An Owner in your Team or Enterprise organization has turned off routines at the organization level. The error appears when you try to create or run a routine, including from `/schedule` and the [Routines](/en/routines) UI on claude.ai/code.
 
 ```text theme={null}
 Routines are disabled by your organization's policy.
@@ -393,7 +393,7 @@ This is a server-side setting, so it cannot be overridden from local settings, e
 
 **What to do:**
 
-* Ask your admin to enable the **Routines** toggle at [claude.ai/admin-settings/claude-code](https://claude.ai/admin-settings/claude-code)
+* Ask an Owner in your organization to enable the **Routines** toggle at [claude.ai/admin-settings/claude-code](https://claude.ai/admin-settings/claude-code)
 * For one-off scheduled work that does not require organization-level routines, see [scheduled tasks](/en/scheduled-tasks)
 
 ### OAuth token revoked or expired
@@ -671,7 +671,7 @@ API Error: 400 ... "thinking.type.enabled" is not supported for this model. Use 
 
 * Run `claude update` and restart Claude Code. Opus 4.7 needs v2.1.111 or later. Opus 4.8 needs v2.1.154 or later
 * If you cannot upgrade, run `/model` and select Opus 4.6 or Sonnet instead
-* If you hit this in the Agent SDK, see [SDK troubleshooting](/en/agent-sdk/quickstart#troubleshooting)
+* {/* min-version: agent-sdk@0.3.154 */}If you hit this in the [Agent SDK](/en/agent-sdk/overview), upgrade the SDK package instead. Opus 4.8 needs TypeScript SDK v0.3.154 or later and Python SDK v0.2.88 or later
 
 ### Thinking budget exceeds output limit
 
