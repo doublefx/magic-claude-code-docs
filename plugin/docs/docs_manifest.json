@@ -400,14 +400,20 @@
     "desktop.md": {
       "original_url": "https://code.claude.com/docs/en/desktop.md",
       "title": "Desktop application",
-      "hash": "82448630a759042b2d67cde2179b2749fa62c756989c5a4ea27797a270ac0c98",
-      "last_updated": "2026-06-24T16:58:54.431804"
+      "hash": "1657bca1811bd7d1f3f9568a7085c27d48cf639c82d7578dba4c19d827fa0e63",
+      "last_updated": "2026-06-30T17:00:24.706841"
+    },
+    "desktop-linux.md": {
+      "original_url": "https://code.claude.com/docs/en/desktop-linux.md",
+      "title": "Claude Desktop on Linux (beta)",
+      "hash": "868b61deff0c79e95228260d7ec23595bc0578d4e821ac25a23f30b8c0d1ae10",
+      "last_updated": "2026-06-30T17:00:25.758448"
     },
     "desktop-quickstart.md": {
       "original_url": "https://code.claude.com/docs/en/desktop-quickstart.md",
       "title": "Get started with the desktop app",
-      "hash": "61285dca6ff09fab8fe351785c7f2976b14e2974f69ddde577bb8f4ad43461e6",
-      "last_updated": "2026-06-09T17:17:27.029424"
+      "hash": "39af894ebb8e8792ff410cb634f12a3cc7a5729ffe3518d8f6ec8d5cbac3e44d",
+      "last_updated": "2026-06-30T17:00:26.760796"
     },
     "desktop-scheduled-tasks.md": {
       "original_url": "https://code.claude.com/docs/en/desktop-scheduled-tasks.md",
@@ -736,8 +742,8 @@
     "setup.md": {
       "original_url": "https://code.claude.com/docs/en/setup.md",
       "title": "Advanced setup",
-      "hash": "fc2c5a4a9389b732fd70a0c0b0a3ca7e915423bba16739fe116d9a6034b6ba9e",
-      "last_updated": "2026-06-25T19:45:27.067143"
+      "hash": "6354f0e598a89697355cfc45806cc973c4c70dbce514dbd46dcaec08b03b6b77",
+      "last_updated": "2026-06-30T17:01:40.852598"
     },
     "slack.md": {
       "original_url": "https://code.claude.com/docs/en/slack.md",
@@ -778,8 +784,8 @@
     "troubleshoot-install.md": {
       "original_url": "https://code.claude.com/docs/en/troubleshoot-install.md",
       "title": "Troubleshoot installation and login",
-      "hash": "91e896304061d1160597e00438b21d91405c93f25dc6b5f5896cf35d210e3d42",
-      "last_updated": "2026-06-26T22:01:49.659816"
+      "hash": "ee682a782a42b200bad6359ddb2128fdc5dbb44846f7982d88e251282ffc56ce",
+      "last_updated": "2026-06-30T17:01:50.393967"
     },
     "troubleshooting.md": {
       "original_url": "https://code.claude.com/docs/en/troubleshooting.md",
@@ -929,22 +935,22 @@
       "original_url": "https://code.claude.com/docs/en/claude_code_docs_map.md",
       "title": "Documentation Map",
       "source": "docs-map",
-      "hash": "a917198973ebab0029874e6b25c29684bcbb8159134a7975fc8084228f1a763e",
-      "last_updated": "2026-06-30T06:45:41.566056"
+      "hash": "6fa5097b3f22cee9d42e4544330298de79632d998687fac8e4feb86152cb675c",
+      "last_updated": "2026-06-30T17:02:20.277967"
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2026-06-30T06:45:41.582114",
-    "fetch_duration_seconds": 152.121878,
-    "total_pages_discovered": 162,
-    "pages_fetched_successfully": 164,
+    "last_fetch_completed": "2026-06-30T17:02:20.614283",
+    "fetch_duration_seconds": 195.597999,
+    "total_pages_discovered": 163,
+    "pages_fetched_successfully": 165,
     "pages_failed": 0,
     "failed_pages": [],
     "llms_txt_url": "https://code.claude.com/docs/llms.txt",
-    "total_files": 155,
+    "total_files": 156,
     "fetch_tool_version": "4.0"
   },
-  "last_updated": "2026-06-30T06:45:41.582274",
+  "last_updated": "2026-06-30T17:02:20.614459",
   "base_url": "https://raw.githubusercontent.com/doublefx/magic-claude-code-docs/main/plugin/docs/",
   "github_repository": "doublefx/magic-claude-code-docs",
   "github_ref": "main",
