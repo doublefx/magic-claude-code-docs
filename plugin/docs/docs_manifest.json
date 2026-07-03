@@ -87,8 +87,8 @@
     "permissions.md": {
       "original_url": "https://code.claude.com/docs/en/permissions.md",
       "title": "Configure permissions",
-      "hash": "f67a5b38ef1ac8e6223d2ea9ff360770faba9569714748e8e6c4fda2aab97e7a",
-      "last_updated": "2026-06-30T06:44:54.835014"
+      "hash": "33c32260c883a93e35ff0e11f69f648b6d9a1c2b9c6971ba4ed1f32fc1983dc3",
+      "last_updated": "2026-07-03T18:59:48.232261"
     },
     "plugins.md": {
       "original_url": "https://code.claude.com/docs/en/plugins.md",
@@ -177,8 +177,8 @@
     "typescript.md": {
       "original_url": "https://code.claude.com/docs/en/agent-sdk/typescript.md",
       "title": "Agent SDK reference - TypeScript",
-      "hash": "fe3fe4b1638b699d6cbbfdf3a994745a224d0d053da4e7a09f553b78d67f4554",
-      "last_updated": "2026-07-03T01:47:10.997462"
+      "hash": "f16f9288875328c2bda462abd1a9f49c9259b530d7bd6192768f72a03a9dc721",
+      "last_updated": "2026-07-03T18:58:28.620356"
     },
     "typescript-v2-preview.md": {
       "original_url": "https://code.claude.com/docs/en/agent-sdk/typescript-v2-preview.md",
@@ -256,8 +256,8 @@
       "original_url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
       "original_raw_url": "https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md",
       "source": "claude-code-repository",
-      "hash": "f0855351569cc3dcf8c468853c1e8ec62e68df4666a2d136f67b9279dbad73a9",
-      "last_updated": "2026-07-03T01:50:35.797796"
+      "hash": "b239b2442caebd7252bc6fbfaf658bf71b19790a4b83ed2025ccd167cbafe7b0",
+      "last_updated": "2026-07-03T19:00:38.549727"
     },
     "channels.md": {
       "original_url": "https://code.claude.com/docs/en/channels.md",
@@ -436,8 +436,8 @@
     "env-vars.md": {
       "original_url": "https://code.claude.com/docs/en/env-vars.md",
       "title": "Environment variables",
-      "hash": "8b2f7cb3de004ff8ef010e14b56f2bdfa92a0b646641e8759cf6919c8da9869f",
-      "last_updated": "2026-07-03T01:48:52.519608"
+      "hash": "1d307d48597b1975082f0369dfa4baf8c69ceef50351c8a4df0e989e88d7a4f5",
+      "last_updated": "2026-07-03T18:59:12.420442"
     },
     "errors.md": {
       "original_url": "https://code.claude.com/docs/en/errors.md",
@@ -574,8 +574,8 @@
     "llm-gateway-protocol.md": {
       "original_url": "https://code.claude.com/docs/en/llm-gateway-protocol.md",
       "title": "Gateway protocol reference",
-      "hash": "c454a049cb8ce13523d1344548adf89ffe1e67918dc7fdeef48b57136f6ed452",
-      "last_updated": "2026-07-01T22:12:56.876902"
+      "hash": "21f95468801f8649bb0a53e4eef4730b7bcb8f27a4578d88ee7372b511fb97f5",
+      "last_updated": "2026-07-03T18:59:36.682750"
     },
     "llm-gateway-rollout.md": {
       "original_url": "https://code.claude.com/docs/en/llm-gateway-rollout.md",
@@ -940,8 +940,8 @@
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2026-07-03T06:22:00.519817",
-    "fetch_duration_seconds": 158.378139,
+    "last_fetch_completed": "2026-07-03T19:00:38.550331",
+    "fetch_duration_seconds": 161.274459,
     "total_pages_discovered": 163,
     "pages_fetched_successfully": 165,
     "pages_failed": 0,
@@ -950,7 +950,7 @@
     "total_files": 156,
     "fetch_tool_version": "4.0"
   },
-  "last_updated": "2026-07-03T06:22:00.520036",
+  "last_updated": "2026-07-03T19:00:38.550580",
   "base_url": "https://raw.githubusercontent.com/doublefx/magic-claude-code-docs/main/plugin/docs/",
   "github_repository": "doublefx/magic-claude-code-docs",
   "github_ref": "main",
