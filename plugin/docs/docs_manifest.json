@@ -484,8 +484,8 @@
     "github-enterprise-server.md": {
       "original_url": "https://code.claude.com/docs/en/github-enterprise-server.md",
       "title": "Claude Code with GitHub Enterprise Server",
-      "hash": "bef08b60b066c929349644197a8d4f8786b6314c6e07087051b19b9c4703e141",
-      "last_updated": "2026-07-04T01:46:50.661878"
+      "hash": "0dd975d28f4433bd64124919b43062244f0fecf8e6413479304acf6bd1d8ba7e",
+      "last_updated": "2026-07-06T17:33:53.837055"
     },
     "gitlab-ci-cd.md": {
       "original_url": "https://code.claude.com/docs/en/gitlab-ci-cd.md",
@@ -935,13 +935,13 @@
       "original_url": "https://code.claude.com/docs/en/claude_code_docs_map.md",
       "title": "Documentation Map",
       "source": "docs-map",
-      "hash": "8e42dde8d4dc50f4320f438ab084e0b1211885500a1ff6b64f08c9be940dea00",
-      "last_updated": "2026-07-04T06:10:25.149369"
+      "hash": "ff46ac65e3246856c5cac02921634281e40e91eec3159f77baf79889b0cb3036",
+      "last_updated": "2026-07-06T17:35:20.727489"
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2026-07-04T06:10:25.186163",
-    "fetch_duration_seconds": 150.578628,
+    "last_fetch_completed": "2026-07-06T17:35:20.745868",
+    "fetch_duration_seconds": 166.671036,
     "total_pages_discovered": 163,
     "pages_fetched_successfully": 165,
     "pages_failed": 0,
@@ -950,7 +950,7 @@
     "total_files": 156,
     "fetch_tool_version": "4.0"
   },
-  "last_updated": "2026-07-04T06:10:25.186328",
+  "last_updated": "2026-07-06T17:35:20.746025",
   "base_url": "https://raw.githubusercontent.com/doublefx/magic-claude-code-docs/main/plugin/docs/",
   "github_repository": "doublefx/magic-claude-code-docs",
   "github_ref": "main",
