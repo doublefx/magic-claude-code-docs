@@ -400,8 +400,8 @@
     "desktop.md": {
       "original_url": "https://code.claude.com/docs/en/desktop.md",
       "title": "Desktop application",
-      "hash": "adebacbeb2f1bf489a188facefc070eea1904213265f9872563aca2aa7a1f844",
-      "last_updated": "2026-07-09T19:21:10.811984"
+      "hash": "df5d7d54487dfd61d63a42baeb33e9d7e54d54fc9e88bfee0da8b18db6df334b",
+      "last_updated": "2026-07-09T22:12:44.445903"
     },
     "desktop-linux.md": {
       "original_url": "https://code.claude.com/docs/en/desktop-linux.md",
@@ -412,8 +412,8 @@
     "desktop-quickstart.md": {
       "original_url": "https://code.claude.com/docs/en/desktop-quickstart.md",
       "title": "Get started with the desktop app",
-      "hash": "2f336ae0b7434db30555eb3ce186950aeebddbbca8b589ca7cdafd7f19af32b0",
-      "last_updated": "2026-07-09T19:21:12.645937"
+      "hash": "b862c1b4e2f57a712ffa044aae13a98f5c2ff3f3cf1170dbf54f081d48519624",
+      "last_updated": "2026-07-09T22:12:47.386610"
     },
     "desktop-scheduled-tasks.md": {
       "original_url": "https://code.claude.com/docs/en/desktop-scheduled-tasks.md",
@@ -736,8 +736,8 @@
     "settings.md": {
       "original_url": "https://code.claude.com/docs/en/settings.md",
       "title": "Claude Code settings",
-      "hash": "2569256cf00a306084533acbc53cdfcb9e2a6c3d4c58fae73ba2e054cf84e109",
-      "last_updated": "2026-07-09T19:22:18.307127"
+      "hash": "626245a9581d2bbfdf3253331ef5a407f2286bf9f1d92d520d29e3c977817441",
+      "last_updated": "2026-07-09T22:13:42.816826"
     },
     "setup.md": {
       "original_url": "https://code.claude.com/docs/en/setup.md",
@@ -935,13 +935,13 @@
       "original_url": "https://code.claude.com/docs/en/claude_code_docs_map.md",
       "title": "Documentation Map",
       "source": "docs-map",
-      "hash": "ecd0481ee97c8c007c25fca3115f80253321748c704ff72e1048dc28e7d8d01a",
-      "last_updated": "2026-07-09T19:22:48.811914"
+      "hash": "69f6c1f2120ffc2f1d27f90fc783829675765b99389e354cbb250ddd15f1f7f9",
+      "last_updated": "2026-07-09T22:14:17.264360"
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2026-07-09T19:22:48.831607",
-    "fetch_duration_seconds": 288.308929,
+    "last_fetch_completed": "2026-07-09T22:14:17.427849",
+    "fetch_duration_seconds": 157.057787,
     "total_pages_discovered": 163,
     "pages_fetched_successfully": 165,
     "pages_failed": 0,
@@ -950,7 +950,7 @@
     "total_files": 156,
     "fetch_tool_version": "4.0"
   },
-  "last_updated": "2026-07-09T19:22:48.831801",
+  "last_updated": "2026-07-09T22:14:17.428039",
   "base_url": "https://raw.githubusercontent.com/doublefx/magic-claude-code-docs/main/plugin/docs/",
   "github_repository": "doublefx/magic-claude-code-docs",
   "github_ref": "main",
