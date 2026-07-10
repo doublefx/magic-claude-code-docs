@@ -81,8 +81,8 @@
     "overview.md": {
       "original_url": "https://code.claude.com/docs/en/overview.md",
       "title": "Overview",
-      "hash": "91dfbc96bc0dfa4e35ff94e91f95138a35cabefebf853799c01de79cd8c6b5dc",
-      "last_updated": "2026-06-25T19:45:03.151451"
+      "hash": "95b77981c46268fc0eab26acd8bda3ecc2a6bb629a29071f79cd462e9c12a20f",
+      "last_updated": "2026-07-10T16:51:41.356724"
     },
     "permissions.md": {
       "original_url": "https://code.claude.com/docs/en/permissions.md",
@@ -99,8 +99,8 @@
     "python.md": {
       "original_url": "https://code.claude.com/docs/en/agent-sdk/python.md",
       "title": "Agent SDK reference - Python",
-      "hash": "3fa3e522156f54f0a46a624a5b9d16532d1d064377184b514bf3d16f1543da76",
-      "last_updated": "2026-07-07T22:03:17.438816"
+      "hash": "e3ecaae02df880427c9e3009d6bc96d38061993c6070f734f9afa686234121c3",
+      "last_updated": "2026-07-10T16:49:14.991637"
     },
     "quickstart.md": {
       "original_url": "https://code.claude.com/docs/en/quickstart.md",
@@ -406,8 +406,8 @@
     "desktop-linux.md": {
       "original_url": "https://code.claude.com/docs/en/desktop-linux.md",
       "title": "Claude Desktop on Linux (beta)",
-      "hash": "686132e59cf116bcdb9ed5b2cf5df20128bada3c2adc9b0a980517bc0b3b96d3",
-      "last_updated": "2026-07-07T01:53:49.170240"
+      "hash": "af4a3f449aa6a278f2bc798b27914378ff162f5267958dd700217b8570c310c3",
+      "last_updated": "2026-07-10T16:50:35.971543"
     },
     "desktop-quickstart.md": {
       "original_url": "https://code.claude.com/docs/en/desktop-quickstart.md",
@@ -442,8 +442,8 @@
     "errors.md": {
       "original_url": "https://code.claude.com/docs/en/errors.md",
       "title": "Error reference",
-      "hash": "f12ef76fe49805bdb79af63acaaa1ae93e32ff6adeeb833987f153d9cd43896a",
-      "last_updated": "2026-07-09T19:21:19.971508"
+      "hash": "952756afb45671e92efe669582d6e2a3594f46188392827dc297951278e44e13",
+      "last_updated": "2026-07-10T16:50:45.189612"
     },
     "fast-mode.md": {
       "original_url": "https://code.claude.com/docs/en/fast-mode.md",
@@ -610,8 +610,8 @@
     "model-config.md": {
       "original_url": "https://code.claude.com/docs/en/model-config.md",
       "title": "Model configuration",
-      "hash": "81e81cb6998f5342b403173d38f7c2a3bfa0f671500eff27c6e25af7fdf1f7d5",
-      "last_updated": "2026-07-09T19:21:49.531717"
+      "hash": "d7b5775e7682439f3ea880721ca0186fbee46c3f4fd04b1f09e79f0f1e3b09d9",
+      "last_updated": "2026-07-10T16:51:33.999066"
     },
     "monitoring-usage.md": {
       "original_url": "https://code.claude.com/docs/en/monitoring-usage.md",
@@ -790,8 +790,8 @@
     "troubleshooting.md": {
       "original_url": "https://code.claude.com/docs/en/troubleshooting.md",
       "title": "Troubleshooting",
-      "hash": "ba7d9e0245d4bc0a948d83701219ff97053f5c6a97bcf2c80d4fb55851da7b69",
-      "last_updated": "2026-07-09T19:22:29.548555"
+      "hash": "34833c9d5717b770ebed6996e66605f0db4baef78dc9ae273266573063bae3ee",
+      "last_updated": "2026-07-10T16:52:17.633447"
     },
     "ultraplan.md": {
       "original_url": "https://code.claude.com/docs/en/ultraplan.md",
@@ -935,13 +935,13 @@
       "original_url": "https://code.claude.com/docs/en/claude_code_docs_map.md",
       "title": "Documentation Map",
       "source": "docs-map",
-      "hash": "69f6c1f2120ffc2f1d27f90fc783829675765b99389e354cbb250ddd15f1f7f9",
-      "last_updated": "2026-07-09T22:14:17.264360"
+      "hash": "764fdaddf19caef54ea9aee6c10b951352667fd2e740964364ee5e7b1bf7a48e",
+      "last_updated": "2026-07-10T16:52:34.943847"
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2026-07-10T01:32:15.662429",
-    "fetch_duration_seconds": 172.304551,
+    "last_fetch_completed": "2026-07-10T16:52:34.961550",
+    "fetch_duration_seconds": 218.993465,
     "total_pages_discovered": 163,
     "pages_fetched_successfully": 165,
     "pages_failed": 0,
@@ -950,7 +950,7 @@
     "total_files": 156,
     "fetch_tool_version": "4.0"
   },
-  "last_updated": "2026-07-10T01:32:15.662590",
+  "last_updated": "2026-07-10T16:52:34.961708",
   "base_url": "https://raw.githubusercontent.com/doublefx/magic-claude-code-docs/main/plugin/docs/",
   "github_repository": "doublefx/magic-claude-code-docs",
   "github_ref": "main",
