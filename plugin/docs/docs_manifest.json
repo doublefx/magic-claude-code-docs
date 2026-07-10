@@ -256,8 +256,8 @@
       "original_url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
       "original_raw_url": "https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md",
       "source": "claude-code-repository",
-      "hash": "262e00cdeb604019baf9beea2eb3d99f11ee4f973e4fb58f642197a344a6eb75",
-      "last_updated": "2026-07-08T22:03:04.948474"
+      "hash": "d820f64cb37f3155e3a329deff590828438c91b554b758d3dbe52e89c4a66f50",
+      "last_updated": "2026-07-10T01:32:15.662038"
     },
     "channels.md": {
       "original_url": "https://code.claude.com/docs/en/channels.md",
@@ -400,8 +400,8 @@
     "desktop.md": {
       "original_url": "https://code.claude.com/docs/en/desktop.md",
       "title": "Desktop application",
-      "hash": "df5d7d54487dfd61d63a42baeb33e9d7e54d54fc9e88bfee0da8b18db6df334b",
-      "last_updated": "2026-07-09T22:12:44.445903"
+      "hash": "e5fdd8007a0f7774555eadbc2952f6635aa4e9aa57b5355424f8870087c0d423",
+      "last_updated": "2026-07-10T01:30:38.651177"
     },
     "desktop-linux.md": {
       "original_url": "https://code.claude.com/docs/en/desktop-linux.md",
@@ -454,8 +454,8 @@
     "feature-availability.md": {
       "original_url": "https://code.claude.com/docs/en/feature-availability.md",
       "title": "Feature availability",
-      "hash": "c19d3d525555303a52cda70218499e5f039eae1a7d6235c6be908f28cdac8f58",
-      "last_updated": "2026-07-04T06:09:08.927086"
+      "hash": "5f7386a24fecfb98e706e4b50f4248b0bbbf698117a9fa9e433238cebbf2b75c",
+      "last_updated": "2026-07-10T01:30:44.923069"
     },
     "features-overview.md": {
       "original_url": "https://code.claude.com/docs/en/features-overview.md",
@@ -568,8 +568,8 @@
     "llm-gateway-connect.md": {
       "original_url": "https://code.claude.com/docs/en/llm-gateway-connect.md",
       "title": "Connect Claude Code to an LLM gateway",
-      "hash": "635e968ccef369778b9ae8fdbfc6e7013f69b8a4312347f54e99adfade4d358d",
-      "last_updated": "2026-07-09T19:21:42.013446"
+      "hash": "f6790232bd422ddcf98fdbcd621899d405858160d6fbab74d158a218a6c1eb25",
+      "last_updated": "2026-07-10T01:30:58.546208"
     },
     "llm-gateway-protocol.md": {
       "original_url": "https://code.claude.com/docs/en/llm-gateway-protocol.md",
@@ -580,8 +580,8 @@
     "llm-gateway-rollout.md": {
       "original_url": "https://code.claude.com/docs/en/llm-gateway-rollout.md",
       "title": "Roll out an LLM gateway for your organization",
-      "hash": "d62564bf01a9f60de6525dbbc0f5747f47d41b8e1f1bff590171f17cd10e9f62",
-      "last_updated": "2026-07-04T06:09:27.154749"
+      "hash": "e84d8a0c60a026a8aa34b5c86209bf670b73e523802c7d7a3e766ca16eb10f44",
+      "last_updated": "2026-07-10T01:31:01.529708"
     },
     "managed-mcp.md": {
       "original_url": "https://code.claude.com/docs/en/managed-mcp.md",
@@ -640,8 +640,8 @@
     "platforms.md": {
       "original_url": "https://code.claude.com/docs/en/platforms.md",
       "title": "Platforms and integrations",
-      "hash": "8183dfe63ce1a30a8f7f511f3b30ea8d933ec623c21c455c49303fc222bc5ad5",
-      "last_updated": "2026-07-04T06:09:41.711541"
+      "hash": "9ad2f6df7275ea495a465786d1caa13a8221d7ee7f4010b73251ad6dd6619658",
+      "last_updated": "2026-07-10T01:31:23.580883"
     },
     "plugin-dependencies.md": {
       "original_url": "https://code.claude.com/docs/en/plugin-dependencies.md",
@@ -940,8 +940,8 @@
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2026-07-09T22:14:17.427849",
-    "fetch_duration_seconds": 157.057787,
+    "last_fetch_completed": "2026-07-10T01:32:15.662429",
+    "fetch_duration_seconds": 172.304551,
     "total_pages_discovered": 163,
     "pages_fetched_successfully": 165,
     "pages_failed": 0,
@@ -950,7 +950,7 @@
     "total_files": 156,
     "fetch_tool_version": "4.0"
   },
-  "last_updated": "2026-07-09T22:14:17.428039",
+  "last_updated": "2026-07-10T01:32:15.662590",
   "base_url": "https://raw.githubusercontent.com/doublefx/magic-claude-code-docs/main/plugin/docs/",
   "github_repository": "doublefx/magic-claude-code-docs",
   "github_ref": "main",
