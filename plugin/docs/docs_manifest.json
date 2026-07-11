@@ -907,11 +907,23 @@
       "hash": "d03a60398668f09b9ae483686d3c57d93eac1a95f70cfe62d3b3fcb51239bf2f",
       "last_updated": "2026-06-27T02:00:47.892747"
     },
+    "2026-w27.md": {
+      "original_url": "https://code.claude.com/docs/en/whats-new/2026-w27.md",
+      "title": "Week 27 \u00b7 June 29 \u2013 July 3, 2026",
+      "hash": "31229875e10a45c8a2a8cc769f5ef3b3718621f7cd74aa8940caa149ae8f8fdb",
+      "last_updated": "2026-07-11T05:33:09.058793"
+    },
+    "2026-w28.md": {
+      "original_url": "https://code.claude.com/docs/en/whats-new/2026-w28.md",
+      "title": "Week 28 \u00b7 July 6\u201310, 2026",
+      "hash": "6e1c2f542e6f08f0c00d58f96fd312e7b4ade1cbdaa9c51fcfbf1e8b10b22242",
+      "last_updated": "2026-07-11T05:33:09.979552"
+    },
     "index.md": {
       "original_url": "https://code.claude.com/docs/en/whats-new/index.md",
       "title": "What's new",
-      "hash": "8d9fd1e412d0659d644a9ade50d07555d53f733e4509ca515b7e5fe4c0734135",
-      "last_updated": "2026-07-04T06:10:23.062934"
+      "hash": "99fb12a23ce414d58a7017212b208d45a327fb4d1a486f3a706e49a95754833d",
+      "last_updated": "2026-07-11T05:33:10.964222"
     },
     "workflows.md": {
       "original_url": "https://code.claude.com/docs/en/workflows.md",
@@ -935,22 +947,22 @@
       "original_url": "https://code.claude.com/docs/en/claude_code_docs_map.md",
       "title": "Documentation Map",
       "source": "docs-map",
-      "hash": "eb2e7a17cebeed875df6f4914034cf022843e7ad1f8cf7d254a542588b6d53ec",
-      "last_updated": "2026-07-11T01:25:49.456514"
+      "hash": "d99edadac0fbde97d8431d831464276fa986d7b38975289ea4b3d045710fecdb",
+      "last_updated": "2026-07-11T05:33:13.208447"
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2026-07-11T01:25:49.633448",
-    "fetch_duration_seconds": 182.203802,
-    "total_pages_discovered": 163,
-    "pages_fetched_successfully": 165,
+    "last_fetch_completed": "2026-07-11T05:33:13.318174",
+    "fetch_duration_seconds": 174.900548,
+    "total_pages_discovered": 165,
+    "pages_fetched_successfully": 167,
     "pages_failed": 0,
     "failed_pages": [],
     "llms_txt_url": "https://code.claude.com/docs/llms.txt",
-    "total_files": 156,
+    "total_files": 158,
     "fetch_tool_version": "4.0"
   },
-  "last_updated": "2026-07-11T01:25:49.633617",
+  "last_updated": "2026-07-11T05:33:13.318344",
   "base_url": "https://raw.githubusercontent.com/doublefx/magic-claude-code-docs/main/plugin/docs/",
   "github_repository": "doublefx/magic-claude-code-docs",
   "github_ref": "main",
