@@ -580,8 +580,8 @@
     "llm-gateway-connect.md": {
       "original_url": "https://code.claude.com/docs/en/llm-gateway-connect.md",
       "title": "Connect Claude Code to an LLM gateway",
-      "hash": "984e16537c508efef44fc74300179a80e56a96e34ca7aa5fab3275e72babbead",
-      "last_updated": "2026-07-14T19:00:36.108444"
+      "hash": "9390c0af5e7bbf74556d30ddf126b5cb88fd234566284242624824ba722451af",
+      "last_updated": "2026-07-15T16:13:32.181717"
     },
     "llm-gateway-protocol.md": {
       "original_url": "https://code.claude.com/docs/en/llm-gateway-protocol.md",
@@ -959,13 +959,13 @@
       "original_url": "https://code.claude.com/docs/en/claude_code_docs_map.md",
       "title": "Documentation Map",
       "source": "docs-map",
-      "hash": "6b459bc22637e3e1c4d132910a94a7d812f80f7bec8515d6671306f939a9dbdc",
-      "last_updated": "2026-07-15T01:14:38.995745"
+      "hash": "f3f0096f95f63cd19664f5e8e5ac875c75d5d4b82c6e8bb463be42814f2eacf1",
+      "last_updated": "2026-07-15T16:14:58.946915"
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2026-07-15T01:14:39.036471",
-    "fetch_duration_seconds": 152.197188,
+    "last_fetch_completed": "2026-07-15T16:14:59.296950",
+    "fetch_duration_seconds": 193.660154,
     "total_pages_discovered": 167,
     "pages_fetched_successfully": 169,
     "pages_failed": 0,
@@ -974,7 +974,7 @@
     "total_files": 160,
     "fetch_tool_version": "4.0"
   },
-  "last_updated": "2026-07-15T01:14:39.036633",
+  "last_updated": "2026-07-15T16:14:59.297105",
   "base_url": "https://raw.githubusercontent.com/doublefx/magic-claude-code-docs/main/plugin/docs/",
   "github_repository": "doublefx/magic-claude-code-docs",
   "github_ref": "main",
