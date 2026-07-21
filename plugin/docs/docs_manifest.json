@@ -63,8 +63,8 @@
     "mcp.md": {
       "original_url": "https://code.claude.com/docs/en/mcp.md",
       "title": "Connect Claude Code to tools via MCP",
-      "hash": "6f88dc3977c6c5eb6c74757609aabb342d6ba1541f2d1cd96407e1796ce3cd22",
-      "last_updated": "2026-07-21T16:14:47.297059"
+      "hash": "7602c09a1b7cb2454d6558e91cdaea235423be986370512c69a49c6d90be8efc",
+      "last_updated": "2026-07-21T21:57:13.870269"
     },
     "migration-guide.md": {
       "original_url": "https://code.claude.com/docs/en/agent-sdk/migration-guide.md",
@@ -135,8 +135,8 @@
     "skills.md": {
       "original_url": "https://code.claude.com/docs/en/skills.md",
       "title": "Extend Claude with skills",
-      "hash": "399a80e12c7bd12753a4fe0487579d052c1cd84d1f909a6dd555f02d7e8110c0",
-      "last_updated": "2026-07-21T16:15:34.449041"
+      "hash": "c8c76fb01f6a20e9041715264f438d98e0063e6dad897c63d97e3141e89a866d",
+      "last_updated": "2026-07-21T22:00:09.147842"
     },
     "slash-commands.md": {
       "original_url": "https://code.claude.com/docs/en/agent-sdk/slash-commands.md",
@@ -262,8 +262,8 @@
       "original_url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
       "original_raw_url": "https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md",
       "source": "claude-code-repository",
-      "hash": "66bd4bd03adcfb563142a8a06a92fdcd15f43b79ba334e10fb3dd80a069d25f1",
-      "last_updated": "2026-07-21T19:03:38.848845"
+      "hash": "4225ac2349fa9d27952e4372c42357d289a4ab720ea4b64375cc57e21f1007cd",
+      "last_updated": "2026-07-21T22:01:52.822583"
     },
     "channels.md": {
       "original_url": "https://code.claude.com/docs/en/channels.md",
@@ -370,8 +370,8 @@
     "computer-use.md": {
       "original_url": "https://code.claude.com/docs/en/computer-use.md",
       "title": "Let Claude use your computer from the CLI",
-      "hash": "0f59cf0fd91094e1ff373c4f00769055e871154714c4fff1c42938bb44f79d60",
-      "last_updated": "2026-07-21T16:13:59.008924"
+      "hash": "1c475ecdae408f59a97c127c4cb7abdfa593e9906f2c6096a25fa2551277cf21",
+      "last_updated": "2026-07-21T21:54:04.782354"
     },
     "context-window.md": {
       "original_url": "https://code.claude.com/docs/en/context-window.md",
@@ -412,8 +412,14 @@
     "desktop.md": {
       "original_url": "https://code.claude.com/docs/en/desktop.md",
       "title": "Desktop application",
-      "hash": "0ac2c25bdc096bb378b5ac0b75d5dc66303cea77edd589f3a1ca22eea2d3e800",
-      "last_updated": "2026-07-21T16:14:07.315686"
+      "hash": "6309b04dc694f7d9530ce1542ed7d4525bba1bfbb6faad434766dacc8cb4cb99",
+      "last_updated": "2026-07-21T21:54:16.180112"
+    },
+    "desktop-ios-simulator.md": {
+      "original_url": "https://code.claude.com/docs/en/desktop-ios-simulator.md",
+      "title": "Test iOS apps in the simulator",
+      "hash": "07e372413cb63465bc7915cdcfebfa87e7bc3d53cafe5e6b79417f50fe0659ae",
+      "last_updated": "2026-07-21T21:54:16.871983"
     },
     "desktop-linux.md": {
       "original_url": "https://code.claude.com/docs/en/desktop-linux.md",
@@ -634,8 +640,8 @@
     "model-config.md": {
       "original_url": "https://code.claude.com/docs/en/model-config.md",
       "title": "Model configuration",
-      "hash": "32650ab02f3379301de30f3d1abbf477814a41fd8ac486b142b651cc7ddbad70",
-      "last_updated": "2026-07-21T16:14:54.501218"
+      "hash": "9cea9fd55d82e17a00e851c1b1f72dbab9a6ef463cce0a941f249e597a421a92",
+      "last_updated": "2026-07-21T21:57:35.898418"
     },
     "monitoring-usage.md": {
       "original_url": "https://code.claude.com/docs/en/monitoring-usage.md",
@@ -977,22 +983,22 @@
       "original_url": "https://code.claude.com/docs/en/claude_code_docs_map.md",
       "title": "Documentation Map",
       "source": "docs-map",
-      "hash": "12dd4dd2f7038bae49abb15bd763257178075a2b24839d2c692bb103166aedb7",
-      "last_updated": "2026-07-21T19:03:38.665750"
+      "hash": "74535b805c42387bacc164482b783ce8b5f904c748dd412356d4bfce5a56a5c4",
+      "last_updated": "2026-07-21T22:01:52.780695"
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2026-07-21T19:03:38.849223",
-    "fetch_duration_seconds": 184.314704,
-    "total_pages_discovered": 170,
-    "pages_fetched_successfully": 172,
+    "last_fetch_completed": "2026-07-21T22:01:52.822815",
+    "fetch_duration_seconds": 592.56141,
+    "total_pages_discovered": 171,
+    "pages_fetched_successfully": 173,
     "pages_failed": 0,
     "failed_pages": [],
     "llms_txt_url": "https://code.claude.com/docs/llms.txt",
-    "total_files": 163,
+    "total_files": 164,
     "fetch_tool_version": "4.0"
   },
-  "last_updated": "2026-07-21T19:03:38.849398",
+  "last_updated": "2026-07-21T22:01:52.822991",
   "base_url": "https://raw.githubusercontent.com/doublefx/magic-claude-code-docs/main/plugin/docs/",
   "github_repository": "doublefx/magic-claude-code-docs",
   "github_ref": "main",
