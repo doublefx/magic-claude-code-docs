@@ -129,8 +129,8 @@
     "sessions.md": {
       "original_url": "https://code.claude.com/docs/en/sessions.md",
       "title": "Manage sessions",
-      "hash": "b3d24e7fe93c708e6804574f564cbaf371c92506a2a6b798f329bfbd93791b33",
-      "last_updated": "2026-07-21T19:03:01.153418"
+      "hash": "d6c8b886a582e21dd7698e5a3a79e96a7d3dc9c5eb73d9cb4901d0233951fbd0",
+      "last_updated": "2026-07-22T18:59:22.447765"
     },
     "skills.md": {
       "original_url": "https://code.claude.com/docs/en/skills.md",
@@ -336,6 +336,12 @@
       "title": "Claude Code on Claude Platform on AWS",
       "hash": "2954025b78406bd6f20b4104397f7a8595f7365ed3aef4af27b3296de6a7204d",
       "last_updated": "2026-07-21T16:13:49.469101"
+    },
+    "claude-security.md": {
+      "original_url": "https://code.claude.com/docs/en/claude-security.md",
+      "title": "Scan your codebase for vulnerabilities",
+      "hash": "5861a8cab1ccc7af463546a1cc3b12cf6ef23a62fb4309148b3b5a9d81ebc634",
+      "last_updated": "2026-07-22T18:55:51.949976"
     },
     "cli-reference.md": {
       "original_url": "https://code.claude.com/docs/en/cli-reference.md",
@@ -754,8 +760,8 @@
     "security-guidance.md": {
       "original_url": "https://code.claude.com/docs/en/security-guidance.md",
       "title": "Catch security issues as Claude writes code",
-      "hash": "3536885c6fca282c58ef05a2b48e85cbe35a66b518e882ce3dd9d10f5095c792",
-      "last_updated": "2026-07-21T16:15:26.869162"
+      "hash": "6902efc58e5081202cafc7390023ebdea96b6e978c60456587d021171f9828c9",
+      "last_updated": "2026-07-22T18:59:19.483524"
     },
     "server-managed-settings.md": {
       "original_url": "https://code.claude.com/docs/en/server-managed-settings.md",
@@ -983,22 +989,22 @@
       "original_url": "https://code.claude.com/docs/en/claude_code_docs_map.md",
       "title": "Documentation Map",
       "source": "docs-map",
-      "hash": "c7a6bad18418761e5843f6a9b9c0b3fde61616f8fa89cc7f65f4cba526b091a8",
-      "last_updated": "2026-07-22T01:23:50.560678"
+      "hash": "7833b7d6aab7e2e109c1e54c2bac7c9ceb3c5e58bc8cef819762eabfdc4a575a",
+      "last_updated": "2026-07-22T19:00:22.102051"
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2026-07-22T01:23:50.602599",
-    "fetch_duration_seconds": 172.74694,
-    "total_pages_discovered": 171,
-    "pages_fetched_successfully": 173,
+    "last_fetch_completed": "2026-07-22T19:00:22.252213",
+    "fetch_duration_seconds": 415.274492,
+    "total_pages_discovered": 172,
+    "pages_fetched_successfully": 174,
     "pages_failed": 0,
     "failed_pages": [],
     "llms_txt_url": "https://code.claude.com/docs/llms.txt",
-    "total_files": 164,
+    "total_files": 165,
     "fetch_tool_version": "4.0"
   },
-  "last_updated": "2026-07-22T01:23:50.602775",
+  "last_updated": "2026-07-22T19:00:22.252387",
   "base_url": "https://raw.githubusercontent.com/doublefx/magic-claude-code-docs/main/plugin/docs/",
   "github_repository": "doublefx/magic-claude-code-docs",
   "github_ref": "main",
