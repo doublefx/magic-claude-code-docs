@@ -352,8 +352,8 @@
     "commands.md": {
       "original_url": "https://code.claude.com/docs/en/commands.md",
       "title": "Commands",
-      "hash": "0b8cab0dc9c979191e0e310d9f54fbc65a97f84a6814515fb4de2ad7f2163dfd",
-      "last_updated": "2026-07-21T19:01:30.450704"
+      "hash": "3ecbe133cba3c3353333103d352be89486f521f446ecfe1d17597696a5ee90a2",
+      "last_updated": "2026-07-22T01:21:56.319277"
     },
     "common-workflows.md": {
       "original_url": "https://code.claude.com/docs/en/common-workflows.md",
@@ -388,8 +388,8 @@
     "costs.md": {
       "original_url": "https://code.claude.com/docs/en/costs.md",
       "title": "Manage costs effectively",
-      "hash": "362da7bec045633785fcc5643938b4e9bb3c114bfc4d51caa00e3cd67018bfce",
-      "last_updated": "2026-07-21T16:14:01.845939"
+      "hash": "48352494a90fad1847d53030ccb92d0595829c89b445da1bcb22460aae6dbaac",
+      "last_updated": "2026-07-22T01:22:04.251327"
     },
     "data-usage.md": {
       "original_url": "https://code.claude.com/docs/en/data-usage.md",
@@ -466,8 +466,8 @@
     "errors.md": {
       "original_url": "https://code.claude.com/docs/en/errors.md",
       "title": "Error reference",
-      "hash": "a456a25434b20e4ddc6b7804e5c36522f63d3618ea578f2ce5dda0cf556cfeba",
-      "last_updated": "2026-07-21T19:01:47.259870"
+      "hash": "ab39b9d8f84113473ef20c26255688f8aada3623b268814e9ca0db6bcdef47dc",
+      "last_updated": "2026-07-22T01:22:14.182863"
     },
     "fast-mode.md": {
       "original_url": "https://code.claude.com/docs/en/fast-mode.md",
@@ -718,8 +718,8 @@
     "remote-control.md": {
       "original_url": "https://code.claude.com/docs/en/remote-control.md",
       "title": "Continue local sessions from any device with Remote Control",
-      "hash": "f7ebd427b00a7f4f2607c292a2b0b3bd16d3164522efc375d1e18033af6cfd64",
-      "last_updated": "2026-07-21T16:15:20.440540"
+      "hash": "5107fc0d9a241ed7c704662be6851208dd03ccecac825c13c44d5902af39787f",
+      "last_updated": "2026-07-22T01:23:07.923496"
     },
     "routines.md": {
       "original_url": "https://code.claude.com/docs/en/routines.md",
@@ -983,13 +983,13 @@
       "original_url": "https://code.claude.com/docs/en/claude_code_docs_map.md",
       "title": "Documentation Map",
       "source": "docs-map",
-      "hash": "74535b805c42387bacc164482b783ce8b5f904c748dd412356d4bfce5a56a5c4",
-      "last_updated": "2026-07-21T22:01:52.780695"
+      "hash": "c7a6bad18418761e5843f6a9b9c0b3fde61616f8fa89cc7f65f4cba526b091a8",
+      "last_updated": "2026-07-22T01:23:50.560678"
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2026-07-21T22:01:52.822815",
-    "fetch_duration_seconds": 592.56141,
+    "last_fetch_completed": "2026-07-22T01:23:50.602599",
+    "fetch_duration_seconds": 172.74694,
     "total_pages_discovered": 171,
     "pages_fetched_successfully": 173,
     "pages_failed": 0,
@@ -998,7 +998,7 @@
     "total_files": 164,
     "fetch_tool_version": "4.0"
   },
-  "last_updated": "2026-07-21T22:01:52.822991",
+  "last_updated": "2026-07-22T01:23:50.602775",
   "base_url": "https://raw.githubusercontent.com/doublefx/magic-claude-code-docs/main/plugin/docs/",
   "github_repository": "doublefx/magic-claude-code-docs",
   "github_ref": "main",
