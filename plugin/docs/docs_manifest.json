@@ -51,8 +51,8 @@
     "hooks.md": {
       "original_url": "https://code.claude.com/docs/en/hooks.md",
       "title": "Hooks reference",
-      "hash": "b212e7f13d2ede7d2b6d8d1c1bb6fdca5e29d023fad199abceac853904caad65",
-      "last_updated": "2026-07-21T19:02:00.780489"
+      "hash": "21ee7174a0d2e211871009ba9eff4965804cefe635fd977e26f7c67cf0646d61",
+      "last_updated": "2026-07-23T05:43:51.174745"
     },
     "hosting.md": {
       "original_url": "https://code.claude.com/docs/en/agent-sdk/hosting.md",
@@ -994,8 +994,8 @@
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2026-07-23T01:31:24.965817",
-    "fetch_duration_seconds": 180.397482,
+    "last_fetch_completed": "2026-07-23T05:45:03.640015",
+    "fetch_duration_seconds": 158.45023,
     "total_pages_discovered": 172,
     "pages_fetched_successfully": 174,
     "pages_failed": 0,
@@ -1004,7 +1004,7 @@
     "total_files": 165,
     "fetch_tool_version": "4.0"
   },
-  "last_updated": "2026-07-23T01:31:24.965961",
+  "last_updated": "2026-07-23T05:45:03.640201",
   "base_url": "https://raw.githubusercontent.com/doublefx/magic-claude-code-docs/main/plugin/docs/",
   "github_repository": "doublefx/magic-claude-code-docs",
   "github_ref": "main",
