@@ -93,8 +93,8 @@
     "permissions.md": {
       "original_url": "https://code.claude.com/docs/en/permissions.md",
       "title": "Configure permissions",
-      "hash": "c3e127baa51d5cd978d70175e7b72454514b82072c4a9f30fa74d662519084f9",
-      "last_updated": "2026-07-23T16:20:14.394365"
+      "hash": "feb61445cd4ab2418f9ccb12ab198506705a93e5cddb1a7e2c9b1072a33e4b0e",
+      "last_updated": "2026-07-25T05:34:41.672403"
     },
     "plugins.md": {
       "original_url": "https://code.claude.com/docs/en/plugins.md",
@@ -262,8 +262,8 @@
       "original_url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
       "original_raw_url": "https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md",
       "source": "claude-code-repository",
-      "hash": "8bd39fae8890b453fc76fea9c41e9271c5aedd1eb43b10f8a1a22832564273a0",
-      "last_updated": "2026-07-24T19:13:12.996520"
+      "hash": "a7b454b4f48ecc768ec5bbeeecfc867297d6c0d8f4148bcb4d537fd30c7f8cc6",
+      "last_updated": "2026-07-25T05:35:36.655884"
     },
     "channels.md": {
       "original_url": "https://code.claude.com/docs/en/channels.md",
@@ -670,8 +670,8 @@
     "permission-modes.md": {
       "original_url": "https://code.claude.com/docs/en/permission-modes.md",
       "title": "Choose a permission mode",
-      "hash": "47a66bda42323812491a0c2b9d03a99bab47dd946cdeeee49d1d7c1237f884db",
-      "last_updated": "2026-07-25T01:27:02.738750"
+      "hash": "ccb0ba68fa85e1774f5074821772921956ed10249ff4602088983184f4c932e8",
+      "last_updated": "2026-07-25T05:34:40.530536"
     },
     "platforms.md": {
       "original_url": "https://code.claude.com/docs/en/platforms.md",
@@ -742,8 +742,8 @@
     "sandboxing.md": {
       "original_url": "https://code.claude.com/docs/en/sandboxing.md",
       "title": "Configure the sandboxed Bash tool",
-      "hash": "4a3944a633848184a0b52dec44ea96c615b07806d605e79f3f7cd648fce7de94",
-      "last_updated": "2026-07-21T19:02:55.977790"
+      "hash": "f53686eb82c0002693357b06074a102c0c463253d7e8cec024c32deff7b196a6",
+      "last_updated": "2026-07-25T05:34:54.947154"
     },
     "scheduled-tasks.md": {
       "original_url": "https://code.claude.com/docs/en/scheduled-tasks.md",
@@ -994,8 +994,8 @@
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2026-07-25T01:28:06.355392",
-    "fetch_duration_seconds": 180.13195,
+    "last_fetch_completed": "2026-07-25T05:35:36.656252",
+    "fetch_duration_seconds": 173.001181,
     "total_pages_discovered": 172,
     "pages_fetched_successfully": 174,
     "pages_failed": 0,
@@ -1004,7 +1004,7 @@
     "total_files": 165,
     "fetch_tool_version": "4.0"
   },
-  "last_updated": "2026-07-25T01:28:06.355589",
+  "last_updated": "2026-07-25T05:35:36.656410",
   "base_url": "https://raw.githubusercontent.com/doublefx/magic-claude-code-docs/main/plugin/docs/",
   "github_repository": "doublefx/magic-claude-code-docs",
   "github_ref": "main",
