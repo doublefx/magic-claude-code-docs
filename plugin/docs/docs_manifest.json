@@ -484,8 +484,8 @@
     "env-vars.md": {
       "original_url": "https://code.claude.com/docs/en/env-vars.md",
       "title": "Environment variables",
-      "hash": "1dd1976c02989dfdbebfd27378de3f0f1e074db9813485c4c7261a3bdf1652b6",
-      "last_updated": "2026-08-05T01:22:53.383174"
+      "hash": "a7a34552ec34c3db122274bfff5bb924c0dd9d70b4b875efa53e026a7f575f6c",
+      "last_updated": "2026-08-05T05:36:01.613273"
     },
     "errors.md": {
       "original_url": "https://code.claude.com/docs/en/errors.md",
@@ -995,13 +995,13 @@
       "original_url": "https://code.claude.com/docs/en/claude_code_docs_map.md",
       "title": "Documentation Map",
       "source": "docs-map",
-      "hash": "2352442469503a5e6018337b71f88a7f068224d366c1657b5b3523fe59a8d35c",
-      "last_updated": "2026-08-05T01:24:18.744408"
+      "hash": "9ef1e23307c4d2665a25ef52003e60533a8e24787eb9da862518aeeb277d857a",
+      "last_updated": "2026-08-05T05:37:26.227238"
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2026-08-05T01:24:18.772415",
-    "fetch_duration_seconds": 165.934726,
+    "last_fetch_completed": "2026-08-05T05:37:26.263099",
+    "fetch_duration_seconds": 155.851766,
     "total_pages_discovered": 174,
     "pages_fetched_successfully": 176,
     "pages_failed": 0,
@@ -1010,7 +1010,7 @@
     "total_files": 166,
     "fetch_tool_version": "4.0"
   },
-  "last_updated": "2026-08-05T01:24:18.772580",
+  "last_updated": "2026-08-05T05:37:26.263267",
   "base_url": "https://raw.githubusercontent.com/doublefx/magic-claude-code-docs/main/plugin/docs/",
   "github_repository": "doublefx/magic-claude-code-docs",
   "github_ref": "main",
