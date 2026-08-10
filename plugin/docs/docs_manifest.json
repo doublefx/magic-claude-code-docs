@@ -40,8 +40,8 @@
     "context-window.md": {
       "original_url": "https://code.claude.com/docs/en/context-window.md",
       "title": "Explore the context window",
-      "hash": "5ad62ac2f97b53531db556578ef044ed107c8da85010034721af6bc1e064725f",
-      "last_updated": "2026-08-05T01:22:40.299566"
+      "hash": "a01841b7affb5b846e6476ab0c1ea488dc515e3de79b9f579a1f0e78e2950581",
+      "last_updated": "2026-08-10T21:29:46.479249"
     },
     "prompt-caching.md": {
       "original_url": "https://code.claude.com/docs/en/prompt-caching.md",
@@ -232,14 +232,14 @@
     "slack.md": {
       "original_url": "https://code.claude.com/docs/en/slack.md",
       "title": "Claude Code in Slack",
-      "hash": "878f148a01a2309622829a9b465cf4ccf8290c11e2aa0b8dd803127cbbe3710f",
-      "last_updated": "2026-07-28T21:57:22.160887"
+      "hash": "b6da636facfc6ceb01989b9fcabccfce82d04eb348d4c5055130d901e839cc14",
+      "last_updated": "2026-08-10T21:30:15.570806"
     },
     "claude-tag.md": {
       "original_url": "https://code.claude.com/docs/en/claude-tag.md",
       "title": "Claude Tag",
-      "hash": "4812a8b5e34c6e895668050a2bfa56aa86572b5b29e07c9a6d7a4c254cbbd1ac",
-      "last_updated": "2026-08-05T19:10:41.685779"
+      "hash": "71a0a4e6c77545d48c76a50df303a62f20d933d79939fd42e4af178f3ff241fd",
+      "last_updated": "2026-08-10T21:30:16.420437"
     },
     "agents.md": {
       "original_url": "https://code.claude.com/docs/en/agents.md",
@@ -616,8 +616,8 @@
     "settings.md": {
       "original_url": "https://code.claude.com/docs/en/settings.md",
       "title": "Claude Code settings",
-      "hash": "20a7c3bf0a74995739cce6c52a0bb7af3232a8a93885bb8186d2be6ebf76b753",
-      "last_updated": "2026-08-10T18:40:56.534832"
+      "hash": "8ad329ee0a5de10ee25ae053a82a86d40d769d7360cdac87ca01ac27ccccf088",
+      "last_updated": "2026-08-10T21:31:09.282235"
     },
     "permissions.md": {
       "original_url": "https://code.claude.com/docs/en/agent-sdk/permissions.md",
@@ -760,8 +760,8 @@
     "env-vars.md": {
       "original_url": "https://code.claude.com/docs/en/env-vars.md",
       "title": "Environment variables",
-      "hash": "5961f37b9369849f268b74e1afcc4305a58203c92b92b5f48c1a6d0b44a5f22d",
-      "last_updated": "2026-08-10T18:41:24.854968"
+      "hash": "fd7999a6a8bd84ac0cf3809e178d1eaeb64a3d107e405debc00a614e3f4dd7a2",
+      "last_updated": "2026-08-10T21:31:31.880260"
     },
     "tools-reference.md": {
       "original_url": "https://code.claude.com/docs/en/tools-reference.md",
@@ -922,8 +922,8 @@
     "typescript.md": {
       "original_url": "https://code.claude.com/docs/en/agent-sdk/typescript.md",
       "title": "Agent SDK reference - TypeScript",
-      "hash": "50dd5684b96f234a78a673a984b0ac93976f8dcaf5ff24facbaebe31cecc75d6",
-      "last_updated": "2026-08-07T21:27:01.648151"
+      "hash": "466c2810e54954620f4cb78186dfc85dbf4423bce2559dcc1d58192672238d56",
+      "last_updated": "2026-08-10T21:32:09.291584"
     },
     "typescript-v2-preview.md": {
       "original_url": "https://code.claude.com/docs/en/agent-sdk/typescript-v2-preview.md",
@@ -1073,13 +1073,13 @@
       "original_url": "https://code.claude.com/docs/en/claude_code_docs_map.md",
       "title": "Documentation Map",
       "source": "docs-map",
-      "hash": "b475066ed5832d217647e14e3639b4bd89806704a74ced0a4b73c23232f2e652",
-      "last_updated": "2026-08-08T00:45:08.075196"
+      "hash": "3b0ddc36ef90ed7de207254e47e5cdcf466a9284dfc320ecbcbb9725c9603e04",
+      "last_updated": "2026-08-10T21:32:35.165757"
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2026-08-10T18:42:29.557678",
-    "fetch_duration_seconds": 194.652956,
+    "last_fetch_completed": "2026-08-10T21:32:35.318480",
+    "fetch_duration_seconds": 176.790066,
     "total_pages_discovered": 187,
     "pages_fetched_successfully": 189,
     "pages_failed": 0,
@@ -1088,7 +1088,7 @@
     "total_files": 179,
     "fetch_tool_version": "4.0"
   },
-  "last_updated": "2026-08-10T18:42:29.557858",
+  "last_updated": "2026-08-10T21:32:35.318717",
   "base_url": "https://raw.githubusercontent.com/doublefx/magic-claude-code-docs/main/plugin/docs/",
   "github_repository": "doublefx/magic-claude-code-docs",
   "github_ref": "main",
