@@ -16,8 +16,8 @@
       "original_url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
       "original_raw_url": "https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md",
       "source": "claude-code-repository",
-      "hash": "20fb912c64d3a2c00ab3de5798a81ad0af418aabf9800c27245c0816dfdb7637",
-      "last_updated": "2026-08-12T21:35:32.378830"
+      "hash": "43a8ce61a71375d1081bde488df1ac2b0919bd14bce73be1c4ad7f9ce5261277",
+      "last_updated": "2026-08-13T09:54:34.779123"
     },
     "how-claude-code-works.md": {
       "original_url": "https://code.claude.com/docs/en/how-claude-code-works.md",
@@ -628,8 +628,8 @@
     "sandbox-environments.md": {
       "original_url": "https://code.claude.com/docs/en/sandbox-environments.md",
       "title": "Choose a sandbox environment",
-      "hash": "a08ac4bb1709f06d6e431a8b68d6612ef515fe0618b61abcec4ef5ddf6d245b3",
-      "last_updated": "2026-08-07T21:28:26.869247"
+      "hash": "9c8982e3120d8a720667fa8b716001c092da6c07be524875bbe60517edd8a987",
+      "last_updated": "2026-08-13T09:53:21.442617"
     },
     "sandboxing.md": {
       "original_url": "https://code.claude.com/docs/en/sandboxing.md",
@@ -1078,8 +1078,8 @@
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2026-08-13T00:58:34.520464",
-    "fetch_duration_seconds": 167.971286,
+    "last_fetch_completed": "2026-08-13T09:54:34.779513",
+    "fetch_duration_seconds": 172.504353,
     "total_pages_discovered": 187,
     "pages_fetched_successfully": 189,
     "pages_failed": 0,
@@ -1088,7 +1088,7 @@
     "total_files": 179,
     "fetch_tool_version": "4.0"
   },
-  "last_updated": "2026-08-13T00:58:34.520621",
+  "last_updated": "2026-08-13T09:54:34.779693",
   "base_url": "https://raw.githubusercontent.com/doublefx/magic-claude-code-docs/main/plugin/docs/",
   "github_repository": "doublefx/magic-claude-code-docs",
   "github_ref": "main",
