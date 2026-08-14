@@ -1073,13 +1073,13 @@
       "original_url": "https://code.claude.com/docs/en/claude_code_docs_map.md",
       "title": "Documentation Map",
       "source": "docs-map",
-      "hash": "3ab827ec30bdc4e51c28af14efe27e592e2454a9e3e42c57bb9dc68cbccb9ba4",
-      "last_updated": "2026-08-14T00:58:13.201513"
+      "hash": "ad0ec1cda1b63eac6aa0d80aa74fa1e99c6062566c0260a25d3b5b4f24883f5b",
+      "last_updated": "2026-08-14T04:43:05.059581"
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2026-08-14T00:58:13.246380",
-    "fetch_duration_seconds": 171.364936,
+    "last_fetch_completed": "2026-08-14T04:43:05.156841",
+    "fetch_duration_seconds": 162.342205,
     "total_pages_discovered": 187,
     "pages_fetched_successfully": 189,
     "pages_failed": 0,
@@ -1088,7 +1088,7 @@
     "total_files": 179,
     "fetch_tool_version": "4.0"
   },
-  "last_updated": "2026-08-14T00:58:13.246559",
+  "last_updated": "2026-08-14T04:43:05.157003",
   "base_url": "https://raw.githubusercontent.com/doublefx/magic-claude-code-docs/main/plugin/docs/",
   "github_repository": "doublefx/magic-claude-code-docs",
   "github_ref": "main",
