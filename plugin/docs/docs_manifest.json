@@ -3,8 +3,8 @@
     "overview.md": {
       "original_url": "https://code.claude.com/docs/en/agent-sdk/overview.md",
       "title": "Agent SDK overview",
-      "hash": "a443e0c70e5b1c98998f6836a2a06ef17f310fb90dbd8e4c3f96b4179d4207bb",
-      "last_updated": "2026-08-10T18:41:32.215627"
+      "hash": "584a1641997bce448e6675b614c418d73b97087234419ab5227693b3dc89f9ff",
+      "last_updated": "2026-08-18T21:13:29.314586"
     },
     "quickstart.md": {
       "original_url": "https://code.claude.com/docs/en/agent-sdk/quickstart.md",
@@ -16,8 +16,8 @@
       "original_url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
       "original_raw_url": "https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md",
       "source": "claude-code-repository",
-      "hash": "dfb563034a8f1123c7c4e6f5dadde5d86e344f69196f3adb73b1b661c83476a0",
-      "last_updated": "2026-08-17T21:16:59.118540"
+      "hash": "716972af250d358a8bef8e3c67cbe14ece86e79ede851db586ecfe3363482cbf",
+      "last_updated": "2026-08-18T21:14:15.495636"
     },
     "how-claude-code-works.md": {
       "original_url": "https://code.claude.com/docs/en/how-claude-code-works.md",
@@ -297,9 +297,9 @@
     },
     "skills.md": {
       "original_url": "https://code.claude.com/docs/en/agent-sdk/skills.md",
-      "title": "Agent Skills in the SDK",
-      "hash": "978ecbb28fbfc4dc7aed5380f99c42a108bd5bff652cf98e59ed4566c625cc3a",
-      "last_updated": "2026-08-13T00:58:07.031164"
+      "title": "Extend agents with skills",
+      "hash": "400bb4b2c7af65d6bef64799f614a22fe8ff915ec06f1c31711b4be0d62aa9ee",
+      "last_updated": "2026-08-18T21:13:43.685630"
     },
     "discover-plugins.md": {
       "original_url": "https://code.claude.com/docs/en/discover-plugins.md",
@@ -310,8 +310,8 @@
     "plugins.md": {
       "original_url": "https://code.claude.com/docs/en/agent-sdk/plugins.md",
       "title": "Plugins in the SDK",
-      "hash": "26994bfcc00f70c3a5065b891902032b679d6752a3ad0d889b6214f9e1ecc20a",
-      "last_updated": "2026-08-13T00:58:07.669718"
+      "hash": "c8b179ee93ae6f4ee0a7b01b688153988c893a1cbca544859adea71097d296c0",
+      "last_updated": "2026-08-18T21:13:44.512840"
     },
     "artifacts.md": {
       "original_url": "https://code.claude.com/docs/en/artifacts.md",
@@ -814,8 +814,8 @@
     "agent-loop.md": {
       "original_url": "https://code.claude.com/docs/en/agent-sdk/agent-loop.md",
       "title": "How the agent loop works",
-      "hash": "a270ce0539dd5fbb7c31221ab45cf5f6bf1e1da07e9edc54f8c169c4b15747f3",
-      "last_updated": "2026-08-15T06:18:55.178668"
+      "hash": "8c998e19a93f78b6df2bc32f1d2d6a766d9aeee49aa7f861f02fcf998d960b17",
+      "last_updated": "2026-08-18T21:13:32.752384"
     },
     "claude-code-features.md": {
       "original_url": "https://code.claude.com/docs/en/agent-sdk/claude-code-features.md",
@@ -876,12 +876,6 @@
       "title": "Modifying system prompts",
       "hash": "5f15c1496afbdeed5092b9ea3d68d877b20ea90091381d8139f1680648f1300c",
       "last_updated": "2026-08-12T21:34:57.635744"
-    },
-    "slash-commands.md": {
-      "original_url": "https://code.claude.com/docs/en/agent-sdk/slash-commands.md",
-      "title": "Slash Commands in the SDK",
-      "hash": "e5c597afe5e5ef0370896a12d51f01e32f80f23697c1d99b8bd2e7b5a463b810",
-      "last_updated": "2026-08-13T00:58:06.382042"
     },
     "file-checkpointing.md": {
       "original_url": "https://code.claude.com/docs/en/agent-sdk/file-checkpointing.md",
@@ -1073,22 +1067,22 @@
       "original_url": "https://code.claude.com/docs/en/claude_code_docs_map.md",
       "title": "Documentation Map",
       "source": "docs-map",
-      "hash": "f48e89514c37ce9460c388b8d82f2004009c1117fcd917116c4b87fb54019cf0",
-      "last_updated": "2026-08-18T15:21:27.762299"
+      "hash": "bd012eb3a1f17cefa73b0ef0aad3a171d4e57db7f26be5dd4a941780215a351a",
+      "last_updated": "2026-08-18T21:14:15.423012"
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2026-08-18T15:21:27.799059",
-    "fetch_duration_seconds": 166.182129,
-    "total_pages_discovered": 187,
-    "pages_fetched_successfully": 189,
+    "last_fetch_completed": "2026-08-18T21:14:15.496271",
+    "fetch_duration_seconds": 154.938615,
+    "total_pages_discovered": 186,
+    "pages_fetched_successfully": 188,
     "pages_failed": 0,
     "failed_pages": [],
     "llms_txt_url": "https://code.claude.com/docs/llms.txt",
-    "total_files": 179,
+    "total_files": 178,
     "fetch_tool_version": "4.0"
   },
-  "last_updated": "2026-08-18T15:21:27.799229",
+  "last_updated": "2026-08-18T21:14:15.496496",
   "base_url": "https://raw.githubusercontent.com/doublefx/magic-claude-code-docs/main/plugin/docs/",
   "github_repository": "doublefx/magic-claude-code-docs",
   "github_ref": "main",
