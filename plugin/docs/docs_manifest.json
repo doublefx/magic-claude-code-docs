@@ -484,8 +484,8 @@
     "claude-apps-gateway.md": {
       "original_url": "https://code.claude.com/docs/en/claude-apps-gateway.md",
       "title": "Claude apps gateway for Amazon Bedrock, Claude Platform on AWS, Google Cloud, and Microsoft Foundry",
-      "hash": "847a1de96e50280485aef7f075b1620958442d0e151c70c8e3e212c822d85012",
-      "last_updated": "2026-08-22T00:32:12.522437"
+      "hash": "8663f94ba8c9f7245afbdad845269fdb640d346f25fe48802d1157f96979eba4",
+      "last_updated": "2026-08-22T21:11:04.991950"
     },
     "claude-apps-gateway-config.md": {
       "original_url": "https://code.claude.com/docs/en/claude-apps-gateway-config.md",
@@ -808,8 +808,8 @@
     "plugins-reference.md": {
       "original_url": "https://code.claude.com/docs/en/plugins-reference.md",
       "title": "Plugins reference",
-      "hash": "9cc919151ddfa0f388eaf0b1ca903a982f466ac0efa1f66560e23dc4673e5394",
-      "last_updated": "2026-08-22T15:10:44.714043"
+      "hash": "2997c815eebad8c8eccc5d0dbc10992d194b06de3eff855f497c7bcd6d81d0f1",
+      "last_updated": "2026-08-22T21:11:47.893331"
     },
     "channels-reference.md": {
       "original_url": "https://code.claude.com/docs/en/channels-reference.md",
@@ -958,8 +958,20 @@
     "index.md": {
       "original_url": "https://code.claude.com/docs/en/whats-new/index.md",
       "title": "What's new",
-      "hash": "598220ee884ac6bd854b235f57e7b9bbd6bf0e41f478523d52d824306c7bb039",
-      "last_updated": "2026-08-10T18:42:11.436538"
+      "hash": "30c6a1c955d7f66fa30e1fad08d49ff79ae92643906de413a303fd594d741667",
+      "last_updated": "2026-08-22T21:12:13.351296"
+    },
+    "2026-w34.md": {
+      "original_url": "https://code.claude.com/docs/en/whats-new/2026-w34.md",
+      "title": "Week 34 \u00b7 August 17\u201321, 2026",
+      "hash": "1d892495d63b14a857c8aaaefa7d67568a43bd91f09009761e525c3083fa3a03",
+      "last_updated": "2026-08-22T21:12:14.094645"
+    },
+    "2026-w33.md": {
+      "original_url": "https://code.claude.com/docs/en/whats-new/2026-w33.md",
+      "title": "Week 33 \u00b7 August 10\u201314, 2026",
+      "hash": "da98bb03b1c777c4195e767a34f850f7fb7e17ab273f9fc268f34e4642095aba",
+      "last_updated": "2026-08-22T21:12:14.763729"
     },
     "2026-w32.md": {
       "original_url": "https://code.claude.com/docs/en/whats-new/2026-w32.md",
@@ -1085,22 +1097,22 @@
       "original_url": "https://code.claude.com/docs/en/claude_code_docs_map.md",
       "title": "Documentation Map",
       "source": "docs-map",
-      "hash": "5de6af0f2695645d3c28ed200d6f682f45b31e69706286515e19baf6b81e0a11",
-      "last_updated": "2026-08-22T18:14:50.449724"
+      "hash": "259b419929f05962dc04a018a1ca4e5edd7567854071115cab905a41ae5cd12b",
+      "last_updated": "2026-08-22T21:12:31.579376"
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2026-08-22T18:14:50.586204",
-    "fetch_duration_seconds": 193.104076,
-    "total_pages_discovered": 189,
-    "pages_fetched_successfully": 191,
+    "last_fetch_completed": "2026-08-22T21:12:31.675043",
+    "fetch_duration_seconds": 151.606104,
+    "total_pages_discovered": 191,
+    "pages_fetched_successfully": 193,
     "pages_failed": 0,
     "failed_pages": [],
     "llms_txt_url": "https://code.claude.com/docs/llms.txt",
-    "total_files": 181,
+    "total_files": 183,
     "fetch_tool_version": "4.0"
   },
-  "last_updated": "2026-08-22T18:14:50.586378",
+  "last_updated": "2026-08-22T21:12:31.675256",
   "base_url": "https://raw.githubusercontent.com/doublefx/magic-claude-code-docs/main/plugin/docs/",
   "github_repository": "doublefx/magic-claude-code-docs",
   "github_ref": "main",
