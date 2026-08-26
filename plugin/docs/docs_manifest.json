@@ -16,8 +16,8 @@
       "original_url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
       "original_raw_url": "https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md",
       "source": "claude-code-repository",
-      "hash": "aacdb0b6482feba429a5200df93af8b7e5402c8663afb2729a393a6ffa067f32",
-      "last_updated": "2026-08-25T06:27:01.504142"
+      "hash": "172b76bef2c6d15f1634464245975d22448965fdc49d3214c4390b30d71d2540",
+      "last_updated": "2026-08-26T00:36:38.632291"
     },
     "how-claude-code-works.md": {
       "original_url": "https://code.claude.com/docs/en/how-claude-code-works.md",
@@ -334,8 +334,8 @@
     "goal.md": {
       "original_url": "https://code.claude.com/docs/en/goal.md",
       "title": "Keep Claude working toward a goal",
-      "hash": "e1b85023df2cc1e02c3d37b241b8c2618930421aa8e42278fd74ecff1b35ffd6",
-      "last_updated": "2026-08-22T03:32:47.051484"
+      "hash": "1a0bcf9a40c2228a9aa4e4a1571ba14b606b027b2f9ef404eb3deef31a8871b2",
+      "last_updated": "2026-08-26T00:34:20.817502"
     },
     "headless.md": {
       "original_url": "https://code.claude.com/docs/en/headless.md",
@@ -376,8 +376,8 @@
     "errors.md": {
       "original_url": "https://code.claude.com/docs/en/errors.md",
       "title": "Error reference",
-      "hash": "c1e5c3e8ec08388a985acaa0157db46ac6b5584e661d56b6cfaa8c6b59aeb142",
-      "last_updated": "2026-08-25T21:16:17.008858"
+      "hash": "32c4fcb81f56eba9c3910380535b50066ebd24eb0eb23acd29b153b4d2c0ccb2",
+      "last_updated": "2026-08-26T00:34:28.925860"
     },
     "admin-setup.md": {
       "original_url": "https://code.claude.com/docs/en/admin-setup.md",
@@ -550,8 +550,8 @@
     "costs.md": {
       "original_url": "https://code.claude.com/docs/en/costs.md",
       "title": "Manage costs effectively",
-      "hash": "f360b37cede6cc48230dad82dbb6dd8fcc9e59a76343518fcdda20317a5bf768",
-      "last_updated": "2026-08-25T06:24:49.284925"
+      "hash": "df3782e51e3ee54930ccd9c61866150985042616efd2acb66abd287037fd3200",
+      "last_updated": "2026-08-26T00:34:59.459951"
     },
     "analytics.md": {
       "original_url": "https://code.claude.com/docs/en/analytics.md",
@@ -772,8 +772,8 @@
     "commands.md": {
       "original_url": "https://code.claude.com/docs/en/commands.md",
       "title": "Commands",
-      "hash": "30c26cc1887fdd180fa22b72fb8f8a56d15d55d1d8addcf6748743ca2601f3d2",
-      "last_updated": "2026-08-25T21:17:13.696859"
+      "hash": "4cbaa03ff4d6a1a096ffc8187aa57ee8857642b3da10a1c8dd1287ad3b26e043",
+      "last_updated": "2026-08-26T00:35:33.997192"
     },
     "env-vars.md": {
       "original_url": "https://code.claude.com/docs/en/env-vars.md",
@@ -1102,8 +1102,8 @@
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2026-08-25T21:18:11.149006",
-    "fetch_duration_seconds": 165.474804,
+    "last_fetch_completed": "2026-08-26T00:36:38.632684",
+    "fetch_duration_seconds": 190.30841,
     "total_pages_discovered": 191,
     "pages_fetched_successfully": 193,
     "pages_failed": 0,
@@ -1112,7 +1112,7 @@
     "total_files": 183,
     "fetch_tool_version": "4.0"
   },
-  "last_updated": "2026-08-25T21:18:11.149175",
+  "last_updated": "2026-08-26T00:36:38.632860",
   "base_url": "https://raw.githubusercontent.com/doublefx/magic-claude-code-docs/main/plugin/docs/",
   "github_repository": "doublefx/magic-claude-code-docs",
   "github_ref": "main",
