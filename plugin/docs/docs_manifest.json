@@ -376,8 +376,8 @@
     "errors.md": {
       "original_url": "https://code.claude.com/docs/en/errors.md",
       "title": "Error reference",
-      "hash": "c945f5d5ccf5062b202b5022c5b0c1164ebf08223afd08fcc2f2dafa1d60740d",
-      "last_updated": "2026-08-27T00:20:03.523531"
+      "hash": "d3b98519b17a7e4509ad703ecc2ccc164e78dbbb8f4a879a25bd7eac5011aa7e",
+      "last_updated": "2026-08-27T13:15:20.198492"
     },
     "admin-setup.md": {
       "original_url": "https://code.claude.com/docs/en/admin-setup.md",
@@ -1097,13 +1097,13 @@
       "original_url": "https://code.claude.com/docs/en/claude_code_docs_map.md",
       "title": "Documentation Map",
       "source": "docs-map",
-      "hash": "23180f2049145dabbc01598d8fc72191a0c72b2cd8da4ec73faa2bdf5c0f9a7e",
-      "last_updated": "2026-08-27T00:21:50.774936"
+      "hash": "a8c520f00c90984ac618a2498258b2deccf1742259dc3e9a4c5569e363305193",
+      "last_updated": "2026-08-27T13:17:40.551486"
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2026-08-27T00:21:50.815817",
-    "fetch_duration_seconds": 164.484412,
+    "last_fetch_completed": "2026-08-27T13:17:40.943837",
+    "fetch_duration_seconds": 205.599413,
     "total_pages_discovered": 191,
     "pages_fetched_successfully": 193,
     "pages_failed": 0,
@@ -1112,7 +1112,7 @@
     "total_files": 183,
     "fetch_tool_version": "4.0"
   },
-  "last_updated": "2026-08-27T00:21:50.815991",
+  "last_updated": "2026-08-27T13:17:40.943991",
   "base_url": "https://raw.githubusercontent.com/doublefx/magic-claude-code-docs/main/plugin/docs/",
   "github_repository": "doublefx/magic-claude-code-docs",
   "github_ref": "main",
