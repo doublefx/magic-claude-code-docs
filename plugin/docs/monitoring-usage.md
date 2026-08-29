@@ -1198,7 +1198,7 @@ To distinguish a session that recovered from one that stalled, group events by `
 
 ### Event analysis
 
-The event data provides detailed insights into Claude Code interactions:
+The event data describes each Claude Code interaction in detail:
 
 **Tool usage patterns**: analyze tool result events to identify:
 
