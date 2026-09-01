@@ -16,8 +16,8 @@
       "original_url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
       "original_raw_url": "https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md",
       "source": "claude-code-repository",
-      "hash": "eabff97903e177595378c7daa3144be3a32862e98fdea58e78b9a1be3ba9008c",
-      "last_updated": "2026-09-01T18:04:10.520132"
+      "hash": "2a78b88828e3714677986723b8c1a3a185403ddfbc96f7bb92c66c2e51a486cc",
+      "last_updated": "2026-09-01T22:56:02.956648"
     },
     "how-claude-code-works.md": {
       "original_url": "https://code.claude.com/docs/en/how-claude-code-works.md",
@@ -244,8 +244,8 @@
     "sub-agents.md": {
       "original_url": "https://code.claude.com/docs/en/sub-agents.md",
       "title": "Create custom subagents",
-      "hash": "e98921cc27501a4bcb8b21cefab2fe06a227cf211bf492e870f7336820c029aa",
-      "last_updated": "2026-09-01T08:03:30.976666"
+      "hash": "a5c6748e506ffc27d8ff6f27f377f49767438d07c61c4f0862e7e3733fe1955e",
+      "last_updated": "2026-09-01T22:53:30.117350"
     },
     "agent-view.md": {
       "original_url": "https://code.claude.com/docs/en/agent-view.md",
@@ -256,8 +256,8 @@
     "agent-teams.md": {
       "original_url": "https://code.claude.com/docs/en/agent-teams.md",
       "title": "Orchestrate teams of Claude Code sessions",
-      "hash": "71fdb875aebcd713b70815917e7dd8a9b2e3075fae0eff17de73c35b05048e5d",
-      "last_updated": "2026-08-31T22:07:31.812588"
+      "hash": "42ee37642823ee36bbb94238db39bbd7795ceedf06b2c769f215cf9175a75c8e",
+      "last_updated": "2026-09-01T22:53:32.583630"
     },
     "cross-session-messaging.md": {
       "original_url": "https://code.claude.com/docs/en/cross-session-messaging.md",
@@ -622,8 +622,8 @@
     "settings-reference.md": {
       "original_url": "https://code.claude.com/docs/en/settings-reference.md",
       "title": "Claude Code settings reference",
-      "hash": "77307a313c4553d0219889a932e704730bd1139883fff78f1e941166e5498cf8",
-      "last_updated": "2026-09-01T18:02:48.585488"
+      "hash": "dad0b5b962271e8f0a10ead987a037ee1138054392865caad617b20dfd6dae76",
+      "last_updated": "2026-09-01T22:54:32.680901"
     },
     "settings-example.md": {
       "original_url": "https://code.claude.com/docs/en/settings-example.md",
@@ -706,8 +706,8 @@
     "model-config.md": {
       "original_url": "https://code.claude.com/docs/en/model-config.md",
       "title": "Model configuration",
-      "hash": "3dbfc8f63a6aabe2a91e61c90933302cab880521842906b40638bb70ac47b49d",
-      "last_updated": "2026-09-01T18:03:08.956075"
+      "hash": "00cdd121b128313bd9bad9e8947817b0a01dbd785e25091c9367f24526816196",
+      "last_updated": "2026-09-01T22:54:46.922031"
     },
     "fast-mode.md": {
       "original_url": "https://code.claude.com/docs/en/fast-mode.md",
@@ -778,8 +778,8 @@
     "env-vars.md": {
       "original_url": "https://code.claude.com/docs/en/env-vars.md",
       "title": "Environment variables",
-      "hash": "56266ae9f04ae3fc1740043b9b38b6a862afe534de81f216ecc8e69f300b961b",
-      "last_updated": "2026-09-01T18:03:22.587368"
+      "hash": "ec3f3d97dbf615114965b3f4e650b2811ddc3b595dadf6d6490ac7c4d37fbea8",
+      "last_updated": "2026-09-01T22:54:59.445573"
     },
     "tools-reference.md": {
       "original_url": "https://code.claude.com/docs/en/tools-reference.md",
@@ -1097,13 +1097,13 @@
       "original_url": "https://code.claude.com/docs/en/claude_code_docs_map.md",
       "title": "Documentation Map",
       "source": "docs-map",
-      "hash": "a0e05a94511946028d2afb8c3d4593bfaaaafacdaeefb479c3725634a3f29f12",
-      "last_updated": "2026-09-01T18:04:10.025968"
+      "hash": "d3265c574af88ef1a3f9e51251041f7995b994ec4eff263f337d56777e58e670",
+      "last_updated": "2026-09-01T22:56:02.900382"
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2026-09-01T18:04:10.520576",
-    "fetch_duration_seconds": 177.527888,
+    "last_fetch_completed": "2026-09-01T22:56:02.957067",
+    "fetch_duration_seconds": 195.937156,
     "total_pages_discovered": 191,
     "pages_fetched_successfully": 193,
     "pages_failed": 0,
@@ -1112,7 +1112,7 @@
     "total_files": 183,
     "fetch_tool_version": "4.0"
   },
-  "last_updated": "2026-09-01T18:04:10.520753",
+  "last_updated": "2026-09-01T22:56:02.957248",
   "base_url": "https://raw.githubusercontent.com/doublefx/magic-claude-code-docs/main/plugin/docs/",
   "github_repository": "doublefx/magic-claude-code-docs",
   "github_ref": "main",
