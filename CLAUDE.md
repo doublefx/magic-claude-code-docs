@@ -94,3 +94,30 @@ When responding to `/magic-claude-docs:docs` commands:
 1. Follow the instructions in the SKILL.md at `plugin/skills/docs/SKILL.md`
 2. Read documentation files from `~/.claude-code-docs/` directory
 3. Use the manifest (`~/.claude-code-docs/docs_manifest.json`) to know available topics and their source URLs
+
+## Package manager — pnpm only, never npm or yarn
+
+Owner decision (2026-09-05), after the npm supply-chain attack wave: any Node tooling added to
+this repository uses pnpm. Nothing here is Node today (Python fetcher + shell hooks); the rule
+applies to the first `package.json` that lands. Distilled from the owner's `yarn-to-pnpm` skill
+(generic half only):
+
+- `package.json` pins `"packageManager": "pnpm@<version>+sha512.<hash>"`; every environment
+  enables it with `corepack enable pnpm` before the first `pnpm` call (CI steps included).
+- `pnpm-lock.yaml` and `pnpm-workspace.yaml` are COMMITTED, never git-ignored; CI installs with
+  `pnpm install --frozen-lockfile`, always. Count check: every `pnpm install` line in a workflow
+  carries `--frozen-lockfile`.
+- `pnpm-workspace.yaml` carries the security policy, explicit even where it matches defaults:
+  `minimumReleaseAge: 1440`, `strictDepBuilds: true`, `trustPolicy: no-downgrade`,
+  `blockExoticSubdeps: true`; packages that legitimately need a build script go under
+  `allowBuilds:` one by one, on the first "ignored build scripts" error, never blanket.
+  ⚠ `pnpm.allowBuilds` / `onlyBuiltDependencies` misplaced (wrong file or key) is a silent no-op.
+- Ephemeral tools: `pnpm dlx <tool>` when nothing is installed; `pnpm exec <tool>` only for a
+  devDependency with `node_modules` present. `pnpm dlx` applies the workspace trust policy too.
+- `pnpm pack`, never `npm pack` (only pnpm applies `publishConfig`). `npm audit` reports on a tree
+  npm resolves, not the one pnpm installed: use `pnpm audit`.
+- pnpm does not run `pre`/`post` scripts on this machine: never rely on them.
+- Converting `yarn <script> -- <args>`: drop the lone `--`, pnpm forwards it to the script.
+- Equivalents: `yarn install` → `pnpm install --frozen-lockfile` · `yarn run X` / `npm run X` →
+  `pnpm run X` · `npx X` → `pnpm dlx X` · `yarn add -D X` → `pnpm add -D X` ·
+  `resolutions` → `overrides:` in `pnpm-workspace.yaml`.
