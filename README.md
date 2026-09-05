@@ -42,7 +42,8 @@ After installation, **enable auto-update** for fresh docs:
 /magic-claude-docs:docs              # List all available topics
 /magic-claude-docs:docs hooks        # Read hooks documentation
 /magic-claude-docs:docs mcp          # Read MCP documentation
-/magic-claude-docs:docs what's new   # See recent documentation changes
+/magic-claude-docs:docs what's new   # Opens with the latest weekly digest, then recent mirror changes
+/magic-claude-docs:docs week 34      # Read a specific weekly digest
 /magic-claude-docs:docs changelog    # Read Claude Code release notes
 ```
 

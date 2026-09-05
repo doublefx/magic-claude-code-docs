@@ -1,6 +1,6 @@
 {
   "plugin": "magic-claude-docs",
-  "version": "2026.9.5.3",
+  "version": "2026.9.5.4",
   "measuredAt": "2026-09-05",
   "frontmatter": {
     "agents": [],
@@ -45,6 +45,7 @@
     { "name": "plugin/docs/docs_manifest.json", "where": "plugin/skills/docs/SKILL.md" },
     { "name": "plugin/docs/recent_changes.md", "where": "plugin/skills/docs/SKILL.md" },
     { "name": "$HOME/.claude-code-docs/*.md", "where": "SessionStart hook 0 — sync target, read by the docs skill" },
+    { "name": "$HOME/.claude-code-docs/NNNN-wNN.md", "where": "plugin/skills/docs/SKILL.md — weekly digest pages: primary source for \"what's new\", direct target for \"week NN\", listed under their own heading in the no-argument listing" },
     { "name": "$HOME/.claude-code-docs/.magic-claude-docs-plugin", "where": "SessionStart hook 0 — marker file" },
     { "name": "$HOME/.claude-code-docs/.published-version", "where": "plugin/hooks/version-signal.sh — cache read in the foreground, written by the detached refresh" },
     { "name": "$HOME/.claude-code-docs/.published-version.fetched_at", "where": "plugin/hooks/version-signal.sh — cache-age stamp, gates the 3h refresh interval" },
