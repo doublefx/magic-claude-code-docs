@@ -65,6 +65,26 @@ After installation, **enable auto-update** for fresh docs:
 4. **SessionStart hook** syncs docs from plugin cache to `~/.claude-code-docs/` for fast access
 5. **SKILL.md** reads from `~/.claude-code-docs/` when you invoke `/magic-claude-docs:docs`
 
+## Session-start signal
+
+At the start of a session, a second `SessionStart` hook checks whether anything has changed
+since last time and, if so, prints a single line into the session's context — for example:
+
+```
+magic-claude-docs: plugin 2026.9.4.3 installed, 2026.9.5.2 published (restart or /reload-plugins to update) · Claude Code 2.1.262, last digested 2.1.261 (see /magic-claude-docs:docs what's new)
+```
+
+It stays **silent** when nothing has drifted — no installed-vs-published plugin mismatch, no
+Claude Code version ahead of what this plugin has already digested. Only the half that
+actually differs is shown; the other is dropped.
+
+The line's "published" reading comes from a small cache file at
+`~/.claude-code-docs/.published-version`. The hook never blocks startup on a network call: it
+reads that cache, prints (or stays quiet), then — only if the cache is more than 3 hours old,
+matching the upstream CI's own fetch cadence — kicks off a detached background refresh of that
+cache for the *next* session to read. A slow or failed network fetch never delays or breaks the
+current session.
+
 ## Uninstalling
 
 ```bash

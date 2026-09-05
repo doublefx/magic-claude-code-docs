@@ -1,0 +1,71 @@
+{
+  "plugin": "magic-claude-docs",
+  "version": "2026.9.5.3",
+  "measuredAt": "2026-09-05",
+  "frontmatter": {
+    "agents": [],
+    "skills": [
+      { "name": "name", "where": "plugin/skills/docs/SKILL.md:1" },
+      { "name": "description", "where": "plugin/skills/docs/SKILL.md:2" }
+    ]
+  },
+  "hooks": {
+    "events": {
+      "SessionStart": [
+        {
+          "matcher": "startup",
+          "type": "command",
+          "purpose": "copy plugin/docs into ~/.claude-code-docs on every session start",
+          "where": "plugin/.claude-plugin/plugin.json:hooks.SessionStart[0]"
+        },
+        {
+          "matcher": "startup",
+          "type": "command",
+          "purpose": "print at most one line when the installed plugin version or the digested Claude Code version has drifted from what is now current",
+          "where": "plugin/.claude-plugin/plugin.json:hooks.SessionStart[1]",
+          "script": "plugin/hooks/version-signal.sh"
+        }
+      ]
+    },
+    "payloadFields": [],
+    "outputs": [
+      "SessionStart hook stdout is appended to the session's context (undocumented but relied upon here — the version-signal line is meant to be read by the model, not the user's terminal)"
+    ]
+  },
+  "functionHooks": { "events": [], "capabilities": [] },
+  "sdk": {
+    "package": "",
+    "version": "",
+    "queryOptions": [],
+    "streamEvents": [],
+    "bundled": false
+  },
+  "files": [
+    { "name": "plugin/docs/*.md", "where": "plugin/.claude-plugin/plugin.json:hooks.SessionStart[0]" },
+    { "name": "plugin/docs/docs_manifest.json", "where": "plugin/skills/docs/SKILL.md" },
+    { "name": "plugin/docs/recent_changes.md", "where": "plugin/skills/docs/SKILL.md" },
+    { "name": "$HOME/.claude-code-docs/*.md", "where": "SessionStart hook 0 — sync target, read by the docs skill" },
+    { "name": "$HOME/.claude-code-docs/.magic-claude-docs-plugin", "where": "SessionStart hook 0 — marker file" },
+    { "name": "$HOME/.claude-code-docs/.published-version", "where": "plugin/hooks/version-signal.sh — cache read in the foreground, written by the detached refresh" },
+    { "name": "$HOME/.claude-code-docs/.published-version.fetched_at", "where": "plugin/hooks/version-signal.sh — cache-age stamp, gates the 3h refresh interval" },
+    { "name": "$HOME/.claude-code-docs/digests/latest", "where": "plugin/hooks/version-signal.sh — read only; written by a later card" },
+    { "name": "$HOME/.local/share/claude/versions/*", "where": "plugin/hooks/version-signal.sh — fallback source for the running Claude Code version when `claude --version` is unavailable" }
+  ],
+  "env": [
+    { "name": "CLAUDE_PLUGIN_ROOT", "where": "plugin/.claude-plugin/plugin.json:hooks.SessionStart both entries; plugin/hooks/version-signal.sh" },
+    { "name": "HOME", "where": "plugin/.claude-plugin/plugin.json:hooks.SessionStart[0]; plugin/hooks/version-signal.sh" }
+  ],
+  "cli": [
+    { "name": "claude --version", "where": "plugin/hooks/version-signal.sh get_claude_code_version — run with </dev/null and a 5s timeout" },
+    { "name": "curl -fsS --max-time 5", "where": "plugin/hooks/version-signal.sh do_refresh_published — detached background fetch of upstream plugin.json, never in the foreground path" },
+    { "name": "jq -r .version", "where": "plugin/hooks/version-signal.sh extract_json_version — used when present; falls back to grep/sed otherwise" }
+  ],
+  "invariants": [
+    "${CLAUDE_PLUGIN_ROOT}/docs exists at SessionStart, or the copy hook is a no-op",
+    "SessionStart hook stdout reaches the model as context",
+    "the copy hook (SessionStart[0]) and the version-signal hook (SessionStart[1]) are two separate command entries, never merged into one",
+    "version-signal.sh prints at most one line and never exits non-zero, on any input combination",
+    "version-signal.sh never makes a blocking network call in the foreground; the published-version cache is refreshed for the NEXT run only, detached",
+    "the published-version cache is treated as fresh for 3 hours, matching the upstream CI's own fetch cadence"
+  ]
+}
