@@ -24,6 +24,9 @@ jobs:
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
         ref: main
+        # Full history: recent_changes.md is built from git log/diff-tree; a shallow
+        # clone (depth 1) yields one parentless commit and an empty page.
+        fetch-depth: 0
 
     - name: Set up Python
       uses: actions/setup-python@v5
