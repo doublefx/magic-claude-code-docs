@@ -1,6 +1,6 @@
 {
   "plugin": "magic-claude-docs",
-  "version": "2026.9.5.4",
+  "version": "2026.9.5.5",
   "measuredAt": "2026-09-05",
   "frontmatter": {
     "agents": [],
@@ -15,8 +15,9 @@
         {
           "matcher": "startup",
           "type": "command",
-          "purpose": "copy plugin/docs into ~/.claude-code-docs on every session start",
-          "where": "plugin/.claude-plugin/plugin.json:hooks.SessionStart[0]"
+          "purpose": "copy plugin/docs into ~/.claude-code-docs only when the installed plugin version differs from the version recorded in the .magic-claude-docs-plugin marker (or the marker/manifest is missing) — a no-op on every other session start",
+          "where": "plugin/.claude-plugin/plugin.json:hooks.SessionStart[0]",
+          "script": "plugin/hooks/sync-docs.sh"
         },
         {
           "matcher": "startup",
@@ -46,7 +47,7 @@
     { "name": "plugin/docs/recent_changes.md", "where": "plugin/skills/docs/SKILL.md" },
     { "name": "$HOME/.claude-code-docs/*.md", "where": "SessionStart hook 0 — sync target, read by the docs skill" },
     { "name": "$HOME/.claude-code-docs/NNNN-wNN.md", "where": "plugin/skills/docs/SKILL.md — weekly digest pages: primary source for \"what's new\", direct target for \"week NN\", listed under their own heading in the no-argument listing" },
-    { "name": "$HOME/.claude-code-docs/.magic-claude-docs-plugin", "where": "SessionStart hook 0 — marker file" },
+    { "name": "$HOME/.claude-code-docs/.magic-claude-docs-plugin", "where": "SessionStart hook 0 (plugin/hooks/sync-docs.sh) — marker file, now holds the synced plugin VERSION (not just a touch marker), written only after a successful copy" },
     { "name": "$HOME/.claude-code-docs/.published-version", "where": "plugin/hooks/version-signal.sh — cache read in the foreground, written by the detached refresh" },
     { "name": "$HOME/.claude-code-docs/.published-version.fetched_at", "where": "plugin/hooks/version-signal.sh — cache-age stamp, gates the 3h refresh interval" },
     { "name": "$HOME/.claude-code-docs/digests/latest", "where": "plugin/hooks/version-signal.sh — read only; written by a later card" },
@@ -63,6 +64,8 @@
   ],
   "invariants": [
     "${CLAUDE_PLUGIN_ROOT}/docs exists at SessionStart, or the copy hook is a no-op",
+    "sync-docs.sh skips the copy when the marker already equals the installed version AND docs_manifest.json exists in the target; otherwise it re-copies and writes the marker LAST",
+    "rm -rf \"$D\"/* does not remove dotfiles, so the marker and version-signal.sh's .published-version caches survive every re-copy",
     "SessionStart hook stdout reaches the model as context",
     "the copy hook (SessionStart[0]) and the version-signal hook (SessionStart[1]) are two separate command entries, never merged into one",
     "version-signal.sh prints at most one line and never exits non-zero, on any input combination",

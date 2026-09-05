@@ -1,6 +1,6 @@
 {
   "name": "magic-claude-docs",
-  "version": "2026.9.5.4",
+  "version": "2026.9.5.5",
   "description": "Community mirror of Claude Code documentation - search, browse, and view what's new offline",
   "author": {
     "name": "doublefx",
@@ -23,7 +23,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "D=\"$HOME/.claude-code-docs\"; if [ -d \"${CLAUDE_PLUGIN_ROOT}/docs\" ]; then mkdir -p \"$D\" && touch \"$D/.magic-claude-docs-plugin\" && rm -rf \"$D\"/* && cp -R \"${CLAUDE_PLUGIN_ROOT}/docs/.\" \"$D/\"; fi"
+            "command": "bash \"${CLAUDE_PLUGIN_ROOT}/hooks/sync-docs.sh\""
           }
         ]
       },

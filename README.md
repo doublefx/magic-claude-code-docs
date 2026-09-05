@@ -63,7 +63,9 @@ After installation, **enable auto-update** for fresh docs:
 1. **CI fetches docs** every 3 hours from `code.claude.com/docs/en/`
 2. **Sentinel check** compares `llms.txt` and `docs_map.md` hashes to skip unnecessary fetches
 3. **Plugin auto-update** delivers new docs to your local machine on session start
-4. **SessionStart hook** syncs docs from plugin cache to `~/.claude-code-docs/` for fast access
+4. **SessionStart hook** re-copies docs from plugin cache to `~/.claude-code-docs/` only when the
+   installed plugin version has changed — a marker file next to the docs holds the last-synced
+   version, so an unchanged plugin skips the copy on every other session start
 5. **SKILL.md** reads from `~/.claude-code-docs/` when you invoke `/magic-claude-docs:docs`
 
 ## Session-start signal
