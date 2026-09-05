@@ -86,6 +86,14 @@ matching the upstream CI's own fetch cadence — kicks off a detached background
 cache for the *next* session to read. A slow or failed network fetch never delays or breaks the
 current session.
 
+## Usage manifest
+
+`plugin/usage-manifest.json` lists what this plugin consumes from the Claude Code harness: hook
+events and the fields they read, skill front matter keys, files under `~/.claude-code-docs/`,
+environment variables, CLI calls and the invariants it relies on. The same file, same shape, ships
+in the workflow-toolbox, claude-mem and atrium plugins; the per-version digest diffs each Claude
+Code release against these manifests to tell every plugin what concerns it.
+
 ## Uninstalling
 
 ```bash
