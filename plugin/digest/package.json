@@ -1,0 +1,14 @@
+{
+  "name": "magic-claude-docs-digest",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.10.0",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test",
+    "gather": "node bin/gather.mjs"
+  }
+}

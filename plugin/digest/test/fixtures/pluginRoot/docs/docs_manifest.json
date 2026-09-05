@@ -1,0 +1,7 @@
+{
+  "files": {
+    "a.md": { "hash": "hash-a-v2" },
+    "b.md": { "hash": "hash-b-v1" },
+    "c.md": { "hash": "hash-c-new" }
+  }
+}
