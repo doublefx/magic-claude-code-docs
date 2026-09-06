@@ -20,6 +20,22 @@
       {
         "name": "description",
         "where": "plugin/skills/digest/SKILL.md:2"
+      },
+      {
+        "name": "when_to_use",
+        "where": "plugin/skills/digest/SKILL.md"
+      },
+      {
+        "name": "argument-hint",
+        "where": "plugin/skills/digest/SKILL.md"
+      },
+      {
+        "name": "allowed-tools",
+        "where": "plugin/skills/digest/SKILL.md"
+      },
+      {
+        "name": "effort",
+        "where": "plugin/skills/digest/SKILL.md"
       }
     ]
   },

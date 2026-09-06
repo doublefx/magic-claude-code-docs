@@ -1,6 +1,10 @@
 ---
 name: digest
-description: Check what changed in Claude Code between the last digested version and the one now running, and whether it breaks or could serve any of this machine's plugins. Invoke when the session-start signal line reports the running Claude Code version is ahead of the last digested one, when the user says "digest", "run the digest", or asks "what changed in Claude Code for our plugins".
+description: Check what changed in Claude Code between the last digested version and the one now running, and whether it breaks or could serve any of this machine's plugins. One model call per Claude Code version, cached for every other session.
+when_to_use: The session-start signal line says the running Claude Code version is ahead of the last digested one; the user says "digest", "run the digest", or asks "what changed in Claude Code for our plugins"; "digest status" or "digest show" to read without running anything.
+argument-hint: "[show [version] | status]"
+allowed-tools: Bash(node *), Bash(corepack pnpm install *), Bash(cat *), Bash(ls *), Bash(timeout 5 claude --version*), Read
+effort: low
 ---
 
 # Claude Code update digest
