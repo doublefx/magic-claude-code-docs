@@ -9,7 +9,7 @@ import { createEmbedder } from '../src/embed.mjs';
 import { loadAssetVectors } from '../src/asset.mjs';
 
 if (process.env.MAGIC_CLAUDE_DOCS_SEARCH === 'off') {
-  console.log('semantic search disabled');
+  console.log('magic-claude-docs: semantic search disabled (MAGIC_CLAUDE_DOCS_SEARCH=off)');
   process.exit(0);
 }
 
@@ -36,11 +36,11 @@ if (!query) {
 const embed = createEmbedder({ home });
 const dbPath = path.join(docsDir, 'index', 'docs.sqlite');
 if (!fs.existsSync(dbPath)) {
-  console.error('Building the search index (first use) — downloading pre-computed embeddings...');
+  console.error('magic-claude-docs: building the docs search index (first use) — downloading pre-computed embeddings from the plugin release...');
   const version = await readVersionMarker(docsDir);
   const asset = await loadAssetVectors({ home, version });
   if (asset.reason) {
-    console.error(`Pre-computed embeddings unavailable (${asset.reason}) — embedding locally instead, this takes a few minutes once.`);
+    console.error(`magic-claude-docs: pre-computed embeddings unavailable (${asset.reason}) — embedding locally instead, this takes a few minutes once.`);
   }
   await buildIndex({ home, docsDir, embed, assetVectors: asset.map });
 }
