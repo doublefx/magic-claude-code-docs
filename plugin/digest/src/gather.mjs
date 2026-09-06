@@ -529,13 +529,50 @@ async function gatherManifestsForConfigDir(configDir) {
   return results;
 }
 
+// Extra manifests declared by hand in <home>/.claude-code-docs/digest-targets.json:
+// an entry `{ "<plugin>": { "manifestPath": "/abs/path/usage-manifest.json", ... } }`
+// covers a plugin whose installed cache does not carry a manifest yet (e.g. a
+// plugin released before its manifest landed). An entry read here wins over
+// a cache entry of the same plugin only through the highest-version rule in
+// analyze's keyManifestEntries; its version is read from the manifest itself
+// (falls back to "0"). Unreadable entries are listed with an error, never dropped.
+async function gatherExtraManifests(home) {
+  const targetsPath = path.join(home, '.claude-code-docs', 'digest-targets.json');
+  let targets;
+  try {
+    targets = JSON.parse(await readFile(targetsPath, 'utf8'));
+  } catch {
+    return [];
+  }
+  const out = [];
+  for (const [plugin, target] of Object.entries(targets ?? {})) {
+    const manifestPath = target?.manifestPath;
+    if (!manifestPath) continue;
+    try {
+      const manifest = JSON.parse(await readFile(manifestPath, 'utf8'));
+      out.push({
+        configDir: 'digest-targets.json',
+        marketplace: manifest.marketplace ?? target.marketplace ?? 'extra',
+        plugin: manifest.plugin ?? plugin,
+        version: String(manifest.version ?? '0'),
+        path: manifestPath,
+        manifest,
+      });
+    } catch (e) {
+      out.push({ configDir: 'digest-targets.json', marketplace: target.marketplace ?? 'extra', plugin, version: '0', path: manifestPath, manifest: null, error: String(e.message || e) });
+    }
+  }
+  return out;
+}
+
 async function gatherManifests({ home }) {
   try {
     const claudeEntries = await gatherManifestsForConfigDir(path.join(home, '.claude'));
     const workEntries = await gatherManifestsForConfigDir(
       path.join(home, '.claude-work'),
     );
-    return { status: 'ok', entries: [...claudeEntries, ...workEntries] };
+    const extraEntries = await gatherExtraManifests(home);
+    return { status: 'ok', entries: [...claudeEntries, ...workEntries, ...extraEntries] };
   } catch (e) {
     return { status: 'unavailable', reason: String(e.message || e), entries: [] };
   }

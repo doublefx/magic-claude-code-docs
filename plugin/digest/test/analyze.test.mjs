@@ -279,3 +279,11 @@ test('(k) the prompt names the exact plugin keys the answer must use', () => {
   const prompt = buildPrompt(gathered);
   assert.match(prompt, /EXACTLY these keys[^\n]*"atrium"[^\n]*"docs"/);
 });
+
+test('(l) analyze passes the section-matching rule in the system prompt', async () => {
+  let seen = null;
+  const fakeQuery = (params) => { seen = params; return (async function* () { yield { type: 'result', subtype: 'success', result: JSON.stringify({ version: '9.9.9', from: null, plugins: {}, summary: 's' }) }; })(); };
+  const gathered = { manifests: { status: 'ok', entries: [] }, changelog: { status: 'ok', blocks: [] }, docsChanged: { status: 'ok', added: [], changed: [], removed: [] }, sdk: { status: 'ok', latest: '0' }, types: { status: 'unavailable', reason: 'x' }, claudeVersion: { status: 'ok', value: '9.9.9' }, previousVersion: { status: 'ok', value: null } };
+  await analyze(gathered, { query: fakeQuery, now: () => new Date() });
+  assert.match(seen.options.systemPrompt, /CLI flag concerns only a plugin whose manifest lists that command under `cli`/);
+});

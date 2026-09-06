@@ -229,3 +229,24 @@ test('bin/gather.mjs writes only <version>.gather.json — never latest nor snap
   assert.deepEqual(files.sort(), ['9.9.9.gather.json']);
   await rm(home, { recursive: true, force: true });
 });
+
+test('manifests: digest-targets.json manifestPath entries are included, unreadable ones listed with error', async () => {
+  const home = await mkdtemp(path.join(tmpdir(), 'gather-extra-'));
+  await mkdir(path.join(home, '.claude-code-docs'), { recursive: true });
+  const good = path.join(home, 'toolbox-manifest.json');
+  await writeFile(good, JSON.stringify({ plugin: 'workflow-toolbox', version: '0.171.0', hooks: {} }));
+  await writeFile(path.join(home, '.claude-code-docs', 'digest-targets.json'), JSON.stringify({
+    'workflow-toolbox': { manifestPath: good, marketplace: 'wt' },
+    'ghost': { manifestPath: path.join(home, 'missing.json') },
+    'no-path': { boardId: 'x' },
+  }));
+  const result = await gather({ home, pluginRoot: path.join(FIXTURES, 'pluginRoot'), exec: makeExec(), fetch: okFetch(), now: () => new Date() });
+  const names = result.manifests.entries.map((e) => e.plugin);
+  assert.ok(names.includes('workflow-toolbox'));
+  const ghost = result.manifests.entries.find((e) => e.plugin === 'ghost');
+  assert.ok(ghost && ghost.error && ghost.manifest === null);
+  assert.ok(!names.includes('no-path'));
+  const wt = result.manifests.entries.find((e) => e.plugin === 'workflow-toolbox');
+  assert.equal(wt.version, '0.171.0');
+  await rm(home, { recursive: true, force: true });
+});
