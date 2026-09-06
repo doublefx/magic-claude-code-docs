@@ -72,13 +72,14 @@ mkdir -p "$D" 2>/dev/null || exit 0
 # `.published-version` / `.published-version.fetched_at` caches written by
 # version-signal.sh survive this wipe by construction. Keep it that way —
 # do not switch this to `rm -rf "$D"/{*,.[!.]*}` or similar.
-# Wipe only what this hook manages. `digests/` and `types/` are written by the
-# per-version digest (ADR on the digest card) and must survive a plugin update;
+# Wipe only what this hook manages. `digests/`, `types/` and `digest-targets.json`
+# belong to the per-version digest (ADR on the digest card) and must survive a
+# plugin update (measured 2026-09-06: the targets file was wiped by 2026.9.6.2);
 # dotfiles (marker, .published-version cache) are untouched by the glob anyway.
 for entry in "$D"/*; do
   [ -e "$entry" ] || continue
   case "$(basename "$entry")" in
-    digests|types) continue ;;
+    digests|types|digest-targets.json) continue ;;
   esac
   rm -rf "$entry" 2>/dev/null
 done

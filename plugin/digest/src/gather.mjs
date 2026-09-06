@@ -188,11 +188,35 @@ async function gatherPreviousVersion({ home, override }) {
 const UPDATE_RE =
   /<Update label="([^"]*)" description="([^"]*)">([\s\S]*?)<\/Update>/g;
 
+// Two formats have been seen in the mirror's changelog.md: the docs-site page
+// (`<Update label="X.Y.Z" description="date">…</Update>` blocks) until
+// 2026-09-05, and the raw GitHub CHANGELOG (`## X.Y.Z` headings, body until the
+// next `## `) from plugin 2026.9.6.2 on. Parse both; `<Update>` wins when present.
+const HEADING_RE = /^## (\d+\.\d+\.\d+)\s*$/;
 export function parseChangelog(content) {
   const blocks = [];
   for (const m of content.matchAll(UPDATE_RE)) {
     blocks.push({ version: m[1], date: m[2], body: m[3].trim() });
   }
+  if (blocks.length > 0) return blocks;
+  const lines = content.split('\n');
+  let current = null;
+  for (const line of lines) {
+    const h = line.match(HEADING_RE);
+    if (h) {
+      if (current) blocks.push(current);
+      current = { version: h[1], date: null, body: '' };
+    } else if (current) {
+      if (line.startsWith('## ') || line.startsWith('# ')) {
+        blocks.push(current);
+        current = null;
+      } else {
+        current.body += (current.body ? '\n' : '') + line;
+      }
+    }
+  }
+  if (current) blocks.push(current);
+  for (const b of blocks) b.body = b.body.trim();
   return blocks;
 }
 
@@ -332,8 +356,28 @@ async function gatherSdk({ fetchFn }) {
 
 // Small line-based LCS diff. O(n*m); guarded for pathologically large inputs.
 export function computeLineDiff(oldLines, newLines) {
+  // Trim the common prefix and suffix first: two versions of a 5,688-line
+  // types file usually differ by a handful of lines (measured 2026-09-06: one
+  // header line), and the quadratic LCS below would otherwise fall back to
+  // "every line deleted and added".
+  let pre = 0;
+  while (pre < oldLines.length && pre < newLines.length && oldLines[pre] === newLines[pre]) pre++;
+  let suf = 0;
+  while (
+    suf < oldLines.length - pre &&
+    suf < newLines.length - pre &&
+    oldLines[oldLines.length - 1 - suf] === newLines[newLines.length - 1 - suf]
+  ) suf++;
+  if (pre > 0 || suf > 0) {
+    const midOld = oldLines.slice(pre, oldLines.length - suf);
+    const midNew = newLines.slice(pre, newLines.length - suf);
+    const head = oldLines.slice(0, pre).map((line) => ({ type: 'ctx', line }));
+    const tail = oldLines.slice(oldLines.length - suf).map((line) => ({ type: 'ctx', line }));
+    return [...head, ...computeLineDiff(midOld, midNew), ...tail];
+  }
   const n = oldLines.length;
   const m = newLines.length;
+  if (n === 0 && m === 0) return [];
   if (n * m > 4_000_000) {
     const ops = [];
     for (const line of oldLines) ops.push({ type: 'del', line });

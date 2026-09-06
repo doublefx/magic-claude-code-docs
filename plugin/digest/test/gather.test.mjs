@@ -7,7 +7,7 @@ import { fileURLToPath } from 'node:url';
 import { execFile } from 'node:child_process';
 import { promisify } from 'node:util';
 import { readdir } from 'node:fs/promises';
-import { gather } from '../src/gather.mjs';
+import { gather, parseChangelog, computeLineDiff, formatDiff } from '../src/gather.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const FIXTURES = path.join(__dirname, 'fixtures');
@@ -249,4 +249,24 @@ test('manifests: digest-targets.json manifestPath entries are included, unreadab
   const wt = result.manifests.entries.find((e) => e.plugin === 'workflow-toolbox');
   assert.equal(wt.version, '0.171.0');
   await rm(home, { recursive: true, force: true });
+});
+
+test('parseChangelog reads the raw GitHub CHANGELOG format (## X.Y.Z headings) as well as <Update> blocks', () => {
+  const raw = '# Claude Code Changelog\n\n> source\n\n---\n\n# Changelog\n\n## 2.1.263\n\n- Bug fixes\n\n## 2.1.261\n\n- Added X\n- Fixed Y\n\n## 2.1.260\n\n- Old\n';
+  const blocks = parseChangelog(raw);
+  assert.deepEqual(blocks.map((b) => b.version), ['2.1.263', '2.1.261', '2.1.260']);
+  assert.equal(blocks[1].body, '- Added X\n- Fixed Y');
+  assert.equal(blocks[0].date, null);
+  const upd = parseChangelog('<Update label="9.9.9" description="d">body</Update>\n## 1.0.0\nignored');
+  assert.deepEqual(upd.map((b) => b.version), ['9.9.9']);
+});
+
+test('computeLineDiff on a large file with one changed line reports one del and one add', () => {
+  const oldLines = Array.from({ length: 6000 }, (_, i) => `line ${i}`);
+  const newLines = oldLines.slice();
+  newLines[0] = '// Written by Claude Code 2.1.263.';
+  oldLines[0] = '// Written by Claude Code 2.1.261.';
+  const { addedLines, removedLines } = formatDiff(computeLineDiff(oldLines, newLines));
+  assert.equal(addedLines, 1);
+  assert.equal(removedLines, 1);
 });

@@ -162,12 +162,14 @@ run_hook "$HOME_G" "$PLUGIN_G" "$WORKDIR/out_g1.txt" "$WORKDIR/exit_g1.txt"
 mkdir -p "$HOME_G/.claude-code-docs/digests" "$HOME_G/.claude-code-docs/types/1.2.3"
 echo -n "2.1.261" > "$HOME_G/.claude-code-docs/digests/latest"
 echo -n "x" > "$HOME_G/.claude-code-docs/types/1.2.3/claude-code.d.ts"
+echo -n "{}" > "$HOME_G/.claude-code-docs/digest-targets.json"
 make_fake_plugin_root "$PLUGIN_G" "1.0.1"
 run_hook "$HOME_G" "$PLUGIN_G" "$WORKDIR/out_g2.txt" "$WORKDIR/exit_g2.txt"
 if [ -f "$HOME_G/.claude-code-docs/digests/latest" ] && [ -f "$HOME_G/.claude-code-docs/types/1.2.3/claude-code.d.ts" ] \
+   && [ -f "$HOME_G/.claude-code-docs/digest-targets.json" ] \
    && [ "$(cat "$HOME_G/.claude-code-docs/.magic-claude-docs-plugin")" = "1.0.1" ] \
    && [ -f "$HOME_G/.claude-code-docs/docs_manifest.json" ]; then
-  pass "(g) digests/ and types/ survive a version re-copy"
+  pass "(g) digests/, types/ and digest-targets.json survive a version re-copy"
 else
   fail "(g) digests/ and types/ were wiped by the re-copy"
 fi
