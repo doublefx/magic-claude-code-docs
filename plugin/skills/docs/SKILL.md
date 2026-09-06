@@ -45,7 +45,7 @@ Semantic search over the full text of the mirror (not just filenames/titles), fo
 ```
 node "${CLAUDE_PLUGIN_ROOT}/search/bin/search.mjs" --home "$HOME" "<question>"
 ```
-First use: if `${CLAUDE_PLUGIN_ROOT}/search/node_modules/@xenova/transformers` is missing, first run `corepack pnpm install --frozen-lockfile --dir "${CLAUDE_PLUGIN_ROOT}/search"`. The command then builds the index on its own first call — this downloads a small (~25 MB) embedding model once and takes a few seconds; every later call is fast. If the command prints "semantic search disabled" (the `MAGIC_CLAUDE_DOCS_SEARCH=off` kill switch), tell the user and fall back to the filename/title search above.
+First use: if `${CLAUDE_PLUGIN_ROOT}/search/node_modules/@xenova/transformers` is missing, first run `corepack pnpm install --frozen-lockfile --dir "${CLAUDE_PLUGIN_ROOT}/search"`. The command then builds the index on its own first call — this downloads a small (~25 MB) embedding model once and takes a few seconds; every later call is fast. If the command prints "semantic search disabled" (the `MAGIC_CLAUDE_DOCS_SEARCH=off` kill switch), tell the user and fall back to the filename/title search above. ⚠ The very first build embeds the whole mirror (about 14,000 passages): measured at roughly 20 minutes on a 12-core machine (2026-09-06), once; later updates re-embed only changed pages and take well under a second. Tell the user before starting it and let it run; a killed build leaves only a temp file and restarts cleanly.
 
 Present each result as: the page name, its heading path, and its excerpt — then offer to open the full page with `/magic-claude-docs:docs <topic>`. Don't just dump raw command output; read the results and summarize them for the question asked.
 

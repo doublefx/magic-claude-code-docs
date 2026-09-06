@@ -27,7 +27,9 @@ export function createEmbedder({ home }) {
     const extractor = await extractorPromise;
     // Batched: one ONNX run per BATCH texts instead of one per text. Measured
     // 2026-09-06 on this machine: text-by-text took >14 min for the mirror.
-    const BATCH = 32;
+    // 32 pushed the WASM runtime past 1 GB RSS and the build was killed for low
+    // memory (2026-09-06); 8 keeps it near the text-by-text footprint.
+    const BATCH = Math.max(1, Number(process.env.MAGIC_CLAUDE_DOCS_EMBED_BATCH) || 8);
     const vectors = [];
     for (let i = 0; i < texts.length; i += BATCH) {
       const batch = texts.slice(i, i + BATCH);
