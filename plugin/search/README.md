@@ -15,7 +15,7 @@ Each page is split by markdown headings, then windowed into ~800-char slices
 with ~100-char overlap; every chunk keeps its heading path as a text prefix.
 
 ## Embeddings
-`@xenova/transformers` (`Xenova/all-MiniLM-L6-v2`, WASM, downloaded once
+`@xenova/transformers` (`Xenova/paraphrase-multilingual-MiniLM-L12-v2`, WASM, downloaded once
 into `<home>/.claude-code-docs/index/models/`) behind an injectable
 `embed(texts) -> Float32Array[]` seam (`src/embed.mjs`) — tests use a
 deterministic fake, never the network (`test/helpers/fakeEmbed.mjs`).

@@ -114,7 +114,7 @@ if (dims === null) {
 // docs mirror.
 const version = values.version ?? (await readVersionMarker(docsDir));
 const meta = {
-  model: values.fake ? 'fake' : 'Xenova/all-MiniLM-L6-v2',
+  model: values.fake ? 'fake' : 'Xenova/paraphrase-multilingual-MiniLM-L12-v2',
   dims,
   docsVersion: version || null,
   builtAt: new Date().toISOString(),

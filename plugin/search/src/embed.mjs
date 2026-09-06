@@ -2,7 +2,7 @@ import path from 'node:path';
 
 // Lazy singleton so a process that never calls the real embedder (every test
 // in this package) never imports @xenova/transformers or touches the
-// network. Model weights (~25 MB, downloaded once) are pinned to a cache dir
+// network. Model weights (~118 MB quantized, downloaded once; the owner asks in French, the docs are English) are pinned to a cache dir
 // inside the docs mirror's own home rather than the package's node_modules,
 // so a fresh adopter machine keeps the download out of the plugin's install
 // footprint and re-uses it across rebuilds.
@@ -10,7 +10,7 @@ let extractorPromise;
 
 /**
  * Create the real, injectable `embed(texts) => Promise<Float32Array[]>` seam
- * backed by @xenova/transformers' Xenova/all-MiniLM-L6-v2 (WASM, 384-dim,
+ * backed by @xenova/transformers' Xenova/paraphrase-multilingual-MiniLM-L12-v2 (50 languages, 384-dim,
  * mean-pooled + L2-normalized). `home` decides the model cache directory;
  * network access and local-model fallback are both explicit, never implicit.
  */
@@ -21,7 +21,7 @@ export function createEmbedder({ home }) {
         const { env, pipeline } = await import('@xenova/transformers');
         env.cacheDir = path.join(home, '.claude-code-docs', 'index', 'models');
         env.allowLocalModels = false;
-        return pipeline('feature-extraction', 'Xenova/all-MiniLM-L6-v2');
+        return pipeline('feature-extraction', 'Xenova/paraphrase-multilingual-MiniLM-L12-v2');
       })();
     }
     const extractor = await extractorPromise;

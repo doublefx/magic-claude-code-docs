@@ -14,6 +14,8 @@ permissions:
 jobs:
   release:
     runs-on: ubuntu-latest
+    outputs:
+      tag: ${{ steps.version.outputs.tag }}
 
     steps:
     - name: Checkout repository
@@ -69,3 +71,15 @@ jobs:
       if: steps.check_release.outputs.exists == 'true'
       run: |
         echo "Release ${{ steps.version.outputs.tag }} already exists, skipping creation"
+
+  # Search embeddings for this release (reusable workflow; a release created
+  # with GITHUB_TOKEN never fires other workflows' `on: release`, so it is
+  # called from here, right after the release step).
+  embeddings:
+    needs: release
+    if: needs.release.outputs.tag != ''
+    uses: ./.github/workflows/embeddings.yml
+    with:
+      tag: ${{ needs.release.outputs.tag }}
+    permissions:
+      contents: write
