@@ -40,6 +40,15 @@ Extract the week number `NN` from the request (zero-pad to two digits). Look for
 ### Search query (multi-word or question-like input)
 Extract keywords (strip common stop words: "tell", "me", "about", "explain", "what", "is", "how", "do", "to", "show", "the", "for", "in", "are"). Search filenames and manifest titles for matches. Present matching topics with their titles from the manifest.
 
+### "search <question>"
+Semantic search over the full text of the mirror (not just filenames/titles), for a question that a filename match won't resolve — e.g. "search how do I stop a hook from blocking the session". Run:
+```
+node "${CLAUDE_PLUGIN_ROOT}/search/bin/search.mjs" --home "$HOME" "<question>"
+```
+First use: if `${CLAUDE_PLUGIN_ROOT}/search/node_modules/@xenova/transformers` is missing, first run `corepack pnpm install --frozen-lockfile --dir "${CLAUDE_PLUGIN_ROOT}/search"`. The command then builds the index on its own first call — this downloads a small (~25 MB) embedding model once and takes a few seconds; every later call is fast. If the command prints "semantic search disabled" (the `MAGIC_CLAUDE_DOCS_SEARCH=off` kill switch), tell the user and fall back to the filename/title search above.
+
+Present each result as: the page name, its heading path, and its excerpt — then offer to open the full page with `/magic-claude-docs:docs <topic>`. Don't just dump raw command output; read the results and summarize them for the question asked.
+
 ## File Locations
 
 All documentation files are at `~/.claude-code-docs/`. This directory is populated by a SessionStart hook that syncs docs from the plugin cache. Use the Read tool with the user's actual home directory path (e.g., `/home/<user>/.claude-code-docs/<filename>.md`). Expand `~` to the real home directory path.
