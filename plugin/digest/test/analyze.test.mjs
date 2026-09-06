@@ -300,3 +300,11 @@ test('(m) usage of the single SDK call is recorded next to the result', async ()
   assert.equal(out.usage.totalCostUsd, 0.05);
   assert.ok(out.usage.promptChars > 0);
 });
+
+test('(n) the system prompt asks to surface an SDK version gap as couldServe', async () => {
+  let seen = null;
+  const fakeQuery = (params) => { seen = params; return (async function* () { yield { type: 'result', subtype: 'success', result: JSON.stringify({ version: '9.9.9', from: null, plugins: {}, summary: 's' }) }; })(); };
+  const gathered = { manifests: { status: 'ok', entries: [] }, changelog: { status: 'ok', blocks: [] }, docsChanged: { status: 'ok', added: [], changed: [], removed: [] }, sdk: { status: 'ok', latest: '0' }, types: { status: 'unavailable', reason: 'x' }, claudeVersion: { status: 'ok', value: '9.9.9' }, previousVersion: { status: 'ok', value: null } };
+  await analyze(gathered, { query: fakeQuery, now: () => new Date() });
+  assert.match(seen.options.systemPrompt, /newer than the version a plugin declares under sdk\.version, list that gap under couldServe/);
+});

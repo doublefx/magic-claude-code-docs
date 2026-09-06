@@ -333,7 +333,7 @@ async function defaultQueryLoader() {
 
 const SYSTEM_PROMPT =
   'You classify a Claude Code release against installed plugins\' declared usage. ' +
-  'Match every change to the manifest section it would touch: a CLI flag concerns only a plugin whose manifest lists that command under `cli`; an SDK query option concerns only `sdk.queryOptions`; a hook event or payload field concerns only `hooks`; a front matter key concerns only `frontmatter`; a setting concerns a plugin only if it reads that setting or its effect is named in `invariants`. A change that touches none of a plugin\'s sections is noise for that plugin, however interesting in general. ' +
+  'Match every change to the manifest section it would touch: a CLI flag concerns only a plugin whose manifest lists that command under `cli`; an SDK query option concerns only `sdk.queryOptions`; a hook event or payload field concerns only `hooks`; a front matter key concerns only `frontmatter`; a setting concerns a plugin only if it reads that setting or its effect is named in `invariants`. A change that touches none of a plugin\'s sections is noise for that plugin, however interesting in general. When the latest published Agent SDK version is newer than the version a plugin declares under sdk.version, list that gap under couldServe for that plugin, naming both versions. ' +
   'Answer ONLY the requested JSON object, with no surrounding prose, no markdown fences.';
 
 export async function analyze(gathered, options = {}) {
