@@ -16,6 +16,8 @@ permissions:
 
 jobs:
   update-docs:
+    outputs:
+      release_tag: ${{ steps.release.outputs.tag }}
     runs-on: ubuntu-latest
 
     steps:
@@ -188,6 +190,7 @@ jobs:
         git push
 
     - name: Create release if version changed
+      id: release
       if: steps.verify-changed-files.outputs.changed == 'true'
       env:
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -205,6 +208,10 @@ jobs:
             --notes-file "$NOTES_FILE"
           echo "Created release $TAG"
         fi
+        # Hand the tag to the embeddings job below (a release created with
+        # GITHUB_TOKEN never fires other workflows' `on: release`, so the
+        # export must be called from THIS workflow).
+        echo "tag=$TAG" >> "$GITHUB_OUTPUT"
 
     - name: Create issue on failure
       if: steps.fetch-docs.outputs.fetch_failed == 'true'
@@ -238,3 +245,14 @@ jobs:
               labels: ['bug', 'automation']
             });
           }
+
+  # Pre-computed search embeddings attached to the release just created, so the
+  # plugin's first `search` downloads ~21 MB instead of embedding for 20 minutes.
+  embeddings:
+    needs: update-docs
+    if: needs.update-docs.outputs.release_tag != ''
+    uses: ./.github/workflows/embeddings.yml
+    with:
+      tag: ${{ needs.update-docs.outputs.release_tag }}
+    permissions:
+      contents: write

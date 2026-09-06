@@ -4,8 +4,9 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import { search } from '../src/search.mjs';
-import { buildIndex } from '../src/index.mjs';
+import { buildIndex, readVersionMarker } from '../src/index.mjs';
 import { createEmbedder } from '../src/embed.mjs';
+import { loadAssetVectors } from '../src/asset.mjs';
 
 if (process.env.MAGIC_CLAUDE_DOCS_SEARCH === 'off') {
   console.log('semantic search disabled');
@@ -35,8 +36,13 @@ if (!query) {
 const embed = createEmbedder({ home });
 const dbPath = path.join(docsDir, 'index', 'docs.sqlite');
 if (!fs.existsSync(dbPath)) {
-  console.error('Building the search index (first use) — this takes a few seconds and downloads a small model once.');
-  await buildIndex({ home, docsDir, embed });
+  console.error('Building the search index (first use) — downloading pre-computed embeddings...');
+  const version = await readVersionMarker(docsDir);
+  const asset = await loadAssetVectors({ home, version });
+  if (asset.reason) {
+    console.error(`Pre-computed embeddings unavailable (${asset.reason}) — embedding locally instead, this takes a few minutes once.`);
+  }
+  await buildIndex({ home, docsDir, embed, assetVectors: asset.map });
 }
 
 const results = await search({ home, docsDir, query, mode: values.mode, embed, topK: Number(values.top) });

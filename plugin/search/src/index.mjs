@@ -5,7 +5,7 @@ import path from 'node:path';
 import { chunkPage } from './chunk.mjs';
 import { openDb, floatsToBlob } from './db.mjs';
 
-async function readVersionMarker(docsDir) {
+export async function readVersionMarker(docsDir) {
   const markerPath = path.join(docsDir, '.magic-claude-docs-plugin');
   try {
     return (await fsp.readFile(markerPath, 'utf8')).trim();
@@ -22,11 +22,14 @@ function loadPreviousChunks(db, name) {
 }
 
 // Chunk + diff + write one page. `previousChunks` is a Map<ord, {id, hash}>
-// from the existing db (null for a fresh/full build). Verifies, after every
-// write, that the row count for this page matches what was intended — a
-// write that silently inserts nothing must fail loudly here, never read back
-// as a quiet success.
-async function upsertPage(db, docsDir, name, meta, embed, previousChunks) {
+// from the existing db (null for a fresh/full build). `assetVectors` is a
+// Map<chunkHash, Float32Array> of vectors CI already computed (empty Map by
+// default) — a chunk whose content hash is in it gets its embedding from
+// there instead of a call to `embed()`. Verifies, after every write, that
+// the row count for this page matches what was intended — a write that
+// silently inserts nothing must fail loudly here, never read back as a quiet
+// success.
+async function upsertPage(db, docsDir, name, meta, embed, previousChunks, assetVectors) {
   const content = await fsp.readFile(path.join(docsDir, name), 'utf8');
   const chunks = chunkPage(content);
 
@@ -41,20 +44,29 @@ async function upsertPage(db, docsDir, name, meta, embed, previousChunks) {
   const deleteFts = db.prepare('DELETE FROM chunks_fts WHERE rowid = ?');
 
   const needingEmbed = []; // { id, text }
+  let fromAsset = 0;
 
   for (const chunk of chunks) {
     const prev = previousChunks?.get(chunk.ord);
     if (prev && prev.hash === chunk.hash) {
       continue; // unchanged chunk: no write, no re-embed
     }
+    let id;
     if (prev) {
       updateChunk.run(chunk.headingPath, chunk.hash, chunk.text, null, prev.id);
       updateFts.run(chunk.text, prev.id);
-      needingEmbed.push({ id: prev.id, text: chunk.text });
+      id = prev.id;
     } else {
       const info = insertChunk.run(name, chunk.ord, chunk.headingPath, chunk.hash, chunk.text, null);
-      const id = Number(info.lastInsertRowid);
+      id = Number(info.lastInsertRowid);
       insertFts.run(id, chunk.text);
+    }
+
+    const assetVector = assetVectors?.get(chunk.hash);
+    if (assetVector) {
+      setEmbedding.run(floatsToBlob(assetVector), id);
+      fromAsset += 1;
+    } else {
       needingEmbed.push({ id, text: chunk.text });
     }
   }
@@ -98,33 +110,36 @@ async function upsertPage(db, docsDir, name, meta, embed, previousChunks) {
     );
   }
 
-  return { chunkCount: chunks.length, embedded };
+  return { chunkCount: chunks.length, embedded, fromAsset };
 }
 
 function mdPages(files) {
   return Object.entries(files).filter(([name]) => name.endsWith('.md'));
 }
 
-async function populateAll(db, docsDir, files, embed) {
+async function populateAll(db, docsDir, files, embed, assetVectors) {
   let chunks = 0;
   let embedded = 0;
+  let fromAsset = 0;
   let pages = 0;
   for (const [name, meta] of mdPages(files)) {
     pages += 1;
-    const result = await upsertPage(db, docsDir, name, meta, embed, null);
+    const result = await upsertPage(db, docsDir, name, meta, embed, null, assetVectors);
     chunks += result.chunkCount;
     embedded += result.embedded;
+    fromAsset += result.fromAsset;
   }
-  return { pages, chunks, embedded };
+  return { pages, chunks, embedded, fromAsset };
 }
 
-async function incrementalUpdate(db, docsDir, files, embed) {
+async function incrementalUpdate(db, docsDir, files, embed, assetVectors) {
   const existing = db.prepare('SELECT name, hash FROM pages').all();
   const existingByName = new Map(existing.map((p) => [p.name, p.hash]));
   const manifestNames = new Set(mdPages(files).map(([name]) => name));
 
   let chunks = 0;
   let embedded = 0;
+  let fromAsset = 0;
   let pages = 0;
 
   for (const [name, meta] of mdPages(files)) {
@@ -134,9 +149,10 @@ async function incrementalUpdate(db, docsDir, files, embed) {
       continue; // page unchanged per manifest hash: skip entirely
     }
     const previousChunks = loadPreviousChunks(db, name);
-    const result = await upsertPage(db, docsDir, name, meta, embed, previousChunks);
+    const result = await upsertPage(db, docsDir, name, meta, embed, previousChunks, assetVectors);
     chunks += result.chunkCount;
     embedded += result.embedded;
+    fromAsset += result.fromAsset;
   }
 
   for (const name of existingByName.keys()) {
@@ -149,7 +165,7 @@ async function incrementalUpdate(db, docsDir, files, embed) {
     db.prepare('DELETE FROM pages WHERE name = ?').run(name);
   }
 
-  return { pages, chunks, embedded };
+  return { pages, chunks, embedded, fromAsset };
 }
 
 /**
@@ -168,9 +184,14 @@ async function incrementalUpdate(db, docsDir, files, embed) {
  * `embed(texts: string[]) => Promise<Float32Array[]>` is the only required
  * injection seam; `openDbFn` (default: `openDb` from ./db.mjs) exists so
  * tests can wrap the real db and simulate a write that silently inserts
- * nothing, proving the row-count check actually fires.
+ * nothing, proving the row-count check actually fires. `assetVectors`
+ * (default: an empty Map) is a Map<chunkHash, Float32Array> of vectors
+ * already computed by CI (see bin/export-embeddings.mjs) — a chunk needing a
+ * (re-)embed whose hash is in this map is filled from it instead of a call
+ * to `embed()`; the stats distinguish `fromAsset` (filled from the map) from
+ * `embedded` (actually sent to `embed()`).
  */
-export async function buildIndex({ home, docsDir, embed, openDbFn = openDb } = {}) {
+export async function buildIndex({ home, docsDir, embed, openDbFn = openDb, assetVectors = new Map() } = {}) {
   if (!embed) throw new Error('buildIndex requires an embed(texts) function');
   const resolvedDocsDir = docsDir ?? path.join(home, '.claude-code-docs');
   const manifestPath = path.join(resolvedDocsDir, 'docs_manifest.json');
@@ -195,14 +216,14 @@ export async function buildIndex({ home, docsDir, embed, openDbFn = openDb } = {
     const tmpPath = path.join(indexDir, `docs.sqlite.tmp-${process.pid}-${createHash('md5').update(String(Date.now())).digest('hex').slice(0, 8)}`);
     await fsp.rm(tmpPath, { force: true });
     db = openDbFn(tmpPath);
-    const stats = await populateAll(db, resolvedDocsDir, files, embed);
+    const stats = await populateAll(db, resolvedDocsDir, files, embed, assetVectors);
     db.prepare('INSERT OR REPLACE INTO meta (key, value) VALUES (?, ?)').run('pluginVersion', version);
     db.close();
     await fsp.rename(tmpPath, dbPath);
     return { ...stats, dbPath, fullRebuild: true };
   }
 
-  const stats = await incrementalUpdate(db, resolvedDocsDir, files, embed);
+  const stats = await incrementalUpdate(db, resolvedDocsDir, files, embed, assetVectors);
   db.prepare('INSERT OR REPLACE INTO meta (key, value) VALUES (?, ?)').run('pluginVersion', version);
   db.close();
   return { ...stats, dbPath, fullRebuild: false };

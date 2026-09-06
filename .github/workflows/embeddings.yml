@@ -1,0 +1,102 @@
+name: Export search embeddings
+
+# Runs right after update-docs.yml creates a docs release and attaches embeddings.bin +
+# embeddings.json to that same release, so the plugin's first `search` call
+# downloads pre-computed vectors instead of embedding the whole mirror
+# locally (~20 minutes cold).
+on:
+  # Called by update-docs.yml right after it creates the release: a release
+  # created with GITHUB_TOKEN never triggers `on: release` in another
+  # workflow, so a `release:` trigger here would never fire.
+  workflow_call:
+    inputs:
+      tag:
+        description: 'Release tag to attach embeddings to (e.g. v2026.9.6.1)'
+        required: true
+        type: string
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Release tag to attach embeddings to (e.g. v2026.9.6.1)'
+        required: true
+        type: string
+
+concurrency:
+  group: embeddings-${{ inputs.tag }}
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    env:
+      TAG: ${{ inputs.tag }}
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - name: Checkout release tag
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ env.TAG }}
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Enable pnpm via corepack
+        run: corepack enable pnpm
+
+      - name: Install dependencies
+        working-directory: plugin/search
+        run: pnpm install --frozen-lockfile
+
+      - name: Download previous release's embeddings (incremental base, if any)
+        id: previous
+        run: |
+          set -e
+          # Most recent PUBLISHED release before this one that actually
+          # carries an embeddings.bin asset. Absence is normal (first run
+          # ever, or the immediately-preceding release predates this
+          # workflow) and must not fail the job.
+          PREV_TAG=$(gh release list --limit 20 --json tagName,publishedAt \
+            --jq '[.[] | select(.tagName != env.TAG)] | sort_by(.publishedAt) | reverse | .[].tagName' \
+            | while read -r t; do
+                if gh release view "$t" --json assets --jq '.assets[].name' 2>/dev/null | grep -qx 'embeddings.bin'; then
+                  echo "$t"
+                  break
+                fi
+              done)
+          if [ -n "$PREV_TAG" ]; then
+            echo "Found previous embeddings on $PREV_TAG"
+            mkdir -p previous
+            gh release download "$PREV_TAG" --pattern 'embeddings.bin' --dir previous
+            echo "found=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "No previous release carries embeddings.bin — full export"
+            echo "found=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Export embeddings for this release
+        working-directory: plugin/search
+        run: |
+          set -e
+          # `plugin/docs` in this checkout never carries the
+          # `.magic-claude-docs-plugin` marker (that file is written only at
+          # runtime by the SessionStart sync hook) — pass the release's own
+          # plugin version explicitly instead of relying on the marker.
+          VERSION=$(jq -r '.version' ../.claude-plugin/plugin.json)
+          ARGS="--home $HOME --docs ../docs --out dist-embeddings --version $VERSION"
+          if [ "${{ steps.previous.outputs.found }}" = "true" ]; then
+            ARGS="$ARGS --previous ../../previous/embeddings.bin"
+          fi
+          node bin/export-embeddings.mjs $ARGS
+
+      - name: Upload embeddings to the release
+        run: |
+          gh release upload "$TAG" \
+            plugin/search/dist-embeddings/embeddings.bin \
+            plugin/search/dist-embeddings/embeddings.json \
+            --clobber

@@ -1,11 +1,12 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { mkdtemp, cp, rm, readFile, writeFile } from 'node:fs/promises';
+import fs from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { buildIndex } from '../src/index.mjs';
-import { openDb } from '../src/db.mjs';
+import { openDb, blobToFloats } from '../src/db.mjs';
 import { chunkPage } from '../src/chunk.mjs';
 import { makeFakeEmbed } from './helpers/fakeEmbed.mjs';
 
@@ -159,6 +160,59 @@ test('(h) a write that silently inserts nothing fails loudly via the row-count c
       () => buildIndex({ home, docsDir, embed: makeFakeEmbed(), openDbFn: brokenOpenDb }),
       /row count mismatch/,
     );
+  } finally {
+    await rm(home, { recursive: true, force: true });
+  }
+});
+
+test('(i) buildIndex fills a chunk from assetVectors instead of calling embed() when its hash matches', async () => {
+  const home = await mkdtemp(path.join(tmpdir(), 'search-home-'));
+  const docsDir = path.join(home, '.claude-code-docs');
+  try {
+    await fs.mkdir(docsDir, { recursive: true });
+    // Three tiny one-chunk pages (no headings, well under the 800-char
+    // window) so the mirror is exactly 3 chunks total — small and exact,
+    // per the brief, rather than reusing the shared 5-page fixture.
+    const pages = {
+      'a.md': 'Page A body text.',
+      'b.md': 'Page B body text.',
+      'c.md': 'Page C body text.',
+    };
+    const manifest = { files: {} };
+    for (const [name, body] of Object.entries(pages)) {
+      await fs.writeFile(path.join(docsDir, name), body);
+      manifest.files[name] = { hash: `hash-${name}`, title: name };
+    }
+    await fs.writeFile(path.join(docsDir, 'docs_manifest.json'), JSON.stringify(manifest, null, 2));
+
+    const hashA = chunkPage(pages['a.md'])[0].hash;
+    const hashB = chunkPage(pages['b.md'])[0].hash;
+
+    const assetVectors = new Map([
+      [hashA, new Float32Array(32).fill(0.5)],
+      [hashB, new Float32Array(32).fill(0.25)],
+    ]);
+
+    const embed = makeFakeEmbed();
+    const stats = await buildIndex({ home, docsDir, embed, assetVectors });
+
+    assert.equal(stats.chunks, 3);
+    assert.equal(stats.fromAsset, 2, '2 of 3 chunks must be filled from the asset');
+    assert.equal(stats.embedded, 1, 'exactly the uncovered chunk must go to embed()');
+    assert.equal(embed.calls.flat().length, 1);
+    assert.match(embed.calls.flat()[0], /Page C body text/);
+
+    const db = openDb(stats.dbPath);
+    try {
+      const rowA = db.prepare('SELECT embedding FROM chunks WHERE page = ?').get('a.md');
+      const rowB = db.prepare('SELECT embedding FROM chunks WHERE page = ?').get('b.md');
+      const rowC = db.prepare('SELECT embedding FROM chunks WHERE page = ?').get('c.md');
+      assert.deepEqual(Array.from(blobToFloats(rowA.embedding)), Array.from(assetVectors.get(hashA)));
+      assert.deepEqual(Array.from(blobToFloats(rowB.embedding)), Array.from(assetVectors.get(hashB)));
+      assert.ok(rowC.embedding, 'the locally-embedded chunk must still have a stored vector');
+    } finally {
+      db.close();
+    }
   } finally {
     await rm(home, { recursive: true, force: true });
   }
