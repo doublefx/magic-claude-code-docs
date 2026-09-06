@@ -33,6 +33,9 @@ async function main() {
   }
 
   const result = await gather({
+    // MAGIC_CLAUDE_DOCS_OFFLINE=1 seals the run (tests, air-gapped hosts): the
+    // SDK-version fetch then fails fast and reports `unavailable`.
+    ...(process.env.MAGIC_CLAUDE_DOCS_OFFLINE ? { fetch: async () => { throw new Error('offline'); } } : {}),
     home: args.home,
     pluginRoot: args.pluginRoot,
     claudeVersion: args.claudeVersion,

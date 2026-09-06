@@ -222,7 +222,7 @@ test('bin/gather.mjs writes only <version>.gather.json — never latest nor snap
   await mkdir(fakeBin, { recursive: true });
   await writeFile(path.join(fakeBin, 'claude'), '#!/bin/sh\necho "9.9.9 (Claude Code)"\n', { mode: 0o755 });
   await run(process.execPath, [bin, '--home', home, '--plugin-root', pluginRoot], {
-    env: { ...process.env, PATH: `${fakeBin}:${process.env.PATH}`, CLAUDE_CODE_ENABLE_FUNCTION_HOOKS: '' },
+    env: { ...process.env, PATH: `${fakeBin}:${process.env.PATH}`, CLAUDE_CODE_ENABLE_FUNCTION_HOOKS: '', MAGIC_CLAUDE_DOCS_OFFLINE: '1' },
     timeout: 60000,
   });
   const files = await readdir(path.join(home, '.claude-code-docs', 'digests'));
