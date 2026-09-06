@@ -50,13 +50,10 @@ async function main() {
   const outPath = path.join(digestsDir, `${version}.gather.json`);
   await writeFile(outPath, JSON.stringify(result, null, 2) + '\n', 'utf8');
 
-  if (result.docsChanged?.status === 'ok' && result.docsChanged.snapshot) {
-    const snapPath = path.join(digestsDir, `${version}.snapshot.json`);
-    await writeFile(snapPath, JSON.stringify(result.docsChanged.snapshot, null, 2) + '\n', 'utf8');
-  }
-  if (version !== 'unknown') {
-    await writeFile(path.join(digestsDir, 'latest'), version + '\n', 'utf8');
-  }
+  // Only the gather file is written here. `<version>.snapshot.json` and
+  // `latest` belong to bin/analyze.mjs, written after a SUCCESSFUL analysis
+  // (ADR on the digest card): a `latest` written by gather would silence the
+  // session-start signal for a version that was never digested.
 
   console.log(outPath);
 }

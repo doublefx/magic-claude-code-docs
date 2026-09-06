@@ -4,6 +4,9 @@ import { mkdtemp, cp, rm, mkdir, writeFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { execFile } from 'node:child_process';
+import { promisify } from 'node:util';
+import { readdir } from 'node:fs/promises';
 import { gather } from '../src/gather.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -207,4 +210,22 @@ test('every read is independently wrapped: pluginRoot missing changelog/manifest
   // unrelated fields still resolve fine
   assert.equal(result.claudeVersion.status, 'ok');
   assert.equal(result.sdk.status, 'ok');
+});
+
+test('bin/gather.mjs writes only <version>.gather.json — never latest nor snapshot', async () => {
+  const home = await mkdtemp(path.join(tmpdir(), 'gather-bin-'));
+  const bin = path.join(__dirname, '..', 'bin', 'gather.mjs');
+  const pluginRoot = path.join(FIXTURES, 'pluginRoot');
+  const run = promisify(execFile);
+  // A fake `claude` on PATH keeps the run offline and deterministic.
+  const fakeBin = path.join(home, 'bin');
+  await mkdir(fakeBin, { recursive: true });
+  await writeFile(path.join(fakeBin, 'claude'), '#!/bin/sh\necho "9.9.9 (Claude Code)"\n', { mode: 0o755 });
+  await run(process.execPath, [bin, '--home', home, '--plugin-root', pluginRoot], {
+    env: { ...process.env, PATH: `${fakeBin}:${process.env.PATH}`, CLAUDE_CODE_ENABLE_FUNCTION_HOOKS: '' },
+    timeout: 60000,
+  });
+  const files = await readdir(path.join(home, '.claude-code-docs', 'digests'));
+  assert.deepEqual(files.sort(), ['9.9.9.gather.json']);
+  await rm(home, { recursive: true, force: true });
 });
