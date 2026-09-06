@@ -134,12 +134,13 @@ async function main() {
       throw e;
     }
 
-    const { result, analyzedAt } = outcome;
+    const { result, analyzedAt, usage } = outcome;
     const record = {
       result,
       sources: gathered,
       gatheredAt: gathered.gatheredAt ?? null,
       analyzedAt,
+      usage: usage ?? null,
       deliveredAt: null,
     };
 

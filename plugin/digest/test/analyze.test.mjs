@@ -287,3 +287,16 @@ test('(l) analyze passes the section-matching rule in the system prompt', async 
   await analyze(gathered, { query: fakeQuery, now: () => new Date() });
   assert.match(seen.options.systemPrompt, /CLI flag concerns only a plugin whose manifest lists that command under `cli`/);
 });
+
+test('(m) usage of the single SDK call is recorded next to the result', async () => {
+  const fakeQuery = () => (async function* () {
+    yield { type: 'result', subtype: 'success', result: JSON.stringify({ version: '9.9.9', from: null, plugins: {}, summary: 's' }),
+      usage: { input_tokens: 11000, output_tokens: 900, cache_read_input_tokens: 0, cache_creation_input_tokens: 0 }, total_cost_usd: 0.05, duration_ms: 1234, num_turns: 1 };
+  })();
+  const gathered = { manifests: { status: 'ok', entries: [] }, changelog: { status: 'ok', blocks: [] }, docsChanged: { status: 'ok', added: [], changed: [], removed: [] }, sdk: { status: 'ok', latest: '0' }, types: { status: 'unavailable', reason: 'x' }, claudeVersion: { status: 'ok', value: '9.9.9' }, previousVersion: { status: 'ok', value: null } };
+  const out = await analyze(gathered, { query: fakeQuery, now: () => new Date() });
+  assert.equal(out.usage.inputTokens, 11000);
+  assert.equal(out.usage.outputTokens, 900);
+  assert.equal(out.usage.totalCostUsd, 0.05);
+  assert.ok(out.usage.promptChars > 0);
+});

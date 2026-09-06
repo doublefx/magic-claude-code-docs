@@ -356,9 +356,23 @@ export async function analyze(gathered, options = {}) {
   });
 
   let text = null;
+  let usage = null;
   for await (const message of stream) {
     if (message?.type === 'result' && message.subtype === 'success') {
       text = message.result;
+      // Token accounting of the ONE call, kept in the digest so the cost is
+      // readable afterwards (no static prefix: settingSources is empty).
+      usage = {
+        inputTokens: message.usage?.input_tokens ?? null,
+        cacheReadInputTokens: message.usage?.cache_read_input_tokens ?? null,
+        cacheCreationInputTokens: message.usage?.cache_creation_input_tokens ?? null,
+        outputTokens: message.usage?.output_tokens ?? null,
+        totalCostUsd: message.total_cost_usd ?? null,
+        durationMs: message.duration_ms ?? null,
+        numTurns: message.num_turns ?? null,
+        model,
+        promptChars: prompt.length,
+      };
     }
   }
   if (typeof text !== 'string') {
@@ -370,5 +384,5 @@ export async function analyze(gathered, options = {}) {
   const parsed = extractJson(text);
   const validated = validateResult(parsed, gathered, text);
 
-  return { result: validated, analyzedAt: now().toISOString() };
+  return { result: validated, analyzedAt: now().toISOString(), usage };
 }
