@@ -7,6 +7,7 @@ on:
     paths:
       - 'plugin/hooks/**'
       - 'plugin/digest/**'
+      - 'plugin/search/**'
       - 'plugin/skills/**'
       - 'tests/**'
       - '.github/workflows/test.yml'
@@ -14,6 +15,7 @@ on:
     paths:
       - 'plugin/hooks/**'
       - 'plugin/digest/**'
+      - 'plugin/search/**'
       - 'plugin/skills/**'
       - 'tests/**'
       - '.github/workflows/test.yml'
@@ -58,4 +60,26 @@ jobs:
 
       - name: Run digest tests
         working-directory: plugin/digest
+        run: pnpm test
+
+  search:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Enable pnpm via corepack
+        run: corepack enable pnpm
+
+      - name: Install dependencies
+        working-directory: plugin/search
+        run: pnpm install --frozen-lockfile
+
+      - name: Run search tests
+        working-directory: plugin/search
         run: pnpm test

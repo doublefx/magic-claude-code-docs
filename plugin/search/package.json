@@ -1,0 +1,18 @@
+{
+  "name": "magic-claude-docs-search",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.10.0",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "node --test",
+    "build-index": "node bin/build-index.mjs",
+    "search": "node bin/search.mjs"
+  },
+  "dependencies": {
+    "@xenova/transformers": "2.17.2"
+  }
+}

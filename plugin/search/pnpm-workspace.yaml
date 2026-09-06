@@ -1,0 +1,14 @@
+# Security policy (CLAUDE.md "Package manager — pnpm only"), explicit even where it matches defaults.
+minimumReleaseAge: 1440
+strictDepBuilds: true
+trustPolicy: no-downgrade
+blockExoticSubdeps: true
+# Build scripts allowed one by one, on the first "ignored build scripts" error:
+# sharp downloads its prebuilt binary (dependency of @xenova/transformers).
+allowBuilds:
+  protobufjs: false
+  sharp: true
+
+# ERR_PNPM_TRUST_DOWNGRADE on protobufjs@6.11.6 (transitive, no provenance); pinned to the attested 7.x line.
+overrides:
+  protobufjs: "^7"

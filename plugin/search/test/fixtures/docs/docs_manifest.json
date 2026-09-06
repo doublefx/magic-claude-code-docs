@@ -1,0 +1,38 @@
+{
+  "files": {
+    "hooks.md": {
+      "original_url": "https://code.claude.com/docs/en/hooks.md",
+      "title": "Hooks",
+      "hash": "hash-hooks-v1",
+      "last_updated": "2026-09-05T00:00:00.000000"
+    },
+    "plugins.md": {
+      "original_url": "https://code.claude.com/docs/en/plugins.md",
+      "title": "Plugins",
+      "hash": "hash-plugins-v1",
+      "last_updated": "2026-09-05T00:00:00.000000"
+    },
+    "memory.md": {
+      "original_url": "https://code.claude.com/docs/en/memory.md",
+      "title": "Memory",
+      "hash": "hash-memory-v1",
+      "last_updated": "2026-09-05T00:00:00.000000"
+    },
+    "settings.md": {
+      "original_url": "https://code.claude.com/docs/en/settings.md",
+      "title": "Settings",
+      "hash": "hash-settings-v1",
+      "last_updated": "2026-09-05T00:00:00.000000"
+    },
+    "limits.md": {
+      "original_url": "https://code.claude.com/docs/en/limits.md",
+      "title": "Output limits",
+      "hash": "hash-limits-v1",
+      "last_updated": "2026-09-05T00:00:00.000000"
+    }
+  },
+  "fetch_metadata": {
+    "total_files": 5
+  },
+  "last_updated": "2026-09-05T00:00:00.000000"
+}

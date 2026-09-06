@@ -1,0 +1,5 @@
+# Security policy (CLAUDE.md "Package manager — pnpm only"), explicit even where it matches defaults.
+minimumReleaseAge: 1440
+strictDepBuilds: true
+trustPolicy: no-downgrade
+blockExoticSubdeps: true
