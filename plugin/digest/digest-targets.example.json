@@ -1,0 +1,18 @@
+{
+  "_comment": "Copy to ~/.claude-code-docs/digest-targets.json and fill in real ids. Two independent uses of the same per-plugin entry: `manifestPath` is read by gather.mjs (an extra manifest for a plugin not discoverable via the normal plugin-cache scan); `boardId`/`listId`/`atriumMention` are read by the digest skill's delivery step (step 4) to pick a Planka board/list and an Atrium mention for that plugin. Neither reader errors on a key it doesn't use, and either half may be present without the other.",
+  "magic-claude-docs": {
+    "boardId": "1857700581309679372",
+    "listId": "1857700637337192208",
+    "atriumMention": "claude-code-docs-cc-1"
+  },
+  "atrium": {
+    "boardId": "PLACEHOLDER-atrium-board-id",
+    "listId": "PLACEHOLDER-atrium-backlog-list-id",
+    "atriumMention": "PLACEHOLDER-atrium-agent-name"
+  },
+  "magic-claude-mem": {
+    "boardId": "PLACEHOLDER-claude-mem-board-id",
+    "listId": "PLACEHOLDER-claude-mem-backlog-list-id",
+    "atriumMention": "PLACEHOLDER-claude-mem-agent-name"
+  }
+}

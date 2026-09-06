@@ -48,3 +48,22 @@ model call — **the real model call is made only by `bin/analyze.mjs` without
 `pnpm test` also runs `test/analyze.test.mjs` (unit tests on `buildPrompt`,
 `analyze`, `renderMarkdown` with an injected fake `query`, plus subprocess
 tests of the CLI's `--fake` path and its lock).
+
+# digest — mark-delivered phase
+`markDelivered({ home, version, note, now? })` sets `deliveredAt` (ISO
+timestamp) and `deliveryNote` on `<version>.json`, written atomically (temp
+file + rename), every other field byte-preserved. Idempotent: a record
+that already carries `deliveredAt` is left untouched and reported as such.
+
+## CLI
+```
+node bin/mark-delivered.mjs --home <dir> --version <v> --note "<where it was posted>"
+```
+Exit `0` on success or on the idempotent no-op; `1` on missing `--version`/
+`--note`; `2` when `<version>.json` does not exist.
+
+## Tests
+`pnpm test` also runs `test/mark-delivered.test.mjs` (sets the fields;
+idempotent on a second call; missing file → `MISSING`/exit 2; CLI happy
+path; the rest of the record compared parsed-equal, not byte-equal, since
+JSON key order is not itself a guarantee).

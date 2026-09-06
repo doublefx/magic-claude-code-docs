@@ -1,12 +1,26 @@
 {
   "plugin": "magic-claude-docs",
-  "version": "2026.9.5.5",
+  "version": "2026.9.6.1",
   "measuredAt": "2026-09-05",
   "frontmatter": {
     "agents": [],
     "skills": [
-      { "name": "name", "where": "plugin/skills/docs/SKILL.md:1" },
-      { "name": "description", "where": "plugin/skills/docs/SKILL.md:2" }
+      {
+        "name": "name",
+        "where": "plugin/skills/docs/SKILL.md:1"
+      },
+      {
+        "name": "description",
+        "where": "plugin/skills/docs/SKILL.md:2"
+      },
+      {
+        "name": "name",
+        "where": "plugin/skills/digest/SKILL.md:1"
+      },
+      {
+        "name": "description",
+        "where": "plugin/skills/digest/SKILL.md:2"
+      }
     ]
   },
   "hooks": {
@@ -15,7 +29,7 @@
         {
           "matcher": "startup",
           "type": "command",
-          "purpose": "copy plugin/docs into ~/.claude-code-docs only when the installed plugin version differs from the version recorded in the .magic-claude-docs-plugin marker (or the marker/manifest is missing) — a no-op on every other session start",
+          "purpose": "copy plugin/docs into ~/.claude-code-docs only when the installed plugin version differs from the version recorded in the .magic-claude-docs-plugin marker (or the marker/manifest is missing) \u2014 a no-op on every other session start",
           "where": "plugin/.claude-plugin/plugin.json:hooks.SessionStart[0]",
           "script": "plugin/hooks/sync-docs.sh"
         },
@@ -30,10 +44,13 @@
     },
     "payloadFields": [],
     "outputs": [
-      "SessionStart hook stdout is appended to the session's context (undocumented but relied upon here — the version-signal line is meant to be read by the model, not the user's terminal)"
+      "SessionStart hook stdout is appended to the session's context (undocumented but relied upon here \u2014 the version-signal line is meant to be read by the model, not the user's terminal)"
     ]
   },
-  "functionHooks": { "events": [], "capabilities": [] },
+  "functionHooks": {
+    "events": [],
+    "capabilities": []
+  },
   "sdk": {
     "package": "",
     "version": "",
@@ -42,25 +59,98 @@
     "bundled": false
   },
   "files": [
-    { "name": "plugin/docs/*.md", "where": "plugin/.claude-plugin/plugin.json:hooks.SessionStart[0]" },
-    { "name": "plugin/docs/docs_manifest.json", "where": "plugin/skills/docs/SKILL.md" },
-    { "name": "plugin/docs/recent_changes.md", "where": "plugin/skills/docs/SKILL.md" },
-    { "name": "$HOME/.claude-code-docs/*.md", "where": "SessionStart hook 0 — sync target, read by the docs skill" },
-    { "name": "$HOME/.claude-code-docs/NNNN-wNN.md", "where": "plugin/skills/docs/SKILL.md — weekly digest pages: primary source for \"what's new\", direct target for \"week NN\", listed under their own heading in the no-argument listing" },
-    { "name": "$HOME/.claude-code-docs/.magic-claude-docs-plugin", "where": "SessionStart hook 0 (plugin/hooks/sync-docs.sh) — marker file, now holds the synced plugin VERSION (not just a touch marker), written only after a successful copy" },
-    { "name": "$HOME/.claude-code-docs/.published-version", "where": "plugin/hooks/version-signal.sh — cache read in the foreground, written by the detached refresh" },
-    { "name": "$HOME/.claude-code-docs/.published-version.fetched_at", "where": "plugin/hooks/version-signal.sh — cache-age stamp, gates the 3h refresh interval" },
-    { "name": "$HOME/.claude-code-docs/digests/latest", "where": "plugin/hooks/version-signal.sh — read only; written by a later card" },
-    { "name": "$HOME/.local/share/claude/versions/*", "where": "plugin/hooks/version-signal.sh — fallback source for the running Claude Code version when `claude --version` is unavailable" }
+    {
+      "name": "plugin/docs/*.md",
+      "where": "plugin/.claude-plugin/plugin.json:hooks.SessionStart[0]"
+    },
+    {
+      "name": "plugin/docs/docs_manifest.json",
+      "where": "plugin/skills/docs/SKILL.md"
+    },
+    {
+      "name": "plugin/docs/recent_changes.md",
+      "where": "plugin/skills/docs/SKILL.md"
+    },
+    {
+      "name": "$HOME/.claude-code-docs/*.md",
+      "where": "SessionStart hook 0 \u2014 sync target, read by the docs skill"
+    },
+    {
+      "name": "$HOME/.claude-code-docs/NNNN-wNN.md",
+      "where": "plugin/skills/docs/SKILL.md \u2014 weekly digest pages: primary source for \"what's new\", direct target for \"week NN\", listed under their own heading in the no-argument listing"
+    },
+    {
+      "name": "$HOME/.claude-code-docs/.magic-claude-docs-plugin",
+      "where": "SessionStart hook 0 (plugin/hooks/sync-docs.sh) \u2014 marker file, now holds the synced plugin VERSION (not just a touch marker), written only after a successful copy"
+    },
+    {
+      "name": "$HOME/.claude-code-docs/.published-version",
+      "where": "plugin/hooks/version-signal.sh \u2014 cache read in the foreground, written by the detached refresh"
+    },
+    {
+      "name": "$HOME/.claude-code-docs/.published-version.fetched_at",
+      "where": "plugin/hooks/version-signal.sh \u2014 cache-age stamp, gates the 3h refresh interval"
+    },
+    {
+      "name": "$HOME/.claude-code-docs/digests/latest",
+      "where": "plugin/hooks/version-signal.sh \u2014 read only; written by a later card"
+    },
+    {
+      "name": "$HOME/.local/share/claude/versions/*",
+      "where": "plugin/hooks/version-signal.sh \u2014 fallback source for the running Claude Code version when `claude --version` is unavailable"
+    },
+    {
+      "name": "$HOME/.claude-code-docs/digests/<version>.gather.json",
+      "where": "plugin/digest/bin/gather.mjs \u2014 raw gather output, one per Claude Code version"
+    },
+    {
+      "name": "$HOME/.claude-code-docs/digests/<version>.json",
+      "where": "plugin/digest/bin/analyze.mjs \u2014 { result, sources, gatheredAt, analyzedAt, deliveredAt }; deliveredAt/deliveryNote set later by plugin/digest/bin/mark-delivered.mjs"
+    },
+    {
+      "name": "$HOME/.claude-code-docs/digests/<version>.md",
+      "where": "plugin/digest/bin/analyze.mjs \u2014 rendered digest, posted verbatim to Atrium by plugin/skills/digest/SKILL.md step 4"
+    },
+    {
+      "name": "$HOME/.claude-code-docs/digests/<version>.snapshot.json",
+      "where": "plugin/digest/bin/analyze.mjs \u2014 docs-changed snapshot carried forward to the next gather"
+    },
+    {
+      "name": "$HOME/.claude-code-docs/digests/<version>.lock",
+      "where": "plugin/digest/bin/analyze.mjs \u2014 concurrency guard, stale after 30 minutes"
+    },
+    {
+      "name": "$HOME/.claude-code-docs/digests/latest",
+      "where": "plugin/digest/bin/analyze.mjs \u2014 written last, atomically; read by plugin/skills/digest/SKILL.md's status/show sub-commands"
+    },
+    {
+      "name": "$HOME/.claude-code-docs/digest-targets.json",
+      "where": "plugin/digest/src/gather.mjs (manifestPath entries) and plugin/skills/digest/SKILL.md step 4 (boardId/listId/atriumMention entries) \u2014 see plugin/digest/digest-targets.example.json"
+    }
   ],
   "env": [
-    { "name": "CLAUDE_PLUGIN_ROOT", "where": "plugin/.claude-plugin/plugin.json:hooks.SessionStart both entries; plugin/hooks/version-signal.sh" },
-    { "name": "HOME", "where": "plugin/.claude-plugin/plugin.json:hooks.SessionStart[0]; plugin/hooks/version-signal.sh" }
+    {
+      "name": "CLAUDE_PLUGIN_ROOT",
+      "where": "plugin/.claude-plugin/plugin.json:hooks.SessionStart both entries; plugin/hooks/version-signal.sh"
+    },
+    {
+      "name": "HOME",
+      "where": "plugin/.claude-plugin/plugin.json:hooks.SessionStart[0]; plugin/hooks/version-signal.sh"
+    }
   ],
   "cli": [
-    { "name": "claude --version", "where": "plugin/hooks/version-signal.sh get_claude_code_version — run with </dev/null and a 5s timeout" },
-    { "name": "curl -fsS --max-time 5", "where": "plugin/hooks/version-signal.sh do_refresh_published — detached background fetch of upstream plugin.json, never in the foreground path" },
-    { "name": "jq -r .version", "where": "plugin/hooks/version-signal.sh extract_json_version — used when present; falls back to grep/sed otherwise" }
+    {
+      "name": "claude --version",
+      "where": "plugin/hooks/version-signal.sh get_claude_code_version \u2014 run with </dev/null and a 5s timeout"
+    },
+    {
+      "name": "curl -fsS --max-time 5",
+      "where": "plugin/hooks/version-signal.sh do_refresh_published \u2014 detached background fetch of upstream plugin.json, never in the foreground path"
+    },
+    {
+      "name": "jq -r .version",
+      "where": "plugin/hooks/version-signal.sh extract_json_version \u2014 used when present; falls back to grep/sed otherwise"
+    }
   ],
   "invariants": [
     "${CLAUDE_PLUGIN_ROOT}/docs exists at SessionStart, or the copy hook is a no-op",

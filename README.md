@@ -74,7 +74,7 @@ At the start of a session, a second `SessionStart` hook checks whether anything 
 since last time and, if so, prints a single line into the session's context — for example:
 
 ```
-magic-claude-docs: plugin 2026.9.4.3 installed, 2026.9.5.2 published (restart or /reload-plugins to update) · Claude Code 2.1.262, last digested 2.1.261 (see /magic-claude-docs:docs what's new)
+magic-claude-docs: plugin 2026.9.4.3 installed, 2026.9.5.2 published (restart or /reload-plugins to update) · Claude Code 2.1.262, last digested 2.1.261 (run /magic-claude-docs:digest)
 ```
 
 It stays **silent** when nothing has drifted — no installed-vs-published plugin mismatch, no
@@ -87,6 +87,27 @@ reads that cache, prints (or stays quiet), then — only if the cache is more th
 matching the upstream CI's own fetch cadence — kicks off a detached background refresh of that
 cache for the *next* session to read. A slow or failed network fetch never delays or breaks the
 current session.
+
+## Per-version digest
+
+`/magic-claude-docs:digest` turns a Claude Code version bump into a report: what a plugin's
+declared usage-manifest entries broke, what new capability the plugin could adopt, and a noise
+count for the rest. Run it when the session-start signal above says a digest is pending, or on
+demand.
+
+- **One model call per version, and only once** — `bin/analyze.mjs` is skipped entirely if
+  `~/.claude-code-docs/digests/<version>.json` already exists; the skill tells you before
+  spending that call.
+- **Delivery** posts the digest's markdown to the Atrium room `harness-changes-digest` and opens
+  one tracker card per plugin with at least one break or adoptable capability, using
+  `~/.claude-code-docs/digest-targets.json` to map a plugin to its board — see
+  `plugin/digest/digest-targets.example.json` for the shape. A plugin missing from that file
+  still gets its Atrium mention; only its card is skipped, and the skill says so.
+- **Sub-commands**: `/magic-claude-docs:digest status` (latest digested version vs. running
+  version, whether one is pending) and `/magic-claude-docs:digest show [version]` (print a past
+  digest without running anything).
+
+See `plugin/digest/README.md` for the gather/analyze/mark-delivered CLIs this skill drives.
 
 ## Usage manifest
 

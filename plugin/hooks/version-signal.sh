@@ -190,7 +190,7 @@ if [ -n "$installed_version" ] && [ -n "$published_version" ] && [ "$installed_v
 fi
 
 if [ -n "$claude_version" ] && [ -n "$digested_version" ] && [ "$claude_version" != "$digested_version" ]; then
-  cc_part="Claude Code ${claude_version}, last digested ${digested_version} (see /magic-claude-docs:docs what's new)"
+  cc_part="Claude Code ${claude_version}, last digested ${digested_version} (run /magic-claude-docs:digest)"
   if [ -n "$line_parts" ]; then
     line_parts="${line_parts} · ${cc_part}"
   else
