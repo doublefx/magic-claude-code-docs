@@ -16,8 +16,8 @@
       "original_url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
       "original_raw_url": "https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md",
       "source": "claude-code-repository",
-      "hash": "84104051f9febf18f99dff358c369839737190613def9157f4836d346be47815",
-      "last_updated": "2026-09-10T22:52:45.616570"
+      "hash": "68fed6a4875ba1b20a029d2bdf99c67a43e2ea3771b255cc11def13e5084620b",
+      "last_updated": "2026-09-11T20:22:22.415160"
     },
     "how-claude-code-works.md": {
       "original_url": "https://code.claude.com/docs/en/how-claude-code-works.md",
@@ -307,6 +307,12 @@
       "hash": "c8b179ee93ae6f4ee0a7b01b688153988c893a1cbca544859adea71097d296c0",
       "last_updated": "2026-08-18T21:13:44.512840"
     },
+    "plugin-evals.md": {
+      "original_url": "https://code.claude.com/docs/en/plugin-evals.md",
+      "title": "Test plugins with evals",
+      "hash": "deb713205878e566af85c45fa9903a092f4a69f3614bf081926b932dc632f7f9",
+      "last_updated": "2026-09-11T20:20:45.949242"
+    },
     "artifacts.md": {
       "original_url": "https://code.claude.com/docs/en/artifacts.md",
       "title": "Share session output as artifacts",
@@ -376,8 +382,8 @@
     "errors.md": {
       "original_url": "https://code.claude.com/docs/en/errors.md",
       "title": "Error reference",
-      "hash": "345acc862ea5648a8f74becf40ec968b4f732703feec7375861c4831b0e0adc2",
-      "last_updated": "2026-09-11T17:58:14.836851"
+      "hash": "ab2cc57f7e4529db6091bd2bcb1184152c4ad12ab3656527c9716ad2ab130a5c",
+      "last_updated": "2026-09-11T20:20:54.064714"
     },
     "admin-setup.md": {
       "original_url": "https://code.claude.com/docs/en/admin-setup.md",
@@ -562,8 +568,8 @@
     "plugin-marketplaces.md": {
       "original_url": "https://code.claude.com/docs/en/plugin-marketplaces.md",
       "title": "Create and distribute a plugin marketplace",
-      "hash": "7912af9270337aa00dd39e74120a5aad65065f90b4a15c54eed99cec6ff6d960",
-      "last_updated": "2026-09-10T22:51:24.490157"
+      "hash": "a3e583bb947febc3c586b49138af534d3915ba29e1bbbb5d66b95b1d1a4fa39c",
+      "last_updated": "2026-09-11T20:21:15.370857"
     },
     "plugin-dependencies.md": {
       "original_url": "https://code.claude.com/docs/en/plugin-dependencies.md",
@@ -808,8 +814,8 @@
     "plugins-reference.md": {
       "original_url": "https://code.claude.com/docs/en/plugins-reference.md",
       "title": "Plugins reference",
-      "hash": "c75119ccd8973aad659373d726d412bbe3f5184e6d0ca0d2064512cad255f0a3",
-      "last_updated": "2026-09-10T22:52:00.055357"
+      "hash": "662f5dae085ac8a78da3746b6f3461f9e9a0a8604cfa939b0c7f1c5ddfbe9834",
+      "last_updated": "2026-09-11T20:21:43.039130"
     },
     "channels-reference.md": {
       "original_url": "https://code.claude.com/docs/en/channels-reference.md",
@@ -1097,22 +1103,22 @@
       "original_url": "https://code.claude.com/docs/en/claude_code_docs_map.md",
       "title": "Documentation Map",
       "source": "docs-map",
-      "hash": "b6b7181d8277f1dfcae07fb00e2e3737059605b579250e9e60e2e456ad7fd875",
-      "last_updated": "2026-09-11T17:59:34.147994"
+      "hash": "9675581f72d39e29f18dc7440133c9d632f1f0a3329d17898d39d9d5febc5366",
+      "last_updated": "2026-09-11T20:22:22.329306"
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2026-09-11T17:59:34.171505",
-    "fetch_duration_seconds": 117.220775,
-    "total_pages_discovered": 191,
-    "pages_fetched_successfully": 193,
+    "last_fetch_completed": "2026-09-11T20:22:22.415507",
+    "fetch_duration_seconds": 131.559022,
+    "total_pages_discovered": 192,
+    "pages_fetched_successfully": 194,
     "pages_failed": 0,
     "failed_pages": [],
     "llms_txt_url": "https://code.claude.com/docs/llms.txt",
-    "total_files": 183,
+    "total_files": 184,
     "fetch_tool_version": "4.0"
   },
-  "last_updated": "2026-09-11T17:59:34.171679",
+  "last_updated": "2026-09-11T20:22:22.415687",
   "base_url": "https://raw.githubusercontent.com/doublefx/magic-claude-code-docs/main/plugin/docs/",
   "github_repository": "doublefx/magic-claude-code-docs",
   "github_ref": "main",
