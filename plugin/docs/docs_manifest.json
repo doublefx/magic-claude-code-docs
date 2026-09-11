@@ -490,8 +490,8 @@
     "claude-apps-gateway-config.md": {
       "original_url": "https://code.claude.com/docs/en/claude-apps-gateway-config.md",
       "title": "Claude apps gateway configuration",
-      "hash": "fccdefd966e2e36e6a8ed1218414b8a4d9893d5333a4b0423a8cc642c26ddefd",
-      "last_updated": "2026-09-10T22:51:15.517412"
+      "hash": "3257bfe37d57f4673a2bd0a0cd20daf9780ff3a718ac81280970d97368c04245",
+      "last_updated": "2026-09-11T01:48:26.329995"
     },
     "claude-apps-gateway-spend-limits.md": {
       "original_url": "https://code.claude.com/docs/en/claude-apps-gateway-spend-limits.md",
@@ -1097,13 +1097,13 @@
       "original_url": "https://code.claude.com/docs/en/claude_code_docs_map.md",
       "title": "Documentation Map",
       "source": "docs-map",
-      "hash": "96e14f0bac455447dbec6a541fdd5ca06c7c8c659a3a63b970ea099f4f573834",
-      "last_updated": "2026-09-10T22:52:45.571631"
+      "hash": "db60e2068cfd6f1a231a014feb265fc0740843d3f2377745a42fdf445539ea1a",
+      "last_updated": "2026-09-11T01:50:21.611610"
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2026-09-10T22:52:45.617025",
-    "fetch_duration_seconds": 171.120607,
+    "last_fetch_completed": "2026-09-11T01:50:21.689224",
+    "fetch_duration_seconds": 191.556764,
     "total_pages_discovered": 191,
     "pages_fetched_successfully": 193,
     "pages_failed": 0,
@@ -1112,7 +1112,7 @@
     "total_files": 183,
     "fetch_tool_version": "4.0"
   },
-  "last_updated": "2026-09-10T22:52:45.617205",
+  "last_updated": "2026-09-11T01:50:21.689393",
   "base_url": "https://raw.githubusercontent.com/doublefx/magic-claude-code-docs/main/plugin/docs/",
   "github_repository": "doublefx/magic-claude-code-docs",
   "github_ref": "main",
