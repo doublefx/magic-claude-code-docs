@@ -16,8 +16,8 @@
       "original_url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
       "original_raw_url": "https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md",
       "source": "claude-code-repository",
-      "hash": "7cf021d827d6e7352574b063f048a34c79796c80003eed723cf11331d253a906",
-      "last_updated": "2026-09-22T18:24:48.225491"
+      "hash": "7b122e971bbe1065309c48a132b9c4428246cdcb19c9c583403f3f78d76150f7",
+      "last_updated": "2026-09-23T23:18:13.226149"
     },
     "how-claude-code-works.md": {
       "original_url": "https://code.claude.com/docs/en/how-claude-code-works.md",
@@ -52,8 +52,8 @@
     "memory.md": {
       "original_url": "https://code.claude.com/docs/en/memory.md",
       "title": "How Claude remembers your project",
-      "hash": "998bfbe601b48a8447870289bc007333c5fa8e14ee06eb8e53ceff723f3a29c3",
-      "last_updated": "2026-09-22T18:22:58.504999"
+      "hash": "cf73d3a512d5bab41ed6f22adeb7751ef7e97f022addcf22da091b3830192a8f",
+      "last_updated": "2026-09-23T23:16:01.937572"
     },
     "sessions.md": {
       "original_url": "https://code.claude.com/docs/en/agent-sdk/sessions.md",
@@ -142,14 +142,14 @@
     "web-quickstart.md": {
       "original_url": "https://code.claude.com/docs/en/web-quickstart.md",
       "title": "Get started with Claude Code in the cloud",
-      "hash": "56b31df35fcb954fd588a4c61e1e936bc79a0b6614b442cc4ae49436a1c5c510",
-      "last_updated": "2026-09-19T01:58:33.914689"
+      "hash": "a7da7908371a2bc762d9927ddd3933480e4d3f63c0fc6cc9d3f74c88364db3b4",
+      "last_updated": "2026-09-23T23:16:12.473215"
     },
     "claude-code-on-the-web.md": {
       "original_url": "https://code.claude.com/docs/en/claude-code-on-the-web.md",
       "title": "Use Claude Code in the cloud",
-      "hash": "d04bb7a4e226669025f3e4a9d743c119e8ff412772cbeb4ab1792ac8851d7727",
-      "last_updated": "2026-09-22T18:23:07.757434"
+      "hash": "e5c3075568d1e5c4fd6a162db1df70ca6d4d62649646522db14f1509d5f5b526",
+      "last_updated": "2026-09-23T23:16:13.154753"
     },
     "routines.md": {
       "original_url": "https://code.claude.com/docs/en/routines.md",
@@ -442,8 +442,8 @@
     "feature-availability.md": {
       "original_url": "https://code.claude.com/docs/en/feature-availability.md",
       "title": "Feature availability",
-      "hash": "83284c85d33a8f28c46c0cb27ebe5cd5df4dbd2205170a2cc99efc1c84a04528",
-      "last_updated": "2026-09-18T22:54:25.305937"
+      "hash": "b5a050a0fafbeae368bacf276fc8f9ec67144d1409f3651ef24c503d1b24b2c7",
+      "last_updated": "2026-09-23T23:16:47.342282"
     },
     "amazon-bedrock.md": {
       "original_url": "https://code.claude.com/docs/en/amazon-bedrock.md",
@@ -670,8 +670,8 @@
     "cloud-environments.md": {
       "original_url": "https://code.claude.com/docs/en/cloud-environments.md",
       "title": "Configure cloud environments",
-      "hash": "c9d63745241928252951155fd9168e02986c527c665779691bf43bd97ce81a2b",
-      "last_updated": "2026-09-22T02:09:49.690434"
+      "hash": "d15e4a152e8a4cf38ff0af39789a5b663045c5497b2e7b618de265a37d2f5ab6",
+      "last_updated": "2026-09-23T23:17:13.697564"
     },
     "self-hosted-environments.md": {
       "original_url": "https://code.claude.com/docs/en/self-hosted-environments.md",
@@ -790,8 +790,8 @@
     "env-vars.md": {
       "original_url": "https://code.claude.com/docs/en/env-vars.md",
       "title": "Environment variables",
-      "hash": "9a21dd1e8a8cbc10ddae2a490f693fe2516538d52a0a4594add63537821e3431",
-      "last_updated": "2026-09-23T02:09:29.597242"
+      "hash": "00b2d4746a0cdcc9f6c48dc559f08a388c8bf5ba96c807ee74677cda5bbabc27",
+      "last_updated": "2026-09-23T23:17:27.760131"
     },
     "tools-reference.md": {
       "original_url": "https://code.claude.com/docs/en/tools-reference.md",
@@ -832,8 +832,8 @@
     "glossary.md": {
       "original_url": "https://code.claude.com/docs/en/glossary.md",
       "title": "Glossary",
-      "hash": "6f3e7f5f81253a17d2e0af58fea59cba41244eb793d1841086185b6d928590a5",
-      "last_updated": "2026-09-22T18:24:14.271267"
+      "hash": "6bb9373f9c5efcf494c42bdebc2c1cc19e026abaf523a74da998daa9f84623c3",
+      "last_updated": "2026-09-23T23:17:32.556587"
     },
     "migration-guide.md": {
       "original_url": "https://code.claude.com/docs/en/agent-sdk/migration-guide.md",
@@ -1138,8 +1138,8 @@
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2026-09-23T08:04:33.059955",
-    "fetch_duration_seconds": 136.641789,
+    "last_fetch_completed": "2026-09-23T23:18:13.226617",
+    "fetch_duration_seconds": 137.256217,
     "total_pages_discovered": 197,
     "pages_fetched_successfully": 199,
     "pages_failed": 0,
@@ -1148,7 +1148,7 @@
     "total_files": 189,
     "fetch_tool_version": "4.0"
   },
-  "last_updated": "2026-09-23T08:04:33.060113",
+  "last_updated": "2026-09-23T23:18:13.226793",
   "base_url": "https://raw.githubusercontent.com/doublefx/magic-claude-code-docs/main/plugin/docs/",
   "github_repository": "doublefx/magic-claude-code-docs",
   "github_ref": "main",
