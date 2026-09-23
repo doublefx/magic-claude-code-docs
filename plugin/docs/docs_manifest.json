@@ -118,8 +118,8 @@
     "vs-code.md": {
       "original_url": "https://code.claude.com/docs/en/vs-code.md",
       "title": "Use Claude Code in VS Code",
-      "hash": "9763fafcb81db78fef07111b3a762872df5916d2c519bb7782ae9366aa4d5fc0",
-      "last_updated": "2026-09-22T18:23:04.864517"
+      "hash": "b91492f144964630077fb9ed2dd3cb265305996d0e54ed7bd99b30a32a8732d4",
+      "last_updated": "2026-09-23T02:08:25.337870"
     },
     "jetbrains.md": {
       "original_url": "https://code.claude.com/docs/en/jetbrains.md",
@@ -160,8 +160,8 @@
     "ultrareview.md": {
       "original_url": "https://code.claude.com/docs/en/ultrareview.md",
       "title": "Find bugs with ultrareview",
-      "hash": "94f7ca0029a266ef72bb067fb6a948fd42b0c13d856705f7c0590eaa2d62297d",
-      "last_updated": "2026-09-22T02:09:00.797478"
+      "hash": "54185eb4c63743b5150e24b4fd7fd76aecc567c91dda39f5e843f0f142a9ec6f",
+      "last_updated": "2026-09-23T02:08:29.287884"
     },
     "desktop-quickstart.md": {
       "original_url": "https://code.claude.com/docs/en/desktop-quickstart.md",
@@ -322,8 +322,8 @@
     "artifacts.md": {
       "original_url": "https://code.claude.com/docs/en/artifacts.md",
       "title": "Share session output as artifacts",
-      "hash": "bfa5225c10ef00b13d9b38872285b5ed81db4642174a917adf0e0920d7c43dbe",
-      "last_updated": "2026-09-22T02:09:16.223807"
+      "hash": "eefc1044e42a8d18c90f127e67936beee3dea151671d62561ffe278220dc0485",
+      "last_updated": "2026-09-23T02:08:44.674883"
     },
     "hooks-guide.md": {
       "original_url": "https://code.claude.com/docs/en/hooks-guide.md",
@@ -556,8 +556,8 @@
     "monitoring-usage.md": {
       "original_url": "https://code.claude.com/docs/en/monitoring-usage.md",
       "title": "Monitoring",
-      "hash": "58bf51e5c03936a5f2225957b5c6b17bf1f71426985754331a636b9302b7eb55",
-      "last_updated": "2026-09-22T08:00:50.182213"
+      "hash": "bab6f018dea36274280bde91ed3769bac4745e17516c05419e4d58197640a354",
+      "last_updated": "2026-09-23T02:09:07.104828"
     },
     "costs.md": {
       "original_url": "https://code.claude.com/docs/en/costs.md",
@@ -574,8 +574,8 @@
     "plugin-marketplaces.md": {
       "original_url": "https://code.claude.com/docs/en/plugin-marketplaces.md",
       "title": "Create and distribute a plugin marketplace",
-      "hash": "3bb3dc8b533151aac9c2ee06c3596f15d8f2f1626d12b6824ce3dff53e6c38e4",
-      "last_updated": "2026-09-22T18:23:49.108636"
+      "hash": "f7edcac19aec227330f4df149ed11c9fa4c657cef58ac2719d20d4bb4d153663",
+      "last_updated": "2026-09-23T02:09:08.934589"
     },
     "plugin-dependencies.md": {
       "original_url": "https://code.claude.com/docs/en/plugin-dependencies.md",
@@ -760,8 +760,8 @@
     "voice-dictation.md": {
       "original_url": "https://code.claude.com/docs/en/voice-dictation.md",
       "title": "Voice dictation",
-      "hash": "3fa55fbf8ba47c232e18ba5462b566621220e66c4f98493e7ed45174a1adf08c",
-      "last_updated": "2026-09-15T23:16:44.416867"
+      "hash": "56f0282e19b61cd418e6696f25c45d99bc5492f77012953c3fac029e462e2801",
+      "last_updated": "2026-09-23T02:09:26.701968"
     },
     "statusline.md": {
       "original_url": "https://code.claude.com/docs/en/statusline.md",
@@ -790,8 +790,8 @@
     "env-vars.md": {
       "original_url": "https://code.claude.com/docs/en/env-vars.md",
       "title": "Environment variables",
-      "hash": "a6ffb00019004668fdce55e33af7e26be4559a467ed1da57e3ff48c760bd3287",
-      "last_updated": "2026-09-22T18:24:10.234212"
+      "hash": "9a21dd1e8a8cbc10ddae2a490f693fe2516538d52a0a4594add63537821e3431",
+      "last_updated": "2026-09-23T02:09:29.597242"
     },
     "tools-reference.md": {
       "original_url": "https://code.claude.com/docs/en/tools-reference.md",
@@ -1133,13 +1133,13 @@
       "original_url": "https://code.claude.com/docs/en/claude_code_docs_map.md",
       "title": "Documentation Map",
       "source": "docs-map",
-      "hash": "ac6e0a9f07b3b7f4812e1721ee5f7a5cec87587489528b8f7bf0ecadd6d3ca57",
-      "last_updated": "2026-09-22T23:23:01.544921"
+      "hash": "8d23a5ac0858884352fd1e51e5684be9532d93dced6e41a093651d5e0287838d",
+      "last_updated": "2026-09-23T02:10:07.651666"
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2026-09-22T23:23:01.582894",
-    "fetch_duration_seconds": 138.692791,
+    "last_fetch_completed": "2026-09-23T02:10:07.724826",
+    "fetch_duration_seconds": 113.710124,
     "total_pages_discovered": 197,
     "pages_fetched_successfully": 199,
     "pages_failed": 0,
@@ -1148,7 +1148,7 @@
     "total_files": 189,
     "fetch_tool_version": "4.0"
   },
-  "last_updated": "2026-09-22T23:23:01.583060",
+  "last_updated": "2026-09-23T02:10:07.724991",
   "base_url": "https://raw.githubusercontent.com/doublefx/magic-claude-code-docs/main/plugin/docs/",
   "github_repository": "doublefx/magic-claude-code-docs",
   "github_ref": "main",
