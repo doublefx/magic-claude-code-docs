@@ -16,8 +16,8 @@
       "original_url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
       "original_raw_url": "https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md",
       "source": "claude-code-repository",
-      "hash": "7b122e971bbe1065309c48a132b9c4428246cdcb19c9c583403f3f78d76150f7",
-      "last_updated": "2026-09-23T23:18:13.226149"
+      "hash": "fcba7af12cf952b017613d729270ccd0d6dc3549216c73bce002396da66896bf",
+      "last_updated": "2026-09-24T18:45:18.252165"
     },
     "how-claude-code-works.md": {
       "original_url": "https://code.claude.com/docs/en/how-claude-code-works.md",
@@ -316,8 +316,8 @@
     "plugin-evals.md": {
       "original_url": "https://code.claude.com/docs/en/plugin-evals.md",
       "title": "Test plugins with evals",
-      "hash": "c371e3b73da971a1aa924c6430ca07d57ead45803f250ce4fa1f278fbe65834d",
-      "last_updated": "2026-09-22T02:09:15.664492"
+      "hash": "72f14986af50e76d46622abc6bb821652c3921cb53a82faa3847e10ab90fa6a4",
+      "last_updated": "2026-09-24T18:43:51.733949"
     },
     "artifacts.md": {
       "original_url": "https://code.claude.com/docs/en/artifacts.md",
@@ -412,14 +412,14 @@
     "managed-settings.md": {
       "original_url": "https://code.claude.com/docs/en/managed-settings.md",
       "title": "Deploy managed settings",
-      "hash": "34887612d23b1657e3daf32b3bf9391c689c3fd27b002213c5efed806887ccc1",
-      "last_updated": "2026-09-22T08:00:35.864035"
+      "hash": "87ce9c1e0e94a4f12aef3855f067ec5d28f22dcaa4c6f3a65bdad497ef1ceac8",
+      "last_updated": "2026-09-24T18:44:01.221531"
     },
     "server-managed-settings.md": {
       "original_url": "https://code.claude.com/docs/en/server-managed-settings.md",
       "title": "Configure server-managed settings",
-      "hash": "a87aff031ad28c284ce86fa3dd0f2da0b9b27d08428ac724726fd10816efa5e8",
-      "last_updated": "2026-09-22T02:09:25.426833"
+      "hash": "e4f266992dd34956683a298a03f8cfb3c2cc7054cfa77eb40b265201f5d29c01",
+      "last_updated": "2026-09-24T18:44:01.792732"
     },
     "managed-mcp.md": {
       "original_url": "https://code.claude.com/docs/en/managed-mcp.md",
@@ -562,8 +562,8 @@
     "costs.md": {
       "original_url": "https://code.claude.com/docs/en/costs.md",
       "title": "Manage costs effectively",
-      "hash": "0a5e6c706ac1ac7501867af5fdae3468430f45a79b2fdaf9b9d0f5b5efba8ead",
-      "last_updated": "2026-09-22T18:23:47.934338"
+      "hash": "ed3284e9c78d975ddfb9f17352d90682d68068b0f83b09632e7bfd613a20cb6c",
+      "last_updated": "2026-09-24T18:44:15.549083"
     },
     "analytics.md": {
       "original_url": "https://code.claude.com/docs/en/analytics.md",
@@ -574,8 +574,8 @@
     "plugin-marketplaces.md": {
       "original_url": "https://code.claude.com/docs/en/plugin-marketplaces.md",
       "title": "Create and distribute a plugin marketplace",
-      "hash": "f7edcac19aec227330f4df149ed11c9fa4c657cef58ac2719d20d4bb4d153663",
-      "last_updated": "2026-09-23T02:09:08.934589"
+      "hash": "931883031a8355e09b2fdb6f7f309f4d27e101290de47ec1108467306c183fdf",
+      "last_updated": "2026-09-24T18:44:16.686134"
     },
     "plugin-dependencies.md": {
       "original_url": "https://code.claude.com/docs/en/plugin-dependencies.md",
@@ -634,8 +634,8 @@
     "settings-reference.md": {
       "original_url": "https://code.claude.com/docs/en/settings-reference.md",
       "title": "All settings",
-      "hash": "062f275b2544f297854e22784333c067a8db5161fc62293ead80a81bdd2f57ea",
-      "last_updated": "2026-09-22T18:23:54.909964"
+      "hash": "06cca10773bfbbf9c1a2871e0c157ef01e1f49b03abb92109ce168a59ffa2dca",
+      "last_updated": "2026-09-24T18:44:22.558655"
     },
     "settings-example.md": {
       "original_url": "https://code.claude.com/docs/en/settings-example.md",
@@ -802,8 +802,8 @@
     "interactive-mode.md": {
       "original_url": "https://code.claude.com/docs/en/interactive-mode.md",
       "title": "Interactive mode",
-      "hash": "8085b82e29ff4fe310a4ec034256dd815ae333615101c1e25a84ace4f948f781",
-      "last_updated": "2026-09-22T18:24:11.360913"
+      "hash": "a32b82668f06eddb14430380be391afd6b7a8a94ff754759e093c1bcf8dfac65",
+      "last_updated": "2026-09-24T18:44:40.052213"
     },
     "checkpointing.md": {
       "original_url": "https://code.claude.com/docs/en/checkpointing.md",
@@ -1133,13 +1133,13 @@
       "original_url": "https://code.claude.com/docs/en/claude_code_docs_map.md",
       "title": "Documentation Map",
       "source": "docs-map",
-      "hash": "a9973fde16f2868055b18b823191ae4a0a195eab6c99c04762ba997d1201e749",
-      "last_updated": "2026-09-23T08:04:32.948162"
+      "hash": "5046e075b9c01736ae0776c9f176357a18217c5f6c366ddf8b260f009c8e0fec",
+      "last_updated": "2026-09-24T18:45:18.228448"
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2026-09-23T23:18:13.226617",
-    "fetch_duration_seconds": 137.256217,
+    "last_fetch_completed": "2026-09-24T18:45:18.252512",
+    "fetch_duration_seconds": 116.656609,
     "total_pages_discovered": 197,
     "pages_fetched_successfully": 199,
     "pages_failed": 0,
@@ -1148,7 +1148,7 @@
     "total_files": 189,
     "fetch_tool_version": "4.0"
   },
-  "last_updated": "2026-09-23T23:18:13.226793",
+  "last_updated": "2026-09-24T18:45:18.252673",
   "base_url": "https://raw.githubusercontent.com/doublefx/magic-claude-code-docs/main/plugin/docs/",
   "github_repository": "doublefx/magic-claude-code-docs",
   "github_ref": "main",
