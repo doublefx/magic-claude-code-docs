@@ -16,8 +16,8 @@
       "original_url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
       "original_raw_url": "https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md",
       "source": "claude-code-repository",
-      "hash": "fcba7af12cf952b017613d729270ccd0d6dc3549216c73bce002396da66896bf",
-      "last_updated": "2026-09-24T18:45:18.252165"
+      "hash": "bb702d0bc3201302ebbf201347ebf378e99acb57691903cf17398e5615f691c7",
+      "last_updated": "2026-09-25T08:17:54.442169"
     },
     "how-claude-code-works.md": {
       "original_url": "https://code.claude.com/docs/en/how-claude-code-works.md",
@@ -82,8 +82,8 @@
     "platforms.md": {
       "original_url": "https://code.claude.com/docs/en/platforms.md",
       "title": "Platforms and integrations",
-      "hash": "e5784da100963ffbccfaa60e9d5f4abf0fe38961db177ffdcbbfa2a3c7a4450f",
-      "last_updated": "2026-09-17T18:39:29.073631"
+      "hash": "e37f6bce6e8c3d01dce14340cf39a7497562f805ef4334483b585bf2c246cfe0",
+      "last_updated": "2026-09-25T08:15:39.481057"
     },
     "remote-control.md": {
       "original_url": "https://code.claude.com/docs/en/remote-control.md",
@@ -132,12 +132,6 @@
       "title": "Claude Code in Slack",
       "hash": "fad994fe30d351cb5464860bd276ddceb8ee9dfb6496f55b9a493f3bd97ef5ff",
       "last_updated": "2026-09-22T18:23:06.034443"
-    },
-    "claude-tag.md": {
-      "original_url": "https://code.claude.com/docs/en/claude-tag.md",
-      "title": "Claude Tag",
-      "hash": "71a0a4e6c77545d48c76a50df303a62f20d933d79939fd42e4af178f3ff241fd",
-      "last_updated": "2026-08-10T21:30:16.420437"
     },
     "web-quickstart.md": {
       "original_url": "https://code.claude.com/docs/en/web-quickstart.md",
@@ -598,8 +592,8 @@
     "claude-apps-gateway-config.md": {
       "original_url": "https://code.claude.com/docs/en/claude-apps-gateway-config.md",
       "title": "Claude apps gateway configuration",
-      "hash": "007c141fe2f1b4d7ef7c0f122173398991ade3c5d980200378b1e1a0d25de282",
-      "last_updated": "2026-09-19T01:59:11.547809"
+      "hash": "eb1a339af8b170acad411c4a1056c3696b21ac824f96e639ec9fb117d8051dbe",
+      "last_updated": "2026-09-25T08:16:42.389726"
     },
     "claude-apps-gateway-spend-limits.md": {
       "original_url": "https://code.claude.com/docs/en/claude-apps-gateway-spend-limits.md",
@@ -610,8 +604,8 @@
     "claude-apps-gateway-deploy.md": {
       "original_url": "https://code.claude.com/docs/en/claude-apps-gateway-deploy.md",
       "title": "Claude apps gateway deployment and operations",
-      "hash": "4ab7b2a4a5978c2ee53e8834fe69015fc62d15ffeef94f00e6d8bd64ea7d1f71",
-      "last_updated": "2026-09-19T01:59:12.759628"
+      "hash": "22adc36166583f677eed16c08cae06f17e55f3c5a04ab5089724c79ecec74e19",
+      "last_updated": "2026-09-25T08:16:43.693714"
     },
     "claude-apps-gateway-on-aws.md": {
       "original_url": "https://code.claude.com/docs/en/claude-apps-gateway-on-aws.md",
@@ -676,8 +670,8 @@
     "zero-data-retention.md": {
       "original_url": "https://code.claude.com/docs/en/zero-data-retention.md",
       "title": "Zero data retention",
-      "hash": "a05ce9c2d3cbb01e3364614f919f001b325d666ac6ac70ba8a4f24f727b8c819",
-      "last_updated": "2026-09-15T23:16:25.833387"
+      "hash": "24c79ef0276402111aaa2b5944ce3b2e6632812149aeb53659e57410d58aeb5c",
+      "last_updated": "2026-09-25T08:16:52.024127"
     },
     "communications-kit.md": {
       "original_url": "https://code.claude.com/docs/en/communications-kit.md",
@@ -1193,22 +1187,24 @@
       "original_url": "https://code.claude.com/docs/en/claude_code_docs_map.md",
       "title": "Documentation Map",
       "source": "docs-map",
-      "hash": "558c946b55e3f884f23aad0fcfa9e3d857eba7f058e02768fffd23273ccbfb45",
-      "last_updated": "2026-09-25T02:14:16.828867"
+      "hash": "704e153bcce17b9404adcac635a34e8003491d14f632b0154a4268a5f73a4abc",
+      "last_updated": "2026-09-25T08:17:54.382904"
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2026-09-25T02:14:16.866651",
-    "fetch_duration_seconds": 120.450202,
+    "last_fetch_completed": "2026-09-25T08:17:54.442686",
+    "fetch_duration_seconds": 144.462304,
     "total_pages_discovered": 210,
-    "pages_fetched_successfully": 212,
-    "pages_failed": 0,
-    "failed_pages": [],
+    "pages_fetched_successfully": 211,
+    "pages_failed": 1,
+    "failed_pages": [
+      "https://code.claude.com/docs/en/claude-tag.md"
+    ],
     "llms_txt_url": "https://code.claude.com/docs/llms.txt",
-    "total_files": 199,
+    "total_files": 198,
     "fetch_tool_version": "4.0"
   },
-  "last_updated": "2026-09-25T02:14:16.866845",
+  "last_updated": "2026-09-25T08:17:54.442818",
   "base_url": "https://raw.githubusercontent.com/doublefx/magic-claude-code-docs/main/plugin/docs/",
   "github_repository": "doublefx/magic-claude-code-docs",
   "github_ref": "main",
