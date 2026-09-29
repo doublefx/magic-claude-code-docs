@@ -496,8 +496,8 @@
     "authentication.md": {
       "original_url": "https://code.claude.com/docs/en/authentication.md",
       "title": "Authentication",
-      "hash": "265ebd5df6ffc6bfc0e0e7c904cd113ab5de8c55d290956b6f996657d8c6aa94",
-      "last_updated": "2026-09-29T00:42:38.697814"
+      "hash": "bbe9415eba2aee489d5dfab25fcca10bcc1f3465ffba6dd59fe20ede952b9a25",
+      "last_updated": "2026-09-29T09:11:38.391696"
     },
     "managed-settings.md": {
       "original_url": "https://code.claude.com/docs/en/managed-settings.md",
@@ -1192,8 +1192,8 @@
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2026-09-29T00:44:01.822202",
-    "fetch_duration_seconds": 145.584641,
+    "last_fetch_completed": "2026-09-29T09:12:48.403605",
+    "fetch_duration_seconds": 121.503374,
     "total_pages_discovered": 210,
     "pages_fetched_successfully": 211,
     "pages_failed": 1,
@@ -1204,7 +1204,7 @@
     "total_files": 198,
     "fetch_tool_version": "4.0"
   },
-  "last_updated": "2026-09-29T00:44:01.822368",
+  "last_updated": "2026-09-29T09:12:48.403775",
   "base_url": "https://raw.githubusercontent.com/doublefx/magic-claude-code-docs/main/plugin/docs/",
   "github_repository": "doublefx/magic-claude-code-docs",
   "github_ref": "main",
