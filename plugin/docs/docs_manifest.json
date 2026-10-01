@@ -172,8 +172,8 @@
     "desktop-linux.md": {
       "original_url": "https://code.claude.com/docs/en/desktop-linux.md",
       "title": "Claude Desktop on Linux (beta)",
-      "hash": "f7bf024f7ce37928c102592ac8234ec52efda4b65f7981b42effb64f98e386e8",
-      "last_updated": "2026-09-29T17:09:20.735133"
+      "hash": "233ad12a2537e189d3205f16d022a9e90513adc96473e3599902eb1cc7cf8a8c",
+      "last_updated": "2026-10-01T17:37:19.446520"
     },
     "desktop-wsl.md": {
       "original_url": "https://code.claude.com/docs/en/desktop-wsl.md",
@@ -1012,8 +1012,8 @@
     "typescript.md": {
       "original_url": "https://code.claude.com/docs/en/agent-sdk/typescript.md",
       "title": "Agent SDK reference - TypeScript",
-      "hash": "695a0de1702947d9e741109465d121644aa79dd9f092a321ddbafb4dd679e1fa",
-      "last_updated": "2026-10-01T09:33:43.993495"
+      "hash": "82f74f9d573e961d6e41cab3653a2d16a2acc82a4068e618b2fea648071b0b72",
+      "last_updated": "2026-10-01T17:39:06.210383"
     },
     "typescript-v2-preview.md": {
       "original_url": "https://code.claude.com/docs/en/agent-sdk/typescript-v2-preview.md",
@@ -1024,8 +1024,8 @@
     "python.md": {
       "original_url": "https://code.claude.com/docs/en/agent-sdk/python.md",
       "title": "Agent SDK reference - Python",
-      "hash": "89e5075f596f03bd6f4a011f44aef7d1ff4766f21533e60956ca6ffb0b8d34ee",
-      "last_updated": "2026-10-01T09:33:45.296367"
+      "hash": "1d28092277104fb1134a2c8b584b754b85713e39fdec4714a17bea0348c5be4c",
+      "last_updated": "2026-10-01T17:39:07.581110"
     },
     "index.md": {
       "original_url": "https://code.claude.com/docs/en/whats-new/index.md",
@@ -1187,13 +1187,13 @@
       "original_url": "https://code.claude.com/docs/en/claude_code_docs_map.md",
       "title": "Documentation Map",
       "source": "docs-map",
-      "hash": "b577d9d84de654e7a6daeffc87af2c73a791951cc76f143ebeeaf8fd910ecde0",
-      "last_updated": "2026-10-01T09:34:02.626256"
+      "hash": "12c189c58b4699ab2ce685da78e9025c678d6ae8c15df9479b23fa1f53b91bf4",
+      "last_updated": "2026-10-01T17:39:25.414841"
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2026-10-01T09:34:02.715453",
-    "fetch_duration_seconds": 138.705863,
+    "last_fetch_completed": "2026-10-01T17:39:25.600134",
+    "fetch_duration_seconds": 145.99253,
     "total_pages_discovered": 210,
     "pages_fetched_successfully": 211,
     "pages_failed": 1,
@@ -1204,7 +1204,7 @@
     "total_files": 198,
     "fetch_tool_version": "4.0"
   },
-  "last_updated": "2026-10-01T09:34:02.715661",
+  "last_updated": "2026-10-01T17:39:25.600318",
   "base_url": "https://raw.githubusercontent.com/doublefx/magic-claude-code-docs/main/plugin/docs/",
   "github_repository": "doublefx/magic-claude-code-docs",
   "github_ref": "main",
