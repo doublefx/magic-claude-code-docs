@@ -16,8 +16,8 @@
       "original_url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
       "original_raw_url": "https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md",
       "source": "claude-code-repository",
-      "hash": "2d9a00d24344456592763ad2b07359c4ab403c59e89fe254f6de4c4cbbe9fd3b",
-      "last_updated": "2026-10-01T22:06:58.917857"
+      "hash": "c2ae1f560defe43ec2db81f86dfd9c86f798cc500498b4a03dc1df47234ecf1f",
+      "last_updated": "2026-10-02T21:33:44.018446"
     },
     "how-claude-code-works.md": {
       "original_url": "https://code.claude.com/docs/en/how-claude-code-works.md",
@@ -118,8 +118,8 @@
     "vs-code.md": {
       "original_url": "https://code.claude.com/docs/en/vs-code.md",
       "title": "Use Claude Code in VS Code",
-      "hash": "f609f3246c2c96d9ea97ec718b918f00041c93947c6b6ab4225cf329006aa6f2",
-      "last_updated": "2026-10-02T16:56:19.061997"
+      "hash": "cafeb169a191777e85d948bde8a77b6bf152b7690ea39f20a7863408d64ae7e6",
+      "last_updated": "2026-10-02T21:30:56.813210"
     },
     "jetbrains.md": {
       "original_url": "https://code.claude.com/docs/en/jetbrains.md",
@@ -892,20 +892,20 @@
     "env-vars.md": {
       "original_url": "https://code.claude.com/docs/en/env-vars.md",
       "title": "Environment variables",
-      "hash": "12c0610fffce0e67ee4ed2895b889c43283bb94f6dd47f5be5af8924f5a778db",
-      "last_updated": "2026-10-02T16:57:52.973734"
+      "hash": "87f1f7176be1511a0eff52325e5fd265657b8bf7d41d70424587b4d7cea27ea5",
+      "last_updated": "2026-10-02T21:33:06.034425"
     },
     "tools-reference.md": {
       "original_url": "https://code.claude.com/docs/en/tools-reference.md",
       "title": "Tools reference",
-      "hash": "ef0e0d896cb541ec19366ce30b1621410b7adcdf6f4fb572fa6c658f62f14f60",
-      "last_updated": "2026-10-02T16:57:53.665740"
+      "hash": "0a8a853a7645902ac5e0e5018e00a84878982f1c09d1daa015e9d756023b5131",
+      "last_updated": "2026-10-02T21:33:06.631940"
     },
     "interactive-mode.md": {
       "original_url": "https://code.claude.com/docs/en/interactive-mode.md",
       "title": "Interactive mode",
-      "hash": "5a47b88a40a74f2a07a8e09cd099acdf182618bf7a1bb1363a1de84f54972e14",
-      "last_updated": "2026-10-02T16:57:54.358189"
+      "hash": "adf8e9dc045b64ff6909fa94c989b5fa4c314614b9555befc03a37b4621a8dd0",
+      "last_updated": "2026-10-02T21:33:07.234772"
     },
     "checkpointing.md": {
       "original_url": "https://code.claude.com/docs/en/checkpointing.md",
@@ -928,8 +928,8 @@
     "glossary.md": {
       "original_url": "https://code.claude.com/docs/en/glossary.md",
       "title": "Glossary",
-      "hash": "12d7dde60bbf47e0501ac7aa5b12641b2d06b00e89ab7b89f2af90ac0f228761",
-      "last_updated": "2026-09-30T21:37:24.443328"
+      "hash": "13491643c25a857bcb6f334a422971873455cf60581b7f214269d582866beb06",
+      "last_updated": "2026-10-02T21:33:09.660997"
     },
     "migration-guide.md": {
       "original_url": "https://code.claude.com/docs/en/agent-sdk/migration-guide.md",
@@ -1240,8 +1240,8 @@
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2026-10-02T16:58:38.045929",
-    "fetch_duration_seconds": 152.47582,
+    "last_fetch_completed": "2026-10-02T21:33:44.018889",
+    "fetch_duration_seconds": 180.295043,
     "total_pages_discovered": 220,
     "pages_fetched_successfully": 221,
     "pages_failed": 1,
@@ -1252,7 +1252,7 @@
     "total_files": 206,
     "fetch_tool_version": "4.0"
   },
-  "last_updated": "2026-10-02T16:58:38.046096",
+  "last_updated": "2026-10-02T21:33:44.019069",
   "base_url": "https://raw.githubusercontent.com/doublefx/magic-claude-code-docs/main/plugin/docs/",
   "github_repository": "doublefx/magic-claude-code-docs",
   "github_ref": "main",
