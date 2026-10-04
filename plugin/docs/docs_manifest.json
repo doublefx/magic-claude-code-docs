@@ -34,8 +34,8 @@
     "claude-directory.md": {
       "original_url": "https://code.claude.com/docs/en/claude-directory.md",
       "title": "Explore the .claude directory",
-      "hash": "327bcc9e6f6ea0ca6a23dfa2f83249848a3be91eb3cbdc9eb8499963f1a62f94",
-      "last_updated": "2026-10-04T11:26:42.822103"
+      "hash": "ada65719991b700cd65351402efaa7575fd2b00205aae5915afbe41410ccd178",
+      "last_updated": "2026-10-04T20:34:27.798297"
     },
     "context-window.md": {
       "original_url": "https://code.claude.com/docs/en/context-window.md",
@@ -1235,13 +1235,13 @@
       "original_url": "https://code.claude.com/docs/en/claude_code_docs_map.md",
       "title": "Documentation Map",
       "source": "docs-map",
-      "hash": "40db022cbd0ec04a334beb5a20f7852fbd4380b405e71c675f7c6909343f2384",
-      "last_updated": "2026-10-04T11:28:43.577076"
+      "hash": "ec474236bddcf29edfc1ec3f0de2a1454a9be29c578179114d6041dbb81a328a",
+      "last_updated": "2026-10-04T20:36:40.573418"
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2026-10-04T16:06:39.570431",
-    "fetch_duration_seconds": 144.099423,
+    "last_fetch_completed": "2026-10-04T20:36:40.674220",
+    "fetch_duration_seconds": 136.315444,
     "total_pages_discovered": 220,
     "pages_fetched_successfully": 221,
     "pages_failed": 1,
@@ -1252,7 +1252,7 @@
     "total_files": 206,
     "fetch_tool_version": "4.0"
   },
-  "last_updated": "2026-10-04T16:06:39.570610",
+  "last_updated": "2026-10-04T20:36:40.674360",
   "base_url": "https://raw.githubusercontent.com/doublefx/magic-claude-code-docs/main/plugin/docs/",
   "github_repository": "doublefx/magic-claude-code-docs",
   "github_ref": "main",
