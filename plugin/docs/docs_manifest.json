@@ -1252,8 +1252,8 @@
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2026-10-10T20:49:58.690292",
-    "fetch_duration_seconds": 138.963838,
+    "last_fetch_completed": "2026-10-10T23:58:31.213266",
+    "fetch_duration_seconds": 145.150504,
     "total_pages_discovered": 222,
     "pages_fetched_successfully": 223,
     "pages_failed": 1,
@@ -1264,7 +1264,7 @@
     "total_files": 208,
     "fetch_tool_version": "4.0"
   },
-  "last_updated": "2026-10-10T20:49:58.690471",
+  "last_updated": "2026-10-10T23:58:31.213468",
   "base_url": "https://raw.githubusercontent.com/doublefx/magic-claude-code-docs/main/plugin/docs/",
   "github_repository": "doublefx/magic-claude-code-docs",
   "github_ref": "main",
