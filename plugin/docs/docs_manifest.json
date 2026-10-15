@@ -166,8 +166,8 @@
     "desktop.md": {
       "original_url": "https://code.claude.com/docs/en/desktop.md",
       "title": "Desktop application",
-      "hash": "dfef62b5eed27890a6cc8633d551766c586f34149f0a8e78a309bea4e20b520c",
-      "last_updated": "2026-10-15T02:07:25.746896"
+      "hash": "f720b3bc5215edfa3c06abd62f00b0049cf8ebe79e4c601ddea8e052babfbb9c",
+      "last_updated": "2026-10-15T07:47:38.252427"
     },
     "desktop-linux.md": {
       "original_url": "https://code.claude.com/docs/en/desktop-linux.md",
@@ -1247,13 +1247,13 @@
       "original_url": "https://code.claude.com/docs/en/claude_code_docs_map.md",
       "title": "Documentation Map",
       "source": "docs-map",
-      "hash": "9a3ef6a00048f7439ffb325199d8ecaf5fa7f4a0a58abbe2e7f2e234cb12f7a2",
-      "last_updated": "2026-10-15T02:09:38.547079"
+      "hash": "3f395b7b91fd0e3462043dbfd249acd33fea06dfa0e8ff58997a67f8d711dab6",
+      "last_updated": "2026-10-15T07:49:47.454055"
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2026-10-15T02:09:38.845569",
-    "fetch_duration_seconds": 152.579851,
+    "last_fetch_completed": "2026-10-15T07:49:47.479857",
+    "fetch_duration_seconds": 148.175232,
     "total_pages_discovered": 222,
     "pages_fetched_successfully": 223,
     "pages_failed": 1,
@@ -1264,7 +1264,7 @@
     "total_files": 208,
     "fetch_tool_version": "4.0"
   },
-  "last_updated": "2026-10-15T02:09:38.845741",
+  "last_updated": "2026-10-15T07:49:47.480048",
   "base_url": "https://raw.githubusercontent.com/doublefx/magic-claude-code-docs/main/plugin/docs/",
   "github_repository": "doublefx/magic-claude-code-docs",
   "github_ref": "main",
