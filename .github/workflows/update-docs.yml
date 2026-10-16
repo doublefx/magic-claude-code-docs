@@ -18,6 +18,7 @@ jobs:
   update-docs:
     outputs:
       release_tag: ${{ steps.release.outputs.tag }}
+      release_ref: ${{ steps.release.outputs.ref }}
     runs-on: ubuntu-latest
 
     steps:
@@ -197,12 +198,19 @@ jobs:
       run: |
         VERSION=$(jq -r '.version' plugin/.claude-plugin/plugin.json)
         TAG="v$VERSION"
+        # The commit just pushed above. The release is a DRAFT pinned to it:
+        # the repository has immutable releases on, so the embeddings job
+        # must attach its files before publishing it.
+        REF=$(git rev-parse HEAD)
         if gh release view "$TAG" >/dev/null 2>&1; then
           echo "Release $TAG already exists, skipping"
+          REF=$(gh release view "$TAG" --json targetCommitish --jq '.targetCommitish')
         else
           NOTES_FILE=$(mktemp)
           printf '## Claude Code Documentation Mirror %s\n\nThis release includes the latest updates to the Claude Code documentation mirror.\n\n### Installation\n\n```bash\nclaude plugin marketplace add https://github.com/doublefx/magic-claude-code-docs\nclaude plugin install magic-claude-docs\n```\n' "$TAG" > "$NOTES_FILE"
           gh release create "$TAG" \
+            --draft \
+            --target "$REF" \
             --title "Claude Code Docs $TAG" \
             --generate-notes \
             --notes-file "$NOTES_FILE"
@@ -212,6 +220,7 @@ jobs:
         # GITHUB_TOKEN never fires other workflows' `on: release`, so the
         # export must be called from THIS workflow).
         echo "tag=$TAG" >> "$GITHUB_OUTPUT"
+        echo "ref=$REF" >> "$GITHUB_OUTPUT"
 
     - name: Create issue on failure
       if: steps.fetch-docs.outputs.fetch_failed == 'true'
@@ -250,9 +259,35 @@ jobs:
   # plugin's first `search` downloads ~21 MB instead of embedding for 20 minutes.
   embeddings:
     needs: update-docs
-    if: needs.update-docs.outputs.release_tag != ''
+    # Unless cancelled: a later step failing (the issue on fetch failure)
+    # must not strand the draft created above.
+    if: ${{ !cancelled() && needs.update-docs.outputs.release_tag != '' }}
     uses: ./.github/workflows/embeddings.yml
     with:
       tag: ${{ needs.update-docs.outputs.release_tag }}
+      ref: ${{ needs.update-docs.outputs.release_ref }}
     permissions:
       contents: write
+
+  # Safety net for the draft-then-publish release flow: a draft whose
+  # embeddings run was force-cancelled or timed out before its publish step
+  # would never be published. Drafts older than 3 hours (the embeddings job
+  # times out at 90 minutes) are published as they are; the plugin then falls
+  # back to embedding locally for that release.
+  publish-stranded-drafts:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+    - name: Publish release drafts older than 3 hours
+      run: |
+        set -e
+        CUTOFF=$(date -u -d '3 hours ago' +%Y-%m-%dT%H:%M:%SZ)
+        gh release list -R "$GITHUB_REPOSITORY" --limit 50 --json tagName,isDraft,createdAt \
+          --jq ".[] | select(.isDraft and .createdAt < \"$CUTOFF\" and (.tagName | test(\"^v[0-9]{4}\\\\.[0-9]+\\\\.[0-9]+\\\\.[0-9]+$\"))) | .tagName" \
+          | while read -r t; do
+              gh release edit "$t" -R "$GITHUB_REPOSITORY" --draft=false
+              echo "::warning::Published stranded draft $t (its embeddings run never published it)"
+            done

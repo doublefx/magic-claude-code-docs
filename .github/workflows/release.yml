@@ -16,6 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       tag: ${{ steps.version.outputs.tag }}
+      ref: ${{ github.sha }}
 
     steps:
     - name: Checkout repository
@@ -44,10 +45,14 @@ jobs:
       env:
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+    # A DRAFT, pinned to this commit: the repository has immutable releases on,
+    # so the embeddings job must attach its files before publishing it.
     - name: Create release
       if: steps.check_release.outputs.exists == 'false'
       run: |
         gh release create "${{ steps.version.outputs.tag }}" \
+          --draft \
+          --target "${{ github.sha }}" \
           --title "Claude Code Docs ${{ steps.version.outputs.tag }}" \
           --generate-notes \
           --notes "
@@ -77,9 +82,11 @@ jobs:
   # called from here, right after the release step).
   embeddings:
     needs: release
-    if: needs.release.outputs.tag != ''
+    # Unless cancelled: a draft already created must still be published.
+    if: ${{ !cancelled() && needs.release.outputs.tag != '' }}
     uses: ./.github/workflows/embeddings.yml
     with:
       tag: ${{ needs.release.outputs.tag }}
+      ref: ${{ needs.release.outputs.ref }}
     permissions:
       contents: write

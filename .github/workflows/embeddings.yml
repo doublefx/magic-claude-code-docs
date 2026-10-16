@@ -8,17 +8,29 @@ on:
   # Called by update-docs.yml right after it creates the release: a release
   # created with GITHUB_TOKEN never triggers `on: release` in another
   # workflow, so a `release:` trigger here would never fire.
+  #
+  # The repository has GitHub immutable releases on: assets can only be
+  # attached while the release is a DRAFT. Callers create the release as a
+  # draft; this workflow attaches the files, then publishes it.
   workflow_call:
     inputs:
       tag:
-        description: 'Release tag to attach embeddings to (e.g. v2026.9.6.1)'
+        description: 'Draft release tag to attach embeddings to (e.g. v2026.9.6.1)'
+        required: true
+        type: string
+      ref:
+        description: 'Commit to export from (a draft release has no git tag yet)'
         required: true
         type: string
   workflow_dispatch:
     inputs:
       tag:
-        description: 'Release tag to attach embeddings to (e.g. v2026.9.6.1)'
+        description: 'Draft release tag to attach embeddings to (e.g. v2026.9.6.1)'
         required: true
+        type: string
+      ref:
+        description: 'Commit to export from (default: the draft release target)'
+        required: false
         type: string
 
 concurrency:
@@ -36,24 +48,52 @@ jobs:
       TAG: ${{ inputs.tag }}
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
-      - name: Checkout release tag
+      # A published release is immutable: no asset can be added to it, so a
+      # rerun against one would export for 20 minutes and then fail the upload.
+      - name: Check the release is still a draft
+        id: draft
+        run: |
+          set -e
+          DRAFT=$(gh release view "$TAG" -R "$GITHUB_REPOSITORY" --json isDraft --jq '.isDraft')
+          echo "draft=$DRAFT" >> "$GITHUB_OUTPUT"
+          if [ "$DRAFT" != "true" ]; then
+            echo "::notice::$TAG is already published (immutable): its assets cannot change, nothing exported"
+          fi
+
+      - name: Resolve the commit to export
+        id: ref
+        if: steps.draft.outputs.draft == 'true'
+        run: |
+          set -e
+          REF="${{ inputs.ref }}"
+          if [ -z "$REF" ]; then
+            REF=$(gh release view "$TAG" -R "$GITHUB_REPOSITORY" --json targetCommitish --jq '.targetCommitish')
+          fi
+          echo "ref=$REF" >> "$GITHUB_OUTPUT"
+
+      - name: Checkout the release commit
+        if: steps.draft.outputs.draft == 'true'
         uses: actions/checkout@v4
         with:
-          ref: ${{ env.TAG }}
+          ref: ${{ steps.ref.outputs.ref }}
 
       - name: Set up Node.js
+        if: steps.draft.outputs.draft == 'true'
         uses: actions/setup-node@v4
         with:
           node-version: 24
 
       - name: Enable pnpm via corepack
+        if: steps.draft.outputs.draft == 'true'
         run: corepack enable pnpm
 
       - name: Install dependencies
+        if: steps.draft.outputs.draft == 'true'
         working-directory: plugin/search
         run: pnpm install --frozen-lockfile
 
       - name: Download previous release's embeddings (incremental base, if any)
+        if: steps.draft.outputs.draft == 'true'
         id: previous
         run: |
           set -e
@@ -61,7 +101,7 @@ jobs:
           # carries an embeddings.bin asset. Absence is normal (first run
           # ever, or the immediately-preceding release predates this
           # workflow) and must not fail the job.
-          PREV_TAG=$(gh release list --limit 20 --json tagName,publishedAt \
+          PREV_TAG=$(gh release list --exclude-drafts --limit 20 --json tagName,publishedAt \
             --jq '[.[] | select(.tagName != env.TAG)] | sort_by(.publishedAt) | reverse | .[].tagName' \
             | while read -r t; do
                 if gh release view "$t" --json assets --jq '.assets[].name' 2>/dev/null | grep -qx 'embeddings.bin'; then
@@ -80,6 +120,7 @@ jobs:
           fi
 
       - name: Export embeddings for this release
+        if: steps.draft.outputs.draft == 'true'
         working-directory: plugin/search
         run: |
           set -e
@@ -94,9 +135,24 @@ jobs:
           fi
           node bin/export-embeddings.mjs $ARGS
 
-      - name: Upload embeddings to the release
+      - name: Upload embeddings to the draft release
+        if: steps.draft.outputs.draft == 'true'
         run: |
           gh release upload "$TAG" \
             plugin/search/dist-embeddings/embeddings.bin \
             plugin/search/dist-embeddings/embeddings.json \
             --clobber
+
+      # Runs even when the export or upload failed: a release left as a draft
+      # has no tag, and the plugin's download URL needs a published release.
+      # Without the files, the plugin falls back to embedding locally.
+      - name: Publish the release
+        if: always() && steps.draft.outputs.draft == 'true'
+        run: |
+          set -e
+          if [ "$(gh release view "$TAG" -R "$GITHUB_REPOSITORY" --json isDraft --jq '.isDraft')" = "true" ]; then
+            gh release edit "$TAG" -R "$GITHUB_REPOSITORY" --draft=false
+            echo "Published $TAG"
+          else
+            echo "$TAG is already published"
+          fi
