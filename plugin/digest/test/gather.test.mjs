@@ -270,3 +270,63 @@ test('computeLineDiff on a large file with one changed line reports one del and 
   assert.equal(addedLines, 1);
   assert.equal(removedLines, 1);
 });
+
+// A range that lacks the digested version's OWN section read as "no changelog entries" for 2.1.290-2.1.301,
+// because the mirror lagged the release. Fixture changelog sections: 1.0.0, 2.0.0, 3.0.0; latest pointer 2.0.0.
+test('changelog: the version newer than every section is STALE, never ok with zero blocks (not yet published / mirror lag)', async () => {
+  const home = await freshHome();
+  const result = await gather({ home, pluginRoot, claudeVersion: '3.0.1', previousVersion: '3.0.0', exec: makeExec(), fetch: okFetch() });
+  assert.equal(result.changelog.status, 'stale');
+  assert.deepEqual(result.changelog.blocks, []);
+  assert.equal(result.changelog.newest, '3.0.0');
+  assert.match(result.changelog.reason, /newest section is 3\.0\.0, not 3\.0\.1/);
+});
+
+test('changelog: a range that holds older sections but not the version own one is still STALE', async () => {
+  const home = await freshHome();
+  const result = await gather({ home, pluginRoot, claudeVersion: '4.0.0', exec: makeExec(), fetch: okFetch() });
+  assert.equal(result.previousVersion.value, '2.0.0');
+  assert.equal(result.changelog.status, 'stale');
+  assert.deepEqual(result.changelog.blocks.map((b) => b.version), ['3.0.0'], 'the sections it has are still returned');
+});
+
+test('changelog: a release the source moved past without a section is ok with a note (published without notes)', async () => {
+  const home = await freshHome();
+  const result = await gather({ home, pluginRoot, claudeVersion: '2.5.0', exec: makeExec(), fetch: okFetch() });
+  assert.equal(result.changelog.status, 'ok');
+  assert.deepEqual(result.changelog.blocks, []);
+  assert.match(result.changelog.note, /no changelog section was published for 2\.5\.0; the changelog moved on to 3\.0\.0/);
+});
+
+test('bin/gather.mjs --previous-version sets the range start instead of digests/latest', async () => {
+  const home = await freshHome();
+  const bin = path.join(__dirname, '..', 'bin', 'gather.mjs');
+  const fakeBin = path.join(home, 'bin');
+  await mkdir(fakeBin, { recursive: true });
+  await writeFile(path.join(fakeBin, 'claude'), '#!/bin/sh\necho "3.0.0 (Claude Code)"\n', { mode: 0o755 });
+  await promisify(execFile)(process.execPath, [bin, '--home', home, '--plugin-root', pluginRoot, '--claude-version', '3.0.0', '--previous-version', '1.0.0'], {
+    env: { ...process.env, PATH: `${fakeBin}:${process.env.PATH}`, CLAUDE_CODE_ENABLE_FUNCTION_HOOKS: '', MAGIC_CLAUDE_DOCS_OFFLINE: '1' },
+    timeout: 60000,
+  });
+  const { readFile } = await import('node:fs/promises');
+  const written = JSON.parse(await readFile(path.join(home, '.claude-code-docs', 'digests', '3.0.0.gather.json'), 'utf8'));
+  assert.equal(written.previousVersion.value, '1.0.0');
+  assert.deepEqual(written.changelog.blocks.map((b) => b.version).sort(), ['2.0.0', '3.0.0']);
+  await rm(home, { recursive: true, force: true });
+});
+
+test('bin/gather.mjs refuses a --previous-version that is not older than the target, writing nothing', async () => {
+  const home = await freshHome();
+  const bin = path.join(__dirname, '..', 'bin', 'gather.mjs');
+  const fakeBin = path.join(home, 'bin');
+  await mkdir(fakeBin, { recursive: true });
+  await writeFile(path.join(fakeBin, 'claude'), '#!/bin/sh\necho "3.0.0 (Claude Code)"\n', { mode: 0o755 });
+  const run = promisify(execFile)(process.execPath, [bin, '--home', home, '--plugin-root', pluginRoot, '--claude-version', '3.0.0', '--previous-version', '3.0.0'], {
+    env: { ...process.env, PATH: `${fakeBin}:${process.env.PATH}`, CLAUDE_CODE_ENABLE_FUNCTION_HOOKS: '', MAGIC_CLAUDE_DOCS_OFFLINE: '1' },
+    timeout: 60000,
+  });
+  await assert.rejects(run, (e) => e.code === 1 && /--previous-version 3\.0\.0 is not older than 3\.0\.0/.test(e.stderr));
+  const { readFile } = await import('node:fs/promises');
+  await assert.rejects(() => readFile(path.join(home, '.claude-code-docs', 'digests', '3.0.0.gather.json'), 'utf8'));
+  await rm(home, { recursive: true, force: true });
+});

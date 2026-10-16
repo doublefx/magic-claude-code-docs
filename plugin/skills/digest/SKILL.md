@@ -60,6 +60,15 @@ node <pluginRoot>/digest/bin/gather.mjs --home "$HOME" --plugin-root <pluginRoot
 ```
 Prints the gather file's path. Read that file's `claudeVersion.value` — call it `<version>`.
 
+Then read its `changelog.status`. `stale` means the docs mirror does not carry `<version>`'s
+changelog section yet (upstream publishes it after the release, and the mirror refreshes every
+3 hours): tell the user the digest of `<version>` waits for the mirror, quote `changelog.reason`,
+and stop here — never analyze a stale gather, it would read as "nothing changed". `unavailable`
+means the changelog could not be read: quote `changelog.reason` and stop the same way. To re-digest a
+version whose earlier digest was built from a stale changelog, delete its `<version>.json` and
+`.md`, then gather with both ends of its range: `--claude-version <version> --previous-version
+<the version digested before it>`. Re-analyzing an older version never moves `latest` backwards.
+
 ### 3. Analyze — only if not already done, and only after telling the user
 
 Check first: does `~/.claude-code-docs/digests/<version>.json` already exist? If yes, skip this
@@ -77,6 +86,8 @@ Then run:
 node <pluginRoot>/digest/bin/analyze.mjs --home "$HOME" --version <version>
 ```
 Exit code `3` means another session holds the analyze lock — say so and stop; do not retry.
+Exit code `4` means the changelog is `stale` or `unavailable` (see step 2) — quote the printed
+reason to the user and stop.
 Any other non-zero exit — report the error and stop.
 
 ### 4. Deliver — only if `deliveredAt` is `null` in `<version>.json`

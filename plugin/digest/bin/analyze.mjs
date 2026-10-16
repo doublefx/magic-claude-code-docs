@@ -14,11 +14,16 @@
 //
 // The real model call is made only by this script, without --fake, one call
 // per Claude Code version.
+//
+// Exit codes: 3 = another run holds the lock; 4 = the gathered changelog is
+// not `ok` (stale: the mirror does not carry this version yet; or
+// unavailable), nothing analyzed.
 
 import path from 'node:path';
 import os from 'node:os';
 import { mkdir, writeFile, readFile, rename, unlink, stat } from 'node:fs/promises';
 import { analyze, buildPrompt, renderMarkdown, AnalyzeError } from '../src/analyze.mjs';
+import { compareVersions } from '../src/gather.mjs';
 
 const LOCK_STALE_MS = 30 * 60 * 1000;
 
@@ -86,6 +91,18 @@ async function main() {
   }
   version = version ?? gathered?.claudeVersion?.value ?? 'unknown';
 
+  // A stale or unreadable changelog would read as "no changes" to the model, and the digest written
+  // here would advance `latest` past a version nobody actually analyzed. Refuse before the lock and the call.
+  const changelogStatus = gathered?.changelog?.status ?? 'unavailable';
+  if (changelogStatus !== 'ok') {
+    console.error(
+      `analyze: changelog is ${changelogStatus} for ${version} — ${gathered?.changelog?.reason ?? 'no reason recorded'}. ` +
+        'Nothing analyzed, nothing written.',
+    );
+    process.exitCode = 4;
+    return;
+  }
+
   const jsonPath = path.join(digestsDir, `${version}.json`);
   const mdPath = path.join(digestsDir, `${version}.md`);
   const snapshotPath = path.join(digestsDir, `${version}.snapshot.json`);
@@ -152,7 +169,11 @@ async function main() {
 
     // `latest` is written LAST — everything else must be durably on disk
     // before any reader can discover this version through the pointer.
-    await atomicWrite(latestPath, version + '\n');
+    // Re-digesting an older version never moves the pointer backwards.
+    const current = (await readFile(latestPath, 'utf8').catch(() => '')).trim();
+    if (!current || compareVersions(version, current) >= 0) {
+      await atomicWrite(latestPath, version + '\n');
+    }
 
     console.log(jsonPath);
   } finally {

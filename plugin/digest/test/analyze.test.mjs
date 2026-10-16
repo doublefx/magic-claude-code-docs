@@ -249,6 +249,61 @@ test('(h) lock younger than 30 min -> exit 3, nothing written', async () => {
   await assert.rejects(() => readFile(path.join(digestsDir, 'latest'), 'utf8'));
 });
 
+test('(l) a STALE changelog -> exit 4 before any model call, nothing written, latest untouched', async () => {
+  const home = await mkdtemp(path.join(tmpdir(), 'digest-analyze-home-'));
+  const digestsDir = path.join(home, '.claude-code-docs', 'digests');
+  await mkdir(digestsDir, { recursive: true });
+  const gathered = sampleGathered();
+  gathered.changelog = {
+    status: 'stale',
+    reason: "the changelog's newest section is 2.0.0, not 3.0.0",
+    newest: '2.0.0',
+    blocks: [],
+  };
+  await writeFile(path.join(digestsDir, '3.0.0.gather.json'), JSON.stringify(gathered), 'utf8');
+  await writeFile(path.join(digestsDir, 'latest'), '2.0.0\n', 'utf8');
+  // A missing fake answer: reaching the model step would fail with exit 1, so exit 4 proves the refusal came first.
+  const missingFake = path.join(home, 'no-such-answer.json');
+
+  const { code, stderr } = await runBin(['--home', home, '--version', '3.0.0', '--fake', missingFake]);
+  assert.equal(code, 4, stderr);
+  assert.match(stderr, /newest section is 2\.0\.0, not 3\.0\.0/);
+
+  await assert.rejects(() => readFile(path.join(digestsDir, '3.0.0.json'), 'utf8'));
+  await assert.rejects(() => readFile(path.join(digestsDir, '3.0.0.lock'), 'utf8'));
+  assert.equal((await readFile(path.join(digestsDir, 'latest'), 'utf8')).trim(), '2.0.0');
+});
+
+test('(m) an UNAVAILABLE changelog -> exit 4, nothing written', async () => {
+  const home = await mkdtemp(path.join(tmpdir(), 'digest-analyze-home-'));
+  const digestsDir = path.join(home, '.claude-code-docs', 'digests');
+  await mkdir(digestsDir, { recursive: true });
+  const gathered = sampleGathered();
+  gathered.changelog = { status: 'unavailable', reason: 'ENOENT: changelog.md', blocks: [] };
+  await writeFile(path.join(digestsDir, '3.0.0.gather.json'), JSON.stringify(gathered), 'utf8');
+
+  const { code, stderr } = await runBin(['--home', home, '--version', '3.0.0', '--fake', path.join(home, 'none.json')]);
+  assert.equal(code, 4, stderr);
+  assert.match(stderr, /changelog is unavailable for 3\.0\.0 — ENOENT/);
+  await assert.rejects(() => readFile(path.join(digestsDir, '3.0.0.json'), 'utf8'));
+  await assert.rejects(() => readFile(path.join(digestsDir, 'latest'), 'utf8'));
+});
+
+test('(n) re-digesting an OLDER version writes its digest but never moves latest backwards', async () => {
+  const home = await mkdtemp(path.join(tmpdir(), 'digest-analyze-home-'));
+  const digestsDir = path.join(home, '.claude-code-docs', 'digests');
+  await mkdir(digestsDir, { recursive: true });
+  await writeFile(path.join(digestsDir, '3.0.0.gather.json'), JSON.stringify(sampleGathered()), 'utf8');
+  await writeFile(path.join(digestsDir, 'latest'), '3.0.10\n', 'utf8');
+  const fakePath = path.join(home, 'fake-answer.json');
+  await writeFile(fakePath, JSON.stringify(validAnswerObject()), 'utf8');
+
+  const { code, stderr } = await runBin(['--home', home, '--version', '3.0.0', '--fake', fakePath]);
+  assert.equal(code, 0, stderr);
+  assert.equal(JSON.parse(await readFile(path.join(digestsDir, '3.0.0.json'), 'utf8')).result.version, '3.0.0');
+  assert.equal((await readFile(path.join(digestsDir, 'latest'), 'utf8')).trim(), '3.0.10');
+});
+
 test('(j) the same plugin in two config dirs is ONE key, highest version kept, installs recorded', () => {
   const keyed = keyManifestEntries([
     { configDir: '/h/.claude', marketplace: 'm', plugin: 'atrium', version: '0.4.199', manifest: { plugin: 'atrium' } },

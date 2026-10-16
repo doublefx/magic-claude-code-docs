@@ -242,10 +242,31 @@ async function gatherChangelog({ pluginRoot, claudeVersion, previousVersion }) {
           compareVersions(b.version, claudeVersion) <= 0,
       );
     }
-    return { status: 'ok', blocks: selected };
+    return changelogResult(blocks, claudeVersion, selected);
   } catch (e) {
     return { status: 'unavailable', reason: String(e.message || e), blocks: [] };
   }
+}
+
+// The mirror can lag upstream, and upstream publishes a release's section after the release itself. A range that
+// lacks the version's OWN section is therefore not "no changes": it is STALE until the source carries that section
+// or moves past it. A source that moved past the version without a section for it means the release shipped
+// without changelog notes (this happens: npm has published versions with no section), so that case stays `ok`
+// with a note saying so.
+export function changelogResult(blocks, claudeVersion, selected) {
+  if (blocks.some((b) => compareVersions(b.version, claudeVersion) === 0)) {
+    return { status: 'ok', blocks: selected };
+  }
+  const newest = blocks.map((b) => b.version).sort(compareVersions).at(-1) ?? null;
+  if (newest && compareVersions(newest, claudeVersion) > 0) {
+    return { status: 'ok', blocks: selected, note: `no changelog section was published for ${claudeVersion}; the changelog moved on to ${newest}` };
+  }
+  return {
+    status: 'stale',
+    reason: `the changelog's newest section is ${newest ?? 'none'}, not ${claudeVersion}: the section is not published yet or the mirror lags; gather again once it appears`,
+    newest,
+    blocks: selected,
+  };
 }
 
 // ---------------------------------------------------------------------------
