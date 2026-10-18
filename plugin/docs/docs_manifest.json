@@ -16,8 +16,8 @@
       "original_url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
       "original_raw_url": "https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md",
       "source": "claude-code-repository",
-      "hash": "e560b9ef84810ede9ae96034ec196346e1daaacfd28e15a25027ee899076bd15",
-      "last_updated": "2026-10-16T23:07:18.316238"
+      "hash": "0aa8d75c2710a73dc53ac86950c9e4278aa1f062973e5da7b07a41e4d33bf762",
+      "last_updated": "2026-10-18T22:41:37.665712"
     },
     "how-claude-code-works.md": {
       "original_url": "https://code.claude.com/docs/en/how-claude-code-works.md",
@@ -1108,8 +1108,8 @@
     "typescript.md": {
       "original_url": "https://code.claude.com/docs/en/agent-sdk/typescript.md",
       "title": "Agent SDK reference - TypeScript",
-      "hash": "983b09d03886a2509b3ee5b4803d044b90b87f0c1acc7184a37b1a9799ad04c8",
-      "last_updated": "2026-10-17T01:54:18.341210"
+      "hash": "161f32ddfb83999d78645a2ca626b0fae7a4c513cb076d01d5cbe9be6c801442",
+      "last_updated": "2026-10-18T22:41:18.371978"
     },
     "typescript-v2-preview.md": {
       "original_url": "https://code.claude.com/docs/en/agent-sdk/typescript-v2-preview.md",
@@ -1120,8 +1120,8 @@
     "python.md": {
       "original_url": "https://code.claude.com/docs/en/agent-sdk/python.md",
       "title": "Agent SDK reference - Python",
-      "hash": "8f97aba75e8021ae9159f9fec46cedf49eb694edd01c8f25150405e7e21c5a07",
-      "last_updated": "2026-10-17T01:54:19.696811"
+      "hash": "7744dc715d2c85a2eb47b0c78062e98d04efaf8114ccb9d6d3522c2b70252eb4",
+      "last_updated": "2026-10-18T22:41:19.869367"
     },
     "index.md": {
       "original_url": "https://code.claude.com/docs/en/whats-new/index.md",
@@ -1288,8 +1288,8 @@
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2026-10-17T01:54:37.705256",
-    "fetch_duration_seconds": 150.509948,
+    "last_fetch_completed": "2026-10-18T22:41:37.666092",
+    "fetch_duration_seconds": 153.486032,
     "total_pages_discovered": 228,
     "pages_fetched_successfully": 229,
     "pages_failed": 1,
@@ -1300,7 +1300,7 @@
     "total_files": 214,
     "fetch_tool_version": "4.0"
   },
-  "last_updated": "2026-10-17T01:54:37.705426",
+  "last_updated": "2026-10-18T22:41:37.666257",
   "base_url": "https://raw.githubusercontent.com/doublefx/magic-claude-code-docs/main/plugin/docs/",
   "github_repository": "doublefx/magic-claude-code-docs",
   "github_ref": "main",
