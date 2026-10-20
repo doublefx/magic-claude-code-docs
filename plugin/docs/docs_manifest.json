@@ -40,8 +40,8 @@
     "context-window.md": {
       "original_url": "https://code.claude.com/docs/en/context-window.md",
       "title": "Explore the context window",
-      "hash": "78bf25a505d7563d92492c0083e8249fdf61cc2ccdc15b1d98f7f9e8fa631b2a",
-      "last_updated": "2026-10-15T02:07:10.799791"
+      "hash": "604b515b1c7da113051f5adc1423931b8d9ddd658b2eba85c339abcab24eb772",
+      "last_updated": "2026-10-20T07:58:43.361818"
     },
     "prompt-caching.md": {
       "original_url": "https://code.claude.com/docs/en/prompt-caching.md",
@@ -64,8 +64,8 @@
     "common-workflows.md": {
       "original_url": "https://code.claude.com/docs/en/common-workflows.md",
       "title": "Common workflows",
-      "hash": "d5e3351134537020b46c13330617f4eef2b2e92df80f48e6a7a4038a8ee84205",
-      "last_updated": "2026-10-14T21:02:52.221160"
+      "hash": "01cb490473952efefb2fec1d9fb9930e1c5c850f123511e1dae63512cec6c8b2",
+      "last_updated": "2026-10-20T07:58:45.863508"
     },
     "prompt-library.md": {
       "original_url": "https://code.claude.com/docs/en/prompt-library.md",
@@ -82,8 +82,8 @@
     "platforms.md": {
       "original_url": "https://code.claude.com/docs/en/platforms.md",
       "title": "Platforms and integrations",
-      "hash": "eee75247131b7edc0e12933f1996f7c09dfc80e34e3e25f71fd8da9beb7ba41c",
-      "last_updated": "2026-10-06T09:31:31.624466"
+      "hash": "2fd19fcfe2fb06f99b8de6a21e35706ac05ac71c1a3db8f529476a93a18d10eb",
+      "last_updated": "2026-10-20T07:58:47.543025"
     },
     "remote-control.md": {
       "original_url": "https://code.claude.com/docs/en/remote-control.md",
@@ -94,8 +94,8 @@
     "claude-projects.md": {
       "original_url": "https://code.claude.com/docs/en/claude-projects.md",
       "title": "Let Claude coordinate ongoing work with Projects",
-      "hash": "4f50e7fd2084ea2a0c6765742bea7039017692e21dac10d5d6d542f08cb42ec9",
-      "last_updated": "2026-10-14T21:02:55.458596"
+      "hash": "129723c935cc7b5334aaed857f2d1bfdda74cffc1c920ba77af08103ba885033",
+      "last_updated": "2026-10-20T07:58:48.670149"
     },
     "mobile.md": {
       "original_url": "https://code.claude.com/docs/en/mobile.md",
@@ -136,20 +136,20 @@
     "web-quickstart.md": {
       "original_url": "https://code.claude.com/docs/en/web-quickstart.md",
       "title": "Get started with Claude Code in the cloud",
-      "hash": "11339a9283e576a80ff4241e1229f22fcb7d860dd6fa5901463c94bfecad3886",
-      "last_updated": "2026-10-15T23:22:33.886559"
+      "hash": "2c806b2a906a47b9dec9793fc54908204ebc7fc3a348674442dc16ceb7d3ed97",
+      "last_updated": "2026-10-20T07:58:52.650379"
     },
     "claude-code-on-the-web.md": {
       "original_url": "https://code.claude.com/docs/en/claude-code-on-the-web.md",
       "title": "Use Claude Code in the cloud",
-      "hash": "96facadf5c54041b768e5e1c98131f80ae9c851c15253d72639423146dafb704",
-      "last_updated": "2026-10-15T23:22:34.522137"
+      "hash": "ae86b9fcfa6efe1082e60662de6a8bff60b3614237293a130133c13dc6ae352e",
+      "last_updated": "2026-10-20T07:58:53.209554"
     },
     "routines.md": {
       "original_url": "https://code.claude.com/docs/en/routines.md",
-      "title": "Automate work with routines",
-      "hash": "7e17c96c0b9eff83779590e596a792e2cdb1c6bbea8095aa1989c305cfe29cac",
-      "last_updated": "2026-10-15T02:07:23.699829"
+      "title": "Automate work with scheduled tasks",
+      "hash": "e4369e748142fc2f810cede0a4a8e7feb38fe3764a12ceccba32df9d2e863b92",
+      "last_updated": "2026-10-20T07:58:53.766441"
     },
     "desktop-quickstart.md": {
       "original_url": "https://code.claude.com/docs/en/desktop-quickstart.md",
@@ -178,8 +178,8 @@
     "desktop-scheduled-tasks.md": {
       "original_url": "https://code.claude.com/docs/en/desktop-scheduled-tasks.md",
       "title": "Schedule recurring tasks in Claude Code Desktop",
-      "hash": "0b3fde03d7215d8339caa1508ef28c992a6cc5c1f7dfd9f090513d2706753cc9",
-      "last_updated": "2026-10-19T21:48:08.062250"
+      "hash": "4964fbeb81c917b7dfc17c16f8ba21673e3d7e21035909d6be3930a3ce497537",
+      "last_updated": "2026-10-20T07:58:56.607033"
     },
     "desktop-ios-simulator.md": {
       "original_url": "https://code.claude.com/docs/en/desktop-ios-simulator.md",
@@ -190,8 +190,8 @@
     "code-review-local.md": {
       "original_url": "https://code.claude.com/docs/en/code-review-local.md",
       "title": "Review locally with /code-review",
-      "hash": "b5a1792e309b8113178ae29b7752ca630a910b712d620c419e0b788328ba0e4a",
-      "last_updated": "2026-10-16T23:05:18.463856"
+      "hash": "957d41ef28b22797358ca0ba3e9a363d552934257522c41c30318285530e5931",
+      "last_updated": "2026-10-20T07:58:57.719993"
     },
     "ultrareview.md": {
       "original_url": "https://code.claude.com/docs/en/ultrareview.md",
@@ -202,8 +202,8 @@
     "github-enterprise-server.md": {
       "original_url": "https://code.claude.com/docs/en/github-enterprise-server.md",
       "title": "Claude Code with GitHub Enterprise Server",
-      "hash": "f833e16eb3b18587757cf535bf6b203e1df04767b8ecd31830547bdffebb8fb0",
-      "last_updated": "2026-10-15T23:22:41.143291"
+      "hash": "5ca20cdd6250b08d354cb9daab756248ea699fbdaeff36853ed37bdc9d095502",
+      "last_updated": "2026-10-20T07:58:58.823097"
     },
     "code-review.md": {
       "original_url": "https://code.claude.com/docs/en/code-review.md",
@@ -274,14 +274,14 @@
     "agents.md": {
       "original_url": "https://code.claude.com/docs/en/agents.md",
       "title": "Run agents in parallel",
-      "hash": "67874a4189558b75520e90509f497464c3712059ee156754bbb96bb1efd7a786",
-      "last_updated": "2026-10-07T12:11:42.797182"
+      "hash": "60ccc15449906c0b8d418eb1f4b691ae0b8834aa8bb021a5df147b6a061b676f",
+      "last_updated": "2026-10-20T07:59:05.485811"
     },
     "sub-agents.md": {
       "original_url": "https://code.claude.com/docs/en/sub-agents.md",
       "title": "Create custom subagents",
-      "hash": "618d18e048ee72a29c9f4174f1ae6ac92a2f753fc204f0fba29947a367c645d4",
-      "last_updated": "2026-10-20T02:23:55.805378"
+      "hash": "1134dc801713cd2ce65bd66c0784d280827635aa8a0ea0ff96d4fcd214fa0b28",
+      "last_updated": "2026-10-20T07:59:06.056822"
     },
     "agent-view.md": {
       "original_url": "https://code.claude.com/docs/en/agent-view.md",
@@ -334,8 +334,8 @@
     "artifacts.md": {
       "original_url": "https://code.claude.com/docs/en/artifacts.md",
       "title": "Share session output as artifacts",
-      "hash": "882fb46a691e0845569fe886d616e61d21eb5dfcfdc5164d99ff66c732257641",
-      "last_updated": "2026-10-19T21:48:25.838626"
+      "hash": "3007e8816370103148f08e51d223353e98a7019d9a699b143bc36d1d580f3abd",
+      "last_updated": "2026-10-20T07:59:11.304244"
     },
     "hooks-guide.md": {
       "original_url": "https://code.claude.com/docs/en/hooks-guide.md",
@@ -346,20 +346,20 @@
     "channels.md": {
       "original_url": "https://code.claude.com/docs/en/channels.md",
       "title": "Push events into a running session with channels",
-      "hash": "bc9798ae1c8bd8b5eb665f0778e9ffa5a05b01f1b57773fbe61706b00474a4ad",
-      "last_updated": "2026-10-16T23:05:34.212035"
+      "hash": "b61fd503e65778ec2cc38fe686590833b7c08becfdb4bd93cd86e9110e444d05",
+      "last_updated": "2026-10-20T07:59:12.450214"
     },
     "scheduled-tasks.md": {
       "original_url": "https://code.claude.com/docs/en/scheduled-tasks.md",
       "title": "Run prompts on a schedule",
-      "hash": "8cb643f43a143fdbd8aee53fb63070d2ac473ac5046f5a301b7fb6e502c0f127",
-      "last_updated": "2026-10-14T21:03:19.344528"
+      "hash": "cb0fbb3ba3cf72a9e92e15332dc18133c0c8a5896741600ab431c911600ecd5e",
+      "last_updated": "2026-10-20T07:59:13.014926"
     },
     "goal.md": {
       "original_url": "https://code.claude.com/docs/en/goal.md",
       "title": "Keep Claude working toward a goal",
-      "hash": "ee86d204c45ddee9145fa4d47eab0c8232819e20e10ff6852bf6f2ba42299817",
-      "last_updated": "2026-10-09T21:57:14.973297"
+      "hash": "d8335c9d52ad47aa7a4266e134aaab99424ae3e1d500657d2e6187fb81961de7",
+      "last_updated": "2026-10-20T07:59:13.597121"
     },
     "headless.md": {
       "original_url": "https://code.claude.com/docs/en/headless.md",
@@ -400,8 +400,8 @@
     "errors.md": {
       "original_url": "https://code.claude.com/docs/en/errors.md",
       "title": "Error reference",
-      "hash": "1d897c2939111034da83825f368a846d987096c5768075591ed5e2b37623b56f",
-      "last_updated": "2026-10-20T02:24:07.928564"
+      "hash": "6355ce8033faaf9691f03aaacf52fab5961007d9fec92c665747ea905c7ac14b",
+      "last_updated": "2026-10-20T07:59:17.639905"
     },
     "install.md": {
       "original_url": "https://code.claude.com/docs/en/plugins/install.md",
@@ -430,8 +430,8 @@
     "create.md": {
       "original_url": "https://code.claude.com/docs/en/plugins/mods/create.md",
       "title": "Create a mod",
-      "hash": "9e50b9553209dfc9acffb67cecaf67cd7b72777fdf98337ca9ec8f5e8518430b",
-      "last_updated": "2026-10-17T01:53:00.505978"
+      "hash": "314a6f37d8ae3689d7dc887815cf6f497eb453b1aa48e07f8551ed7035cf1dac",
+      "last_updated": "2026-10-20T07:59:25.488591"
     },
     "components.md": {
       "original_url": "https://code.claude.com/docs/en/plugins/components.md",
@@ -496,8 +496,8 @@
     "api.md": {
       "original_url": "https://code.claude.com/docs/en/plugins/mods/api.md",
       "title": "Use the mods API",
-      "hash": "569f2542ba1b341d39c4652dd6763d286558980da4dcbdde1444ebd94e535188",
-      "last_updated": "2026-10-15T18:45:02.116880"
+      "hash": "428158fb7545adf2ea68f23fed03cd675bc8802f1f100dbf7e93f09dd08ed7b2",
+      "last_updated": "2026-10-20T07:59:28.296109"
     },
     "test.md": {
       "original_url": "https://code.claude.com/docs/en/plugins/mods/test.md",
@@ -508,8 +508,8 @@
     "troubleshoot.md": {
       "original_url": "https://code.claude.com/docs/en/plugins/mods/troubleshoot.md",
       "title": "Troubleshoot a mod",
-      "hash": "5a0822fe39c9136d70e2c28807f7778f286f9f61d703669da09faa2b2d571a07",
-      "last_updated": "2026-10-20T02:24:20.538484"
+      "hash": "dc13eb7674ab0d0871ea34702d90b0c330ac37a63f82d355773cdc494e6978df",
+      "last_updated": "2026-10-20T07:59:29.422528"
     },
     "create-marketplace.md": {
       "original_url": "https://code.claude.com/docs/en/plugins/create-marketplace.md",
@@ -568,8 +568,8 @@
     "admin-setup.md": {
       "original_url": "https://code.claude.com/docs/en/admin-setup.md",
       "title": "Set up Claude Code for your organization",
-      "hash": "e459ffddd1cc8bc5d63f0ad52c25bdc3759364435b7bfc56345955d9415edbe7",
-      "last_updated": "2026-10-08T00:31:46.539247"
+      "hash": "a4e4d4cd17d35096ceb95492214fec61c16e261c5bce2c7ab9a65c174ab162a1",
+      "last_updated": "2026-10-20T07:59:35.644028"
     },
     "setup.md": {
       "original_url": "https://code.claude.com/docs/en/setup.md",
@@ -616,8 +616,8 @@
     "feature-availability.md": {
       "original_url": "https://code.claude.com/docs/en/feature-availability.md",
       "title": "Feature availability",
-      "hash": "a29639d7ac6f81e02233d7903f4674d296f4146205f0ac71d869e86be7100306",
-      "last_updated": "2026-10-14T03:52:56.005736"
+      "hash": "c43cf9ed02c613f023bb8a5b858466ab0634d1573fee6e3feacdd7da7d1c7ab3",
+      "last_updated": "2026-10-20T07:59:40.285377"
     },
     "amazon-bedrock.md": {
       "original_url": "https://code.claude.com/docs/en/amazon-bedrock.md",
@@ -736,8 +736,8 @@
     "costs.md": {
       "original_url": "https://code.claude.com/docs/en/costs.md",
       "title": "Manage costs effectively",
-      "hash": "6622bdc6962b23a8c0ef27162b93aaa82a8ecc8527b0dadb0772eedc089a2521",
-      "last_updated": "2026-10-17T01:53:30.705490"
+      "hash": "1454be2b74ace5f003a69242548a5886f755f936451ab9be209e8b8afb27321c",
+      "last_updated": "2026-10-20T07:59:51.490302"
     },
     "analytics.md": {
       "original_url": "https://code.claude.com/docs/en/analytics.md",
@@ -784,8 +784,8 @@
     "settings-reference.md": {
       "original_url": "https://code.claude.com/docs/en/settings-reference.md",
       "title": "All settings",
-      "hash": "19a2218fb4ceeacbecb23866359d7cfdfe8a13c153fd2b06402fed875099baa5",
-      "last_updated": "2026-10-20T02:24:49.240263"
+      "hash": "587bebe2dad933a9da9e1ca598b041178879128b9219cd70409990d2f7be3817",
+      "last_updated": "2026-10-20T07:59:56.638426"
     },
     "settings-example.md": {
       "original_url": "https://code.claude.com/docs/en/settings-example.md",
@@ -802,8 +802,8 @@
     "permission-modes.md": {
       "original_url": "https://code.claude.com/docs/en/permission-modes.md",
       "title": "Choose a permission mode",
-      "hash": "3a4c8f6a040631734e67a988416a9148b04fc7cca88b9e34b357fffd1a4a838e",
-      "last_updated": "2026-10-20T02:24:51.016962"
+      "hash": "f18755bdcc176a7ee1f90f30bc23f598ec3317812fed6648e364d00ae1378c97",
+      "last_updated": "2026-10-20T07:59:58.442080"
     },
     "auto-mode-classifier-billing.md": {
       "original_url": "https://code.claude.com/docs/en/auto-mode-classifier-billing.md",
@@ -826,14 +826,14 @@
     "cloud-environments.md": {
       "original_url": "https://code.claude.com/docs/en/cloud-environments.md",
       "title": "Configure cloud environments",
-      "hash": "299e408e9efa92e53fa75c6d36b49132980f228a3f14dd290e18de43a178c61f",
-      "last_updated": "2026-10-15T18:45:41.085250"
+      "hash": "5a5485b2bb1fe9743600eda7ee7eba557259a1cc1e7dbae7d4bc69b84d9e5141",
+      "last_updated": "2026-10-20T08:00:00.733484"
     },
     "self-hosted-environments.md": {
       "original_url": "https://code.claude.com/docs/en/self-hosted-environments.md",
       "title": "Self-hosted environments",
-      "hash": "aa7acca4dff21eb303bf0eb37f6ae977073e6bc421d3837a26de8f1317646444",
-      "last_updated": "2026-10-14T21:04:14.193122"
+      "hash": "8d68839a68b4d7da78bd072bea8537de9927ea17180986fccd9fa806ca3d6a2b",
+      "last_updated": "2026-10-20T08:00:01.309836"
     },
     "self-hosted-environments-quickstart.md": {
       "original_url": "https://code.claude.com/docs/en/self-hosted-environments-quickstart.md",
@@ -850,8 +850,8 @@
     "self-hosted-environments-configuration.md": {
       "original_url": "https://code.claude.com/docs/en/self-hosted-environments-configuration.md",
       "title": "Customize sessions in self-hosted environments",
-      "hash": "49a22ac4cafb6d8e23bf6c2a46d3025112347447821e66774b20e60e38813873",
-      "last_updated": "2026-10-14T21:04:16.127127"
+      "hash": "8b40b2a7546deff365980de99892182a971228071f1c52a3b6c04de83ba6a552",
+      "last_updated": "2026-10-20T08:00:03.081220"
     },
     "self-hosted-environments-testing.md": {
       "original_url": "https://code.claude.com/docs/en/self-hosted-environments-testing.md",
@@ -874,8 +874,8 @@
     "model-config.md": {
       "original_url": "https://code.claude.com/docs/en/model-config.md",
       "title": "Model configuration",
-      "hash": "91065b0bc6d7953e6d467000529010d74c7c4bdd1d82aedce41e065467fda109",
-      "last_updated": "2026-10-19T21:49:31.194943"
+      "hash": "7c5005a47f8e88ac5dd7732afef8cdd6b008029b6e7a4e33186b5a3fe44797ac",
+      "last_updated": "2026-10-20T08:00:05.318476"
     },
     "fast-mode.md": {
       "original_url": "https://code.claude.com/docs/en/fast-mode.md",
@@ -934,26 +934,26 @@
     "commands.md": {
       "original_url": "https://code.claude.com/docs/en/commands.md",
       "title": "Commands",
-      "hash": "5ae004eade110c0330e60a5ce71eba93b8511d713f9c7ef034cc8a5291f6346b",
-      "last_updated": "2026-10-19T21:49:38.865955"
+      "hash": "fcb2694e02cdc2986545f64253a6c9fad49865f3a1eeb4adc3ec47168b59ee19",
+      "last_updated": "2026-10-20T08:00:11.461629"
     },
     "env-vars.md": {
       "original_url": "https://code.claude.com/docs/en/env-vars.md",
       "title": "Environment variables",
-      "hash": "b50b7e3d9a16f0c52185afc48b5f42e50cebffed03d9531d09df8ef30cc53acf",
-      "last_updated": "2026-10-20T02:25:05.477278"
+      "hash": "2f8189d3d6345bd18a3741c3e1efab7f29283189fb0c015085f48e009faa67d3",
+      "last_updated": "2026-10-20T08:00:12.037750"
     },
     "tools-reference.md": {
       "original_url": "https://code.claude.com/docs/en/tools-reference.md",
       "title": "Tools reference",
-      "hash": "af4c030abd682cb2dfcf5a50a6aeb1d49884af46d11e61d114fb71b909ed94b4",
-      "last_updated": "2026-10-19T21:49:40.231838"
+      "hash": "e035d409df09550250e9dde336e1ec58a400133d72875ddd49b95eb8667de6f9",
+      "last_updated": "2026-10-20T08:00:12.638951"
     },
     "interactive-mode.md": {
       "original_url": "https://code.claude.com/docs/en/interactive-mode.md",
       "title": "Interactive mode",
-      "hash": "bf4b8481b5ba7666503cbe494427d97302732b79545ad200df2ce620e985e30a",
-      "last_updated": "2026-10-19T21:49:41.069164"
+      "hash": "cdb17ddf90c306d9d97e138627edd5f54992e732463b18393b1deeec41e18688",
+      "last_updated": "2026-10-20T08:00:13.368436"
     },
     "checkpointing.md": {
       "original_url": "https://code.claude.com/docs/en/checkpointing.md",
@@ -976,8 +976,8 @@
     "glossary.md": {
       "original_url": "https://code.claude.com/docs/en/glossary.md",
       "title": "Glossary",
-      "hash": "4835bb8cff3ee5737c5641622270972ef4e4188e814660783cbea03185a58937",
-      "last_updated": "2026-10-09T21:58:26.991625"
+      "hash": "88aafdd0c5a2dcc09899b923c8ecf9584aac15dc8096820ec72695a9396a54e8",
+      "last_updated": "2026-10-20T08:00:15.625242"
     },
     "migration-guide.md": {
       "original_url": "https://code.claude.com/docs/en/agent-sdk/migration-guide.md",
@@ -1042,8 +1042,8 @@
     "custom-tools.md": {
       "original_url": "https://code.claude.com/docs/en/agent-sdk/custom-tools.md",
       "title": "Give Claude custom tools",
-      "hash": "40da8ca864dc53b14ee9a880ecd389904feca976830f97bbe5bc924e209f3aff",
-      "last_updated": "2026-10-17T01:54:08.568253"
+      "hash": "6473f30bd67d943d1eb51e3634bc7ca1f7473b1b0d64ec0670a4d988da6d95a4",
+      "last_updated": "2026-10-20T08:00:24.133598"
     },
     "tool-search.md": {
       "original_url": "https://code.claude.com/docs/en/agent-sdk/tool-search.md",
@@ -1283,13 +1283,13 @@
       "original_url": "https://code.claude.com/docs/en/claude_code_docs_map.md",
       "title": "Documentation Map",
       "source": "docs-map",
-      "hash": "840bba9900c99d9a83024abe3a9c6a2ed4a2a700dfd90d610e66c4f1c4a49ab7",
-      "last_updated": "2026-10-20T02:25:51.451370"
+      "hash": "e091add18f68934bb452116d74ce425bdaffb164aa314bf9854ec54632a70742",
+      "last_updated": "2026-10-20T08:00:49.073374"
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2026-10-20T02:25:51.495883",
-    "fetch_duration_seconds": 145.875907,
+    "last_fetch_completed": "2026-10-20T08:00:49.098470",
+    "fetch_duration_seconds": 129.506477,
     "total_pages_discovered": 228,
     "pages_fetched_successfully": 229,
     "pages_failed": 1,
@@ -1300,7 +1300,7 @@
     "total_files": 214,
     "fetch_tool_version": "4.0"
   },
-  "last_updated": "2026-10-20T02:25:51.496088",
+  "last_updated": "2026-10-20T08:00:49.098640",
   "base_url": "https://raw.githubusercontent.com/doublefx/magic-claude-code-docs/main/plugin/docs/",
   "github_repository": "doublefx/magic-claude-code-docs",
   "github_ref": "main",
