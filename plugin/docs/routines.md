@@ -33,6 +33,8 @@ Scheduled tasks are available on Pro, Max, Team, and Enterprise plans. Create an
 
 Team and Enterprise Owners can turn off scheduled tasks for all members with the **Scheduled tasks (Was Routines)** toggle at [**Organization settings > Capabilities > Remote sessions**](https://claude.ai/admin-settings/capabilities). When the toggle is off, existing scheduled tasks stop running and members can't create new ones.
 
+If your Enterprise organization manages your access with [custom roles](https://support.claude.com/en/articles/13930452), you also need a role that includes the scheduled tasks permission. An Owner can add it in a role's **Remote sessions** section at [**Organization settings > Roles**](https://claude.ai/admin-settings/roles).
+
 ## Example use cases
 
 Each example pairs a trigger type with the kind of work scheduled tasks are suited to: unattended, repeatable, and tied to a clear outcome.
@@ -48,7 +50,7 @@ Each example pairs a trigger type with the kind of work scheduled tasks are suit
 
 Create a scheduled task from the web at [claude.ai/code/routines](https://claude.ai/code/routines), from the Desktop app, or from the CLI. All three surfaces write to the same cloud account, so a scheduled task you create in one shows up in the others immediately. In the Desktop app's **Code** tab, click **Scheduled** in the sidebar or in the sidebar's **More** menu, then **New task**, and continue with [Create from the web](#create-from-the-web).
 
-Scheduled tasks run autonomously as full Claude Code cloud sessions. You don't choose a permission mode. The session runs shell commands, uses [skills](/docs/en/skills) committed to the cloned repository, and calls any connectors you include, all without stopping for approval apart from some [artifact actions](#when-a-run-publishes-an-artifact-without-asking).
+Scheduled tasks run autonomously as full Claude Code cloud sessions. You don't choose a permission mode. The session runs shell commands, uses [skills](/docs/en/skills), and calls any connectors you include, all without stopping for approval apart from some [artifact actions](#when-a-run-publishes-an-artifact-without-asking). Outside a [project](/docs/en/claude-projects#what-threads-pick-up-from-your-repositories), those skills include the ones committed to the cloned repository.
 
 What a scheduled task can reach is determined by:
 
@@ -356,7 +358,7 @@ Scheduled tasks can use your connected MCP connectors to read from and write to 
 Connectors are the [claude.ai integrations](/docs/en/mcp#use-mcp-servers-from-claude-ai) on your account. MCP servers you added locally in the CLI with `claude mcp add` are stored on your machine rather than your claude.ai account, so they do not appear in the connectors list. To use one of those servers in a scheduled task:
 
 * **As a connector**: add it as a connector at [claude.ai/customize/connectors](https://claude.ai/customize/connectors)
-* **In the repository**: for a scheduled task with one repository, you can instead declare the server in a committed [`.mcp.json`](/docs/en/mcp#project-scope) so it is part of the cloned repository
+* **In the repository**: for a scheduled task with one repository outside a [project](/docs/en/claude-projects#what-threads-pick-up-from-your-repositories), you can instead declare the server in a committed [`.mcp.json`](/docs/en/mcp#project-scope). A scheduled task in a project doesn't load `.mcp.json`, so add the server as a connector
 
 When you create a scheduled task, all of your currently connected connectors are included by default. Remove any that aren't needed to limit which tools Claude has access to during the run. You can also add connectors directly from the task's creation or edit dialog.
 
@@ -452,8 +454,9 @@ The cause is usually one of the following:
 * You are inside a cloud session, where submitting `/schedule` answers that the command isn't available in that environment. Manage scheduled tasks from the [web UI](https://claude.ai/code/routines) instead
 * Your organization's policy disables [cloud sessions](/docs/en/claude-code-on-the-web), which scheduled tasks require. In this case, submitting `/schedule` answers [`Cloud sessions are disabled by your organization's policy`](/docs/en/errors#cloud-sessions-are-disabled-by-your-organizations-policy) instead. Before v2.1.268, it returned `Unknown command: /schedule`
 * An Owner [turned off scheduled tasks](#routines-are-disabled-by-your-organizations-policy) for your Team or Enterprise organization. Before v2.1.227, the command still appeared in this case, and claude.ai rejected the task when Claude tried to create or run it
+* Your Enterprise organization manages your access with [custom roles](https://support.claude.com/en/articles/13930452), and none of your roles includes the scheduled tasks permission under **Remote sessions**. Ask an Owner to add it to one of your roles
 
-Unless your organization's policy disables scheduled tasks or cloud sessions, you can create and manage scheduled tasks at [claude.ai/code/routines](https://claude.ai/code/routines) regardless of how the CLI is configured.
+If the cause is your CLI sign-in or being inside a cloud session, you can still create and manage scheduled tasks at [claude.ai/code/routines](https://claude.ai/code/routines). You need a Pro, Max, Team, or Enterprise account there. If scheduled tasks or cloud sessions are off for your organization or missing from your roles, you can't create them on the web either.
 
 ### "Routines are disabled by your organization's policy"
 
