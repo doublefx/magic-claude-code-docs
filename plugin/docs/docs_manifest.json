@@ -124,8 +124,8 @@
     "jetbrains.md": {
       "original_url": "https://code.claude.com/docs/en/jetbrains.md",
       "title": "JetBrains IDEs",
-      "hash": "f4af835e8a33b2b0010d15fe84049e4a8daed48d6c21f50912855a668d9cfb35",
-      "last_updated": "2026-10-23T18:46:34.790862"
+      "hash": "1d749d341482275601c6f24f6f2e91298285ed5d59268251931f83391be47507",
+      "last_updated": "2026-10-24T07:40:45.582452"
     },
     "slack.md": {
       "original_url": "https://code.claude.com/docs/en/slack.md",
@@ -400,8 +400,8 @@
     "errors.md": {
       "original_url": "https://code.claude.com/docs/en/errors.md",
       "title": "Error reference",
-      "hash": "439ba83f5bc1173d53ea0aee85a4caa86bd1e6d603445a85bc2e2e3a6c79116b",
-      "last_updated": "2026-10-23T18:47:06.653395"
+      "hash": "bf901502940532ed4306a33fedd572ab445919fc401bef5d8ac859ce70809440",
+      "last_updated": "2026-10-24T07:41:13.591652"
     },
     "install.md": {
       "original_url": "https://code.claude.com/docs/en/plugins/install.md",
@@ -730,8 +730,8 @@
     "monitoring-usage.md": {
       "original_url": "https://code.claude.com/docs/en/monitoring-usage.md",
       "title": "Monitoring",
-      "hash": "3dceb23478eb5ad0099bf68203e019679dca8b029b6296077ee14822346c0a7f",
-      "last_updated": "2026-10-23T18:47:46.972883"
+      "hash": "c50c99c7952c8a7660f0564a75de972c38a6423633aad5fff248bc20c7a44860",
+      "last_updated": "2026-10-24T07:41:49.089380"
     },
     "costs.md": {
       "original_url": "https://code.claude.com/docs/en/costs.md",
@@ -1283,13 +1283,13 @@
       "original_url": "https://code.claude.com/docs/en/claude_code_docs_map.md",
       "title": "Documentation Map",
       "source": "docs-map",
-      "hash": "7ac0100ead75c3a8091f9da9c7bd7f47d4d90dd5aa6a1e1d01fb72c04ff2a9ae",
-      "last_updated": "2026-10-23T23:39:00.542073"
+      "hash": "f8b5fe837a35c821e6c96eed572b630b975110b824a8c9ccf27e61f7a8eb151e",
+      "last_updated": "2026-10-24T07:42:50.615325"
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2026-10-24T02:17:17.319351",
-    "fetch_duration_seconds": 131.53046,
+    "last_fetch_completed": "2026-10-24T07:42:50.703555",
+    "fetch_duration_seconds": 137.71954,
     "total_pages_discovered": 228,
     "pages_fetched_successfully": 229,
     "pages_failed": 1,
@@ -1300,7 +1300,7 @@
     "total_files": 214,
     "fetch_tool_version": "4.0"
   },
-  "last_updated": "2026-10-24T02:17:17.319528",
+  "last_updated": "2026-10-24T07:42:50.703710",
   "base_url": "https://raw.githubusercontent.com/doublefx/magic-claude-code-docs/main/plugin/docs/",
   "github_repository": "doublefx/magic-claude-code-docs",
   "github_ref": "main",
