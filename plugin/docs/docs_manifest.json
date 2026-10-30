@@ -16,8 +16,8 @@
       "original_url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
       "original_raw_url": "https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md",
       "source": "claude-code-repository",
-      "hash": "2eb321e6c78607db92c7601a32b51002b683a7ab69f48afab56ea27fff0ad2b4",
-      "last_updated": "2026-10-28T00:09:26.688550"
+      "hash": "45fdf13d7f5d6b3fcb2d10319c304728969b1ef31bd60b94e679868c22a242ec",
+      "last_updated": "2026-10-30T03:16:58.196065"
     },
     "how-claude-code-works.md": {
       "original_url": "https://code.claude.com/docs/en/how-claude-code-works.md",
@@ -1288,8 +1288,8 @@
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2026-10-29T22:09:25.576648",
-    "fetch_duration_seconds": 122.389521,
+    "last_fetch_completed": "2026-10-30T03:16:58.196515",
+    "fetch_duration_seconds": 120.936216,
     "total_pages_discovered": 228,
     "pages_fetched_successfully": 229,
     "pages_failed": 1,
@@ -1300,7 +1300,7 @@
     "total_files": 214,
     "fetch_tool_version": "4.0"
   },
-  "last_updated": "2026-10-29T22:09:25.576857",
+  "last_updated": "2026-10-30T03:16:58.196691",
   "base_url": "https://raw.githubusercontent.com/doublefx/magic-claude-code-docs/main/plugin/docs/",
   "github_repository": "doublefx/magic-claude-code-docs",
   "github_ref": "main",
