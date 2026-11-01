@@ -160,8 +160,8 @@
     "desktop.md": {
       "original_url": "https://code.claude.com/docs/en/desktop.md",
       "title": "Desktop application",
-      "hash": "0b9c66683c20346bccce5edf45162f1945d19b7db29ee115626819e17dfdfe67",
-      "last_updated": "2026-10-31T02:59:13.215736"
+      "hash": "cac6a537e446076c84954dd7264ca62a5ffff40928db1cfa608adaf8c6e564d4",
+      "last_updated": "2026-11-01T21:26:05.356196"
     },
     "desktop-linux.md": {
       "original_url": "https://code.claude.com/docs/en/desktop-linux.md",
@@ -574,8 +574,8 @@
     "setup.md": {
       "original_url": "https://code.claude.com/docs/en/setup.md",
       "title": "Advanced setup",
-      "hash": "34cdae9fb70e93f7fd144efad9e4ec503e6ea0b80f707ea27a9f88217e832c40",
-      "last_updated": "2026-10-30T21:45:20.397776"
+      "hash": "652872f26cfd711c4f92351b1ef8338d3f0b6140024c246c42edcbcbdfea172d",
+      "last_updated": "2026-11-01T21:26:46.019262"
     },
     "authentication.md": {
       "original_url": "https://code.claude.com/docs/en/authentication.md",
@@ -1283,13 +1283,13 @@
       "original_url": "https://code.claude.com/docs/en/claude_code_docs_map.md",
       "title": "Documentation Map",
       "source": "docs-map",
-      "hash": "7b4b1d137c23ec2292d8499185506db248f58b8f43554687be4ee7107c3c35c5",
-      "last_updated": "2026-10-31T03:01:00.081293"
+      "hash": "78405d46398fb39288dbb752033fcc12b5153bc3aecc72e0314335228b1f0f60",
+      "last_updated": "2026-11-01T21:27:56.928979"
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2026-10-31T03:01:00.108107",
-    "fetch_duration_seconds": 121.027621,
+    "last_fetch_completed": "2026-11-01T21:27:56.994731",
+    "fetch_duration_seconds": 126.221056,
     "total_pages_discovered": 228,
     "pages_fetched_successfully": 229,
     "pages_failed": 1,
@@ -1300,7 +1300,7 @@
     "total_files": 214,
     "fetch_tool_version": "4.0"
   },
-  "last_updated": "2026-10-31T03:01:00.108272",
+  "last_updated": "2026-11-01T21:27:56.994930",
   "base_url": "https://raw.githubusercontent.com/doublefx/magic-claude-code-docs/main/plugin/docs/",
   "github_repository": "doublefx/magic-claude-code-docs",
   "github_ref": "main",
