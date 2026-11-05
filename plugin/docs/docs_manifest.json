@@ -160,8 +160,8 @@
     "desktop.md": {
       "original_url": "https://code.claude.com/docs/en/desktop.md",
       "title": "Desktop application",
-      "hash": "cd95f89d0832246a5bc177b682e015d1065fedc2f0334eaadfd5f35fbe414868",
-      "last_updated": "2026-11-05T01:07:48.218918"
+      "hash": "35b7c1ee8b3512849a8652bddb08a049d15682dfe6ca06dc99ef1d7447a54b9f",
+      "last_updated": "2026-11-05T09:59:04.082968"
     },
     "desktop-linux.md": {
       "original_url": "https://code.claude.com/docs/en/desktop-linux.md",
@@ -184,8 +184,8 @@
     "desktop-ios-simulator.md": {
       "original_url": "https://code.claude.com/docs/en/desktop-ios-simulator.md",
       "title": "Test iOS apps in the simulator",
-      "hash": "4b675510b80fa45c90764c58c2b26fab5ceb9c41f9fd61558d2a11c6e9f462e7",
-      "last_updated": "2026-10-30T21:44:43.150792"
+      "hash": "bc4092ebda67b85f6f4cbd642e243464a383bb948310a2109fd021999801351b",
+      "last_updated": "2026-11-05T09:59:06.257642"
     },
     "code-review-local.md": {
       "original_url": "https://code.claude.com/docs/en/code-review-local.md",
@@ -1283,13 +1283,13 @@
       "original_url": "https://code.claude.com/docs/en/claude_code_docs_map.md",
       "title": "Documentation Map",
       "source": "docs-map",
-      "hash": "4e9ea402fd2df9fc47823b22947d703eef14bf9dd36eeb58c5b9dfde42fa3778",
-      "last_updated": "2026-11-05T01:09:37.719147"
+      "hash": "36f2b51a7c7d9bf69bb98c8255735adc76419057b353257b42fb71a59275da34",
+      "last_updated": "2026-11-05T10:00:52.655393"
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2026-11-05T01:09:37.804338",
-    "fetch_duration_seconds": 124.076021,
+    "last_fetch_completed": "2026-11-05T10:00:52.717262",
+    "fetch_duration_seconds": 122.866831,
     "total_pages_discovered": 228,
     "pages_fetched_successfully": 229,
     "pages_failed": 1,
@@ -1300,7 +1300,7 @@
     "total_files": 214,
     "fetch_tool_version": "4.0"
   },
-  "last_updated": "2026-11-05T01:09:37.804513",
+  "last_updated": "2026-11-05T10:00:52.717440",
   "base_url": "https://raw.githubusercontent.com/doublefx/magic-claude-code-docs/main/plugin/docs/",
   "github_repository": "doublefx/magic-claude-code-docs",
   "github_ref": "main",
