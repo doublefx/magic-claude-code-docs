@@ -814,8 +814,8 @@
     "sandboxing.md": {
       "original_url": "https://code.claude.com/docs/en/sandboxing.md",
       "title": "Configure the sandboxed Bash tool",
-      "hash": "6e1c321f48933ba638084de9533f72d007dc919240aed4195e07664bd2f8b3d7",
-      "last_updated": "2026-11-04T00:58:26.067965"
+      "hash": "5052f33f5c9ad369712da4a21e794f9e7b5fc87b9123deb9cb7e4919245e3bca",
+      "last_updated": "2026-11-07T09:22:49.732757"
     },
     "sandbox-environments.md": {
       "original_url": "https://code.claude.com/docs/en/sandbox-environments.md",
@@ -1283,13 +1283,13 @@
       "original_url": "https://code.claude.com/docs/en/claude_code_docs_map.md",
       "title": "Documentation Map",
       "source": "docs-map",
-      "hash": "37166d418ae35ccda0b49b6a7b9c08c6d033b3f68d77218446cbaac8a0855765",
-      "last_updated": "2026-11-07T00:29:43.842839"
+      "hash": "9ddff600d408103637be1ab240226203c9e214495a25a09492e2e20b41e6bf11",
+      "last_updated": "2026-11-07T09:23:35.635037"
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2026-11-07T00:29:43.890383",
-    "fetch_duration_seconds": 122.880923,
+    "last_fetch_completed": "2026-11-07T09:23:35.735440",
+    "fetch_duration_seconds": 120.693073,
     "total_pages_discovered": 228,
     "pages_fetched_successfully": 229,
     "pages_failed": 1,
@@ -1300,7 +1300,7 @@
     "total_files": 214,
     "fetch_tool_version": "4.0"
   },
-  "last_updated": "2026-11-07T00:29:43.890552",
+  "last_updated": "2026-11-07T09:23:35.735623",
   "base_url": "https://raw.githubusercontent.com/doublefx/magic-claude-code-docs/main/plugin/docs/",
   "github_repository": "doublefx/magic-claude-code-docs",
   "github_ref": "main",
