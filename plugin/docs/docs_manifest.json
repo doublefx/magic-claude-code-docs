@@ -304,8 +304,8 @@
     "workflows.md": {
       "original_url": "https://code.claude.com/docs/en/workflows.md",
       "title": "Orchestrate subagents at scale with dynamic workflows",
-      "hash": "b940968734f59d5e7f3b58c9513d1b90c69c9a429436eadf6b9d1d95873bf4c5",
-      "last_updated": "2026-10-27T19:49:08.452880"
+      "hash": "5b262faf3ba1bb40315a27d560371bed5b4969b7ad6855bbcecf284487a49b54",
+      "last_updated": "2026-11-10T13:53:05.831180"
     },
     "worktrees.md": {
       "original_url": "https://code.claude.com/docs/en/worktrees.md",
@@ -400,8 +400,8 @@
     "errors.md": {
       "original_url": "https://code.claude.com/docs/en/errors.md",
       "title": "Error reference",
-      "hash": "a1f7917c618818b9229590cbe45b19ad249740b463f5c64d34ec92bb1c7b47ba",
-      "last_updated": "2026-11-09T23:38:08.910186"
+      "hash": "eb86027b6c29f84713c86d4eaea816f71edb8c59be950a339845a19cb43afe19",
+      "last_updated": "2026-11-10T13:53:15.385065"
     },
     "install.md": {
       "original_url": "https://code.claude.com/docs/en/plugins/install.md",
@@ -754,8 +754,8 @@
     "zero-data-retention.md": {
       "original_url": "https://code.claude.com/docs/en/zero-data-retention.md",
       "title": "Zero data retention",
-      "hash": "3e201f9929d89530fed35f717403614a3d7bf8346838d50b14f0cb9cebd3d6ea",
-      "last_updated": "2026-11-09T23:38:43.882025"
+      "hash": "76ce1148782ed8400e1b1db3aefd8fb3e6c25964b2a9df1f46628c6c3ccecd18",
+      "last_updated": "2026-11-10T13:53:54.576836"
     },
     "hipaa-setup.md": {
       "original_url": "https://code.claude.com/docs/en/hipaa-setup.md",
@@ -964,8 +964,8 @@
     "hooks.md": {
       "original_url": "https://code.claude.com/docs/en/agent-sdk/hooks.md",
       "title": "Intercept and control agent behavior with hooks",
-      "hash": "ba09f63dbb2d125d50d6c49c5f3b0711164a5b23e66e4b193dac576bca5992cb",
-      "last_updated": "2026-11-06T10:02:54.652283"
+      "hash": "f2121f6f769a47484d0e675c013908d99aa08381c1d641e4361de30ff57b4fa7",
+      "last_updated": "2026-11-10T13:54:30.235167"
     },
     "channels-reference.md": {
       "original_url": "https://code.claude.com/docs/en/channels-reference.md",
@@ -1283,13 +1283,13 @@
       "original_url": "https://code.claude.com/docs/en/claude_code_docs_map.md",
       "title": "Documentation Map",
       "source": "docs-map",
-      "hash": "84a0c7dff2da20c2cc0226c6ab0e79553797f1cb97c9639a4ccc79c9df827ba9",
-      "last_updated": "2026-11-10T05:00:17.600629"
+      "hash": "70a7ac201564f6c2fdb12756e397179f09a944e58fbc3daf27a6636ce6030966",
+      "last_updated": "2026-11-10T13:54:51.320902"
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2026-11-10T05:00:17.979589",
-    "fetch_duration_seconds": 126.590413,
+    "last_fetch_completed": "2026-11-10T13:54:51.414245",
+    "fetch_duration_seconds": 135.83161,
     "total_pages_discovered": 228,
     "pages_fetched_successfully": 229,
     "pages_failed": 1,
@@ -1300,7 +1300,7 @@
     "total_files": 214,
     "fetch_tool_version": "4.0"
   },
-  "last_updated": "2026-11-10T05:00:17.979746",
+  "last_updated": "2026-11-10T13:54:51.414382",
   "base_url": "https://raw.githubusercontent.com/doublefx/magic-claude-code-docs/main/plugin/docs/",
   "github_repository": "doublefx/magic-claude-code-docs",
   "github_ref": "main",
