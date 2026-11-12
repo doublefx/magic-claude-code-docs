@@ -160,8 +160,8 @@
     "desktop.md": {
       "original_url": "https://code.claude.com/docs/en/desktop.md",
       "title": "Desktop application",
-      "hash": "cfc3131bd25c1fb47b122908921c47551ccf67339ec81cc357b1f66e9f4b3250",
-      "last_updated": "2026-11-10T21:03:54.535030"
+      "hash": "ccd83bf92a2844ebd760c1e326122d5fb1355ec771d9b0625639547ebd105cf1",
+      "last_updated": "2026-11-12T04:39:39.122441"
     },
     "desktop-linux.md": {
       "original_url": "https://code.claude.com/docs/en/desktop-linux.md",
@@ -502,8 +502,8 @@
     "test.md": {
       "original_url": "https://code.claude.com/docs/en/plugins/mods/test.md",
       "title": "Test a mod",
-      "hash": "65d8154fd43d809a68bbb0436fda364f16ccc0b01c7a599097204ad033620ed7",
-      "last_updated": "2026-10-26T22:00:49.346232"
+      "hash": "0023ee9e002a888eeeea8652ca40633b4745839efb5e7b3f57a8c297c52fae56",
+      "last_updated": "2026-11-12T04:40:11.278818"
     },
     "troubleshoot.md": {
       "original_url": "https://code.claude.com/docs/en/plugins/mods/troubleshoot.md",
@@ -784,8 +784,8 @@
     "settings-reference.md": {
       "original_url": "https://code.claude.com/docs/en/settings-reference.md",
       "title": "All settings",
-      "hash": "304541915e9965992f707a032e64ce1c070c1084fe0c59d63ff3bae9fd500786",
-      "last_updated": "2026-11-11T03:31:05.695717"
+      "hash": "164320461acfc2ab93d6f7dfddb859fe3d36aef77ac9aeca28fe744d523c65fd",
+      "last_updated": "2026-11-12T04:40:37.535071"
     },
     "settings-example.md": {
       "original_url": "https://code.claude.com/docs/en/settings-example.md",
@@ -1133,13 +1133,13 @@
       "original_url": "https://code.claude.com/docs/en/claude_code_docs_map.md",
       "title": "Documentation Map",
       "source": "docs-map",
-      "hash": "328d8a7b652e32ce5ecbca4870f795ce9e53e1e6e3bae2342927de43fe68bdb4",
-      "last_updated": "2026-11-11T21:39:27.852234"
+      "hash": "102eb2c5f35ed1fecbb75dd2d3d2c4c6821ec672fe3e0f6223058bfa1bb182ab",
+      "last_updated": "2026-11-12T04:41:12.931338"
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2026-11-11T21:39:27.935052",
-    "fetch_duration_seconds": 112.403249,
+    "last_fetch_completed": "2026-11-12T04:41:12.980973",
+    "fetch_duration_seconds": 108.048748,
     "total_pages_discovered": 203,
     "pages_fetched_successfully": 204,
     "pages_failed": 1,
@@ -1150,7 +1150,7 @@
     "total_files": 189,
     "fetch_tool_version": "4.0"
   },
-  "last_updated": "2026-11-11T21:39:27.935219",
+  "last_updated": "2026-11-12T04:41:12.981130",
   "base_url": "https://raw.githubusercontent.com/doublefx/magic-claude-code-docs/main/plugin/docs/",
   "github_repository": "doublefx/magic-claude-code-docs",
   "github_ref": "main",
