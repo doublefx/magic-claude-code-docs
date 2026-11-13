@@ -400,8 +400,8 @@
     "errors.md": {
       "original_url": "https://code.claude.com/docs/en/errors.md",
       "title": "Error reference",
-      "hash": "f82b28d0d60a91b57419ef7cf063fa987eee3955fc570427adcaf6e7a278ed7a",
-      "last_updated": "2026-11-13T03:52:28.715684"
+      "hash": "602c194d1a254189f0923b399a92ee4b0ab6598b48c9b3f96a3d0120021d461e",
+      "last_updated": "2026-11-13T13:32:04.549845"
     },
     "install.md": {
       "original_url": "https://code.claude.com/docs/en/plugins/install.md",
@@ -436,8 +436,8 @@
     "components.md": {
       "original_url": "https://code.claude.com/docs/en/plugins/components.md",
       "title": "Add components to a plugin",
-      "hash": "4e824b70bbe00db2d487ab5aeac1c63575fdc151b0d0a3eff573f461ce6f6d4b",
-      "last_updated": "2026-10-25T17:56:52.190845"
+      "hash": "1ea4367112bf1ab73bd954ed6ee6bebb411d4a4dde3081f89bed44ba55a21a04",
+      "last_updated": "2026-11-13T13:32:08.579921"
     },
     "dependencies.md": {
       "original_url": "https://code.claude.com/docs/en/plugins/dependencies.md",
@@ -454,8 +454,8 @@
     "publish.md": {
       "original_url": "https://code.claude.com/docs/en/plugins/publish.md",
       "title": "Publish and distribute a plugin",
-      "hash": "f98d37d7355d95ddd027676974b26886522feab56667b42cd0772f5d8f19bab5",
-      "last_updated": "2026-10-30T21:45:07.974619"
+      "hash": "f7b6defb5c8fc1881be2df2f9a4b7a067e52727fa92817feca74c7cefbfcac8f",
+      "last_updated": "2026-11-13T13:32:10.371383"
     },
     "measure.md": {
       "original_url": "https://code.claude.com/docs/en/plugins/measure.md",
@@ -550,8 +550,8 @@
     "manifest-reference.md": {
       "original_url": "https://code.claude.com/docs/en/plugins/manifest-reference.md",
       "title": "Plugin manifest reference",
-      "hash": "d78c502c30849c7405c61dce1080243d0ce2f0682310634d06d5babbf5bcfd27",
-      "last_updated": "2026-11-10T21:04:31.810536"
+      "hash": "1bfc3252191281cb3248bfa43111e240b467257bad36613dd79bd3c28c59a4b2",
+      "last_updated": "2026-11-13T13:32:21.599281"
     },
     "marketplace-reference.md": {
       "original_url": "https://code.claude.com/docs/en/plugins/marketplace-reference.md",
@@ -784,8 +784,8 @@
     "settings-reference.md": {
       "original_url": "https://code.claude.com/docs/en/settings-reference.md",
       "title": "All settings",
-      "hash": "9919f8c3be6189a8552f62c5b9f3e791749a72f57aee40760689ccbb0b4f3731",
-      "last_updated": "2026-11-13T03:53:06.069170"
+      "hash": "1a90c9ee8c64dc91474f292132d1d360402ceae70b20b7e4dfbfbf34fd0b05f8",
+      "last_updated": "2026-11-13T13:32:45.131723"
     },
     "settings-example.md": {
       "original_url": "https://code.claude.com/docs/en/settings-example.md",
@@ -922,8 +922,8 @@
     "statusline.md": {
       "original_url": "https://code.claude.com/docs/en/statusline.md",
       "title": "Customize your status line",
-      "hash": "6da886d1d49d40461586165d5f246cd8a049123b194caa1ebc755d8b33038cff",
-      "last_updated": "2026-10-30T21:45:52.526764"
+      "hash": "3c1cdd1401c6eb644311ea2e0c1cd70d6445037d780d1d7dbe2ce6d531149635",
+      "last_updated": "2026-11-13T13:32:58.429403"
     },
     "keybindings.md": {
       "original_url": "https://code.claude.com/docs/en/keybindings.md",
@@ -1133,13 +1133,13 @@
       "original_url": "https://code.claude.com/docs/en/claude_code_docs_map.md",
       "title": "Documentation Map",
       "source": "docs-map",
-      "hash": "fbf423d2beb802296683fea0c7c6654180b6dbfc7a2751e1e3838571bdaa039b",
-      "last_updated": "2026-11-13T03:53:41.991914"
+      "hash": "108459b3c6db9d30f01c7b57df0b427f0c3d712529f5cac23893a7986f945ba9",
+      "last_updated": "2026-11-13T13:33:23.456992"
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2026-11-13T03:53:42.023782",
-    "fetch_duration_seconds": 109.404082,
+    "last_fetch_completed": "2026-11-13T13:33:23.579432",
+    "fetch_duration_seconds": 117.567156,
     "total_pages_discovered": 203,
     "pages_fetched_successfully": 204,
     "pages_failed": 1,
@@ -1150,7 +1150,7 @@
     "total_files": 189,
     "fetch_tool_version": "4.0"
   },
-  "last_updated": "2026-11-13T03:53:42.023955",
+  "last_updated": "2026-11-13T13:33:23.579590",
   "base_url": "https://raw.githubusercontent.com/doublefx/magic-claude-code-docs/main/plugin/docs/",
   "github_repository": "doublefx/magic-claude-code-docs",
   "github_ref": "main",
