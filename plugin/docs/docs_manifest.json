@@ -160,8 +160,8 @@
     "desktop.md": {
       "original_url": "https://code.claude.com/docs/en/desktop.md",
       "title": "Desktop application",
-      "hash": "35b77248f3f513e476f979a6a86109b504604e0e74be08a29c16b7cd0d941033",
-      "last_updated": "2026-11-17T05:29:26.049679"
+      "hash": "bc0295df18527ebbe49c842536670f0859624991d6ed6be0b5475e982bc31816",
+      "last_updated": "2026-11-18T10:49:48.376952"
     },
     "desktop-linux.md": {
       "original_url": "https://code.claude.com/docs/en/desktop-linux.md",
@@ -346,8 +346,8 @@
     "channels.md": {
       "original_url": "https://code.claude.com/docs/en/channels.md",
       "title": "Push events into a running session with channels",
-      "hash": "7a38c1b3e98789b34090b97891b798b0fbd6cf74ff11773be875820e18993c2f",
-      "last_updated": "2026-11-06T10:01:40.808235"
+      "hash": "027537644226c1592215c992c6091cc8bd333768c1e222c5ef036f0db126dd8b",
+      "last_updated": "2026-11-18T10:50:06.635333"
     },
     "scheduled-tasks.md": {
       "original_url": "https://code.claude.com/docs/en/scheduled-tasks.md",
@@ -568,14 +568,14 @@
     "admin-setup.md": {
       "original_url": "https://code.claude.com/docs/en/admin-setup.md",
       "title": "Set up Claude Code for your organization",
-      "hash": "ff258a7aa3b3f6e7cb72e4d47ba324719df61c3f6787a35934eeba5e0d37ec87",
-      "last_updated": "2026-11-17T05:30:04.402095"
+      "hash": "54a57c46a55cd83128f9ac39b2a9a5261c59b5a3c4e33642d81c5c354c2d4284",
+      "last_updated": "2026-11-18T10:50:32.782483"
     },
     "setup.md": {
       "original_url": "https://code.claude.com/docs/en/setup.md",
       "title": "Advanced setup",
-      "hash": "dc409d98be351f99616c9f19e8ea4d762b3f2925c56d6763615bf5e328502975",
-      "last_updated": "2026-11-17T05:30:04.936096"
+      "hash": "27ddc5d3a7664856523f8f2d98861ffe6f091f825fd233dcb2d24d8da2a38294",
+      "last_updated": "2026-11-18T10:50:33.315404"
     },
     "authentication.md": {
       "original_url": "https://code.claude.com/docs/en/authentication.md",
@@ -790,8 +790,8 @@
     "settings-reference.md": {
       "original_url": "https://code.claude.com/docs/en/settings-reference.md",
       "title": "All settings",
-      "hash": "e21f35b55e3e99112b30ec19c0b426c4e86c87f05d9cd91566e6d0c46a9e0093",
-      "last_updated": "2026-11-18T00:07:49.853107"
+      "hash": "7b7b9dde44e60d9bea9d2072202e4e452cb3a34cd9adf9adbda6af4f838effbe",
+      "last_updated": "2026-11-18T10:50:54.361353"
     },
     "settings-example.md": {
       "original_url": "https://code.claude.com/docs/en/settings-example.md",
@@ -1145,13 +1145,13 @@
       "original_url": "https://code.claude.com/docs/en/claude_code_docs_map.md",
       "title": "Documentation Map",
       "source": "docs-map",
-      "hash": "8447887398d8027bb299c5a2f51767c40ecee60e3f7f05ea22297a3ab8404f5a",
-      "last_updated": "2026-11-18T00:08:27.809626"
+      "hash": "cdbdb6ecc8910748e1820f62233d1c5c257c155c3a348082af67ad3e2fbe018b",
+      "last_updated": "2026-11-18T10:51:34.006514"
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2026-11-18T00:08:27.914339",
-    "fetch_duration_seconds": 117.667724,
+    "last_fetch_completed": "2026-11-18T10:51:34.054182",
+    "fetch_duration_seconds": 122.111152,
     "total_pages_discovered": 205,
     "pages_fetched_successfully": 206,
     "pages_failed": 1,
@@ -1162,7 +1162,7 @@
     "total_files": 191,
     "fetch_tool_version": "4.0"
   },
-  "last_updated": "2026-11-18T00:08:27.914502",
+  "last_updated": "2026-11-18T10:51:34.054340",
   "base_url": "https://raw.githubusercontent.com/doublefx/magic-claude-code-docs/main/plugin/docs/",
   "github_repository": "doublefx/magic-claude-code-docs",
   "github_ref": "main",
