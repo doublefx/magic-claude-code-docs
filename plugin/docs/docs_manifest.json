@@ -34,8 +34,8 @@
     "claude-directory.md": {
       "original_url": "https://code.claude.com/docs/en/claude-directory.md",
       "title": "Explore the .claude directory",
-      "hash": "85ffec16f2f0e886cd77027c75469ba0752174160fe95a0acc075d585dbbe81d",
-      "last_updated": "2026-11-20T01:55:43.324426"
+      "hash": "129068082d8ef0c6f5069c3d7b2fd2364e5b2b964053a9f5ee9ae40eccbcba97",
+      "last_updated": "2026-11-20T19:20:18.271927"
     },
     "context-window.md": {
       "original_url": "https://code.claude.com/docs/en/context-window.md",
@@ -46,8 +46,8 @@
     "prompt-caching.md": {
       "original_url": "https://code.claude.com/docs/en/prompt-caching.md",
       "title": "How Claude Code uses prompt caching",
-      "hash": "6dd7b7540098e8cdfaa2d530c1a887d120f5e095624e8cac5e3821cf54736a54",
-      "last_updated": "2026-11-19T19:41:05.429772"
+      "hash": "e464adca63cd5c66ebc9384e8f00b8ba37d638dcdc647e714e0d8c1a6a3e3699",
+      "last_updated": "2026-11-20T19:20:19.424137"
     },
     "memory.md": {
       "original_url": "https://code.claude.com/docs/en/memory.md",
@@ -94,8 +94,8 @@
     "claude-projects.md": {
       "original_url": "https://code.claude.com/docs/en/claude-projects.md",
       "title": "Let Claude coordinate ongoing work with Projects",
-      "hash": "99294585588ebcabab7cb31a2cd83436a11c2f9750a386ad2016c5d0fc671215",
-      "last_updated": "2026-11-17T05:29:20.147855"
+      "hash": "152b888bed324a4cf742ec9f0437202bc091e20db4cbbd2da1890465de54d129",
+      "last_updated": "2026-11-20T19:20:23.864489"
     },
     "mobile.md": {
       "original_url": "https://code.claude.com/docs/en/mobile.md",
@@ -310,8 +310,8 @@
     "worktrees.md": {
       "original_url": "https://code.claude.com/docs/en/worktrees.md",
       "title": "Run parallel sessions with worktrees",
-      "hash": "5b800b1cd50f91f0fb7e85a6810c9f3d3ddfa3d9f191fe64be019213a52257f1",
-      "last_updated": "2026-11-19T10:50:39.070309"
+      "hash": "2dd83cd40e1ac77b9dbca9aa69b3002c34e1d9293c6e3157f0b9bcccfb8e0a78",
+      "last_updated": "2026-11-20T19:20:44.895010"
     },
     "mcp-quickstart.md": {
       "original_url": "https://code.claude.com/docs/en/mcp-quickstart.md",
@@ -400,14 +400,14 @@
     "errors.md": {
       "original_url": "https://code.claude.com/docs/en/errors.md",
       "title": "Error reference",
-      "hash": "c9ad601aff1e6a50d95382b7c498d9da861c091898ac54ec614418bd376887f4",
-      "last_updated": "2026-11-20T01:56:17.342721"
+      "hash": "561dd9a538d769e9a7b5cd10cc36aaba60333a0afbedc4b51fbcf4be2dd08871",
+      "last_updated": "2026-11-20T19:20:53.613759"
     },
     "install.md": {
       "original_url": "https://code.claude.com/docs/en/plugins/install.md",
       "title": "Install and manage plugins",
-      "hash": "f85b2f19434b55d8c9db461fd094703ee20412661266d77e704275e3f3743319",
-      "last_updated": "2026-11-20T01:56:18.423288"
+      "hash": "82f0e90e0dba286583acdbdda8a46faba7a357306fbc89ea2efdbc21a2a36de4",
+      "last_updated": "2026-11-20T19:20:54.747760"
     },
     "anthropic-marketplaces.md": {
       "original_url": "https://code.claude.com/docs/en/plugins/anthropic-marketplaces.md",
@@ -544,14 +544,14 @@
     "loading.md": {
       "original_url": "https://code.claude.com/docs/en/plugins/loading.md",
       "title": "Plugin loading reference",
-      "hash": "72d5d7129f8cc4ef2f6746f95c303d47dab5fb4809c3b2884b9dda49fa82b52c",
-      "last_updated": "2026-11-20T01:56:32.504206"
+      "hash": "da2242fb44ebdb09027d4f850018538e0b8f8c0f4c39ade8afa45cb341783b3f",
+      "last_updated": "2026-11-20T19:21:09.985596"
     },
     "manifest-reference.md": {
       "original_url": "https://code.claude.com/docs/en/plugins/manifest-reference.md",
       "title": "Plugin manifest reference",
-      "hash": "881277b37c7b02ec0c5212ee0d1a4498de38c52a3e83b9fc2f0853ed16a76504",
-      "last_updated": "2026-11-20T01:56:33.048345"
+      "hash": "6d2d7ad4b87c4af44ee5fa43ceeac553bca3cdab47e76fea5cfc0cc1e68c66d8",
+      "last_updated": "2026-11-20T19:21:10.542089"
     },
     "marketplace-reference.md": {
       "original_url": "https://code.claude.com/docs/en/plugins/marketplace-reference.md",
@@ -568,8 +568,8 @@
     "admin-setup.md": {
       "original_url": "https://code.claude.com/docs/en/admin-setup.md",
       "title": "Set up Claude Code for your organization",
-      "hash": "54a57c46a55cd83128f9ac39b2a9a5261c59b5a3c4e33642d81c5c354c2d4284",
-      "last_updated": "2026-11-18T10:50:32.782483"
+      "hash": "569d8ad07bdbdd34a66ddc7006531d273cd319a6d7f20da96622083fce672b40",
+      "last_updated": "2026-11-20T19:21:12.266749"
     },
     "setup.md": {
       "original_url": "https://code.claude.com/docs/en/setup.md",
@@ -598,8 +598,8 @@
     "managed-mcp.md": {
       "original_url": "https://code.claude.com/docs/en/managed-mcp.md",
       "title": "Control MCP server access for your organization",
-      "hash": "eac154aad2d3af22c3598bf2a619cd76f6d36728c33710187af4315fbb09811c",
-      "last_updated": "2026-11-20T01:56:37.630331"
+      "hash": "01406ed61e802b1a8d8be9ae88a9b85c467a60e4d50baa17b1b749f5caceb684",
+      "last_updated": "2026-11-20T19:21:15.097476"
     },
     "auto-mode-config.md": {
       "original_url": "https://code.claude.com/docs/en/auto-mode-config.md",
@@ -628,8 +628,8 @@
     "claude-platform-on-aws.md": {
       "original_url": "https://code.claude.com/docs/en/claude-platform-on-aws.md",
       "title": "Claude Code on Claude Platform on AWS",
-      "hash": "69a072a212cf41756ca453651124dc9858559b5b71ddef67e441f6376866862f",
-      "last_updated": "2026-11-11T03:30:50.857085"
+      "hash": "3e63703ac9281cb9c3f8b8f9fa4d6d472f6e1aac059d6d990c54fb0947a422f5",
+      "last_updated": "2026-11-20T19:21:18.041938"
     },
     "claude-models-on-google-cloud-anthropic-managed.md": {
       "original_url": "https://code.claude.com/docs/en/claude-models-on-google-cloud-anthropic-managed.md",
@@ -820,8 +820,8 @@
     "sandboxing.md": {
       "original_url": "https://code.claude.com/docs/en/sandboxing.md",
       "title": "Configure the sandboxed Bash tool",
-      "hash": "23b9ba15ebad247fa2322225307e688eb23e118406296a6d6d6beee51fed6798",
-      "last_updated": "2026-11-20T01:56:58.140277"
+      "hash": "bb348771bffa3771eb8f4a6cbce9db3d21c66c456997ec84895dc22305c50cb8",
+      "last_updated": "2026-11-20T19:21:37.533764"
     },
     "sandbox-environments.md": {
       "original_url": "https://code.claude.com/docs/en/sandbox-environments.md",
@@ -952,8 +952,8 @@
     "env-vars.md": {
       "original_url": "https://code.claude.com/docs/en/env-vars.md",
       "title": "Environment variables",
-      "hash": "5a92055baebcd045c25b5e47ef862490e0db33a9505309b81cadf159ce951572",
-      "last_updated": "2026-11-20T01:57:10.527592"
+      "hash": "831bb94bf57b7cabda2f810d3646080b7a5326e52d73d2d1f8972258f654a7c4",
+      "last_updated": "2026-11-20T19:21:51.021663"
     },
     "tools-reference.md": {
       "original_url": "https://code.claude.com/docs/en/tools-reference.md",
@@ -1145,13 +1145,13 @@
       "original_url": "https://code.claude.com/docs/en/claude_code_docs_map.md",
       "title": "Documentation Map",
       "source": "docs-map",
-      "hash": "3f16682ce6410bd666b9d64f2aeea421ce3d94504cd409500dc316e0cd2450e4",
-      "last_updated": "2026-11-20T01:57:32.228655"
+      "hash": "c1d95e0ec1515710b93df0488cdd0a262c0a875b49940a60f2cc23a852c798ae",
+      "last_updated": "2026-11-20T19:22:13.646169"
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2026-11-20T01:57:32.266329",
-    "fetch_duration_seconds": 111.99937,
+    "last_fetch_completed": "2026-11-20T19:22:13.716471",
+    "fetch_duration_seconds": 118.704881,
     "total_pages_discovered": 205,
     "pages_fetched_successfully": 206,
     "pages_failed": 1,
@@ -1162,7 +1162,7 @@
     "total_files": 191,
     "fetch_tool_version": "4.0"
   },
-  "last_updated": "2026-11-20T01:57:32.266498",
+  "last_updated": "2026-11-20T19:22:13.716641",
   "base_url": "https://raw.githubusercontent.com/doublefx/magic-claude-code-docs/main/plugin/docs/",
   "github_repository": "doublefx/magic-claude-code-docs",
   "github_ref": "main",
