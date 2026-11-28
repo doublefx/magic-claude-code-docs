@@ -166,8 +166,8 @@
     "desktop.md": {
       "original_url": "https://code.claude.com/docs/en/desktop.md",
       "title": "Desktop application",
-      "hash": "325175a43f4c3422a98213b46dceeb1aaed0484aa93091dfe7b4b2418a4b4054",
-      "last_updated": "2026-11-25T03:51:06.488833"
+      "hash": "ee2bb007396744a721c4e0220f9841c76863aceaab525fe0da6e92a292fd1368",
+      "last_updated": "2026-11-28T11:00:13.185267"
     },
     "desktop-linux.md": {
       "original_url": "https://code.claude.com/docs/en/desktop-linux.md",
@@ -346,8 +346,8 @@
     "claude-security.md": {
       "original_url": "https://code.claude.com/docs/en/claude-security.md",
       "title": "Scan your codebase for vulnerabilities",
-      "hash": "5b7324657a5045492c3be3097a95f55262051e1e53356c1cc09882258e1e8757",
-      "last_updated": "2026-11-25T03:51:24.034728"
+      "hash": "8cc2ed048d551f7f3e3e12e8b13e0c17562ff43b6e20da6d8d8c92023d03cbce",
+      "last_updated": "2026-11-28T11:00:29.984259"
     },
     "github-actions.md": {
       "original_url": "https://code.claude.com/docs/en/github-actions.md",
@@ -682,8 +682,8 @@
     "managed-settings.md": {
       "original_url": "https://code.claude.com/docs/en/managed-settings.md",
       "title": "Deploy managed settings",
-      "hash": "7a54e72aee8a05d8cd9134fc07dcf6e93774bffdb25b6aff36ac524eea601489",
-      "last_updated": "2026-11-25T03:51:58.666055"
+      "hash": "b1630f0456ed3a8fb47117beb5084e1f4e33fa7bc0fcb9b59d4bdce092e21300",
+      "last_updated": "2026-11-28T11:01:02.574455"
     },
     "server-managed-settings.md": {
       "original_url": "https://code.claude.com/docs/en/server-managed-settings.md",
@@ -886,8 +886,8 @@
     "settings-reference.md": {
       "original_url": "https://code.claude.com/docs/en/settings-reference.md",
       "title": "All settings",
-      "hash": "f87b28f014d323f1d99655f4dd8f329693e8295eec0f1cecf8af0bcc534a5249",
-      "last_updated": "2026-11-25T03:52:18.770147"
+      "hash": "955ec60686c2bc0f4cc32590eac6a791f78794d824380a5c06c86a263eaee2f2",
+      "last_updated": "2026-11-28T11:01:21.625070"
     },
     "settings-example.md": {
       "original_url": "https://code.claude.com/docs/en/settings-example.md",
@@ -976,8 +976,8 @@
     "model-config.md": {
       "original_url": "https://code.claude.com/docs/en/model-config.md",
       "title": "Model configuration",
-      "hash": "5af716d1c4a3db4f932fc9dd5400403f50f335d67a737ff1134dac8757eab0da",
-      "last_updated": "2026-11-25T03:52:27.536711"
+      "hash": "4f10981d5b2b5d11244d105a916276423e05feea7a3780667473a42c938ca06a",
+      "last_updated": "2026-11-28T11:01:29.849902"
     },
     "fast-mode.md": {
       "original_url": "https://code.claude.com/docs/en/fast-mode.md",
@@ -1241,13 +1241,13 @@
       "original_url": "https://code.claude.com/docs/en/claude_code_docs_map.md",
       "title": "Documentation Map",
       "source": "docs-map",
-      "hash": "33253e73ef89c304f29a04e899299126cd21346a5891da0c23ebfcc6487596c9",
-      "last_updated": "2026-11-25T16:22:00.499623"
+      "hash": "24f463a114c11741ae038ffa863994dacd21ad906110e066f86d7e077a7c40a9",
+      "last_updated": "2026-11-28T11:01:58.350152"
     }
   },
   "fetch_metadata": {
-    "last_fetch_completed": "2026-11-25T16:22:00.611254",
-    "fetch_duration_seconds": 125.498614,
+    "last_fetch_completed": "2026-11-28T11:01:58.397912",
+    "fetch_duration_seconds": 119.95183,
     "total_pages_discovered": 221,
     "pages_fetched_successfully": 222,
     "pages_failed": 1,
@@ -1258,7 +1258,7 @@
     "total_files": 207,
     "fetch_tool_version": "4.0"
   },
-  "last_updated": "2026-11-25T16:22:00.611479",
+  "last_updated": "2026-11-28T11:01:58.398036",
   "base_url": "https://raw.githubusercontent.com/doublefx/magic-claude-code-docs/main/plugin/docs/",
   "github_repository": "doublefx/magic-claude-code-docs",
   "github_ref": "main",
